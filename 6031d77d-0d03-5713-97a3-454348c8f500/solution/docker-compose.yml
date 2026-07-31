@@ -1,0 +1,16 @@
+services:
+  app:
+    build: ./app
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/', timeout=2)"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
+      start_period: 1s
+  checker:
+    build: ./checker
+    depends_on:
+      app:
+        condition: service_healthy
+    volumes:
+      - ./out:/out

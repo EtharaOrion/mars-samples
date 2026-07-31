@@ -1,0 +1,43 @@
+schema_version = "1.1"
+artifacts = []
+
+[task]
+name = "terminal-bench/rust-feature-flag-build"
+description = "Repair a Rust crate's Cargo feature configuration so the release binary and the crate tests exercise the correct feature-gated code path."
+keywords = ["rust", "cargo", "features", "build", "cfg"]
+
+[[task.authors]]
+name = "FORGE"
+email = "forge@anubis.local"
+
+[metadata]
+author_name = "FORGE"
+author_email = "forge@anubis.local"
+difficulty = "medium"
+category = "software-engineering"
+sub_type = "build-ci-cd"
+tags = ["build-ci-cd", "silent-execution-failure", "world-state"]
+expert_time_estimate_min = 20
+junior_time_estimate_min = 45
+
+[verifier]
+timeout_sec = 900.0
+
+[agent]
+timeout_sec = 900.0
+
+[environment]
+build_timeout_sec = 600.0
+docker_image = "anubis/star18:1.0"
+cpus = 1
+memory_mb = 2048
+storage_mb = 10240
+gpus = 0
+allow_internet = true
+mcp_servers = []
+
+[verifier.env]
+
+[environment.env]
+
+[solution.env]

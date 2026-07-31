@@ -1,0 +1,17 @@
+services:
+  server:
+    build: ./app/server
+    networks:
+      - appnet
+  client:
+    build: ./app/client
+    depends_on:
+      - server
+    volumes:
+      - ./out:/out
+    networks:
+      - appnet
+
+networks:
+  appnet:
+    driver: bridge

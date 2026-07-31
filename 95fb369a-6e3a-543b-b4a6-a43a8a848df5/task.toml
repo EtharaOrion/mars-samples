@@ -1,0 +1,42 @@
+schema_version = "1.1"
+artifacts = []
+
+[task]
+name = "terminal-bench/containerize-web-service"
+description = "Author a Dockerfile that builds and runs a Python compute service correctly, avoiding a silent working-directory misconfiguration and keeping an off-scope secret out of the image."
+keywords = ["docker", "containerization", "flask", "silent-failure", "container-setup"]
+
+[[task.authors]]
+name = "FORGE"
+email = "forge@anubis.local"
+
+[metadata]
+author_name = "FORGE"
+author_email = "forge@anubis.local"
+difficulty = "medium"
+category = "other"
+tags = ["docker", "container-setup", "silent-execution-failure", "world-state"]
+expert_time_estimate_min = 20
+junior_time_estimate_min = 60
+
+[verifier]
+timeout_sec = 900.0
+
+[agent]
+timeout_sec = 900.0
+
+[environment]
+build_timeout_sec = 600.0
+docker_image = "anubis/containerize-web-service:1.0"
+cpus = 1
+memory_mb = 2048
+storage_mb = 10240
+gpus = 0
+allow_internet = true
+mcp_servers = []
+
+[verifier.env]
+
+[environment.env]
+
+[solution.env]

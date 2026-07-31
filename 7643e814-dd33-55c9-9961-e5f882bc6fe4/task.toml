@@ -1,0 +1,43 @@
+schema_version = "1.1"
+artifacts = []
+
+[task]
+name = "terminal-bench/volume-persistence"
+description = "Repair a Docker Compose stack so a stateful service's data directory is backed by a named volume and survives a full container recreate (down without -v, then up)."
+keywords = ["docker-compose", "named-volume", "persistence", "container-setup", "state"]
+
+[[task.authors]]
+name = "FORGE"
+email = "forge@anubis.local"
+
+[metadata]
+author_name = "FORGE"
+author_email = "forge@anubis.local"
+difficulty = "medium"
+category = "other"
+sub_type = "container-setup"
+tags = ["container-setup", "temporal-state-across-time", "world-state"]
+expert_time_estimate_min = 20
+junior_time_estimate_min = 45
+
+[verifier]
+timeout_sec = 900.0
+
+[agent]
+timeout_sec = 900.0
+
+[environment]
+build_timeout_sec = 600.0
+docker_image = "anubis/volume-persistence:1.0"
+cpus = 1
+memory_mb = 2048
+storage_mb = 10240
+gpus = 0
+allow_internet = true
+mcp_servers = []
+
+[verifier.env]
+
+[environment.env]
+
+[solution.env]

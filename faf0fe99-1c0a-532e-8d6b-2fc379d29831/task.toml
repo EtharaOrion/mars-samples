@@ -1,0 +1,43 @@
+schema_version = "1.1"
+artifacts = []
+
+[task]
+name = "terminal-bench/fix-makefile-stale-dep"
+description = "A C project's Makefile has incomplete header dependency tracking, so make relinks a stale object and ships a wrong binary; fix the prerequisites so make rebuilds from current sources."
+keywords = ["make", "makefile", "dependency", "stale", "incremental-build", "c"]
+
+[[task.authors]]
+name = "FORGE"
+email = "forge@anubis.local"
+
+[metadata]
+author_name = "FORGE"
+author_email = "forge@anubis.local"
+difficulty = "medium"
+category = "software-engineering"
+sub_type = "build-ci-cd"
+tags = ["build-ci-cd", "temporal-staleness", "world-state"]
+expert_time_estimate_min = 20
+junior_time_estimate_min = 45
+
+[verifier]
+timeout_sec = 900.0
+
+[agent]
+timeout_sec = 900.0
+
+[environment]
+build_timeout_sec = 600.0
+docker_image = "anubis/star20:1.0"
+cpus = 1
+memory_mb = 2048
+storage_mb = 10240
+gpus = 0
+allow_internet = true
+mcp_servers = []
+
+[verifier.env]
+
+[environment.env]
+
+[solution.env]

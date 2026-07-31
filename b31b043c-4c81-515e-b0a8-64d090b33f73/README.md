@@ -1,0 +1,1 @@
+rust-cross-compile: fix Cargo cross-toolchain config so cargo build --target aarch64-unknown-linux-gnu links and emits an ARM64 ELF binary; build-ci-cd, archetype AR3 tool-chaining brittleness; world-state graded.

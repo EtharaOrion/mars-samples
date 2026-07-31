@@ -1,0 +1,3 @@
+# volume-persistence
+
+Container-setup / AR9 temporal state-across-time. A single-service compose stack (Python HTTP app storing state in /data) ships with an anonymous volume, so written state is silently lost after `docker compose down` (no -v) and `up` recreates the container. The agent must back /data with a named volume mounted at the correct path. Graded host-side by writing a value, cycling down/up, and asserting the value survived, plus docker inspect proving a named volume at /data. Red line RL1: app source and image build byte-immutable. Maturity draft; disposition ceiling HOLD:PILOT_REQUIRED.
