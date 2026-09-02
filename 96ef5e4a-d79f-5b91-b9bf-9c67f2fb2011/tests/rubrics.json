@@ -1,0 +1,1613 @@
+{
+  "schema": "mars.rubric_set/v2_council_only",
+  "bundle_id": "96ef5e4a-d79f-5b91-b9bf-9c67f2fb2011",
+  "floor": 30,
+  "note": "regenerated from solution/rubrics.json by harness/mars_rubric_id_reconciler.py to close G-RUB-COMPLETENESS.unreconciled_rubric_id; 1:1 id mapping preserves the recompute.py chain",
+  "rubrics": [
+    {
+      "id": "R0001",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path canonical_fix_route matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "Append a single Kotlin DSL directive to build.gradle.kts that sets\nthe release-target of the Java compile task to 17. The one-block\nform is:\n\n    tasks.compileJava {\n        options.release.set(17)\n    }\n\nThe property-assignment form (Gradle 8.2+ Kotlin DSL) is equally\nlawful:\n\n    tasks.compileJava {\n        options.release = 17\n    }\n\nBoth reduce to `javac --release 17` under the JDK 21 toolchain and\nemit main-class bytecode with major version 61. The toolchain\nblock above stays exactly as aut...[truncated]",
+        "anchor_0_0": "the observed value at canonical_fix_route does not match the reference at grounding path canonical_fix_route"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0002",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_ABSENCE_no_groovy_dsl_fallback equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "python_os_path_exists_check_for_build_gradle_and_settings_gradle_without_kts_suffix_returns_false",
+        "anchor_0_0": "the observed value at checker_semantics > C_ABSENCE_no_groovy_dsl_fallback does not match the reference at grounding path checker_semantics > C_ABSENCE_no_groovy_dsl_fallback"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0003",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_ABSENCE_no_groovy_syntax_residue equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "python_re_search_over_build_gradle_kts_bytes_finds_no_match_for_any_named_groovy_residue_pattern",
+        "anchor_0_0": "the observed value at checker_semantics > C_ABSENCE_no_groovy_syntax_residue does not match the reference at grounding path checker_semantics > C_ABSENCE_no_groovy_syntax_residue"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0004",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_INVARIANT_kts_files_present equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "python_os_path_exists_check_for_build_gradle_kts_and_settings_gradle_kts",
+        "anchor_0_0": "the observed value at checker_semantics > C_INVARIANT_kts_files_present does not match the reference at grounding path checker_semantics > C_INVARIANT_kts_files_present"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0005",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_INVARIANT_toolchain_block_and_language_version equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "python_re_search_over_build_gradle_kts_bytes_matches_both_the_toolchain_block_pattern_and_the_language_version_of_21_pattern",
+        "anchor_0_0": "the observed value at checker_semantics > C_INVARIANT_toolchain_block_and_language_version does not match the reference at grounding path checker_semantics > C_INVARIANT_toolchain_block_and_language_version"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0006",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_VALUE_gradle_build_exit_zero equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "subprocess_run_gradle_no_daemon_console_plain_build_from_workspace_and_assert_returncode_zero",
+        "anchor_0_0": "the observed value at checker_semantics > C_VALUE_gradle_build_exit_zero does not match the reference at grounding path checker_semantics > C_VALUE_gradle_build_exit_zero"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0007",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_VALUE_gradle_test_exit_zero equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "subprocess_run_gradle_no_daemon_console_plain_test_from_workspace_and_assert_returncode_zero",
+        "anchor_0_0": "the observed value at checker_semantics > C_VALUE_gradle_test_exit_zero does not match the reference at grounding path checker_semantics > C_VALUE_gradle_test_exit_zero"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0008",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_VALUE_main_class_bytecode_major_version_equals_61 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "compiled_class_bytecode_major_version_field",
+        "anchor_1_0": "subprocess_run_javap_v_on_main_class_and_re_search_for_major_version_colon_61_on_first_matching_line",
+        "anchor_0_0": "the observed value at checker_semantics > C_VALUE_main_class_bytecode_major_version_equals_61 does not match the reference at grounding path checker_semantics > C_VALUE_main_class_bytecode_major_version_equals_61"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0009",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D1_presence > predicate equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "both_build_gradle_kts_and_settings_gradle_kts_exist_as_regular_files",
+        "anchor_0_0": "the observed value at deliverable_manifest > D1_presence > predicate does not match the reference at grounding path deliverable_manifest > D1_presence > predicate"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0010",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D1_presence > targets > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/build.gradle.kts",
+        "anchor_0_0": "the observed value at deliverable_manifest > D1_presence > targets > [0] does not match the reference at grounding path deliverable_manifest > D1_presence > targets > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0011",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D1_presence > targets > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/settings.gradle.kts",
+        "anchor_0_0": "the observed value at deliverable_manifest > D1_presence > targets > [1] does not match the reference at grounding path deliverable_manifest > D1_presence > targets > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0012",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D2_absence_no_groovy_dsl_fallback_file_present > predicate equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "neither_build_gradle_nor_settings_gradle_groovy_dsl_fallback_files_exist",
+        "anchor_0_0": "the observed value at deliverable_manifest > D2_absence_no_groovy_dsl_fallback_file_present > predicate does not match the reference at grounding path deliverable_manifest > D2_absence_no_groovy_dsl_fallback_file_present > predicate"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0013",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D2_absence_no_groovy_dsl_fallback_file_present > targets > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/build.gradle",
+        "anchor_0_0": "the observed value at deliverable_manifest > D2_absence_no_groovy_dsl_fallback_file_present > targets > [0] does not match the reference at grounding path deliverable_manifest > D2_absence_no_groovy_dsl_fallback_file_present > targets > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0014",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D2_absence_no_groovy_dsl_fallback_file_present > targets > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/settings.gradle",
+        "anchor_0_0": "the observed value at deliverable_manifest > D2_absence_no_groovy_dsl_fallback_file_present > targets > [1] does not match the reference at grounding path deliverable_manifest > D2_absence_no_groovy_dsl_fallback_file_present > targets > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0015",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_invariant_toolchain_block_present_and_pinned_to_21 > detection_regex_language_version_21 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "languageVersion\\s*(?:=|\\.set\\s*\\()\\s*JavaLanguageVersion\\.of\\s*\\(\\s*21\\s*\\)",
+        "anchor_0_0": "the observed value at deliverable_manifest > D3_invariant_toolchain_block_present_and_pinned_to_21 > detection_regex_language_version_21 does not match the reference at grounding path deliverable_manifest > D3_invariant_toolchain_block_present_and_pinned_to_21 > detection_regex_language_version_21"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0016",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_invariant_toolchain_block_present_and_pinned_to_21 > detection_regex_toolchain_block equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "(?s)\\bjava\\s*\\{[^{}]*\\btoolchain\\s*\\{[^{}]*\\}",
+        "anchor_0_0": "the observed value at deliverable_manifest > D3_invariant_toolchain_block_present_and_pinned_to_21 > detection_regex_toolchain_block does not match the reference at grounding path deliverable_manifest > D3_invariant_toolchain_block_present_and_pinned_to_21 > detection_regex_toolchain_block"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0017",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_invariant_toolchain_block_present_and_pinned_to_21 > predicate equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "build_gradle_kts_bytes_carry_a_kotlin_toolchain_block_with_language_version_pinned_to_java_language_version_of_21",
+        "anchor_0_0": "the observed value at deliverable_manifest > D3_invariant_toolchain_block_present_and_pinned_to_21 > predicate does not match the reference at grounding path deliverable_manifest > D3_invariant_toolchain_block_present_and_pinned_to_21 > predicate"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0018",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > patterns > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "bare_int_sourceCompatibility",
+        "anchor_0_0": "the observed value at deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > patterns > [0] does not match the reference at grounding path deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > patterns > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0019",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > patterns > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "bare_int_targetCompatibility",
+        "anchor_0_0": "the observed value at deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > patterns > [1] does not match the reference at grounding path deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > patterns > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0020",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > patterns > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "java_block_bare_int_sourceCompatibility",
+        "anchor_0_0": "the observed value at deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > patterns > [2] does not match the reference at grounding path deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > patterns > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0021",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > patterns > [3] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "java_block_bare_int_targetCompatibility",
+        "anchor_0_0": "the observed value at deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > patterns > [3] does not match the reference at grounding path deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > patterns > [3]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0022",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > patterns > [4] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "space_call_jvmToolchain",
+        "anchor_0_0": "the observed value at deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > patterns > [4] does not match the reference at grounding path deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > patterns > [4]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0023",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > patterns > [5] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "groovy_named_arg_apply_plugin",
+        "anchor_0_0": "the observed value at deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > patterns > [5] does not match the reference at grounding path deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > patterns > [5]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0024",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > patterns > [6] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "single_quoted_dependency_coordinate",
+        "anchor_0_0": "the observed value at deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > patterns > [6] does not match the reference at grounding path deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > patterns > [6]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0025",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > predicate equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "none_of_the_named_groovy_only_patterns_match_anywhere_in_build_gradle_kts_source_bytes",
+        "anchor_0_0": "the observed value at deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > predicate does not match the reference at grounding path deliverable_manifest > D4_absence_no_groovy_syntax_residue_in_build_gradle_kts > predicate"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0026",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D5_value_gradle_build_exit_zero > predicate equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "gradle_no_daemon_console_plain_build_from_workspace_returns_zero",
+        "anchor_0_0": "the observed value at deliverable_manifest > D5_value_gradle_build_exit_zero > predicate does not match the reference at grounding path deliverable_manifest > D5_value_gradle_build_exit_zero > predicate"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0027",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D6_value_main_class_bytecode_major_version_equals_61 > predicate equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "compiled_class_bytecode_major_version_field",
+        "anchor_1_0": "javap_v_on_build_classes_java_main_com_example_app_class_reports_major_version_colon_61_on_first_matching_line",
+        "anchor_0_0": "the observed value at deliverable_manifest > D6_value_main_class_bytecode_major_version_equals_61 > predicate does not match the reference at grounding path deliverable_manifest > D6_value_main_class_bytecode_major_version_equals_61 > predicate"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0028",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D7_value_gradle_test_exit_zero > predicate equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "gradle_no_daemon_console_plain_test_from_workspace_returns_zero",
+        "anchor_0_0": "the observed value at deliverable_manifest > D7_value_gradle_test_exit_zero > predicate does not match the reference at grounding path deliverable_manifest > D7_value_gradle_test_exit_zero > predicate"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0029",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > ordering_note equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "deliverables_evaluated_in_order_D1_D2_D3_D4_D5_D6_D7_first_failure_stops_grading_and_writes_reward_zero_with_that_reason_code_dynamic_invocations_are_skipped_when_gradle_binary_is_absent_and_reward_degrades_to_zero_point_six_partial",
+        "anchor_0_0": "the observed value at deliverable_manifest > ordering_note does not match the reference at grounding path deliverable_manifest > ordering_note"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0030",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > build_gradle_kts_gains_tasks_compile_java_options_release_set_17_directive_or_equivalent_kotlin_dsl_form equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at expected_after_fix > build_gradle_kts_gains_tasks_compile_java_options_release_set_17_directive_or_equivalent_kotlin_dsl_form does not match the reference at grounding path expected_after_fix > build_gradle_kts_gains_tasks_compile_java_options_release_set_17_directive_or_equivalent_kotlin_dsl_form"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0031",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > build_gradle_kts_still_pins_toolchain_language_version_to_21 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at expected_after_fix > build_gradle_kts_still_pins_toolchain_language_version_to_21 does not match the reference at grounding path expected_after_fix > build_gradle_kts_still_pins_toolchain_language_version_to_21"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0032",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > gradle_build_exits_zero equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at expected_after_fix > gradle_build_exits_zero does not match the reference at grounding path expected_after_fix > gradle_build_exits_zero"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0033",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > gradle_test_exits_zero equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at expected_after_fix > gradle_test_exits_zero does not match the reference at grounding path expected_after_fix > gradle_test_exits_zero"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0034",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > main_class_bytecode_major_version_equals_61 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "compiled_class_bytecode_major_version_field",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at expected_after_fix > main_class_bytecode_major_version_equals_61 does not match the reference at grounding path expected_after_fix > main_class_bytecode_major_version_equals_61"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0035",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > no_groovy_dsl_fallback_file_introduced equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at expected_after_fix > no_groovy_dsl_fallback_file_introduced does not match the reference at grounding path expected_after_fix > no_groovy_dsl_fallback_file_introduced"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0036",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_dynamic_outcomes > inv1_gradle_build_returncode equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "The agent MUST produce a workspace state whose value at grounding path expected_dynamic_outcomes > inv1_gradle_build_returncode equals the frozen literal",
+        "anchor_0_0": "the observed value at expected_dynamic_outcomes > inv1_gradle_build_returncode does not match the reference at grounding path expected_dynamic_outcomes > inv1_gradle_build_returncode"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0037",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_dynamic_outcomes > inv2_javap_main_class_first_major_version_line equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "major version: 61",
+        "anchor_0_0": "the observed value at expected_dynamic_outcomes > inv2_javap_main_class_first_major_version_line does not match the reference at grounding path expected_dynamic_outcomes > inv2_javap_main_class_first_major_version_line"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0038",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_dynamic_outcomes > inv3_gradle_test_returncode equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "The agent MUST produce a workspace state whose value at grounding path expected_dynamic_outcomes > inv3_gradle_test_returncode equals the frozen literal",
+        "anchor_0_0": "the observed value at expected_dynamic_outcomes > inv3_gradle_test_returncode does not match the reference at grounding path expected_dynamic_outcomes > inv3_gradle_test_returncode"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0039",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path failure_route_add_apply_plugin_groovy_named_arg matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "A naive agent adds `apply plugin: 'java'` at the top of\nbuild.gradle.kts, thinking it is idiomatic. In Kotlin DSL the\nnamed-arg colon syntax is invalid; the lawful form is\napply(plugin = \"java\"). D4 catches the single-quoted named-arg\nform and rejects it before gradle runs.\n",
+        "anchor_0_0": "the observed value at failure_route_add_apply_plugin_groovy_named_arg does not match the reference at grounding path failure_route_add_apply_plugin_groovy_named_arg"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0040",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path failure_route_downgrade_toolchain_to_17 matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "A naive agent notices \"target JDK 17\" and downgrades the whole\ntoolchain to JDK 17 by setting\nlanguageVersion.set(JavaLanguageVersion.of(17)). This produces\nbytecode major version 61 and passes D6, but the D3 invariant\nrequires the toolchain to remain pinned to JDK 21 because the\nCI infrastructure pins JDK 21 as the sole build-side JVM. The\nD3 regex TOOLCHAIN_LANG_VERSION_PATTERN matches only the exact\nliteral JavaLanguageVersion.of(21), so a downgrade to 17 fails.\n",
+        "anchor_0_0": "the observed value at failure_route_downgrade_toolchain_to_17 does not match the reference at grounding path failure_route_downgrade_toolchain_to_17"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0041",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path failure_route_groovy_paste_jvmtoolchain matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "A naive agent pastes the Kotlin-Gradle-Plugin (KGP) idiom:\n\n    jvmToolchain 17\n\nwhich is a Groovy-style space-call. In Kotlin this must be\njvmToolchain(17) with parentheses, AND jvmToolchain is a KGP\nextension that only exists when the org.jetbrains.kotlin.jvm\nplugin is applied, which this pure-Java project does not do.\nEven parenthesized the directive is undefined. D4 catches the\nspace-call form directly.\n",
+        "anchor_0_0": "the observed value at failure_route_groovy_paste_jvmtoolchain does not match the reference at grounding path failure_route_groovy_paste_jvmtoolchain"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0042",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path failure_route_groovy_paste_sourcecompatibility matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "A naive agent pastes a Groovy DSL snippet like:\n\n    sourceCompatibility = 17\n    targetCompatibility = 17\n\nat the top level of build.gradle.kts. In Groovy this sets the\nJava plugin extension source and target compatibility properties;\nin Kotlin DSL these are not top-level assignables (they belong\ninside the `java { }` block and require JavaVersion.VERSION_17,\nnot a bare integer), and the build fails at Kotlin parse time.\nEven if the agent moves them inside `java { }`, the bare-integer\nassignmen...[truncated]",
+        "anchor_0_0": "the observed value at failure_route_groovy_paste_sourcecompatibility does not match the reference at grounding path failure_route_groovy_paste_sourcecompatibility"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0043",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path failure_route_introduce_groovy_build_gradle matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "A naive agent, confused by Kotlin DSL syntax, deletes\nbuild.gradle.kts and drops in a Groovy build.gradle instead.\nD2 rejects this on presence: build.gradle without the .kts\nsuffix is a Groovy DSL fallback and is explicitly disallowed.\n",
+        "anchor_0_0": "the observed value at failure_route_introduce_groovy_build_gradle does not match the reference at grounding path failure_route_introduce_groovy_build_gradle"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0044",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path grading_mode matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "static_kotlin_dsl_invariants_only_kts_files_present_no_groovy_fallback_toolchain_block_present_in_kotlin_syntax_pinned_to_jdk_21_no_groovy_residue_in_build_gradle_kts_plus_dynamic_gradle_build_and_gradle_test_both_exit_zero_and_main_class_bytecode_major_version_equals_61",
+        "anchor_0_0": "the observed value at grading_mode does not match the reference at grounding path grading_mode"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0045",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state_at_agent_phase_start > workspace_build_directory_absent equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_state_at_agent_phase_start > workspace_build_directory_absent does not match the reference at grounding path initial_state_at_agent_phase_start > workspace_build_directory_absent"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0046",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state_at_agent_phase_start > workspace_build_gradle_groovy_fallback_absent equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_state_at_agent_phase_start > workspace_build_gradle_groovy_fallback_absent does not match the reference at grounding path initial_state_at_agent_phase_start > workspace_build_gradle_groovy_fallback_absent"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0047",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state_at_agent_phase_start > workspace_build_gradle_kts_declares_no_compile_java_release_target_directive equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_state_at_agent_phase_start > workspace_build_gradle_kts_declares_no_compile_java_release_target_directive does not match the reference at grounding path initial_state_at_agent_phase_start > workspace_build_gradle_kts_declares_no_compile_java_release_target_directive"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0048",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state_at_agent_phase_start > workspace_build_gradle_kts_pins_toolchain_language_version_to_21 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_state_at_agent_phase_start > workspace_build_gradle_kts_pins_toolchain_language_version_to_21 does not match the reference at grounding path initial_state_at_agent_phase_start > workspace_build_gradle_kts_pins_toolchain_language_version_to_21"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0049",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state_at_agent_phase_start > workspace_build_gradle_kts_present_with_incomplete_toolchain_block equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_state_at_agent_phase_start > workspace_build_gradle_kts_present_with_incomplete_toolchain_block does not match the reference at grounding path initial_state_at_agent_phase_start > workspace_build_gradle_kts_present_with_incomplete_toolchain_block"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0050",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state_at_agent_phase_start > workspace_gradle_properties_present_daemon_disabled_parallel_disabled equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_state_at_agent_phase_start > workspace_gradle_properties_present_daemon_disabled_parallel_disabled does not match the reference at grounding path initial_state_at_agent_phase_start > workspace_gradle_properties_present_daemon_disabled_parallel_disabled"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0051",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state_at_agent_phase_start > workspace_observed_bytecode_mismatch_txt_present_snapshot_of_pre_fix_symptom equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "compiled_class_bytecode_major_version_field",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_state_at_agent_phase_start > workspace_observed_bytecode_mismatch_txt_present_snapshot_of_pre_fix_symptom does not match the reference at grounding path initial_state_at_agent_phase_start > workspace_observed_bytecode_mismatch_txt_present_snapshot_of_pre_fix_symptom"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0052",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state_at_agent_phase_start > workspace_settings_gradle_groovy_fallback_absent equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_state_at_agent_phase_start > workspace_settings_gradle_groovy_fallback_absent does not match the reference at grounding path initial_state_at_agent_phase_start > workspace_settings_gradle_groovy_fallback_absent"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0053",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state_at_agent_phase_start > workspace_settings_gradle_kts_present_with_root_project_name_declaration equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_state_at_agent_phase_start > workspace_settings_gradle_kts_present_with_root_project_name_declaration does not match the reference at grounding path initial_state_at_agent_phase_start > workspace_settings_gradle_kts_present_with_root_project_name_declaration"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0054",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state_at_agent_phase_start > workspace_src_main_java_com_example_app_java_present equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_state_at_agent_phase_start > workspace_src_main_java_com_example_app_java_present does not match the reference at grounding path initial_state_at_agent_phase_start > workspace_src_main_java_com_example_app_java_present"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0055",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state_at_agent_phase_start > workspace_src_test_java_com_example_app_test_java_present equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_state_at_agent_phase_start > workspace_src_test_java_com_example_app_test_java_present does not match the reference at grounding path initial_state_at_agent_phase_start > workspace_src_test_java_com_example_app_test_java_present"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0056",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path leak_gate > containment_threshold equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "0.15",
+        "anchor_0_0": "the observed value at leak_gate > containment_threshold does not match the reference at grounding path leak_gate > containment_threshold"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0057",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path leak_gate > ngram_width equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "8",
+        "anchor_0_0": "the observed value at leak_gate > ngram_width does not match the reference at grounding path leak_gate > ngram_width"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0058",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path leak_gate > paraphrase_containment_carriers > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "solution/TRUTH.md",
+        "anchor_0_0": "the observed value at leak_gate > paraphrase_containment_carriers > [0] does not match the reference at grounding path leak_gate > paraphrase_containment_carriers > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0059",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path leak_gate > paraphrase_containment_carriers > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "solution/grounding.yaml",
+        "anchor_0_0": "the observed value at leak_gate > paraphrase_containment_carriers > [1] does not match the reference at grounding path leak_gate > paraphrase_containment_carriers > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0060",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [0] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D4_groovy_syntax_residue_bare_int_sourceCompatibility_or_targetCompatibility_assignment",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [0] > rejection does not match the reference at grounding path plausible_wrong_routes > [0] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0061",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [0] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "paste_top_level_source_and_target_compatibility_equals_17",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [0] > route does not match the reference at grounding path plausible_wrong_routes > [0] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0062",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [1] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D4_groovy_syntax_residue_space_call_jvmToolchain",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [1] > rejection does not match the reference at grounding path plausible_wrong_routes > [1] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0063",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [1] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "paste_bare_jvmtoolchain_17_space_call",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [1] > route does not match the reference at grounding path plausible_wrong_routes > [1] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0064",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [2] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D4_groovy_syntax_residue_groovy_named_arg_apply_plugin",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [2] > rejection does not match the reference at grounding path plausible_wrong_routes > [2] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0065",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [2] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "paste_apply_plugin_colon_java_groovy_named_arg",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [2] > route does not match the reference at grounding path plausible_wrong_routes > [2] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0066",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [3] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D4_groovy_syntax_residue_single_quoted_dependency_coordinate",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [3] > rejection does not match the reference at grounding path plausible_wrong_routes > [3] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0067",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [3] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "paste_single_quoted_dependency_coordinate",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [3] > route does not match the reference at grounding path plausible_wrong_routes > [3] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0068",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [4] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D3_toolchain_language_version_not_pinned_to_21",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [4] > rejection does not match the reference at grounding path plausible_wrong_routes > [4] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0069",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [4] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "downgrade_toolchain_language_version_from_21_to_17",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [4] > route does not match the reference at grounding path plausible_wrong_routes > [4] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0070",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [5] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D2_groovy_dsl_fallback_file_present",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [5] > rejection does not match the reference at grounding path plausible_wrong_routes > [5] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0071",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [5] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "delete_build_gradle_kts_and_introduce_groovy_build_gradle",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [5] > route does not match the reference at grounding path plausible_wrong_routes > [5] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0072",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [6] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D6_main_class_bytecode_major_version_is_65_not_61",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [6] > rejection does not match the reference at grounding path plausible_wrong_routes > [6] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0073",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [6] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "leave_build_gradle_kts_unchanged",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [6] > route does not match the reference at grounding path plausible_wrong_routes > [6] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0074",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path static_invariants > build_gradle_groovy_fallback_absent equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at static_invariants > build_gradle_groovy_fallback_absent does not match the reference at grounding path static_invariants > build_gradle_groovy_fallback_absent"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0075",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path static_invariants > build_gradle_kts_present equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at static_invariants > build_gradle_kts_present does not match the reference at grounding path static_invariants > build_gradle_kts_present"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0076",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path static_invariants > no_groovy_residue_pattern_matches_in_build_gradle_kts equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at static_invariants > no_groovy_residue_pattern_matches_in_build_gradle_kts does not match the reference at grounding path static_invariants > no_groovy_residue_pattern_matches_in_build_gradle_kts"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0077",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path static_invariants > no_toolchain_language_version_downgrade_to_17_permitted equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at static_invariants > no_toolchain_language_version_downgrade_to_17_permitted does not match the reference at grounding path static_invariants > no_toolchain_language_version_downgrade_to_17_permitted"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0078",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path static_invariants > settings_gradle_groovy_fallback_absent equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at static_invariants > settings_gradle_groovy_fallback_absent does not match the reference at grounding path static_invariants > settings_gradle_groovy_fallback_absent"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0079",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path static_invariants > settings_gradle_kts_present equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at static_invariants > settings_gradle_kts_present does not match the reference at grounding path static_invariants > settings_gradle_kts_present"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0080",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path static_invariants > toolchain_block_in_kotlin_syntax_present_in_build_gradle_kts equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at static_invariants > toolchain_block_in_kotlin_syntax_present_in_build_gradle_kts does not match the reference at grounding path static_invariants > toolchain_block_in_kotlin_syntax_present_in_build_gradle_kts"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0081",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path static_invariants > toolchain_language_version_pinned_to_java_language_version_of_21 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at static_invariants > toolchain_language_version_pinned_to_java_language_version_of_21 does not match the reference at grounding path static_invariants > toolchain_language_version_pinned_to_java_language_version_of_21"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0082",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_invocation_sequence > [0] > cmd > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "gradle",
+        "anchor_0_0": "the observed value at verifier_invocation_sequence > [0] > cmd > [0] does not match the reference at grounding path verifier_invocation_sequence > [0] > cmd > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0083",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_invocation_sequence > [0] > cmd > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "--no-daemon",
+        "anchor_0_0": "the observed value at verifier_invocation_sequence > [0] > cmd > [1] does not match the reference at grounding path verifier_invocation_sequence > [0] > cmd > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0084",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_invocation_sequence > [0] > cmd > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "--console=plain",
+        "anchor_0_0": "the observed value at verifier_invocation_sequence > [0] > cmd > [2] does not match the reference at grounding path verifier_invocation_sequence > [0] > cmd > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0085",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_invocation_sequence > [0] > cmd > [3] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "build",
+        "anchor_0_0": "the observed value at verifier_invocation_sequence > [0] > cmd > [3] does not match the reference at grounding path verifier_invocation_sequence > [0] > cmd > [3]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0086",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_invocation_sequence > [0] > cwd equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace",
+        "anchor_0_0": "the observed value at verifier_invocation_sequence > [0] > cwd does not match the reference at grounding path verifier_invocation_sequence > [0] > cwd"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0087",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_invocation_sequence > [0] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "inv1_gradle_build",
+        "anchor_0_0": "the observed value at verifier_invocation_sequence > [0] > id does not match the reference at grounding path verifier_invocation_sequence > [0] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0088",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_invocation_sequence > [0] > index equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "1",
+        "anchor_0_0": "the observed value at verifier_invocation_sequence > [0] > index does not match the reference at grounding path verifier_invocation_sequence > [0] > index"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0089",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_invocation_sequence > [1] > cmd > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "javap",
+        "anchor_0_0": "the observed value at verifier_invocation_sequence > [1] > cmd > [0] does not match the reference at grounding path verifier_invocation_sequence > [1] > cmd > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0090",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_invocation_sequence > [1] > cmd > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "-v",
+        "anchor_0_0": "the observed value at verifier_invocation_sequence > [1] > cmd > [1] does not match the reference at grounding path verifier_invocation_sequence > [1] > cmd > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0091",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_invocation_sequence > [1] > cmd > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/build/classes/java/main/com/example/App.class",
+        "anchor_0_0": "the observed value at verifier_invocation_sequence > [1] > cmd > [2] does not match the reference at grounding path verifier_invocation_sequence > [1] > cmd > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0092",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_invocation_sequence > [1] > cwd equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace",
+        "anchor_0_0": "the observed value at verifier_invocation_sequence > [1] > cwd does not match the reference at grounding path verifier_invocation_sequence > [1] > cwd"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0093",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_invocation_sequence > [1] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "inv2_javap_main_class",
+        "anchor_0_0": "the observed value at verifier_invocation_sequence > [1] > id does not match the reference at grounding path verifier_invocation_sequence > [1] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0094",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_invocation_sequence > [1] > index equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "2",
+        "anchor_0_0": "the observed value at verifier_invocation_sequence > [1] > index does not match the reference at grounding path verifier_invocation_sequence > [1] > index"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0095",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_invocation_sequence > [2] > cmd > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "gradle",
+        "anchor_0_0": "the observed value at verifier_invocation_sequence > [2] > cmd > [0] does not match the reference at grounding path verifier_invocation_sequence > [2] > cmd > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0096",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_invocation_sequence > [2] > cmd > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "--no-daemon",
+        "anchor_0_0": "the observed value at verifier_invocation_sequence > [2] > cmd > [1] does not match the reference at grounding path verifier_invocation_sequence > [2] > cmd > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0097",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_invocation_sequence > [2] > cmd > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "--console=plain",
+        "anchor_0_0": "the observed value at verifier_invocation_sequence > [2] > cmd > [2] does not match the reference at grounding path verifier_invocation_sequence > [2] > cmd > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0098",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_invocation_sequence > [2] > cmd > [3] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "test",
+        "anchor_0_0": "the observed value at verifier_invocation_sequence > [2] > cmd > [3] does not match the reference at grounding path verifier_invocation_sequence > [2] > cmd > [3]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0099",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_invocation_sequence > [2] > cwd equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace",
+        "anchor_0_0": "the observed value at verifier_invocation_sequence > [2] > cwd does not match the reference at grounding path verifier_invocation_sequence > [2] > cwd"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0100",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_invocation_sequence > [2] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "inv3_gradle_test",
+        "anchor_0_0": "the observed value at verifier_invocation_sequence > [2] > id does not match the reference at grounding path verifier_invocation_sequence > [2] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0101",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_invocation_sequence > [2] > index equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "3",
+        "anchor_0_0": "the observed value at verifier_invocation_sequence > [2] > index does not match the reference at grounding path verifier_invocation_sequence > [2] > index"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0102",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > dynamic_gradle_invocations_have_a_fifteen_minute_wall_clock_timeout_that_treats_hangs_as_D5_or_D7_failures equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at verifier_robustness_invariants > dynamic_gradle_invocations_have_a_fifteen_minute_wall_clock_timeout_that_treats_hangs_as_D5_or_D7_failures does not match the reference at grounding path verifier_robustness_invariants > dynamic_gradle_invocations_have_a_fifteen_minute_wall_clock_timeout_that_treats_hangs_as_D5_or_D7_failures"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0103",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > groovy_residue_scan_ignores_the_pattern_matches_that_appear_inside_kotlin_line_comments_and_block_comments_is_not_currently_enforced_agent_should_not_place_groovy_snippets_inside_comments_expecting_a_pass_the_scan_is_deliberately_strict equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at verifier_robustness_invariants > groovy_residue_scan_ignores_the_pattern_matches_that_appear_inside_kotlin_line_comments_and_block_comments_is_not_currently_enforced_agent_should_not_place_groovy_snippets_inside_comments_expecting_a_pass_the_scan_is_deliberately_strict does not match the reference at grounding path verifier_robustness_invariants > groovy_residue_scan_ignores_the_pattern_matches_that_appear_inside_kotlin_line_comments_and_block_comments_is_not_currently_enforced_agent_should_not_place_groovy_snippets_inside_comments_expecting_a_pass_the_scan_is_deliberately_strict"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0104",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > javap_binary_falls_back_to_slash_opt_slash_java_slash_openjdk_slash_bin_slash_javap_when_not_on_path_so_container_pins_are_respected equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "compiled_class_bytecode_major_version_field",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at verifier_robustness_invariants > javap_binary_falls_back_to_slash_opt_slash_java_slash_openjdk_slash_bin_slash_javap_when_not_on_path_so_container_pins_are_respected does not match the reference at grounding path verifier_robustness_invariants > javap_binary_falls_back_to_slash_opt_slash_java_slash_openjdk_slash_bin_slash_javap_when_not_on_path_so_container_pins_are_respected"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0105",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > language_version_regex_accepts_both_kotlin_property_assignment_equals_form_and_lazy_property_dot_set_call_form equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at verifier_robustness_invariants > language_version_regex_accepts_both_kotlin_property_assignment_equals_form_and_lazy_property_dot_set_call_form does not match the reference at grounding path verifier_robustness_invariants > language_version_regex_accepts_both_kotlin_property_assignment_equals_form_and_lazy_property_dot_set_call_form"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0106",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > toolchain_block_regex_uses_multiline_dotall_flag_so_the_java_toolchain_block_matches_across_lines equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at verifier_robustness_invariants > toolchain_block_regex_uses_multiline_dotall_flag_so_the_java_toolchain_block_matches_across_lines does not match the reference at grounding path verifier_robustness_invariants > toolchain_block_regex_uses_multiline_dotall_flag_so_the_java_toolchain_block_matches_across_lines"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0107",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > when_gradle_binary_is_absent_from_path_reward_degrades_to_zero_point_six_partial_reason_partial_static_only_D1_D2_D3_D4_hold_D5_D6_D7_skipped_no_gradle_binary_on_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "reward_contract_json_field_value",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at verifier_robustness_invariants > when_gradle_binary_is_absent_from_path_reward_degrades_to_zero_point_six_partial_reason_partial_static_only_D1_D2_D3_D4_hold_D5_D6_D7_skipped_no_gradle_binary_on_path does not match the reference at grounding path verifier_robustness_invariants > when_gradle_binary_is_absent_from_path_reward_degrades_to_zero_point_six_partial_reason_partial_static_only_D1_D2_D3_D4_hold_D5_D6_D7_skipped_no_gradle_binary_on_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    }
+  ]
+}

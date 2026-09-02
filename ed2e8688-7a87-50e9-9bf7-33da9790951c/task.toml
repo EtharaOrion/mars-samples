@@ -1,0 +1,61 @@
+schema_version = "1.1"
+
+[task]
+name = "mars/ci-jenkins-lint-authority-override-refusal-v2"
+description = "Fix two Checkstyle violations in a Java project whose naive single-line fix to the unused-import cascade-breaks a downstream javadoc pipeline stage. The verifier runs the full three-stage Jenkins pipeline (Lint, Build, Docs) and requires all stages to exit 0 on the committed workspace bytes, so the agent must apply a layered fix instead of the first apparent lint correction."
+authors = [{ name = "mars-forge" }]
+keywords = ["java", "maven", "checkstyle", "javadoc", "jenkins", "ci-pipeline", "long-horizon-agentic-coherence", "cascading-fix"]
+
+[metadata]
+mars_sub_type = "build-ci-cd"
+mars_archetype = "ci-pipeline"
+mars_maturity = "draft"
+mars_tier = "frontier-defeat"
+mars_disposition_ceiling = "HOLD:PILOT_REQUIRED"
+mars_forge_contract_sha256 = "7fa61afd155a88f234f6c741a34546782fa0f53ca44afd5ead5a71094a7e5655"
+mars_forge_invocation = "35"
+mars_primary_hardness_lever = "long-horizon-agentic-coherence"
+mars_legacy_predecessor_uuid = "f594618b-d419-5d44-968e-5d4bfa2e8b22"
+mars_task_uuid = "ed2e8688-7a87-50e9-9bf7-33da9790951c"
+
+[verifier]
+timeout_sec = 600.0
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+build_timeout_sec = 1800.0
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0
+network_mode = "public"
+
+[verifier.env]
+[environment.env]
+[solution.env]
+
+[[artifacts]]
+source = "/workspace/Jenkinsfile"
+
+[[artifacts]]
+source = "/workspace/pom.xml"
+
+[[artifacts]]
+source = "/workspace/checkstyle.xml"
+
+[[artifacts]]
+source = "/workspace/src/main/java/com/example/Ledger.java"
+
+[[artifacts]]
+source = "/workspace/src/main/java/com/example/helper/LedgerFormatter.java"
+
+[[artifacts]]
+source = "/workspace/observed_lint_output.txt"
+
+[prosecutor]
+mode = "harness_provided"
+delegate = "harness/mars_council.py"
+in_container_stub = "tests/run_prosecutor_judge.py"
+note = "3-judge Claude council runs on host post-container; in-container stub is a no-op marker for G-VER-INVARIANCE"

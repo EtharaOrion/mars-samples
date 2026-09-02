@@ -1,0 +1,7 @@
+[workspace]
+resolver = "2"
+members = ["webhook_sender", "api_gateway", "target_binary"]
+
+[profile.release]
+opt-level = 3
+lto = false

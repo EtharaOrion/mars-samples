@@ -1,0 +1,3210 @@
+{
+  "schema": "forge.rubric_bundle/v1",
+  "task_uuid": "6090baab-d22a-5a40-8b74-3a86c3da6a49",
+  "task_slug": "fix-tsc-paths-runtime-resolver-drift-v2",
+  "generated_by": "dataset/<uuid>/solution/recompute.py",
+  "source_of_truth": "dataset/<uuid>/solution/grounding.yaml",
+  "bound_by_contract": "seed/contract.yaml#rubric",
+  "compiled_item_weight_share": 0.9705882352941176,
+  "compilation_floor": 0.8,
+  "compilation_floor_note": "per_seed_contract_yaml_rubric_block_and_invariant_24",
+  "item_count": 170,
+  "items": [
+    {
+      "id": "R0001",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path alternative_paths_that_also_compile_but_verifier_rejects > [0] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "alternative_paths_that_also_compile_but_verifier_rejects",
+        0,
+        "id"
+      ],
+      "grounding_path_display": "alternative_paths_that_also_compile_but_verifier_rejects > [0] > id",
+      "expected_literal": "path_a_moduleResolution_node10_with_rewriteRelativeImportExtensions"
+    },
+    {
+      "id": "R0002",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path alternative_paths_that_also_compile_but_verifier_rejects > [0] > reason_rejected equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "alternative_paths_that_also_compile_but_verifier_rejects",
+        0,
+        "reason_rejected"
+      ],
+      "grounding_path_display": "alternative_paths_that_also_compile_but_verifier_rejects > [0] > reason_rejected",
+      "expected_literal": "verifier_tsconfig_bundler_binding_check_requires_moduleResolution_bundler"
+    },
+    {
+      "id": "R0003",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path alternative_paths_that_also_compile_but_verifier_rejects > [1] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "alternative_paths_that_also_compile_but_verifier_rejects",
+        1,
+        "id"
+      ],
+      "grounding_path_display": "alternative_paths_that_also_compile_but_verifier_rejects > [1] > id",
+      "expected_literal": "path_b_moduleResolution_node16_with_module_node16_and_rewriteRelativeImportExtensions"
+    },
+    {
+      "id": "R0004",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path alternative_paths_that_also_compile_but_verifier_rejects > [1] > reason_rejected equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "alternative_paths_that_also_compile_but_verifier_rejects",
+        1,
+        "reason_rejected"
+      ],
+      "grounding_path_display": "alternative_paths_that_also_compile_but_verifier_rejects > [1] > reason_rejected",
+      "expected_literal": "verifier_tsconfig_bundler_binding_check_requires_moduleResolution_bundler"
+    },
+    {
+      "id": "R0005",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path alternative_paths_that_also_compile_but_verifier_rejects > [2] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "alternative_paths_that_also_compile_but_verifier_rejects",
+        2,
+        "id"
+      ],
+      "grounding_path_display": "alternative_paths_that_also_compile_but_verifier_rejects > [2] > id",
+      "expected_literal": "path_c_moduleResolution_nodenext_with_module_nodenext_and_rewriteRelativeImportExtensions"
+    },
+    {
+      "id": "R0006",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path alternative_paths_that_also_compile_but_verifier_rejects > [2] > reason_rejected equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "alternative_paths_that_also_compile_but_verifier_rejects",
+        2,
+        "reason_rejected"
+      ],
+      "grounding_path_display": "alternative_paths_that_also_compile_but_verifier_rejects > [2] > reason_rejected",
+      "expected_literal": "verifier_tsconfig_bundler_binding_check_requires_moduleResolution_bundler"
+    },
+    {
+      "id": "R0007",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path alternative_paths_that_also_compile_but_verifier_rejects > [3] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "alternative_paths_that_also_compile_but_verifier_rejects",
+        3,
+        "id"
+      ],
+      "grounding_path_display": "alternative_paths_that_also_compile_but_verifier_rejects > [3] > id",
+      "expected_literal": "path_d_moduleResolution_classic_with_rewriteRelativeImportExtensions"
+    },
+    {
+      "id": "R0008",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path alternative_paths_that_also_compile_but_verifier_rejects > [3] > reason_rejected equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "alternative_paths_that_also_compile_but_verifier_rejects",
+        3,
+        "reason_rejected"
+      ],
+      "grounding_path_display": "alternative_paths_that_also_compile_but_verifier_rejects > [3] > reason_rejected",
+      "expected_literal": "verifier_tsconfig_bundler_binding_check_requires_moduleResolution_bundler"
+    },
+    {
+      "id": "R0009",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path archetype equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "archetype"
+      ],
+      "grounding_path_display": "archetype",
+      "expected_literal": "build-fix"
+    },
+    {
+      "id": "R0010",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path canonical_fix_bytes_diff_from_initial > added > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "canonical_fix_bytes_diff_from_initial",
+        "added",
+        0
+      ],
+      "grounding_path_display": "canonical_fix_bytes_diff_from_initial > added > [0]",
+      "expected_literal": "compilerOptions.rewriteRelativeImportExtensions_added_and_set_to_true"
+    },
+    {
+      "id": "R0011",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path canonical_fix_bytes_diff_from_initial > changed > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "canonical_fix_bytes_diff_from_initial",
+        "changed",
+        0
+      ],
+      "grounding_path_display": "canonical_fix_bytes_diff_from_initial > changed > [0]",
+      "expected_literal": "compilerOptions.module_changed_from_esnext_to_preserve"
+    },
+    {
+      "id": "R0012",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path canonical_fix_bytes_diff_from_initial > changed > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "canonical_fix_bytes_diff_from_initial",
+        "changed",
+        1
+      ],
+      "grounding_path_display": "canonical_fix_bytes_diff_from_initial > changed > [1]",
+      "expected_literal": "compilerOptions.moduleResolution_changed_from_node_to_bundler"
+    },
+    {
+      "id": "R0013",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path canonical_fix_bytes_diff_from_initial > removed_or_flipped > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "canonical_fix_bytes_diff_from_initial",
+        "removed_or_flipped",
+        0
+      ],
+      "grounding_path_display": "canonical_fix_bytes_diff_from_initial > removed_or_flipped > [0]",
+      "expected_literal": "compilerOptions.noEmit_removed_or_set_to_false"
+    },
+    {
+      "id": "R0014",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path canonical_fix_bytes_diff_from_initial > unchanged > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "canonical_fix_bytes_diff_from_initial",
+        "unchanged",
+        0
+      ],
+      "grounding_path_display": "canonical_fix_bytes_diff_from_initial > unchanged > [0]",
+      "expected_literal": "compilerOptions.target_remains_es2022"
+    },
+    {
+      "id": "R0015",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path canonical_fix_bytes_diff_from_initial > unchanged > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "canonical_fix_bytes_diff_from_initial",
+        "unchanged",
+        1
+      ],
+      "grounding_path_display": "canonical_fix_bytes_diff_from_initial > unchanged > [1]",
+      "expected_literal": "compilerOptions.outDir_remains_dist"
+    },
+    {
+      "id": "R0016",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path canonical_fix_bytes_diff_from_initial > unchanged > [2] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "canonical_fix_bytes_diff_from_initial",
+        "unchanged",
+        2
+      ],
+      "grounding_path_display": "canonical_fix_bytes_diff_from_initial > unchanged > [2]",
+      "expected_literal": "compilerOptions.rootDir_remains_src"
+    },
+    {
+      "id": "R0017",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path canonical_fix_bytes_diff_from_initial > unchanged > [3] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "canonical_fix_bytes_diff_from_initial",
+        "unchanged",
+        3
+      ],
+      "grounding_path_display": "canonical_fix_bytes_diff_from_initial > unchanged > [3]",
+      "expected_literal": "compilerOptions.allowImportingTsExtensions_remains_true_or_becomes_implicit_via_rewriteRelativeImportExtensions"
+    },
+    {
+      "id": "R0018",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path canonical_fix_bytes_diff_from_initial > unchanged > [4] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "canonical_fix_bytes_diff_from_initial",
+        "unchanged",
+        4
+      ],
+      "grounding_path_display": "canonical_fix_bytes_diff_from_initial > unchanged > [4]",
+      "expected_literal": "compilerOptions.esModuleInterop_remains_true"
+    },
+    {
+      "id": "R0019",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path canonical_fix_bytes_diff_from_initial > unchanged > [5] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "canonical_fix_bytes_diff_from_initial",
+        "unchanged",
+        5
+      ],
+      "grounding_path_display": "canonical_fix_bytes_diff_from_initial > unchanged > [5]",
+      "expected_literal": "compilerOptions.strict_remains_true"
+    },
+    {
+      "id": "R0020",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path canonical_fix_bytes_diff_from_initial > unchanged > [6] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "canonical_fix_bytes_diff_from_initial",
+        "unchanged",
+        6
+      ],
+      "grounding_path_display": "canonical_fix_bytes_diff_from_initial > unchanged > [6]",
+      "expected_literal": "compilerOptions.skipLibCheck_remains_true"
+    },
+    {
+      "id": "R0021",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path canonical_fix_bytes_diff_from_initial > unchanged > [7] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "canonical_fix_bytes_diff_from_initial",
+        "unchanged",
+        7
+      ],
+      "grounding_path_display": "canonical_fix_bytes_diff_from_initial > unchanged > [7]",
+      "expected_literal": "include_remains_src_star_star_dot_ts"
+    },
+    {
+      "id": "R0022",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path canonical_fix_path_selected equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "canonical_fix_path_selected"
+      ],
+      "grounding_path_display": "canonical_fix_path_selected",
+      "expected_literal": "bundler_module_preserve_with_rewriteRelativeImportExtensions"
+    },
+    {
+      "id": "R0023",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path canonical_fix_rationale matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "canonical_fix_rationale"
+      ],
+      "grounding_path_display": "canonical_fix_rationale",
+      "expected_literal": "The source uses ts extensions in relative import specifiers because the\npackage.json type field is module which puts node esm mode in play and\nesm requires explicit extensions on relative imports; ts extensions were\nthe modern typescript-native way to preserve editor-time and typechecker-\ntime resolution against src files while allowing the compiler to rewrite\nthose specifiers to js at emit. The initial tsconfig set noEmit true so\ntsc never populated dist and node could not find the entry file. Simply\nturning noEmit off is not sufficient because allowImportingTsExtensions\nrequires one of noEmit or emitDeclarationOnly or\nrewriteRelativeImportExtensions to remain set, and rewriteRelativeImport\nExtensions is the only one that actually populates dist with js. The\nmoduleResolution setting must be bundler so the compiler will accept ts\nextensions in source and emit js extensions after the rewrite in a way\nthe node esm loader can resolve at runtime under the intended module\npreserve emit; node16 and nodenext and node10 and classic each carry\ntheir own resolution or emit assumptions that the verifier's bundler-\nbinding gate rejects even when they happen to compile cleanly.\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0024",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "command_stdout_bytes",
+      "criterion": "the value at grounding path expected_stdout_bytes_utf8 matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "command_stdout_bytes"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "expected_stdout_bytes_utf8"
+      ],
+      "grounding_path_display": "expected_stdout_bytes_utf8",
+      "expected_literal": "Hello, Mars!\nGoodbye, Mars.\n",
+      "semantic_residue": "value_carries_embedded_newlines_multiline_blob"
+    },
+    {
+      "id": "R0025",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "command_stdout_bytes",
+      "criterion": "the value at grounding path expected_stdout_line_1 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_stdout_bytes"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_stdout_line_1"
+      ],
+      "grounding_path_display": "expected_stdout_line_1",
+      "expected_literal": "Hello, Mars!"
+    },
+    {
+      "id": "R0026",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "command_stdout_bytes",
+      "criterion": "the value at grounding path expected_stdout_line_2 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_stdout_bytes"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_stdout_line_2"
+      ],
+      "grounding_path_display": "expected_stdout_line_2",
+      "expected_literal": "Goodbye, Mars."
+    },
+    {
+      "id": "R0027",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "command_stdout_bytes",
+      "criterion": "the value at grounding path expected_stdout_terminator equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_stdout_bytes"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_stdout_terminator"
+      ],
+      "grounding_path_display": "expected_stdout_terminator",
+      "expected_literal": "single_trailing_newline"
+    },
+    {
+      "id": "R0028",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [0] > expected_outcome equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        0,
+        "expected_outcome"
+      ],
+      "grounding_path_display": "false_lead_probes > [0] > expected_outcome",
+      "expected_literal": "no_network_egress_npm_install_fails_with_connection_error_and_verifier_would_reject_via_forbidden_node_modules_check"
+    },
+    {
+      "id": "R0029",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [0] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        0,
+        "probe"
+      ],
+      "grounding_path_display": "false_lead_probes > [0] > probe",
+      "expected_literal": "run_npm_install_of_ts_node_or_tsx_or_esbuild_or_tsc_alias_or_tsconfig_paths"
+    },
+    {
+      "id": "R0030",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [1] > expected_outcome equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        1,
+        "expected_outcome"
+      ],
+      "grounding_path_display": "false_lead_probes > [1] > expected_outcome",
+      "expected_literal": "verifier_source_bytes_sha256_check_rejects_the_edited_file"
+    },
+    {
+      "id": "R0031",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [1] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        1,
+        "probe"
+      ],
+      "grounding_path_display": "false_lead_probes > [1] > probe",
+      "expected_literal": "rewrite_src_index_ts_to_replace_dot_ts_extensions_with_dot_js_extensions"
+    },
+    {
+      "id": "R0032",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [2] > expected_outcome equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        2,
+        "expected_outcome"
+      ],
+      "grounding_path_display": "false_lead_probes > [2] > expected_outcome",
+      "expected_literal": "verifier_re_runs_tsc_from_agent_tsconfig_which_overwrites_dist_index_js"
+    },
+    {
+      "id": "R0033",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [2] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        2,
+        "probe"
+      ],
+      "grounding_path_display": "false_lead_probes > [2] > probe",
+      "expected_literal": "hand_author_dist_index_js_by_copy_of_src_files_transpiled_via_babel_or_manual_edit"
+    },
+    {
+      "id": "R0034",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [3] > expected_outcome equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        3,
+        "expected_outcome"
+      ],
+      "grounding_path_display": "false_lead_probes > [3] > expected_outcome",
+      "expected_literal": "tsc_error_TS5096_allowImportingTsExtensions_requires_noEmit_or_emitDeclarationOnly_or_rewriteRelativeImportExtensions"
+    },
+    {
+      "id": "R0035",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [3] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        3,
+        "probe"
+      ],
+      "grounding_path_display": "false_lead_probes > [3] > probe",
+      "expected_literal": "remove_noEmit_true_but_keep_moduleResolution_node_and_leave_allowImportingTsExtensions_true"
+    },
+    {
+      "id": "R0036",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [4] > expected_outcome equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        4,
+        "expected_outcome"
+      ],
+      "grounding_path_display": "false_lead_probes > [4] > expected_outcome",
+      "expected_literal": "verifier_tsconfig_bundler_binding_check_rejects_because_moduleResolution_is_not_bundler"
+    },
+    {
+      "id": "R0037",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [4] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        4,
+        "probe"
+      ],
+      "grounding_path_display": "false_lead_probes > [4] > probe",
+      "expected_literal": "change_moduleResolution_to_node16_or_nodenext_and_remove_noEmit"
+    },
+    {
+      "id": "R0038",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [5] > expected_outcome equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        5,
+        "expected_outcome"
+      ],
+      "grounding_path_display": "false_lead_probes > [5] > expected_outcome",
+      "expected_literal": "verifier_tsconfig_bundler_binding_check_rejects_because_moduleResolution_is_not_bundler"
+    },
+    {
+      "id": "R0039",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [5] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        5,
+        "probe"
+      ],
+      "grounding_path_display": "false_lead_probes > [5] > probe",
+      "expected_literal": "change_moduleResolution_to_classic_and_remove_noEmit"
+    },
+    {
+      "id": "R0040",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [6] > expected_outcome equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        6,
+        "expected_outcome"
+      ],
+      "grounding_path_display": "false_lead_probes > [6] > expected_outcome",
+      "expected_literal": "verifier_tsc_version_probe_rejects_because_reported_version_differs_from_5_7_2"
+    },
+    {
+      "id": "R0041",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [6] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        6,
+        "probe"
+      ],
+      "grounding_path_display": "false_lead_probes > [6] > probe",
+      "expected_literal": "downgrade_typescript_to_a_version_below_5_7_that_lacks_rewriteRelativeImportExtensions"
+    },
+    {
+      "id": "R0042",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [0] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        0,
+        "description"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [0] > description",
+      "expected_literal": "rewrite ./greet.ts to ./greet.js in src/index.ts to make node esm resolve without rewriteRelativeImportExtensions"
+    },
+    {
+      "id": "R0043",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [0] > detection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        0,
+        "detection"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [0] > detection",
+      "expected_literal": "verifier I1 sha256 compare of src/index.ts rejects"
+    },
+    {
+      "id": "R0044",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [0] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        0,
+        "id"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [0] > id",
+      "expected_literal": "shortcut_change_source_extensions"
+    },
+    {
+      "id": "R0045",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [1] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        1,
+        "description"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [1] > description",
+      "expected_literal": "hand-author /workspace/app/dist/index.js bytes that already print the two lines"
+    },
+    {
+      "id": "R0046",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [1] > detection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        1,
+        "detection"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [1] > detection",
+      "expected_literal": "verifier E2 runs tsc under the agent tsconfig which either fails or overwrites dist with real emit that must satisfy R1 and R2"
+    },
+    {
+      "id": "R0047",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [1] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        1,
+        "id"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [1] > id",
+      "expected_literal": "shortcut_bypass_tsc_by_prewriting_dist"
+    },
+    {
+      "id": "R0048",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [2] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        2,
+        "description"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [2] > description",
+      "expected_literal": "reach npm for a runtime loader such as ts-node or tsx or esbuild-register"
+    },
+    {
+      "id": "R0049",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [2] > detection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        2,
+        "detection"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [2] > detection",
+      "expected_literal": "no-network policy denies egress AND verifier I2 rejects the presence of any forbidden node module"
+    },
+    {
+      "id": "R0050",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [2] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        2,
+        "id"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [2] > id",
+      "expected_literal": "shortcut_install_ts_node_or_tsx_runtime_loader"
+    },
+    {
+      "id": "R0051",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [3] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        3,
+        "description"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [3] > description",
+      "expected_literal": "install an older typescript that predates rewriteRelativeImportExtensions and use paths mapping instead"
+    },
+    {
+      "id": "R0052",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [3] > detection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        3,
+        "detection"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [3] > detection",
+      "expected_literal": "verifier I3 tsc version probe rejects because the reported version no longer contains 5.7.2"
+    },
+    {
+      "id": "R0053",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [3] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        3,
+        "id"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [3] > id",
+      "expected_literal": "shortcut_downgrade_typescript_to_avoid_rewrite_extension_dependency"
+    },
+    {
+      "id": "R0054",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [4] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        4,
+        "description"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [4] > description",
+      "expected_literal": "change moduleResolution to node16 or nodenext because ESM lore says use nodenext when unsure"
+    },
+    {
+      "id": "R0055",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [4] > detection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        4,
+        "detection"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [4] > detection",
+      "expected_literal": "verifier T2 rejects because the string does not lower-equal bundler even when node runtime happens to succeed"
+    },
+    {
+      "id": "R0056",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [4] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        4,
+        "id"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [4] > id",
+      "expected_literal": "shortcut_pick_first_moduleResolution_that_silences_tsc"
+    },
+    {
+      "id": "R0057",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path initial_tsconfig_bytes_manifest > compilerOptions.allowImportingTsExtensions equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "initial_tsconfig_bytes_manifest",
+        "compilerOptions.allowImportingTsExtensions"
+      ],
+      "grounding_path_display": "initial_tsconfig_bytes_manifest > compilerOptions.allowImportingTsExtensions",
+      "expected_literal": true
+    },
+    {
+      "id": "R0058",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path initial_tsconfig_bytes_manifest > compilerOptions.esModuleInterop equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "initial_tsconfig_bytes_manifest",
+        "compilerOptions.esModuleInterop"
+      ],
+      "grounding_path_display": "initial_tsconfig_bytes_manifest > compilerOptions.esModuleInterop",
+      "expected_literal": true
+    },
+    {
+      "id": "R0059",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path initial_tsconfig_bytes_manifest > compilerOptions.forceConsistentCasingInFileNames equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "initial_tsconfig_bytes_manifest",
+        "compilerOptions.forceConsistentCasingInFileNames"
+      ],
+      "grounding_path_display": "initial_tsconfig_bytes_manifest > compilerOptions.forceConsistentCasingInFileNames",
+      "expected_literal": true
+    },
+    {
+      "id": "R0060",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path initial_tsconfig_bytes_manifest > compilerOptions.module equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "initial_tsconfig_bytes_manifest",
+        "compilerOptions.module"
+      ],
+      "grounding_path_display": "initial_tsconfig_bytes_manifest > compilerOptions.module",
+      "expected_literal": "esnext"
+    },
+    {
+      "id": "R0061",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path initial_tsconfig_bytes_manifest > compilerOptions.moduleResolution equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "initial_tsconfig_bytes_manifest",
+        "compilerOptions.moduleResolution"
+      ],
+      "grounding_path_display": "initial_tsconfig_bytes_manifest > compilerOptions.moduleResolution",
+      "expected_literal": "node"
+    },
+    {
+      "id": "R0062",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path initial_tsconfig_bytes_manifest > compilerOptions.noEmit equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "initial_tsconfig_bytes_manifest",
+        "compilerOptions.noEmit"
+      ],
+      "grounding_path_display": "initial_tsconfig_bytes_manifest > compilerOptions.noEmit",
+      "expected_literal": true
+    },
+    {
+      "id": "R0063",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path initial_tsconfig_bytes_manifest > compilerOptions.outDir equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "initial_tsconfig_bytes_manifest",
+        "compilerOptions.outDir"
+      ],
+      "grounding_path_display": "initial_tsconfig_bytes_manifest > compilerOptions.outDir",
+      "expected_literal": "dist"
+    },
+    {
+      "id": "R0064",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path initial_tsconfig_bytes_manifest > compilerOptions.rootDir equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "initial_tsconfig_bytes_manifest",
+        "compilerOptions.rootDir"
+      ],
+      "grounding_path_display": "initial_tsconfig_bytes_manifest > compilerOptions.rootDir",
+      "expected_literal": "src"
+    },
+    {
+      "id": "R0065",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path initial_tsconfig_bytes_manifest > compilerOptions.skipLibCheck equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "initial_tsconfig_bytes_manifest",
+        "compilerOptions.skipLibCheck"
+      ],
+      "grounding_path_display": "initial_tsconfig_bytes_manifest > compilerOptions.skipLibCheck",
+      "expected_literal": true
+    },
+    {
+      "id": "R0066",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path initial_tsconfig_bytes_manifest > compilerOptions.strict equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "initial_tsconfig_bytes_manifest",
+        "compilerOptions.strict"
+      ],
+      "grounding_path_display": "initial_tsconfig_bytes_manifest > compilerOptions.strict",
+      "expected_literal": true
+    },
+    {
+      "id": "R0067",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path initial_tsconfig_bytes_manifest > compilerOptions.target equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "initial_tsconfig_bytes_manifest",
+        "compilerOptions.target"
+      ],
+      "grounding_path_display": "initial_tsconfig_bytes_manifest > compilerOptions.target",
+      "expected_literal": "es2022"
+    },
+    {
+      "id": "R0068",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path initial_tsconfig_bytes_manifest > include > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "initial_tsconfig_bytes_manifest",
+        "include",
+        0
+      ],
+      "grounding_path_display": "initial_tsconfig_bytes_manifest > include > [0]",
+      "expected_literal": "src/**/*.ts"
+    },
+    {
+      "id": "R0069",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [0] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        0,
+        "description"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [0] > description",
+      "expected_literal": "package.json and every src ts file must sha256-match the seeded digest at grade time"
+    },
+    {
+      "id": "R0070",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [0] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        0,
+        "id"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [0] > id",
+      "expected_literal": "I1_source_bytes_unchanged"
+    },
+    {
+      "id": "R0071",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [1] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        1,
+        "description"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [1] > description",
+      "expected_literal": "no forbidden runtime loader or bundler package under node_modules"
+    },
+    {
+      "id": "R0072",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [1] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        1,
+        "id"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [1] > id",
+      "expected_literal": "I2_no_runtime_shim_installed"
+    },
+    {
+      "id": "R0073",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [2] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        2,
+        "description"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [2] > description",
+      "expected_literal": "tsc --version must still name the seeded pinned typescript version 5.7.2"
+    },
+    {
+      "id": "R0074",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [2] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        2,
+        "id"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [2] > id",
+      "expected_literal": "I3_typescript_version_unchanged"
+    },
+    {
+      "id": "R0075",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [3] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        3,
+        "description"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [3] > description",
+      "expected_literal": "tsconfig.json compilerOptions.moduleResolution must lower-equal bundler after the fix"
+    },
+    {
+      "id": "R0076",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [3] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        3,
+        "id"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [3] > id",
+      "expected_literal": "T2_tsconfig_moduleResolution_bundler"
+    },
+    {
+      "id": "R0077",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [4] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        4,
+        "description"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [4] > description",
+      "expected_literal": "tsconfig.json compilerOptions.noEmit must not be true after the fix or dist will never be populated"
+    },
+    {
+      "id": "R0078",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [4] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        4,
+        "id"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [4] > id",
+      "expected_literal": "T3_tsconfig_noEmit_off"
+    },
+    {
+      "id": "R0079",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path node_runtime_pinned equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "node_runtime_pinned"
+      ],
+      "grounding_path_display": "node_runtime_pinned",
+      "expected_literal": "node:20-slim"
+    },
+    {
+      "id": "R0080",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path package_json_main_field_value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "package_json_main_field_value"
+      ],
+      "grounding_path_display": "package_json_main_field_value",
+      "expected_literal": "dist/index.js"
+    },
+    {
+      "id": "R0081",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path package_json_type_field_value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "package_json_type_field_value"
+      ],
+      "grounding_path_display": "package_json_type_field_value",
+      "expected_literal": "module"
+    },
+    {
+      "id": "R0082",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [0] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        0,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [0] > rejection",
+      "expected_literal": "no-network AND ts-node is in the forbidden list AND the verifier reads dist/index.js not src"
+    },
+    {
+      "id": "R0083",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [0] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        0,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [0] > route",
+      "expected_literal": "install ts-node then invoke it against src/index.ts directly to sidestep tsc"
+    },
+    {
+      "id": "R0084",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [1] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        1,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [1] > rejection",
+      "expected_literal": "verifier E2 re-runs tsc which respects the agent tsconfig; noEmit=true means dist is not written and E2 fails"
+    },
+    {
+      "id": "R0085",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [1] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        1,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [1] > route",
+      "expected_literal": "keep noEmit true and hand-copy source to dist as a shell one-liner"
+    },
+    {
+      "id": "R0086",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [2] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        2,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [2] > rejection",
+      "expected_literal": "node runtime would in fact succeed but the verifier T2 gate byte-rejects because moduleResolution is not bundler"
+    },
+    {
+      "id": "R0087",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [2] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        2,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [2] > route",
+      "expected_literal": "change moduleResolution to nodenext and add module=nodenext plus rewriteRelativeImportExtensions"
+    },
+    {
+      "id": "R0088",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [3] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        3,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [3] > rejection",
+      "expected_literal": "verifier I1 rejects because src/index.ts sha256 no longer matches"
+    },
+    {
+      "id": "R0089",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [3] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        3,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [3] > route",
+      "expected_literal": "strip the .ts extension from imports in src/index.ts to sidestep rewriteRelativeImportExtensions"
+    },
+    {
+      "id": "R0090",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [4] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        4,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [4] > rejection",
+      "expected_literal": "tsc paths mapping never propagates to Node runtime; the emitted dist/index.js would still name ./greet.ts unless rewriteRelativeImportExtensions is set; runtime R1 fails"
+    },
+    {
+      "id": "R0091",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [4] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        4,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [4] > route",
+      "expected_literal": "introduce a paths mapping in tsconfig instead of enabling rewriteRelativeImportExtensions"
+    },
+    {
+      "id": "R0092",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path primary_lever equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "primary_lever"
+      ],
+      "grounding_path_display": "primary_lever",
+      "expected_literal": "shortcut-resistance"
+    },
+    {
+      "id": "R0093",
+      "dimension": "correctness_of_value",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path reference_solve_summary matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "reference_solve_summary"
+      ],
+      "grounding_path_display": "reference_solve_summary",
+      "expected_literal": "Overwrite /workspace/app/tsconfig.json with a compilerOptions block that\nsets moduleResolution to bundler, module to preserve, rewriteRelative\nImportExtensions to true, allowImportingTsExtensions to true, keeps\ntarget es2022 and outDir dist and rootDir src, and removes noEmit or\nsets it to false. Run ./node_modules/.bin/tsc from /workspace/app to\npopulate dist. Then node /workspace/app/dist/index.js should print\nHello, Mars! and Goodbye, Mars. on two lines with a trailing newline.\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0094",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path source_files_that_must_stay_byte_identical > [0] > rel_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "source_files_that_must_stay_byte_identical",
+        0,
+        "rel_path"
+      ],
+      "grounding_path_display": "source_files_that_must_stay_byte_identical > [0] > rel_path",
+      "expected_literal": "package.json"
+    },
+    {
+      "id": "R0095",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path source_files_that_must_stay_byte_identical > [0] > sha256 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "source_files_that_must_stay_byte_identical",
+        0,
+        "sha256"
+      ],
+      "grounding_path_display": "source_files_that_must_stay_byte_identical > [0] > sha256",
+      "expected_literal": "5a868b8a2b3cfc703e1e99dd6adc87979a00ad1dd8b08597fd6311d345fad8d0"
+    },
+    {
+      "id": "R0096",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path source_files_that_must_stay_byte_identical > [1] > rel_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "source_files_that_must_stay_byte_identical",
+        1,
+        "rel_path"
+      ],
+      "grounding_path_display": "source_files_that_must_stay_byte_identical > [1] > rel_path",
+      "expected_literal": "src/index.ts"
+    },
+    {
+      "id": "R0097",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path source_files_that_must_stay_byte_identical > [1] > sha256 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "source_files_that_must_stay_byte_identical",
+        1,
+        "sha256"
+      ],
+      "grounding_path_display": "source_files_that_must_stay_byte_identical > [1] > sha256",
+      "expected_literal": "1dbc6460131acd49ba893ab582a8b44a41f81bdcea3787d369d693349d4a2138"
+    },
+    {
+      "id": "R0098",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path source_files_that_must_stay_byte_identical > [2] > rel_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "source_files_that_must_stay_byte_identical",
+        2,
+        "rel_path"
+      ],
+      "grounding_path_display": "source_files_that_must_stay_byte_identical > [2] > rel_path",
+      "expected_literal": "src/greet.ts"
+    },
+    {
+      "id": "R0099",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path source_files_that_must_stay_byte_identical > [2] > sha256 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "source_files_that_must_stay_byte_identical",
+        2,
+        "sha256"
+      ],
+      "grounding_path_display": "source_files_that_must_stay_byte_identical > [2] > sha256",
+      "expected_literal": "ddadb22209a4466c1f4c6075e56c0317cfe9a29fed48c6dacdb3241447368efc"
+    },
+    {
+      "id": "R0100",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path source_files_that_must_stay_byte_identical > [3] > rel_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "source_files_that_must_stay_byte_identical",
+        3,
+        "rel_path"
+      ],
+      "grounding_path_display": "source_files_that_must_stay_byte_identical > [3] > rel_path",
+      "expected_literal": "src/farewell.ts"
+    },
+    {
+      "id": "R0101",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path source_files_that_must_stay_byte_identical > [3] > sha256 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "source_files_that_must_stay_byte_identical",
+        3,
+        "sha256"
+      ],
+      "grounding_path_display": "source_files_that_must_stay_byte_identical > [3] > sha256",
+      "expected_literal": "8f1e67b3f0fac8ccc06877b5fc89a79109ed56f0991585670cfc32473cb4f207"
+    },
+    {
+      "id": "R0102",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path source_index_ts_import_shape > first_import equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "source_index_ts_import_shape",
+        "first_import"
+      ],
+      "grounding_path_display": "source_index_ts_import_shape > first_import",
+      "expected_literal": "import { greet } from \"./greet.ts\";"
+    },
+    {
+      "id": "R0103",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path source_index_ts_import_shape > imports_are_relative equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "source_index_ts_import_shape",
+        "imports_are_relative"
+      ],
+      "grounding_path_display": "source_index_ts_import_shape > imports_are_relative",
+      "expected_literal": true
+    },
+    {
+      "id": "R0104",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path source_index_ts_import_shape > imports_use_paths_aliases equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "source_index_ts_import_shape",
+        "imports_use_paths_aliases"
+      ],
+      "grounding_path_display": "source_index_ts_import_shape > imports_use_paths_aliases",
+      "expected_literal": false
+    },
+    {
+      "id": "R0105",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path source_index_ts_import_shape > imports_use_ts_extensions equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "source_index_ts_import_shape",
+        "imports_use_ts_extensions"
+      ],
+      "grounding_path_display": "source_index_ts_import_shape > imports_use_ts_extensions",
+      "expected_literal": true
+    },
+    {
+      "id": "R0106",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path source_index_ts_import_shape > second_import equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "source_index_ts_import_shape",
+        "second_import"
+      ],
+      "grounding_path_display": "source_index_ts_import_shape > second_import",
+      "expected_literal": "import { farewell } from \"./farewell.ts\";"
+    },
+    {
+      "id": "R0107",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path symptom_at_container_build > observed_node_error_class equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "symptom_at_container_build",
+        "observed_node_error_class"
+      ],
+      "grounding_path_display": "symptom_at_container_build > observed_node_error_class",
+      "expected_literal": "ERR_MODULE_NOT_FOUND"
+    },
+    {
+      "id": "R0108",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path symptom_at_container_build > observed_node_error_message_shape equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "symptom_at_container_build",
+        "observed_node_error_message_shape"
+      ],
+      "grounding_path_display": "symptom_at_container_build > observed_node_error_message_shape",
+      "expected_literal": "Cannot find module '/workspace/app/dist/index.js'"
+    },
+    {
+      "id": "R0109",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path symptom_at_container_build > observed_node_output_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "symptom_at_container_build",
+        "observed_node_output_path"
+      ],
+      "grounding_path_display": "symptom_at_container_build > observed_node_output_path",
+      "expected_literal": "/workspace/observed_node.txt"
+    },
+    {
+      "id": "R0110",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "command_exit_code",
+      "criterion": "the value at grounding path symptom_at_container_build > observed_node_returncode equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_exit_code"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "symptom_at_container_build",
+        "observed_node_returncode"
+      ],
+      "grounding_path_display": "symptom_at_container_build > observed_node_returncode",
+      "expected_literal": 1
+    },
+    {
+      "id": "R0111",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path symptom_at_container_build > observed_tsc_output_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "symptom_at_container_build",
+        "observed_tsc_output_path"
+      ],
+      "grounding_path_display": "symptom_at_container_build > observed_tsc_output_path",
+      "expected_literal": "/workspace/observed_tsc.txt"
+    },
+    {
+      "id": "R0112",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "command_exit_code",
+      "criterion": "the value at grounding path symptom_at_container_build > observed_tsc_returncode equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_exit_code"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "symptom_at_container_build",
+        "observed_tsc_returncode"
+      ],
+      "grounding_path_display": "symptom_at_container_build > observed_tsc_returncode",
+      "expected_literal": 0
+    },
+    {
+      "id": "R0113",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "command_stderr_bytes",
+      "criterion": "the value at grounding path symptom_at_container_build > observed_tsc_stderr_contains_error equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_stderr_bytes"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "symptom_at_container_build",
+        "observed_tsc_stderr_contains_error"
+      ],
+      "grounding_path_display": "symptom_at_container_build > observed_tsc_stderr_contains_error",
+      "expected_literal": false
+    },
+    {
+      "id": "R0114",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path symptom_at_container_build > root_cause_at_authoring equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "symptom_at_container_build",
+        "root_cause_at_authoring"
+      ],
+      "grounding_path_display": "symptom_at_container_build > root_cause_at_authoring",
+      "expected_literal": "initial_tsconfig_has_noEmit_true_so_dist_index_js_is_never_written_and_node_cannot_find_it"
+    },
+    {
+      "id": "R0115",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path typescript_version_pinned equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "typescript_version_pinned"
+      ],
+      "grounding_path_display": "typescript_version_pinned",
+      "expected_literal": "5.7.2"
+    },
+    {
+      "id": "R0116",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [0] > comparator equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        0,
+        "comparator"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [0] > comparator",
+      "expected_literal": "sha256_equality_against_pinned_digests"
+    },
+    {
+      "id": "R0117",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [0] > fail_reason_code equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        0,
+        "fail_reason_code"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [0] > fail_reason_code",
+      "expected_literal": "I1_source_file_bytes_mutated"
+    },
+    {
+      "id": "R0118",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [0] > gate_id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        0,
+        "gate_id"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [0] > gate_id",
+      "expected_literal": "I1_source_bytes_sha256_check"
+    },
+    {
+      "id": "R0119",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [0] > target equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        0,
+        "target"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [0] > target",
+      "expected_literal": "package.json, src/index.ts, src/greet.ts, src/farewell.ts"
+    },
+    {
+      "id": "R0120",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [1] > comparator equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        1,
+        "comparator"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [1] > comparator",
+      "expected_literal": "directory_absence_of_each_forbidden_package_name"
+    },
+    {
+      "id": "R0121",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [1] > fail_reason_code equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        1,
+        "fail_reason_code"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [1] > fail_reason_code",
+      "expected_literal": "I2_forbidden_runtime_shim_installed"
+    },
+    {
+      "id": "R0122",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        1,
+        "forbidden_package_names_covered_in_verifier",
+        0
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [0]",
+      "expected_literal": "ts-node"
+    },
+    {
+      "id": "R0123",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        1,
+        "forbidden_package_names_covered_in_verifier",
+        1
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [1]",
+      "expected_literal": "tsx"
+    },
+    {
+      "id": "R0124",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [2] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        1,
+        "forbidden_package_names_covered_in_verifier",
+        2
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [2]",
+      "expected_literal": "tsconfig-paths"
+    },
+    {
+      "id": "R0125",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [3] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        1,
+        "forbidden_package_names_covered_in_verifier",
+        3
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [3]",
+      "expected_literal": "tsc-alias"
+    },
+    {
+      "id": "R0126",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [4] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        1,
+        "forbidden_package_names_covered_in_verifier",
+        4
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [4]",
+      "expected_literal": "esbuild"
+    },
+    {
+      "id": "R0127",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [5] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        1,
+        "forbidden_package_names_covered_in_verifier",
+        5
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [5]",
+      "expected_literal": "esbuild-register"
+    },
+    {
+      "id": "R0128",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [6] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        1,
+        "forbidden_package_names_covered_in_verifier",
+        6
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [6]",
+      "expected_literal": "swc"
+    },
+    {
+      "id": "R0129",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [7] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        1,
+        "forbidden_package_names_covered_in_verifier",
+        7
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [7]",
+      "expected_literal": "@swc/core"
+    },
+    {
+      "id": "R0130",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [8] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        1,
+        "forbidden_package_names_covered_in_verifier",
+        8
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [8]",
+      "expected_literal": "@swc-node/register"
+    },
+    {
+      "id": "R0131",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [9] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        1,
+        "forbidden_package_names_covered_in_verifier",
+        9
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [9]",
+      "expected_literal": "@esbuild-kit/esm-loader"
+    },
+    {
+      "id": "R0132",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [10] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        1,
+        "forbidden_package_names_covered_in_verifier",
+        10
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [10]",
+      "expected_literal": "@esbuild-kit/cjs-loader"
+    },
+    {
+      "id": "R0133",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [11] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        1,
+        "forbidden_package_names_covered_in_verifier",
+        11
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [11]",
+      "expected_literal": "bun"
+    },
+    {
+      "id": "R0134",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [12] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        1,
+        "forbidden_package_names_covered_in_verifier",
+        12
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [1] > forbidden_package_names_covered_in_verifier > [12]",
+      "expected_literal": "deno"
+    },
+    {
+      "id": "R0135",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [1] > gate_id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        1,
+        "gate_id"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [1] > gate_id",
+      "expected_literal": "I2_forbidden_node_modules_check"
+    },
+    {
+      "id": "R0136",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [1] > target equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        1,
+        "target"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [1] > target",
+      "expected_literal": "/workspace/app/node_modules/"
+    },
+    {
+      "id": "R0137",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [2] > comparator equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        2,
+        "comparator"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [2] > comparator",
+      "expected_literal": "string_contains_expected_version_5_7_2"
+    },
+    {
+      "id": "R0138",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [2] > fail_reason_code equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        2,
+        "fail_reason_code"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [2] > fail_reason_code",
+      "expected_literal": "I3_tsc_version_drift"
+    },
+    {
+      "id": "R0139",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [2] > gate_id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        2,
+        "gate_id"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [2] > gate_id",
+      "expected_literal": "I3_typescript_version_probe"
+    },
+    {
+      "id": "R0140",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [2] > target equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        2,
+        "target"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [2] > target",
+      "expected_literal": "./node_modules/.bin/tsc --version output"
+    },
+    {
+      "id": "R0141",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [3] > comparator equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        3,
+        "comparator"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [3] > comparator",
+      "expected_literal": "json_load_returns_a_dict"
+    },
+    {
+      "id": "R0142",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [3] > fail_reason_code equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        3,
+        "fail_reason_code"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [3] > fail_reason_code",
+      "expected_literal": "T1_tsconfig_json_not_valid_json"
+    },
+    {
+      "id": "R0143",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [3] > gate_id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        3,
+        "gate_id"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [3] > gate_id",
+      "expected_literal": "T1_tsconfig_json_parseable"
+    },
+    {
+      "id": "R0144",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [3] > target equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        3,
+        "target"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [3] > target",
+      "expected_literal": "/workspace/app/tsconfig.json"
+    },
+    {
+      "id": "R0145",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [4] > comparator equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        4,
+        "comparator"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [4] > comparator",
+      "expected_literal": "string_lower_equals_bundler"
+    },
+    {
+      "id": "R0146",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [4] > fail_reason_code equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        4,
+        "fail_reason_code"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [4] > fail_reason_code",
+      "expected_literal": "T2_tsconfig_moduleResolution_not_bundler"
+    },
+    {
+      "id": "R0147",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [4] > gate_id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        4,
+        "gate_id"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [4] > gate_id",
+      "expected_literal": "T2_tsconfig_moduleResolution_bundler"
+    },
+    {
+      "id": "R0148",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [4] > target equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        4,
+        "target"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [4] > target",
+      "expected_literal": "parsed_tsconfig.compilerOptions.moduleResolution"
+    },
+    {
+      "id": "R0149",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [5] > comparator equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        5,
+        "comparator"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [5] > comparator",
+      "expected_literal": "value_is_not_true"
+    },
+    {
+      "id": "R0150",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [5] > fail_reason_code equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        5,
+        "fail_reason_code"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [5] > fail_reason_code",
+      "expected_literal": "T3_tsconfig_noEmit_still_true_no_dist_will_be_emitted"
+    },
+    {
+      "id": "R0151",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [5] > gate_id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        5,
+        "gate_id"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [5] > gate_id",
+      "expected_literal": "T3_tsconfig_noEmit_off"
+    },
+    {
+      "id": "R0152",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [5] > target equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        5,
+        "target"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [5] > target",
+      "expected_literal": "parsed_tsconfig.compilerOptions.noEmit"
+    },
+    {
+      "id": "R0153",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [6] > comparator equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        6,
+        "comparator"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [6] > comparator",
+      "expected_literal": "returncode_zero_and_no_error_TS_N_regex_hit_in_stdout_or_stderr"
+    },
+    {
+      "id": "R0154",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [6] > fail_reason_code equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        6,
+        "fail_reason_code"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [6] > fail_reason_code",
+      "expected_literal": "E1_tsc_noemit_reported_diagnostics"
+    },
+    {
+      "id": "R0155",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [6] > gate_id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        6,
+        "gate_id"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [6] > gate_id",
+      "expected_literal": "E1_tsc_noemit_clean"
+    },
+    {
+      "id": "R0156",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [6] > target equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        6,
+        "target"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [6] > target",
+      "expected_literal": "./node_modules/.bin/tsc --project ./tsconfig.json --noEmit"
+    },
+    {
+      "id": "R0157",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [7] > comparator equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        7,
+        "comparator"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [7] > comparator",
+      "expected_literal": "returncode_zero_and_dist_index_js_exists_after_run"
+    },
+    {
+      "id": "R0158",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [7] > fail_reason_code equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        7,
+        "fail_reason_code"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [7] > fail_reason_code",
+      "expected_literal": "E2_tsc_emit_produced_no_dist_index_js"
+    },
+    {
+      "id": "R0159",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [7] > gate_id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        7,
+        "gate_id"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [7] > gate_id",
+      "expected_literal": "E2_tsc_emit_succeeds"
+    },
+    {
+      "id": "R0160",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [7] > target equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        7,
+        "target"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [7] > target",
+      "expected_literal": "./node_modules/.bin/tsc --project ./tsconfig.json"
+    },
+    {
+      "id": "R0161",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [8] > comparator equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        8,
+        "comparator"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [8] > comparator",
+      "expected_literal": "returncode_zero"
+    },
+    {
+      "id": "R0162",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [8] > fail_reason_code equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        8,
+        "fail_reason_code"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [8] > fail_reason_code",
+      "expected_literal": "R1_node_returncode_nonzero"
+    },
+    {
+      "id": "R0163",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [8] > gate_id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        8,
+        "gate_id"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [8] > gate_id",
+      "expected_literal": "R1_node_dist_index_js_returncode_zero"
+    },
+    {
+      "id": "R0164",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [8] > target equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        8,
+        "target"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [8] > target",
+      "expected_literal": "node /workspace/app/dist/index.js"
+    },
+    {
+      "id": "R0165",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [9] > comparator equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        9,
+        "comparator"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [9] > comparator",
+      "expected_literal": "byte_exact_string_equality_against_hello_mars_goodbye_mars_two_lines_trailing_newline"
+    },
+    {
+      "id": "R0166",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [9] > fail_reason_code equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        9,
+        "fail_reason_code"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [9] > fail_reason_code",
+      "expected_literal": "R2_node_stdout_bytes_mismatch"
+    },
+    {
+      "id": "R0167",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [9] > gate_id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        9,
+        "gate_id"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [9] > gate_id",
+      "expected_literal": "R2_node_stdout_bytes_exact"
+    },
+    {
+      "id": "R0168",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path verifier_gates_ordered > [9] > target equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_gates_ordered",
+        9,
+        "target"
+      ],
+      "grounding_path_display": "verifier_gates_ordered > [9] > target",
+      "expected_literal": "stdout of node /workspace/app/dist/index.js"
+    },
+    {
+      "id": "R0169",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path why_the_verifier_hardpins_bundler > design_intent matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "why_the_verifier_hardpins_bundler",
+        "design_intent"
+      ],
+      "grounding_path_display": "why_the_verifier_hardpins_bundler > design_intent",
+      "expected_literal": "The task's primary lever is shortcut-resistance. The naive agent will\nexperimentally toggle moduleResolution until tsc stops complaining and\nnode stops crashing, and the first setting that clears both bars is\nfrequently node16 or nodenext because they are the well-known esm\ndefaults. The redesign hardpins bundler at the verifier boundary so\nthe agent must either read the tsc documentation carefully or exhaust\nthe option space and observe that only bundler is graded as accepted;\na naive lexical shortcut such as \"swap in the first ESM-friendly\nmoduleResolution\" scores zero.\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0170",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0058823529411764705,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path why_the_verifier_hardpins_bundler > frontier_defeat_hypothesis matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "why_the_verifier_hardpins_bundler",
+        "frontier_defeat_hypothesis"
+      ],
+      "grounding_path_display": "why_the_verifier_hardpins_bundler > frontier_defeat_hypothesis",
+      "expected_literal": "A frontier model that has memorized the tsc option table can produce\nbundler as the first attempt only if it correctly identifies module\npreserve and rewriteRelativeImportExtensions as the pair binding\nbundler at the emit boundary. A model that memorized instead the\nincident-response reflex \"set moduleResolution to nodenext when\nmodule-not-found strikes\" writes bytes that clear tsc but score zero.\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    }
+  ]
+}

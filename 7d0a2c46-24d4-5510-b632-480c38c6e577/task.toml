@@ -1,0 +1,65 @@
+schema_version = "1.1"
+
+[task]
+name = "mars/configure-cmake-rpath-drift-v2"
+description = "Configure CMake rpath so the installed binary at prefix/bin/myapp loads libcore.so from prefix/lib and its runtime-dlopened plugin at prefix/share/myapp/plugins/libplugin.so loads libplugin_dep.so from prefix/share/myapp/libs. Requires deriving TWO distinct $ORIGIN-relative rpath expressions, one per target, and proving the entire prefix subtree is relocatable to any absolute path under an empty LD_LIBRARY_PATH."
+authors = [{ name = "mars-forge" }]
+keywords = ["cmake", "rpath", "origin", "dlopen", "shared-libraries", "build-configure", "compositional-multi-domain-reasoning", "relocatable-install"]
+
+[metadata]
+mars_sub_type = "build-ci-cd"
+mars_archetype = "build-configure"
+mars_maturity = "draft"
+mars_tier = "frontier-defeat"
+mars_disposition_ceiling = "HOLD:PILOT_REQUIRED"
+mars_forge_contract_sha256 = "7fa61afd155a88f234f6c741a34546782fa0f53ca44afd5ead5a71094a7e5655"
+mars_forge_invocation = "35"
+mars_slot_index = 9
+mars_slot_slug = "configure-cmake-rpath-drift-v2"
+mars_primary_hardness_lever = "compositional-multi-domain-reasoning"
+mars_legacy_predecessor_uuid = "104684a6-6b38-5ed0-86ff-a6f93a1c9954"
+mars_task_uuid = "7d0a2c46-24d4-5510-b632-480c38c6e577"
+
+[verifier]
+timeout_sec = 300.0
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+build_timeout_sec = 900.0
+cpus = 2
+memory_mb = 2048
+storage_mb = 4096
+gpus = 0
+network_mode = "public"
+
+[verifier.env]
+
+[environment.env]
+
+[solution.env]
+
+[[artifacts]]
+source = "/workspace/CMakeLists.txt"
+
+[[artifacts]]
+source = "/workspace/main.c"
+
+[[artifacts]]
+source = "/workspace/core.c"
+
+[[artifacts]]
+source = "/workspace/plugin.c"
+
+[[artifacts]]
+source = "/workspace/plugin_dep.c"
+
+[[artifacts]]
+source = "/workspace/observed_symptom.txt"
+
+[prosecutor]
+mode = "harness_provided"
+delegate = "harness/mars_council.py"
+in_container_stub = "tests/run_prosecutor_judge.py"
+note = "3-judge Claude council runs on host post-container; in-container stub is a no-op marker for G-VER-INVARIANCE"

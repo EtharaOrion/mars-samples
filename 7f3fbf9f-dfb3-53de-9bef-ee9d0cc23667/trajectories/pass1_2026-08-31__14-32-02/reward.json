@@ -1,0 +1,45 @@
+{
+  "breakdown": {
+    "D1_output_exists": {
+      "pass": true,
+      "path": "/workspace/out/critical.tsv",
+      "size": 1228
+    },
+    "D2_row_shape_invariant": {
+      "first_violation": null,
+      "pass": true,
+      "row_count": 21
+    },
+    "D3_set_equality": {
+      "actual_count": 21,
+      "expected_count": 21,
+      "extra_entries": [],
+      "extra_total": 0,
+      "missing_entries": [],
+      "missing_total": 0,
+      "pass": true
+    },
+    "D4_row_ordering": {
+      "first_inversion": null,
+      "inversions": 0,
+      "pass": true
+    },
+    "D5_solve_script_shortcut_scan": {
+      "hits": [],
+      "pass": true
+    },
+    "D6_solve_script_line_budget": {
+      "budget": 60,
+      "line_count": 17,
+      "pass": true
+    },
+    "D7_pipeline_structure": {
+      "checked_pattern": "\\bjq\\b[^\\n|]*\\|[^\\n]*?\\bsed\\b[^\\n|]*\\|[^\\n]*?\\b(?:g?awk|mawk)\\b",
+      "pass": false,
+      "reason": "D7_pipeline_structure_missing_jq_pipe_sed_pipe_awk_ordered_stages"
+    }
+  },
+  "reason": "D7_pipeline_structure_missing_jq_pipe_sed_pipe_awk_ordered_stages",
+  "reward": 0.0,
+  "success": false
+}

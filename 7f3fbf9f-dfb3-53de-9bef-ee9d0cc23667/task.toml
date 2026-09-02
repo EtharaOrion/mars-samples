@@ -1,0 +1,58 @@
+schema_version = "1.4"
+
+[task]
+name = "mars/pipe-jq-sed-awk-pipeline-order-matters"
+description = "Extract critical npm-audit vulnerabilities from a concatenated JSONL corpus into a canonical TSV. Compose exactly four shell-pipeline stages in the required order: jq severity filter, jq TSV projection, awk test-path drop, coreutils sort -u dedupe. Any two-stage transposition produces a plausible non-empty output that fails one of D2, D3, or D4."
+authors = [{ name = "mars-forge" }]
+keywords = ["cli", "shell-pipeline", "jq", "awk", "sed", "coreutils", "npm-audit", "typescript"]
+
+[metadata]
+mars_sub_type = "cli"
+mars_archetype = "cli-shell-pipeline"
+mars_maturity = "draft"
+mars_tier = "at_baseline"
+mars_disposition_ceiling = "HOLD:PILOT_REQUIRED"
+mars_forge_contract_sha256 = "dcf86050ec413309cd4e7ea31e4718f30f86fcbcedd6731b855b7583f22928a7"
+mars_primary_hardness_lever = "compositional-multi-domain-reasoning"
+
+[verifier]
+timeout_sec = 300.0
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 1200.0
+cpus = 2
+memory_mb = 2048
+storage_mb = 4096
+gpus = 0
+network_mode = "public"
+
+[environment.healthcheck]
+command = "jq --version > /dev/null 2>&1 && gawk --version > /dev/null 2>&1 && node --version > /dev/null 2>&1"
+interval_sec = 2.0
+timeout_sec = 5.0
+start_period_sec = 3.0
+retries = 3
+
+[verifier.env]
+
+[environment.env]
+
+[solution.env]
+
+[[artifacts]]
+source = "/workspace/input"
+
+[[artifacts]]
+source = "/workspace/out"
+
+[[artifacts]]
+source = "/workspace/README_FOR_AGENT.md"
+
+[prosecutor]
+mode = "harness_provided"
+delegate = "harness/mars_council.py"
+in_container_stub = "tests/run_prosecutor_judge.py"
+note = "3-judge Claude council runs on host post-container; in-container stub is a no-op marker for G-VER-INVARIANCE"

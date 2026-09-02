@@ -1,0 +1,116 @@
+{
+    "id": "03820f1e-69a7-40d5-9fd0-fdabca7d7cba",
+    "task_name": "mars/nginx-mtls-forward-auth-single-service",
+    "trial_name": "c2c23041-47f0-505d-aee7-439f160a__D5u6fLS",
+    "trial_uri": "file:///Users/apple/Sources/office/mars-anubis/mars/jobs/2026-08-31__13-36-56/c2c23041-47f0-505d-aee7-439f160a__D5u6fLS",
+    "task_id": {
+        "path": "/Users/apple/Sources/office/mars-anubis/mars/dataset/c2c23041-47f0-505d-aee7-439f160a46de"
+    },
+    "source": null,
+    "task_checksum": "ed1c8a9b59643372aa3e0ff810dbf3b64f4178574b2e61331fe5018bc1887640",
+    "config": {
+        "task": {
+            "path": "/Users/apple/Sources/office/mars-anubis/mars/dataset/c2c23041-47f0-505d-aee7-439f160a46de",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "c2c23041-47f0-505d-aee7-439f160a__D5u6fLS",
+        "trials_dir": "jobs/2026-08-31__13-36-56",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": 5.0,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "claude-code",
+            "import_path": null,
+            "model_name": "claude-opus-4-8",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "1d0b4b9b-bbe1-4022-970c-07c3573c0f5b",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.251",
+        "model_info": {
+            "name": "claude-opus-4-8",
+            "provider": null
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 549864,
+        "n_cache_tokens": 498502,
+        "n_output_tokens": 18487,
+        "cost_usd": 1.0324035,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0,
+            "success": 0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-08-31T08:06:57.184114Z",
+    "finished_at": "2026-08-31T08:12:37.518062Z",
+    "environment_setup": {
+        "started_at": "2026-08-31T08:06:57.238178Z",
+        "finished_at": "2026-08-31T08:07:11.563551Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-08-31T08:07:11.836488Z",
+        "finished_at": "2026-08-31T08:08:25.627775Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-08-31T08:08:25.628646Z",
+        "finished_at": "2026-08-31T08:12:32.872560Z"
+    },
+    "verifier": {
+        "started_at": "2026-08-31T08:12:34.285586Z",
+        "finished_at": "2026-08-31T08:12:34.630843Z"
+    },
+    "step_results": null
+}

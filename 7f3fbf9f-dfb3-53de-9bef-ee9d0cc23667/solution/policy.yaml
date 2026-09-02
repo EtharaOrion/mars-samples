@@ -1,0 +1,33 @@
+# GENERATED SECTION. DO NOT HAND-EDIT.
+# Source: seed/contract.yaml#policy.channel_vocabulary_and_batch_default_state.
+# Emitted by solution/recompute.py extended by FORGE update-run inv31.
+# Manifest states intent only per Phase 1 rule 2d.
+schema: forge.policy_manifest/v1
+task_uuid: 2700b69d-a588-59e2-b6ab-968b98cc6746
+task_slug: pipe-jq-sed-awk-pipeline-order-matters
+bound_by_contract: seed/contract.yaml#policy
+channel_state_vocabulary: [denied, restricted, allowed]
+channels:
+  network_egress_external_beyond_container_loopback: denied
+  network_egress_container_loopback: allowed
+  dns_resolution: denied
+  package_installation_apt_or_dpkg_after_pre_provisioned_image: denied
+  package_installation_pip_or_uv_or_pipx_after_pre_provisioned_image: denied
+  package_installation_npm_or_yarn_or_pnpm_after_pre_provisioned_image: denied
+  package_installation_cargo_or_go_get_or_gem_after_pre_provisioned_image: denied
+  container_or_orchestration_management_docker_podman_containerd_kubernetes: denied
+  kernel_module_load_or_sysctl_write_or_bpf_program_load: denied
+  privileged_execution_via_sudo_or_setuid_binary: restricted
+  process_kill_or_signal_to_processes_outside_agent_owned_pids: restricted
+  filesystem_write_agent_workspace_slash_workspace: allowed
+  filesystem_write_system_paths_outside_slash_workspace: restricted
+  filesystem_write_slash_var_log_and_service_owned_paths: restricted
+  filesystem_read_slash_workspace_and_agent_visible_surfaces: allowed
+  filesystem_read_slash_solution_and_slash_tests_private_boundary: denied
+  secret_read_via_environment_variable_or_dotfile_or_credential_helper: restricted
+  secret_read_via_vault_or_secret_manager_api: restricted
+  arbitrary_code_execution_within_agent_workspace_under_agent_uid: allowed
+  arbitrary_code_execution_under_a_service_uid_or_root: restricted
+  ptrace_or_debugger_attach_to_processes_outside_agent_owned_pids: denied
+  clock_or_time_source_manipulation_via_settimeofday_or_ntpd: denied
+  randomness_source_manipulation_via_dev_urandom_shim: denied

@@ -1,0 +1,69 @@
+schema_version = "1.4"
+
+[task]
+name = "mars/fix-tsc-paths-runtime-resolver-drift-v2"
+description = "Fix a TypeScript project whose tsc typechecks cleanly but node dist/index.js fails module-not-found because tsconfig noEmit was set on top of allowImportingTsExtensions, requiring a moduleResolution and emit-mode change to bundler + module preserve + rewriteRelativeImportExtensions."
+authors = [{ name = "mars-forge" }]
+keywords = ["typescript", "tsconfig", "moduleResolution", "bundler", "rewriteRelativeImportExtensions", "esm", "node", "build-fix"]
+
+[metadata]
+mars_sub_type = "build-ci-cd"
+mars_archetype = "build-fix"
+mars_maturity = "draft"
+mars_tier = "frontier-defeat-target"
+mars_disposition_ceiling = "HOLD:PILOT_REQUIRED"
+mars_forge_contract_sha256 = "7fa61afd155a88f234f6c741a34546782fa0f53ca44afd5ead5a71094a7e5655"
+mars_slot_index = 7
+mars_slot_slug = "fix-tsc-paths-runtime-resolver-drift-v2"
+mars_legacy_predecessor_uuid = "3517b0b2-6398-5eef-90b8-ee17d7c1efce"
+mars_task_uuid = "6090baab-d22a-5a40-8b74-3a86c3da6a49"
+
+[verifier]
+timeout_sec = 300.0
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+build_timeout_sec = 900.0
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0
+network_mode = "public"
+
+[verifier.env]
+
+[environment.env]
+
+[solution.env]
+
+[[artifacts]]
+source = "/workspace/app/tsconfig.json"
+
+[[artifacts]]
+source = "/workspace/app/package.json"
+
+[[artifacts]]
+source = "/workspace/app/src/index.ts"
+
+[[artifacts]]
+source = "/workspace/app/src/greet.ts"
+
+[[artifacts]]
+source = "/workspace/app/src/farewell.ts"
+
+[[artifacts]]
+source = "/workspace/observed_tsc.txt"
+
+[[artifacts]]
+source = "/workspace/observed_node.txt"
+
+[[artifacts]]
+source = "/workspace/prebuild_install_log.txt"
+
+[prosecutor]
+mode = "harness_provided"
+delegate = "harness/mars_council.py"
+in_container_stub = "tests/run_prosecutor_judge.py"
+note = "3-judge Claude council runs on host post-container; in-container stub is a no-op marker for G-VER-INVARIANCE"

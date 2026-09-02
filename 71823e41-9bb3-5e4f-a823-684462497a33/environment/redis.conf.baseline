@@ -1,0 +1,24 @@
+# /etc/redis/redis.conf -- baseline for FORGE inv-27.
+# No corruption primitive touches Redis server config directly. The
+# Redis-side seed lives in /etc/app/config.py (CACHE_LOCK_TTL_SECONDS).
+# This config binds redis to the container loopback only, disables
+# protected mode admin bypass, and turns off both AOF and RDB
+# persistence so the graded surface is a pure in-memory cache.
+
+bind 127.0.0.1
+port 6379
+protected-mode yes
+tcp-backlog 511
+timeout 0
+tcp-keepalive 300
+daemonize no
+supervised no
+pidfile /var/run/redis/redis-server.pid
+loglevel notice
+logfile /var/log/redis/redis-server.log
+databases 16
+dir /var/lib/redis
+save ""
+appendonly no
+stop-writes-on-bgsave-error no
+maxmemory-policy noeviction

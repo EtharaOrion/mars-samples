@@ -1,0 +1,29 @@
+# baseline redis.conf for redis-single-service-silent-config-drift (inv-24).
+# The drift ticks mutate in-memory state via CONFIG SET and never call
+# CONFIG REWRITE, so the bytes of this file remain the baseline reference.
+port 0
+tls-port 6380
+tls-cert-file /etc/redis/tls/redis.crt
+tls-key-file  /etc/redis/tls/redis.key
+tls-ca-cert-file /etc/redis/tls/ca.crt
+tls-auth-clients no
+
+unixsocket /var/run/redis/redis.sock
+unixsocketperm 777
+
+protected-mode yes
+bind 127.0.0.1 -::1
+
+appendonly yes
+appendfsync everysec
+appendfilename "appendonly.aof"
+appenddirname  "appendonlydir"
+
+maxmemory 128mb
+maxmemory-policy allkeys-lru
+
+dir /var/lib/redis
+logfile ""
+loglevel notice
+daemonize no
+supervised no

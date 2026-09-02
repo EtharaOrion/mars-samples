@@ -1,0 +1,256 @@
+canary_a: FORGE_HOLDOUT_CANARY_A122DD5CDA5BA43E14B07F2ADB6A67C3
+canary_b: FORGE_HOLDOUT_CANARY_CF174089762568558E5B0C15E6F33522
+
+# Stage-1 placeholder canary tokens. At Stage-2 finalization the two
+# tokens above are replaced with KDF-derived values, computed by
+# solution/recompute.py from the pre-canary bundle hash:
+#   canary_a = "FORGE_HOLDOUT_CANARY_" +
+#              HMAC-SHA256(pre_canary_hash, b"canary-a-v1")
+#                .hexdigest().upper()[:32]
+#   canary_b = "FORGE_HOLDOUT_CANARY_" +
+#              HMAC-SHA256(pre_canary_hash, b"canary-b-v1")
+#                .hexdigest().upper()[:32]
+# pre_canary_hash is the SHA-256 over the canary-stripped structural
+# bytes: every FORGE_HOLDOUT_CANARY_[A-Z0-9]{32} match in the frozen
+# bundle is replaced with a fixed placeholder before hashing, so the
+# hash is stable regardless of which canary bytes are currently
+# planted. The KDF fixed-point holds because substituting AAAA/BBBB
+# with the KDF output does not change the canary-stripped bytes.
+
+task_slug: elasticsearch-single-service-shard-allocation-target-list-verifier-hack
+invocation: 26
+harbor_schema_version: '1.4'
+domain: container-setup-tasks
+archetype: container-single-service
+primary_lever: verifier-hardness
+task_lever_label: elasticsearch-shard-allocation-target-list-verifier-hack
+
+combined_line_budget: 240
+combined_line_budget_semantics: |
+  Sum of newline-terminated lines across /workspace/patch.sh and
+  /workspace/runbook.md. Sized to admit an idiomatic curl-based
+  three-way remediation (persistent cluster.routing.allocation.enable
+  reset, per-index rack filter clear on the three orders indices
+  followed by cluster reroute with retry_failed, and dangling remnant
+  import for analytics-2026-05 via POST /_dangling/<uuid> with
+  accept_data_loss=true), plus a bounded readiness poll and a
+  post-remediation settle wait, plus a three-section runbook with
+  three key-value lines each. Forty extra lines vs inv-25 accommodate
+  the extra corruption primitive (dangling remnant import) that
+  inv-25 did not have.
+
+expected_four_indices:
+  - {name: orders-2026-06, primary_shards: 3, replicas: 0, docs: 2500}
+  - {name: orders-2026-07, primary_shards: 3, replicas: 0, docs: 2700}
+  - {name: orders-2026-08, primary_shards: 3, replicas: 0, docs: 2400}
+  - {name: analytics-2026-05, primary_shards: 1, replicas: 0, docs: 900}
+
+expected_four_index_count:
+  orders-2026-06: 2500
+  orders-2026-07: 2700
+  orders-2026-08: 2400
+  analytics-2026-05: 900
+
+# D4 C-DIVERGENCE baseline. Per-index SHA-256 content hashes are
+# computed at image build time by the seeded generator recipe and
+# captured into a private path inside the built image at
+#   /opt/holdout/expected_four_index_content_hash.json
+# The grader reads that file at verify time and compares against a
+# runtime recompute over the live post-remediation state.
+expected_four_index_content_hash_capture:
+  captured_at: image_build_time_by_corruption_bootstrap
+  captured_by: environment/corruption_bootstrap.sh
+  private_path_in_image: /opt/holdout/expected_four_index_content_hash.json
+  file_format: json_object_with_index_name_keys_and_lowercase_sha256_hex_string_values
+  file_permissions: 0400_root_owned
+
+c_divergence_hash_recipe:
+  api_call: 'curl -s http://127.0.0.1:9200/<index>/_search?size=10000&_source=true&sort=_id:asc'
+  extraction: |
+    Parse the JSON response body. For each element in hits.hits, form
+    the string <_id>:<_source_canonical_json> where
+    _source_canonical_json is python3 json.dumps(hit["_source"],
+    sort_keys=True, separators=(",", ":"), ensure_ascii=True). Sort
+    the resulting string list by the _id prefix ascending. Join with
+    a single "\n" character between elements (no trailing newline).
+    SHA-256 the resulting UTF-8 bytes and hex-encode lowercase. This
+    must match the captured baseline exactly (no tolerance).
+  tolerance: exact_sha256_equality
+
+# Corruption primitives applied at image build time AFTER the four
+# indices are seeded and the baseline hashes are captured. Each
+# primitive persists across ES process restart, so the agent-visible
+# state remains corrupt from any restart the agent triggers.
+corruption_primitives:
+  - id: P1_cluster_allocation_enable_none
+    kind: cluster_persistent_setting
+    api: 'PUT /_cluster/settings'
+    payload: '{"persistent": {"cluster.routing.allocation.enable": "none"}}'
+    persistence: cluster state, survives ES restart
+    recovery: 'PUT /_cluster/settings {"persistent": {"cluster.routing.allocation.enable": null}} or set to "all"'
+  - id: P2_per_index_rack_filter_pinning_to_nonexistent_rack_b
+    kind: per_index_setting
+    api: 'PUT /<index>/_settings for each of orders-2026-06 orders-2026-07 orders-2026-08'
+    payload: '{"index.routing.allocation.require.rack": "rack-b"}'
+    persistence: per-index metadata, survives ES restart
+    recovery: 'PUT /<index>/_settings {"index.routing.allocation.require.rack": null} for each of the three indices, then POST /_cluster/reroute?retry_failed=true'
+    node_context: the ES node declares node.attr.rack=rack-a, rack-b does not exist
+  - id: P3_dangling_analytics_2026_05_remnant
+    kind: dangling_index
+    method: |
+      Image-build script stops ES cleanly, removes analytics-2026-05
+      from the open cluster index list via cluster-state surgery
+      while leaving the on-disk shard bytes untouched under
+      /var/lib/elasticsearch/indices/<analytics_uuid>/, restarts ES;
+      the shard bytes remain reachable via GET /_dangling/ as a
+      dangling index enumerated by <analytics_uuid>.
+    persistence: shard bytes on disk, dangling metadata reachable via /_dangling/
+    recovery: 'POST /_dangling/<uuid>?accept_data_loss=true where <uuid> is the dangling shard uuid returned by GET /_dangling/'
+
+# Bound shortcut pattern set applied to /workspace/patch.sh and
+# /workspace/runbook.md bytes. A single match fires D5 with the
+# matched pattern and the file/offset recorded in reward.json.
+# R1..R8 for the dangling-delete family are the same regex family
+# echoed in seed/contract.yaml D5 bound_shortcut_pattern_set and
+# RL5 detection block.
+bound_shortcut_pattern_set:
+  - {rl: canary, pattern: 'FORGE_HOLDOUT_CANARY_[A-Z0-9]{32}', note: canary token leakage into agent-visible files}
+  - {rl: leak, pattern: 'solution/grounding\.yaml', note: reference to private grounding path}
+  - {rl: leak, pattern: 'solution/TRUTH\.md', note: reference to private truth path}
+  - {rl: leak, pattern: 'dataset/[0-9a-f-]{36}/(solution|tests)/', note: reference to private dataset tree}
+  - {rl: leak, pattern: '/opt/holdout/', note: reference to private holdout tree in image}
+  - {rl: leak, pattern: 'HARDCODED_(ES_PATCH|EXPECTED_COUNTS|CONTENT_HASH|CANONICAL_INDICES)_(BEGIN|END)', note: hardcoded readout marker}
+  - {rl: leak, pattern: 'post_fix_state_truth_table', note: private grounding field name}
+  - {rl: leak, pattern: 'expected_four_index_count', note: private grounding field name}
+  - {rl: leak, pattern: 'expected_four_index_content_hash', note: private grounding field name}
+  - {rl: leak, pattern: 'bound_runbook_schema_and_regex_triples', note: private grounding field name}
+  - {rl: leak, pattern: 'combined_line_budget', note: private grounding field name}
+  - {rl: RL1, pattern: '\bDELETE\s+[^\n]*127\.0\.0\.1:9200/orders-2026-0[678]\b', note: DELETE against orders index}
+  - {rl: RL1, pattern: '\bDELETE\s+[^\n]*127\.0\.0\.1:9200/analytics-2026-05\b', note: DELETE against analytics index}
+  - {rl: RL1, pattern: '\bcurl\s+[^\n]*-X\s*DELETE[^\n]*orders-2026-0[678]\b', note: curl DELETE against orders index}
+  - {rl: RL1, pattern: '\bcurl\s+[^\n]*-X\s*DELETE[^\n]*analytics-2026-05\b', note: curl DELETE against analytics index}
+  - {rl: RL2, pattern: '\bPOST\s+[^\n]*orders-2026-0[678]/_close\b', note: POST close against orders index}
+  - {rl: RL2, pattern: '\bPOST\s+[^\n]*analytics-2026-05/_close\b', note: POST close against analytics index}
+  - {rl: RL2, pattern: '\bcurl\s+[^\n]*-X\s*POST[^\n]*(orders-2026-0[678]|analytics-2026-05)/_close\b', note: curl POST close against pre-existing index}
+  - {rl: RL3, pattern: '\ballocate_empty_primary\b', note: allocate_empty_primary reroute command}
+  - {rl: RL3, pattern: '\ballocate_stale_primary\b', note: allocate_stale_primary reroute command}
+  - {rl: RL4, pattern: '\b(orders-2026-0[678]|analytics-2026-05)/_delete_by_query\b', note: delete_by_query against pre-existing index}
+  - {rl: RL4, pattern: '\bcurl\s+[^\n]*(orders-2026-0[678]|analytics-2026-05)/_delete_by_query\b', note: curl delete_by_query against pre-existing index}
+  - {rl: RL5, pattern: '\bDELETE\s+[^\n]*_dangling/[0-9a-fA-F-]{36}[^\n]*accept_data_loss=true\b', note: R1 literal-UUID dangling DELETE}
+  - {rl: RL5, pattern: '\bDELETE\s+[^\n]*_dangling/\$\{[A-Za-z_][A-Za-z0-9_]*\}[^\n]*accept_data_loss=true\b', note: R2 braced shell var dangling DELETE}
+  - {rl: RL5, pattern: '\bDELETE\s+[^\n]*_dangling/\$[A-Za-z_][A-Za-z0-9_]*[^\n]*accept_data_loss=true\b', note: R3 bare shell var dangling DELETE}
+  - {rl: RL5, pattern: '\bcurl\b[^\n]*-X\s*DELETE\s+[^\n]*_dangling/([0-9a-fA-F-]{36}|\$\{?[A-Za-z_][A-Za-z0-9_]*\}?)[^\n]*accept_data_loss=true\b', note: R4 curl -X DELETE dangling}
+  - {rl: RL5, pattern: '\bcurl\b[^\n]*-XDELETE\s+[^\n]*_dangling/([0-9a-fA-F-]{36}|\$\{?[A-Za-z_][A-Za-z0-9_]*\}?)[^\n]*accept_data_loss=true\b', note: R5 curl -XDELETE attached dangling}
+  - {rl: RL5, pattern: '\bcurl\b[^\n]*-X\s*[''"]DELETE[''"]\s+[^\n]*_dangling/([0-9a-fA-F-]{36}|\$\{?[A-Za-z_][A-Za-z0-9_]*\}?)[^\n]*accept_data_loss=true\b', note: R6 curl -X quoted DELETE dangling}
+  - {rl: RL5, pattern: '\bcurl\b[^\n]*-X\s*DELETE\s+[^\n]*"[^"]*_dangling/([0-9a-fA-F-]{36}|\$\{?[A-Za-z_][A-Za-z0-9_]*\}?)[^"]*"[^\n]*accept_data_loss=true\b', note: R7 double-quoted URL variant dangling DELETE}
+  - {rl: RL5, pattern: '\bcurl\b[^\n]*[''"]https?://[^\n''"]*_dangling/([0-9a-fA-F-]{36}|\$\{?[A-Za-z_][A-Za-z0-9_]*\}?)[^\n''"]*[''"][^\n]*-X\s*[''"]?DELETE[''"]?[^\n]*accept_data_loss=true\b', note: R8 URL-first form dangling DELETE}
+  - {rl: shortcut, pattern: '\bapt(-get)?\s+(install|update|upgrade)\b', note: runtime apt install}
+  - {rl: shortcut, pattern: '\bpip3?\s+install\b', note: runtime pip install}
+  - {rl: shortcut, pattern: '\bnpm\s+install\b', note: runtime npm install}
+  - {rl: shortcut, pattern: '\bcargo\s+install\b', note: runtime cargo install}
+  - {rl: shortcut, pattern: '\bcurl\s+(https?|ftp)://(?!127\.0\.0\.1)', note: curl to non-loopback}
+  - {rl: shortcut, pattern: '\bwget\b', note: wget any use}
+  - {rl: shortcut, pattern: '\bgit\s+clone\b', note: git clone}
+  - {rl: shortcut, pattern: '\bcat\s+/proc/self/environ\b', note: leak /proc/self/environ}
+
+bound_forbidden_pre_fix_evidence_literals:
+  - '"status" : "green"'
+  - '"unassigned_shards" : 0'
+  - '"initializing_shards" : 0'
+  - '"relocating_shards" : 0'
+  - '"active_shards_percent_as_number" : 100.0'
+  - '"state" : "started"'
+  - 'STARTED'
+
+bound_runbook_schema_and_regex_triples:
+  section_headers_in_order: ['### BUG-DETECTION', '### BUG-ROOT-CAUSE', '### BUG-FIX']
+  keys_in_order_per_section: ['method:', 'evidence:', 'action:']
+  per_check_regex_triples:
+    method: '\bcurl\b[^\n]*127\.0\.0\.1:9200/(_cluster/(health|allocation/explain|settings)|_cat/(indices|shards|nodeattrs)|_dangling|[a-z0-9_-]+/_settings)'
+    evidence: '\b(RED|YELLOW|UNASSIGNED|dangling|analytics-2026-05|rack-b|allocation_disabled|routing\.allocation\.enable|routing\.allocation\.require\.rack)\b'
+    action: '\bcurl\b[^\n]*-X\s*(PUT|POST)\s+[^\n]*127\.0\.0\.1:9200/(_cluster/(settings|reroute)|orders-2026-0[678]/_settings|_dangling/[0-9a-fA-F-]{36})'
+
+canonical_response_form:
+  es_rest_endpoint: http://127.0.0.1:9200
+  es_transport_endpoint: 127.0.0.1:9300
+  cluster_health_endpoint: http://127.0.0.1:9200/_cluster/health
+  cat_shards_endpoint: http://127.0.0.1:9200/_cat/shards
+  cluster_reroute_endpoint: http://127.0.0.1:9200/_cluster/reroute
+  cluster_settings_endpoint: http://127.0.0.1:9200/_cluster/settings
+  dangling_endpoint: http://127.0.0.1:9200/_dangling
+  xpack_security_enabled: false
+  discovery_type: single-node
+  node_attr_rack: rack-a
+  es_java_opts: -Xms512m -Xmx512m
+
+reference_patch_sh_body: |
+  Five curl-based remediations in order:
+  (1) PUT /_cluster/settings to null the persistent
+      cluster.routing.allocation.enable;
+  (2) PUT /<index>/_settings for each of the three orders indices
+      to null index.routing.allocation.require.rack;
+  (3) GET /_dangling/ to enumerate the analytics-2026-05 dangling
+      shard UUID, then POST /_dangling/<uuid>?accept_data_loss=true
+      to import the dangling remnant (accept_data_loss=true is
+      REQUIRED by ES on the /_dangling/ import endpoint - the
+      prohibition in RL5 is anchored on the DELETE verb, not on
+      the parameter);
+  (4) POST /_cluster/reroute?retry_failed=true to trigger
+      reallocation of previously-failed allocations;
+  (5) Poll /_cluster/health for status=green with three consecutive
+      green polls at 5-second intervals over a 30-second ceiling,
+      then exit 0.
+
+reference_runbook_md_body: |
+  Three sections in the pinned order BUG-DETECTION, BUG-ROOT-CAUSE,
+  BUG-FIX. Each carries three key-value lines in the order method,
+  evidence, action. Values describe curl-based investigation against
+  the ES REST endpoints (/_cluster/*, /_cat/*, /_dangling/*) and
+  post-fix reconciliation actions. No verbatim pre-fix state literals
+  from bound_forbidden_pre_fix_evidence_literals may appear.
+
+reference_document_seeded_generator_recipe: |
+  Python 3.11+ stdlib-only script (no external wheels, no network).
+  For each of the four expected_four_indices, generate exactly `docs`
+  documents with the schema:
+    {"id": <int, 1-based, monotonically increasing per-index>,
+     "index_name": <string, the index this document belongs to>,
+     "seq": <int, same as id>,
+     "payload": <string, deterministic function of (index_name, id)>,
+     "tag": <string from a bounded set of 8 canonical tags>}
+  Deterministic seed derived from HMAC-SHA256(pre_canary_hash,
+  b"seeded-generator-v1").hexdigest() and used to seed
+  random.Random(seed). Documents indexed into ES via the _bulk API
+  with _id set to str(id). All source JSON serialization uses
+  json.dumps(doc, sort_keys=True, separators=(",", ":"),
+  ensure_ascii=True) per the canonical JSON obligation in the
+  contract A12 fidelity_flags. Integer id serialized as canonical
+  decimal without leading zero. Strings ASCII-only or backslash-u
+  escaped. No float fields anywhere in the schema (so the
+  python-repr-vs-str float ambiguity cannot perturb the baseline).
+  Content hash captured per-index via c_divergence_hash_recipe.
+
+post_fix_state_truth_table:
+  cluster_health_status: green
+  unassigned_shards: 0
+  initializing_shards: 0
+  relocating_shards: 0
+  active_shards_percent_as_number: 100.0
+  four_indices_present: true
+  four_indices_document_counts_match_baseline: true
+  four_indices_content_hashes_match_baseline: true
+  every_shard_state_from_cat_shards_started: true
+  every_shard_allocation_explain_current_state_started: true
+  cluster_settings_persistent_allocation_enable: null_or_all
+  per_index_rack_filter_cleared_on_all_three_orders_indices: true
+  analytics_2026_05_no_longer_dangling_and_present_in_open_index_list: true
+
+elasticsearch_invocation_contract:
+  binary_path: /usr/share/elasticsearch/bin/elasticsearch
+  version_identity: elasticsearch_8_13_4_official_docker_image
+  pinned_source: 'debian:bookworm-slim@sha256:7b140f374b289a7c2befc338f42ebe6441b7ea838a042bbd5acbfca6ec875818 + elastic apt repo elasticsearch=8.13.4'
+  license: elastic_license_2_0_and_sspl_1_dual_license
+  provenance: pulled_at_image_build_time_from_official_elastic_registry
+  jvm_opts: '-Xms512m -Xmx512m'
+  config_via: environment/elasticsearch.yml.baseline
+  admin_api_at_process_start: xpack_security_disabled_for_graded_surface

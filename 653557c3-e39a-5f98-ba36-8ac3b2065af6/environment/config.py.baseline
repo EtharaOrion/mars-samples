@@ -1,0 +1,8 @@
+# Webapp postgres connection config.
+# The verifier grades against POSTGRES_PASSWORD; other keys must not change.
+POSTGRES_HOST='127.0.0.1'
+POSTGRES_PORT=5432
+POSTGRES_USER='app_role'
+POSTGRES_DB='production'
+POSTGRES_PASSWORD='P_STALE_PLACEHOLDER'
+# fallback: if primary is unreachable, try secret/data/app/backup/prod-mirror

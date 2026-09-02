@@ -1,0 +1,132 @@
+{
+    "id": "a8c39dc6-8030-4138-843d-86a4cf5c4e0b",
+    "task_name": "mars/ci-github-actions-flaky-test-quarantine-v2",
+    "trial_name": "f28204c2-72da-5700-bb03-e3d915cc__vWCqzC7",
+    "trial_uri": "file:///Users/apple/Sources/office/mars-anubis/mars/jobs/2026-08-31__14-47-27/f28204c2-72da-5700-bb03-e3d915cc__vWCqzC7",
+    "task_id": {
+        "path": "/Users/apple/Sources/office/mars-anubis/mars/dataset/f28204c2-72da-5700-bb03-e3d915ccbb69"
+    },
+    "source": null,
+    "task_checksum": "fd16fd445aa7829dcc76285bec13123467546b5139757c53c214026068ed37d2",
+    "config": {
+        "task": {
+            "path": "/Users/apple/Sources/office/mars-anubis/mars/dataset/f28204c2-72da-5700-bb03-e3d915ccbb69",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "f28204c2-72da-5700-bb03-e3d915cc__vWCqzC7",
+        "trials_dir": "jobs/2026-08-31__14-47-27",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": 5.0,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "claude-code",
+            "import_path": null,
+            "model_name": "claude-opus-4-8",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "0d35d4f7-b58f-49fa-bc28-fddb7262184f",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.251",
+        "model_info": {
+            "name": "claude-opus-4-8",
+            "provider": null
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 101055,
+        "n_cache_tokens": 74439,
+        "n_output_tokens": 1518,
+        "cost_usd": 0.2415095,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0,
+            "p_committed_hashes_json_readable": 1,
+            "p_test_source_present": 1,
+            "p_test_source_hash_matches_pinned": 1,
+            "p_pyproject_toml_hash_matches_pinned": 1,
+            "p_no_pytest_skip_marker_in_test_source": 1,
+            "p_workflow_yaml_parses_and_has_pytest_step": 1,
+            "p_max_retries_env_present_and_integer": 1,
+            "p_reruns_argv_present_and_integer": 0,
+            "p_reruns_argv_equals_max_retries_env_numerically": 0,
+            "p_max_retries_meets_convergence_floor_three": 0,
+            "p_all_pytest_trials_exited_zero": 0,
+            "j_max_retries_env_value": 3,
+            "j_convergence_floor": 3,
+            "j_trials_configured": 3,
+            "j_trials_run": 0,
+            "j_trials_passed": 0,
+            "j_final_reward": 0.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-08-31T09:17:28.196530Z",
+    "finished_at": "2026-08-31T09:22:36.816001Z",
+    "environment_setup": {
+        "started_at": "2026-08-31T09:17:28.260112Z",
+        "finished_at": "2026-08-31T09:17:31.962555Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-08-31T09:17:31.962816Z",
+        "finished_at": "2026-08-31T09:21:32.051153Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-08-31T09:21:32.075681Z",
+        "finished_at": "2026-08-31T09:22:10.158425Z"
+    },
+    "verifier": {
+        "started_at": "2026-08-31T09:22:14.946175Z",
+        "finished_at": "2026-08-31T09:22:16.282515Z"
+    },
+    "step_results": null
+}

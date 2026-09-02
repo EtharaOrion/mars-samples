@@ -1,0 +1,1103 @@
+{
+  "schema": "mars.rubric_set/v2_council_only",
+  "bundle_id": "c2c23041-47f0-505d-aee7-439f160a46de",
+  "floor": 0.8,
+  "note": "regenerated from solution/rubrics.json by harness/mars_rubric_id_reconciler.py to close G-RUB-COMPLETENESS.unreconciled_rubric_id; 1:1 id mapping preserves the recompute.py chain",
+  "rubrics": [
+    {
+      "id": "R0001",
+      "criterion": "the value at grounding path bound_log_field_set > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "log_file_contents_or_line_match_or_line_absence",
+        "anchor_1_0": "request_id",
+        "anchor_0_0": "the observed value at bound_log_field_set > [0] does not match the reference at grounding path bound_log_field_set > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0002",
+      "criterion": "the value at grounding path bound_log_field_set > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "log_file_contents_or_line_match_or_line_absence",
+        "anchor_1_0": "remote_addr",
+        "anchor_0_0": "the observed value at bound_log_field_set > [1] does not match the reference at grounding path bound_log_field_set > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0003",
+      "criterion": "the value at grounding path bound_log_field_set > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "log_file_contents_or_line_match_or_line_absence",
+        "anchor_1_0": "ts_iso8601",
+        "anchor_0_0": "the observed value at bound_log_field_set > [2] does not match the reference at grounding path bound_log_field_set > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0004",
+      "criterion": "the value at grounding path bound_log_field_set > [3] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "log_file_contents_or_line_match_or_line_absence",
+        "anchor_1_0": "request_method",
+        "anchor_0_0": "the observed value at bound_log_field_set > [3] does not match the reference at grounding path bound_log_field_set > [3]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0005",
+      "criterion": "the value at grounding path bound_log_field_set > [4] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "log_file_contents_or_line_match_or_line_absence",
+        "anchor_1_0": "request_uri",
+        "anchor_0_0": "the observed value at bound_log_field_set > [4] does not match the reference at grounding path bound_log_field_set > [4]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0006",
+      "criterion": "the value at grounding path bound_log_field_set > [5] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "log_file_contents_or_line_match_or_line_absence",
+        "anchor_1_0": "http_host",
+        "anchor_0_0": "the observed value at bound_log_field_set > [5] does not match the reference at grounding path bound_log_field_set > [5]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0007",
+      "criterion": "the value at grounding path bound_log_field_set > [6] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "log_file_contents_or_line_match_or_line_absence",
+        "anchor_1_0": "status",
+        "anchor_0_0": "the observed value at bound_log_field_set > [6] does not match the reference at grounding path bound_log_field_set > [6]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0008",
+      "criterion": "the value at grounding path bound_log_field_set > [7] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "log_file_contents_or_line_match_or_line_absence",
+        "anchor_1_0": "body_bytes_sent",
+        "anchor_0_0": "the observed value at bound_log_field_set > [7] does not match the reference at grounding path bound_log_field_set > [7]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0009",
+      "criterion": "the value at grounding path bound_log_field_set > [8] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "log_file_contents_or_line_match_or_line_absence",
+        "anchor_1_0": "request_time_seconds",
+        "anchor_0_0": "the observed value at bound_log_field_set > [8] does not match the reference at grounding path bound_log_field_set > [8]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0010",
+      "criterion": "the value at grounding path bound_log_field_set > [9] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "log_file_contents_or_line_match_or_line_absence",
+        "anchor_1_0": "ssl_client_verify",
+        "anchor_0_0": "the observed value at bound_log_field_set > [9] does not match the reference at grounding path bound_log_field_set > [9]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0011",
+      "criterion": "the value at grounding path bound_log_field_set > [10] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "log_file_contents_or_line_match_or_line_absence",
+        "anchor_1_0": "ssl_client_s_dn",
+        "anchor_0_0": "the observed value at bound_log_field_set > [10] does not match the reference at grounding path bound_log_field_set > [10]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0012",
+      "criterion": "the value at grounding path bound_log_field_set > [11] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "log_file_contents_or_line_match_or_line_absence",
+        "anchor_1_0": "http_user_agent",
+        "anchor_0_0": "the observed value at bound_log_field_set > [11] does not match the reference at grounding path bound_log_field_set > [11]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0013",
+      "criterion": "the value at grounding path combined_line_budget equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "220",
+        "anchor_0_0": "the observed value at combined_line_budget does not match the reference at grounding path combined_line_budget"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0014",
+      "criterion": "the value at grounding path reference_client_cn_pattern equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "CN=svc-[a-z0-9]+,O=Ethara",
+        "anchor_0_0": "the observed value at reference_client_cn_pattern does not match the reference at grounding path reference_client_cn_pattern"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0015",
+      "criterion": "the value at grounding path reference_log_record_P1 > ssl_client_s_dn_regex equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "log_file_contents_or_line_match_or_line_absence",
+        "anchor_1_0": "^CN=svc-alpha,O=Ethara$",
+        "anchor_0_0": "the observed value at reference_log_record_P1 > ssl_client_s_dn_regex does not match the reference at grounding path reference_log_record_P1 > ssl_client_s_dn_regex"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0016",
+      "criterion": "the value at grounding path reference_log_record_P1 > ssl_client_verify equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "log_file_contents_or_line_match_or_line_absence",
+        "anchor_1_0": "SUCCESS",
+        "anchor_0_0": "the observed value at reference_log_record_P1 > ssl_client_verify does not match the reference at grounding path reference_log_record_P1 > ssl_client_verify"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0017",
+      "criterion": "the value at grounding path reference_log_record_P1 > status equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "service_endpoint_response_status",
+        "anchor_1_0": "200",
+        "anchor_0_0": "the observed value at reference_log_record_P1 > status does not match the reference at grounding path reference_log_record_P1 > status"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0018",
+      "criterion": "the value at grounding path reference_mime_types_body equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "embedded in tests/grader.py under REFERENCE_MIME_TYPES constant",
+        "anchor_0_0": "the observed value at reference_mime_types_body does not match the reference at grounding path reference_mime_types_body"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0019",
+      "criterion": "the value at grounding path reference_nginx_conf_body equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "embedded in tests/grader.py under REFERENCE_NGINX_CONF constant",
+        "anchor_0_0": "the observed value at reference_nginx_conf_body does not match the reference at grounding path reference_nginx_conf_body"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0020",
+      "criterion": "the value at grounding path reference_pki_authoring_recipe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "baked at image build via /tmp/build_pki.sh with pinned serials 0x1001,0x2001,0x3001,0x4001,0x4002,0x4003,0x4004,0x9001 and pinned -not_before/-not_after for the expired client",
+        "anchor_0_0": "the observed value at reference_pki_authoring_recipe does not match the reference at grounding path reference_pki_authoring_recipe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0021",
+      "criterion": "the value at grounding path reference_probe_truth_table > canonical_response_form matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "service_endpoint_response_body",
+        "anchor_1_0": "Ordered 8-tuple in probe-id order:\n(probe_id, http_status_code, response_body_sha256_hex_or_null,\n upstream_observed_subject_or_null)\n",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > canonical_response_form does not match the reference at grounding path reference_probe_truth_table > canonical_response_form"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0022",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [0] > body_sha256 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "c19511a15470c746f541a5eda64d7f2f4eea4ffeb54f92b7ec963450fd8f90d5",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [0] > body_sha256 does not match the reference at grounding path reference_probe_truth_table > rows > [0] > body_sha256"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0023",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [0] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "P1",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [0] > probe does not match the reference at grounding path reference_probe_truth_table > rows > [0] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0024",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [0] > status equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "service_endpoint_response_status",
+        "anchor_1_0": "200",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [0] > status does not match the reference at grounding path reference_probe_truth_table > rows > [0] > status"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0025",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [0] > upstream_observed_subject equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "CN=svc-alpha,O=Ethara",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [0] > upstream_observed_subject does not match the reference at grounding path reference_probe_truth_table > rows > [0] > upstream_observed_subject"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0026",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [1] > body_sha256 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "the value at grounding path reference_probe_truth_table > rows > [1] > body_sha256 equals the frozen literal",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [1] > body_sha256 does not match the reference at grounding path reference_probe_truth_table > rows > [1] > body_sha256"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0027",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [1] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "P2",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [1] > probe does not match the reference at grounding path reference_probe_truth_table > rows > [1] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0028",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [1] > status equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "service_endpoint_response_status",
+        "anchor_1_0": "404",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [1] > status does not match the reference at grounding path reference_probe_truth_table > rows > [1] > status"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0029",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [1] > upstream_observed_subject equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "the value at grounding path reference_probe_truth_table > rows > [1] > upstream_observed_subject equals the frozen literal",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [1] > upstream_observed_subject does not match the reference at grounding path reference_probe_truth_table > rows > [1] > upstream_observed_subject"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0030",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [2] > body_sha256 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "the value at grounding path reference_probe_truth_table > rows > [2] > body_sha256 equals the frozen literal",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [2] > body_sha256 does not match the reference at grounding path reference_probe_truth_table > rows > [2] > body_sha256"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0031",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [2] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "P3",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [2] > probe does not match the reference at grounding path reference_probe_truth_table > rows > [2] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0032",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [2] > status equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "service_endpoint_response_status",
+        "anchor_1_0": "495",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [2] > status does not match the reference at grounding path reference_probe_truth_table > rows > [2] > status"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0033",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [2] > upstream_observed_subject equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "the value at grounding path reference_probe_truth_table > rows > [2] > upstream_observed_subject equals the frozen literal",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [2] > upstream_observed_subject does not match the reference at grounding path reference_probe_truth_table > rows > [2] > upstream_observed_subject"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0034",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [3] > body_sha256 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "the value at grounding path reference_probe_truth_table > rows > [3] > body_sha256 equals the frozen literal",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [3] > body_sha256 does not match the reference at grounding path reference_probe_truth_table > rows > [3] > body_sha256"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0035",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [3] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "P4",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [3] > probe does not match the reference at grounding path reference_probe_truth_table > rows > [3] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0036",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [3] > status equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "service_endpoint_response_status",
+        "anchor_1_0": "495",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [3] > status does not match the reference at grounding path reference_probe_truth_table > rows > [3] > status"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0037",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [3] > upstream_observed_subject equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "the value at grounding path reference_probe_truth_table > rows > [3] > upstream_observed_subject equals the frozen literal",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [3] > upstream_observed_subject does not match the reference at grounding path reference_probe_truth_table > rows > [3] > upstream_observed_subject"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0038",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [4] > body_sha256 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "the value at grounding path reference_probe_truth_table > rows > [4] > body_sha256 equals the frozen literal",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [4] > body_sha256 does not match the reference at grounding path reference_probe_truth_table > rows > [4] > body_sha256"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0039",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [4] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "P5",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [4] > probe does not match the reference at grounding path reference_probe_truth_table > rows > [4] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0040",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [4] > status equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "service_endpoint_response_status",
+        "anchor_1_0": "495",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [4] > status does not match the reference at grounding path reference_probe_truth_table > rows > [4] > status"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0041",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [4] > upstream_observed_subject equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "the value at grounding path reference_probe_truth_table > rows > [4] > upstream_observed_subject equals the frozen literal",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [4] > upstream_observed_subject does not match the reference at grounding path reference_probe_truth_table > rows > [4] > upstream_observed_subject"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0042",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [5] > body_sha256 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "the value at grounding path reference_probe_truth_table > rows > [5] > body_sha256 equals the frozen literal",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [5] > body_sha256 does not match the reference at grounding path reference_probe_truth_table > rows > [5] > body_sha256"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0043",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [5] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "P6",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [5] > probe does not match the reference at grounding path reference_probe_truth_table > rows > [5] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0044",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [5] > status equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "service_endpoint_response_status",
+        "anchor_1_0": "496",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [5] > status does not match the reference at grounding path reference_probe_truth_table > rows > [5] > status"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0045",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [5] > upstream_observed_subject equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "the value at grounding path reference_probe_truth_table > rows > [5] > upstream_observed_subject equals the frozen literal",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [5] > upstream_observed_subject does not match the reference at grounding path reference_probe_truth_table > rows > [5] > upstream_observed_subject"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0046",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [6] > body_sha256 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "the value at grounding path reference_probe_truth_table > rows > [6] > body_sha256 equals the frozen literal",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [6] > body_sha256 does not match the reference at grounding path reference_probe_truth_table > rows > [6] > body_sha256"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0047",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [6] > curl_exit_nonzero equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [6] > curl_exit_nonzero does not match the reference at grounding path reference_probe_truth_table > rows > [6] > curl_exit_nonzero"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0048",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [6] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "P7",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [6] > probe does not match the reference at grounding path reference_probe_truth_table > rows > [6] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0049",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [6] > status equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "service_endpoint_response_status",
+        "anchor_1_0": "the value at grounding path reference_probe_truth_table > rows > [6] > status equals the frozen literal",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [6] > status does not match the reference at grounding path reference_probe_truth_table > rows > [6] > status"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0050",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [6] > upstream_observed_subject equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "the value at grounding path reference_probe_truth_table > rows > [6] > upstream_observed_subject equals the frozen literal",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [6] > upstream_observed_subject does not match the reference at grounding path reference_probe_truth_table > rows > [6] > upstream_observed_subject"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0051",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [7] > body_sha256 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "the value at grounding path reference_probe_truth_table > rows > [7] > body_sha256 equals the frozen literal",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [7] > body_sha256 does not match the reference at grounding path reference_probe_truth_table > rows > [7] > body_sha256"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0052",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [7] > location_header equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "https://localhost/foo",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [7] > location_header does not match the reference at grounding path reference_probe_truth_table > rows > [7] > location_header"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0053",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [7] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "P8",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [7] > probe does not match the reference at grounding path reference_probe_truth_table > rows > [7] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0054",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [7] > status equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "service_endpoint_response_status",
+        "anchor_1_0": "301",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [7] > status does not match the reference at grounding path reference_probe_truth_table > rows > [7] > status"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0055",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [7] > upstream_observed_subject equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "the value at grounding path reference_probe_truth_table > rows > [7] > upstream_observed_subject equals the frozen literal",
+        "anchor_0_0": "the observed value at reference_probe_truth_table > rows > [7] > upstream_observed_subject does not match the reference at grounding path reference_probe_truth_table > rows > [7] > upstream_observed_subject"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0056",
+      "criterion": "the value at grounding path reference_reload_sh_body equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "embedded in tests/grader.py under REFERENCE_RELOAD_SH constant",
+        "anchor_0_0": "the observed value at reference_reload_sh_body does not match the reference at grounding path reference_reload_sh_body"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0057",
+      "criterion": "the value at grounding path reference_upstream_observed_subject_map > P1 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "CN=svc-alpha,O=Ethara",
+        "anchor_0_0": "the observed value at reference_upstream_observed_subject_map > P1 does not match the reference at grounding path reference_upstream_observed_subject_map > P1"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0058",
+      "criterion": "the value at grounding path reload_sh_success_contract > exit_code equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "the value at grounding path reload_sh_success_contract > exit_code equals the frozen literal",
+        "anchor_0_0": "the observed value at reload_sh_success_contract > exit_code does not match the reference at grounding path reload_sh_success_contract > exit_code"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0059",
+      "criterion": "the value at grounding path reload_sh_success_contract > nginx_t_recheck_exit_code equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "the value at grounding path reload_sh_success_contract > nginx_t_recheck_exit_code equals the frozen literal",
+        "anchor_0_0": "the observed value at reload_sh_success_contract > nginx_t_recheck_exit_code does not match the reference at grounding path reload_sh_success_contract > nginx_t_recheck_exit_code"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0060",
+      "criterion": "the value at grounding path reload_sh_success_contract > tcp_443_bound_within_seconds equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "5",
+        "anchor_0_0": "the observed value at reload_sh_success_contract > tcp_443_bound_within_seconds does not match the reference at grounding path reload_sh_success_contract > tcp_443_bound_within_seconds"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0061",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [0] > nonempty equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "required",
+        "anchor_0_0": "the observed value at three_authored_files_shape_contract > [0] > nonempty does not match the reference at grounding path three_authored_files_shape_contract > [0] > nonempty"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0062",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [0] > path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/nginx.conf",
+        "anchor_0_0": "the observed value at three_authored_files_shape_contract > [0] > path does not match the reference at grounding path three_authored_files_shape_contract > [0] > path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0063",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [0] > presence equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "required",
+        "anchor_0_0": "the observed value at three_authored_files_shape_contract > [0] > presence does not match the reference at grounding path three_authored_files_shape_contract > [0] > presence"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0064",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [0] > utf8 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "required",
+        "anchor_0_0": "the observed value at three_authored_files_shape_contract > [0] > utf8 does not match the reference at grounding path three_authored_files_shape_contract > [0] > utf8"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0065",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [1] > nonempty equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "required",
+        "anchor_0_0": "the observed value at three_authored_files_shape_contract > [1] > nonempty does not match the reference at grounding path three_authored_files_shape_contract > [1] > nonempty"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0066",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [1] > path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/mime.types",
+        "anchor_0_0": "the observed value at three_authored_files_shape_contract > [1] > path does not match the reference at grounding path three_authored_files_shape_contract > [1] > path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0067",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [1] > presence equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "required",
+        "anchor_0_0": "the observed value at three_authored_files_shape_contract > [1] > presence does not match the reference at grounding path three_authored_files_shape_contract > [1] > presence"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0068",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [1] > utf8 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "required",
+        "anchor_0_0": "the observed value at three_authored_files_shape_contract > [1] > utf8 does not match the reference at grounding path three_authored_files_shape_contract > [1] > utf8"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0069",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [2] > mode_bit_owner_exec equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "required",
+        "anchor_0_0": "the observed value at three_authored_files_shape_contract > [2] > mode_bit_owner_exec does not match the reference at grounding path three_authored_files_shape_contract > [2] > mode_bit_owner_exec"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0070",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [2] > nonempty equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "required",
+        "anchor_0_0": "the observed value at three_authored_files_shape_contract > [2] > nonempty does not match the reference at grounding path three_authored_files_shape_contract > [2] > nonempty"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0071",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [2] > path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/reload.sh",
+        "anchor_0_0": "the observed value at three_authored_files_shape_contract > [2] > path does not match the reference at grounding path three_authored_files_shape_contract > [2] > path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0072",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [2] > presence equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "required",
+        "anchor_0_0": "the observed value at three_authored_files_shape_contract > [2] > presence does not match the reference at grounding path three_authored_files_shape_contract > [2] > presence"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0073",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [2] > utf8 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "required",
+        "anchor_0_0": "the observed value at three_authored_files_shape_contract > [2] > utf8 does not match the reference at grounding path three_authored_files_shape_contract > [2] > utf8"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    }
+  ]
+}

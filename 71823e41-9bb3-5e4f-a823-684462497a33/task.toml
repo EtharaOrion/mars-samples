@@ -1,0 +1,36 @@
+# Harbor task manifest for pg-pgbouncer-redis-multi-service-cache-stampede-and-pool-mode-drift.
+# Bound by seed/contract.yaml delivery block (inv-27, contract digest
+#   c6eec7d9e6ad9888dfb4e1b00c598bf17091d8f7a89dcbf627f080204a0d9606).
+schema_version = "1.1"
+name = "pg-pgbouncer-redis-multi-service-cache-stampede-and-pool-mode-drift"
+instruction = "instruction.md"
+
+[environment]
+kind = "dockerfile"
+context = "environment"
+dockerfile = "environment/Dockerfile"
+base_image_digest = "sha256:7b140f374b289a7c2befc338f42ebe6441b7ea838a042bbd5acbfca6ec875818"
+
+[environment.network]
+mode = "none"
+
+[verifier]
+kind = "same_container"
+entrypoint = "tests/test.sh"
+reward_contract_path = "/tmp/reward.json"
+
+[oracle]
+entrypoint = "solution/solve.sh"
+
+[metadata]
+domain = "container-setup-tasks"
+archetype = "container-multi-service"
+primary_lever = "pg-pgbouncer-redis-cache-stampede-and-pool-mode-drift"
+maturity = "draft"
+invocation = 27
+
+[prosecutor]
+mode = "harness_provided"
+delegate = "harness/mars_council.py"
+in_container_stub = "tests/run_prosecutor_judge.py"
+note = "3-judge Claude council runs on host post-container; in-container stub is a no-op marker for G-VER-INVARIANCE"

@@ -1,0 +1,2198 @@
+{
+  "schema": "mars.rubric_set/v2_council_only",
+  "bundle_id": "34ec72b4-7cf0-549b-b3cc-11c621876ca4",
+  "floor": 30,
+  "note": "regenerated from solution/rubrics.json by harness/mars_rubric_id_reconciler.py to close G-RUB-COMPLETENESS.unreconciled_rubric_id; 1:1 id mapping preserves the recompute.py chain",
+  "rubrics": [
+    {
+      "id": "R0001",
+      "criterion": "the value at grounding path acceptable_fix_paths > [0] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "install orjson (declared in pyproject optional-dependencies.perf) so the unguarded import in helpers.py resolves",
+        "anchor_0_0": "the observed value at acceptable_fix_paths > [0] > description does not match the reference at grounding path acceptable_fix_paths > [0] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0002",
+      "criterion": "the value at grounding path acceptable_fix_paths > [0] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "path_a_install_optional_dependency",
+        "anchor_0_0": "the observed value at acceptable_fix_paths > [0] > id does not match the reference at grounding path acceptable_fix_paths > [0] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0003",
+      "criterion": "the value at grounding path acceptable_fix_paths > [0] > requires_network equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at acceptable_fix_paths > [0] > requires_network does not match the reference at grounding path acceptable_fix_paths > [0] > requires_network"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0004",
+      "criterion": "the value at grounding path acceptable_fix_paths > [0] > works_in_this_environment equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "the value at grounding path acceptable_fix_paths > [0] > works_in_this_environment equals the frozen literal",
+        "anchor_0_0": "the observed value at acceptable_fix_paths > [0] > works_in_this_environment does not match the reference at grounding path acceptable_fix_paths > [0] > works_in_this_environment"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0005",
+      "criterion": "the value at grounding path acceptable_fix_paths > [1] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "rewrite helpers.py to guard the orjson import with try/except and fall back to a stdlib json serializer that produces byte-identical output for the record shape the CLI handles",
+        "anchor_0_0": "the observed value at acceptable_fix_paths > [1] > description does not match the reference at grounding path acceptable_fix_paths > [1] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0006",
+      "criterion": "the value at grounding path acceptable_fix_paths > [1] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "path_b_guarded_import_with_functional_fallback",
+        "anchor_0_0": "the observed value at acceptable_fix_paths > [1] > id does not match the reference at grounding path acceptable_fix_paths > [1] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0007",
+      "criterion": "the value at grounding path acceptable_fix_paths > [1] > requires_network equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "the value at grounding path acceptable_fix_paths > [1] > requires_network equals the frozen literal",
+        "anchor_0_0": "the observed value at acceptable_fix_paths > [1] > requires_network does not match the reference at grounding path acceptable_fix_paths > [1] > requires_network"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0008",
+      "criterion": "the value at grounding path acceptable_fix_paths > [1] > works_in_this_environment equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at acceptable_fix_paths > [1] > works_in_this_environment does not match the reference at grounding path acceptable_fix_paths > [1] > works_in_this_environment"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0009",
+      "criterion": "the value at grounding path archetype equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "build-fix",
+        "anchor_0_0": "the observed value at archetype does not match the reference at grounding path archetype"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0010",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > cli_py_top_import_statement equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "from myapp import helpers",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > cli_py_top_import_statement does not match the reference at grounding path authored_manifest_of_broken_state > cli_py_top_import_statement"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0011",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > console_script_generated_at equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/usr/local/bin/myapp",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > console_script_generated_at does not match the reference at grounding path authored_manifest_of_broken_state > console_script_generated_at"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0012",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > console_script_imports equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "from myapp.cli import main",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > console_script_imports does not match the reference at grounding path authored_manifest_of_broken_state > console_script_imports"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0013",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > helpers_py_top_import_statement equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "import orjson",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > helpers_py_top_import_statement does not match the reference at grounding path authored_manifest_of_broken_state > helpers_py_top_import_statement"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0014",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > pyproject_dependencies_value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "[]",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > pyproject_dependencies_value does not match the reference at grounding path authored_manifest_of_broken_state > pyproject_dependencies_value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0015",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > pyproject_optional_dependencies_perf_value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "[\"orjson>=3.9,<4\"]",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > pyproject_optional_dependencies_perf_value does not match the reference at grounding path authored_manifest_of_broken_state > pyproject_optional_dependencies_perf_value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0016",
+      "criterion": "the value at grounding path canonical_fix_path_selected equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "path_b_guarded_import_with_functional_fallback",
+        "anchor_0_0": "the observed value at canonical_fix_path_selected does not match the reference at grounding path canonical_fix_path_selected"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0017",
+      "criterion": "the value at grounding path canonical_fix_path_selection_rationale matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "Path a (pip install orjson==3.9.*) requires network egress which the\ncontainer denies. Path b (guard the helpers.py import and provide a\nstdlib json fallback that produces the same bytes) is more idiomatic\nfor optional-dependency handling, works offline, and preserves the\nimport chain that the package was designed around.\n",
+        "anchor_0_0": "the observed value at canonical_fix_path_selection_rationale does not match the reference at grounding path canonical_fix_path_selection_rationale"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0018",
+      "criterion": "the value at grounding path console_script_name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "myapp",
+        "anchor_0_0": "the observed value at console_script_name does not match the reference at grounding path console_script_name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0019",
+      "criterion": "the value at grounding path console_script_target equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "myapp.cli:main",
+        "anchor_0_0": "the observed value at console_script_target does not match the reference at grounding path console_script_target"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0020",
+      "criterion": "the value at grounding path csv_module_choice equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "orjson",
+        "anchor_0_0": "the observed value at csv_module_choice does not match the reference at grounding path csv_module_choice"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0021",
+      "criterion": "the value at grounding path false_lead_probes > [0] > expected_outcome equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "no_network_egress_pip_fails_with_index_or_connection_error",
+        "anchor_0_0": "the observed value at false_lead_probes > [0] > expected_outcome does not match the reference at grounding path false_lead_probes > [0] > expected_outcome"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0022",
+      "criterion": "the value at grounding path false_lead_probes > [0] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "pip_install_orjson_from_pypi",
+        "anchor_0_0": "the observed value at false_lead_probes > [0] > probe does not match the reference at grounding path false_lead_probes > [0] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0023",
+      "criterion": "the value at grounding path false_lead_probes > [1] > expected_outcome equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "install_completes_but_myapp_still_fails_because_orjson_still_absent",
+        "anchor_0_0": "the observed value at false_lead_probes > [1] > expected_outcome does not match the reference at grounding path false_lead_probes > [1] > expected_outcome"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0024",
+      "criterion": "the value at grounding path false_lead_probes > [1] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "pip_install_dash_e_myapp_reinstall",
+        "anchor_0_0": "the observed value at false_lead_probes > [1] > probe does not match the reference at grounding path false_lead_probes > [1] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0025",
+      "criterion": "the value at grounding path false_lead_probes > [2] > expected_outcome equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "myapp_help_may_succeed_but_myapp_process_fails_because_process_records_unresolvable",
+        "anchor_0_0": "the observed value at false_lead_probes > [2] > expected_outcome does not match the reference at grounding path false_lead_probes > [2] > expected_outcome"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0026",
+      "criterion": "the value at grounding path false_lead_probes > [2] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "edit_cli_py_to_remove_import_of_helpers",
+        "anchor_0_0": "the observed value at false_lead_probes > [2] > probe does not match the reference at grounding path false_lead_probes > [2] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0027",
+      "criterion": "the value at grounding path false_lead_probes > [3] > expected_outcome equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "signature_change_does_not_address_top_of_file_import_chain_failure",
+        "anchor_0_0": "the observed value at false_lead_probes > [3] > expected_outcome does not match the reference at grounding path false_lead_probes > [3] > expected_outcome"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0028",
+      "criterion": "the value at grounding path false_lead_probes > [3] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "edit_cli_py_main_signature",
+        "anchor_0_0": "the observed value at false_lead_probes > [3] > probe does not match the reference at grounding path false_lead_probes > [3] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0029",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [0] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "replace process_records body to return b\"[]\" or hardcoded bytes that ignore input records",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [0] > description does not match the reference at grounding path forbidden_shortcut_patterns > [0] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0030",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [0] > detection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "holdout inputs produce wrong output; ast walk of helpers.py finds no reference to _normalize_record or equivalent record transformation",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [0] > detection does not match the reference at grounding path forbidden_shortcut_patterns > [0] > detection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0031",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [0] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "rewrite_helpers_to_no_op",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [0] > id does not match the reference at grounding path forbidden_shortcut_patterns > [0] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0032",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [1] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "delete orjson import entirely and replace with an unrelated stub that neither imports json nor performs the intended transformation",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [1] > description does not match the reference at grounding path forbidden_shortcut_patterns > [1] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0033",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [1] > detection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "ast walk of helpers.py finds no orjson reference AND no json module reference AND no functional serialization call",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [1] > detection does not match the reference at grounding path forbidden_shortcut_patterns > [1] > detection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0034",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [1] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "remove_orjson_import_and_replace_with_stub",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [1] > id does not match the reference at grounding path forbidden_shortcut_patterns > [1] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0035",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [2] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "rewrite main() to bypass helpers.process_records and hardcode output values",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [2] > description does not match the reference at grounding path forbidden_shortcut_patterns > [2] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0036",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [2] > detection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "ast walk of cli.py finds no helpers.process_records call OR the process subcommand handler no longer routes through the helpers module",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [2] > detection does not match the reference at grounding path forbidden_shortcut_patterns > [2] > detection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0037",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [2] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "edit_cli_main_signature",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [2] > id does not match the reference at grounding path forbidden_shortcut_patterns > [2] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0038",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [3] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "replace /usr/local/bin/myapp with a bash script that echoes hardcoded output for the visible input",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [3] > description does not match the reference at grounding path forbidden_shortcut_patterns > [3] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0039",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [3] > detection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "cold-start replay reinstalls the package and regenerates the entry-point script from pyproject.toml; the bash wrapper is overwritten and fails on holdout inputs",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [3] > detection does not match the reference at grounding path forbidden_shortcut_patterns > [3] > detection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0040",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [3] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "shell_wrapper_at_usr_local_bin_myapp",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [3] > id does not match the reference at grounding path forbidden_shortcut_patterns > [3] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0041",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [4] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "reach out to a public PyPI index to install orjson",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [4] > description does not match the reference at grounding path forbidden_shortcut_patterns > [4] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0042",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [4] > detection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "no-network policy blocks the install; agent's pip command fails; even if it somehow succeeded the pyproject.toml would still not declare orjson as a real dependency",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [4] > detection does not match the reference at grounding path forbidden_shortcut_patterns > [4] > detection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0043",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [4] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "install_orjson_from_pypi",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [4] > id does not match the reference at grounding path forbidden_shortcut_patterns > [4] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0044",
+      "criterion": "the value at grounding path holdout_expected_outputs > [0] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "holdout_alpha",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [0] > name does not match the reference at grounding path holdout_expected_outputs > [0] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0045",
+      "criterion": "the value at grounding path holdout_expected_outputs > [0] > records > [0] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "h001",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [0] > records > [0] > id does not match the reference at grounding path holdout_expected_outputs > [0] > records > [0] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0046",
+      "criterion": "the value at grounding path holdout_expected_outputs > [0] > records > [0] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "ALPHA BETA",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [0] > records > [0] > value does not match the reference at grounding path holdout_expected_outputs > [0] > records > [0] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0047",
+      "criterion": "the value at grounding path holdout_expected_outputs > [0] > records > [1] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "h002",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [0] > records > [1] > id does not match the reference at grounding path holdout_expected_outputs > [0] > records > [1] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0048",
+      "criterion": "the value at grounding path holdout_expected_outputs > [0] > records > [1] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "GAMMA",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [0] > records > [1] > value does not match the reference at grounding path holdout_expected_outputs > [0] > records > [1] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0049",
+      "criterion": "the value at grounding path holdout_expected_outputs > [0] > records > [2] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "h003",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [0] > records > [2] > id does not match the reference at grounding path holdout_expected_outputs > [0] > records > [2] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0050",
+      "criterion": "the value at grounding path holdout_expected_outputs > [0] > records > [2] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "DELTA-ECHO",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [0] > records > [2] > value does not match the reference at grounding path holdout_expected_outputs > [0] > records > [2] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0051",
+      "criterion": "the value at grounding path holdout_expected_outputs > [1] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "holdout_mixed",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [1] > name does not match the reference at grounding path holdout_expected_outputs > [1] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0052",
+      "criterion": "the value at grounding path holdout_expected_outputs > [1] > records > [0] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "m001",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [1] > records > [0] > id does not match the reference at grounding path holdout_expected_outputs > [1] > records > [0] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0053",
+      "criterion": "the value at grounding path holdout_expected_outputs > [1] > records > [0] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "MIXED_CASE_HELLO",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [1] > records > [0] > value does not match the reference at grounding path holdout_expected_outputs > [1] > records > [0] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0054",
+      "criterion": "the value at grounding path holdout_expected_outputs > [1] > records > [1] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "m002",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [1] > records > [1] > id does not match the reference at grounding path holdout_expected_outputs > [1] > records > [1] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0055",
+      "criterion": "the value at grounding path holdout_expected_outputs > [1] > records > [1] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "SPACED",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [1] > records > [1] > value does not match the reference at grounding path holdout_expected_outputs > [1] > records > [1] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0056",
+      "criterion": "the value at grounding path holdout_expected_outputs > [1] > records > [2] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "m003",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [1] > records > [2] > id does not match the reference at grounding path holdout_expected_outputs > [1] > records > [2] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0057",
+      "criterion": "the value at grounding path holdout_expected_outputs > [1] > records > [2] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "12345",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [1] > records > [2] > value does not match the reference at grounding path holdout_expected_outputs > [1] > records > [2] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0058",
+      "criterion": "the value at grounding path holdout_expected_outputs > [1] > records > [3] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "m004",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [1] > records > [3] > id does not match the reference at grounding path holdout_expected_outputs > [1] > records > [3] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0059",
+      "criterion": "the value at grounding path holdout_expected_outputs > [1] > records > [3] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "PUNCTUATION!",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [1] > records > [3] > value does not match the reference at grounding path holdout_expected_outputs > [1] > records > [3] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0060",
+      "criterion": "the value at grounding path holdout_expected_outputs > [2] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "holdout_edge",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [2] > name does not match the reference at grounding path holdout_expected_outputs > [2] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0061",
+      "criterion": "the value at grounding path holdout_expected_outputs > [2] > records > [0] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "e001",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [2] > records > [0] > id does not match the reference at grounding path holdout_expected_outputs > [2] > records > [0] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0062",
+      "criterion": "the value at grounding path holdout_expected_outputs > [2] > records > [0] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "the value at grounding path holdout_expected_outputs > [2] > records > [0] > value equals the frozen literal",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [2] > records > [0] > value does not match the reference at grounding path holdout_expected_outputs > [2] > records > [0] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0063",
+      "criterion": "the value at grounding path holdout_expected_outputs > [2] > records > [1] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "e002",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [2] > records > [1] > id does not match the reference at grounding path holdout_expected_outputs > [2] > records > [1] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0064",
+      "criterion": "the value at grounding path holdout_expected_outputs > [2] > records > [1] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "X",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [2] > records > [1] > value does not match the reference at grounding path holdout_expected_outputs > [2] > records > [1] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0065",
+      "criterion": "the value at grounding path holdout_expected_outputs > [2] > records > [2] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "e003",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [2] > records > [2] > id does not match the reference at grounding path holdout_expected_outputs > [2] > records > [2] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0066",
+      "criterion": "the value at grounding path holdout_expected_outputs > [2] > records > [2] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "the value at grounding path holdout_expected_outputs > [2] > records > [2] > value equals the frozen literal",
+        "anchor_0_0": "the observed value at holdout_expected_outputs > [2] > records > [2] > value does not match the reference at grounding path holdout_expected_outputs > [2] > records > [2] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0067",
+      "criterion": "the value at grounding path holdout_inputs > [0] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "holdout_alpha",
+        "anchor_0_0": "the observed value at holdout_inputs > [0] > name does not match the reference at grounding path holdout_inputs > [0] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0068",
+      "criterion": "the value at grounding path holdout_inputs > [0] > records > [0] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "h001",
+        "anchor_0_0": "the observed value at holdout_inputs > [0] > records > [0] > id does not match the reference at grounding path holdout_inputs > [0] > records > [0] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0069",
+      "criterion": "the value at grounding path holdout_inputs > [0] > records > [0] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "  alpha beta  ",
+        "anchor_0_0": "the observed value at holdout_inputs > [0] > records > [0] > value does not match the reference at grounding path holdout_inputs > [0] > records > [0] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0070",
+      "criterion": "the value at grounding path holdout_inputs > [0] > records > [1] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "h002",
+        "anchor_0_0": "the observed value at holdout_inputs > [0] > records > [1] > id does not match the reference at grounding path holdout_inputs > [0] > records > [1] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0071",
+      "criterion": "the value at grounding path holdout_inputs > [0] > records > [1] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "gamma",
+        "anchor_0_0": "the observed value at holdout_inputs > [0] > records > [1] > value does not match the reference at grounding path holdout_inputs > [0] > records > [1] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0072",
+      "criterion": "the value at grounding path holdout_inputs > [0] > records > [2] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "h003",
+        "anchor_0_0": "the observed value at holdout_inputs > [0] > records > [2] > id does not match the reference at grounding path holdout_inputs > [0] > records > [2] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0073",
+      "criterion": "the value at grounding path holdout_inputs > [0] > records > [2] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": " Delta-Echo ",
+        "anchor_0_0": "the observed value at holdout_inputs > [0] > records > [2] > value does not match the reference at grounding path holdout_inputs > [0] > records > [2] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0074",
+      "criterion": "the value at grounding path holdout_inputs > [1] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "holdout_mixed",
+        "anchor_0_0": "the observed value at holdout_inputs > [1] > name does not match the reference at grounding path holdout_inputs > [1] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0075",
+      "criterion": "the value at grounding path holdout_inputs > [1] > records > [0] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "m001",
+        "anchor_0_0": "the observed value at holdout_inputs > [1] > records > [0] > id does not match the reference at grounding path holdout_inputs > [1] > records > [0] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0076",
+      "criterion": "the value at grounding path holdout_inputs > [1] > records > [0] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "mixed_case_HELLO",
+        "anchor_0_0": "the observed value at holdout_inputs > [1] > records > [0] > value does not match the reference at grounding path holdout_inputs > [1] > records > [0] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0077",
+      "criterion": "the value at grounding path holdout_inputs > [1] > records > [1] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "m002",
+        "anchor_0_0": "the observed value at holdout_inputs > [1] > records > [1] > id does not match the reference at grounding path holdout_inputs > [1] > records > [1] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0078",
+      "criterion": "the value at grounding path holdout_inputs > [1] > records > [1] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "   spaced   ",
+        "anchor_0_0": "the observed value at holdout_inputs > [1] > records > [1] > value does not match the reference at grounding path holdout_inputs > [1] > records > [1] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0079",
+      "criterion": "the value at grounding path holdout_inputs > [1] > records > [2] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "m003",
+        "anchor_0_0": "the observed value at holdout_inputs > [1] > records > [2] > id does not match the reference at grounding path holdout_inputs > [1] > records > [2] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0080",
+      "criterion": "the value at grounding path holdout_inputs > [1] > records > [2] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": " 12345 ",
+        "anchor_0_0": "the observed value at holdout_inputs > [1] > records > [2] > value does not match the reference at grounding path holdout_inputs > [1] > records > [2] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0081",
+      "criterion": "the value at grounding path holdout_inputs > [1] > records > [3] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "m004",
+        "anchor_0_0": "the observed value at holdout_inputs > [1] > records > [3] > id does not match the reference at grounding path holdout_inputs > [1] > records > [3] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0082",
+      "criterion": "the value at grounding path holdout_inputs > [1] > records > [3] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "punctuation!",
+        "anchor_0_0": "the observed value at holdout_inputs > [1] > records > [3] > value does not match the reference at grounding path holdout_inputs > [1] > records > [3] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0083",
+      "criterion": "the value at grounding path holdout_inputs > [2] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "holdout_edge",
+        "anchor_0_0": "the observed value at holdout_inputs > [2] > name does not match the reference at grounding path holdout_inputs > [2] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0084",
+      "criterion": "the value at grounding path holdout_inputs > [2] > records > [0] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "e001",
+        "anchor_0_0": "the observed value at holdout_inputs > [2] > records > [0] > id does not match the reference at grounding path holdout_inputs > [2] > records > [0] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0085",
+      "criterion": "the value at grounding path holdout_inputs > [2] > records > [0] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "the value at grounding path holdout_inputs > [2] > records > [0] > value equals the frozen literal",
+        "anchor_0_0": "the observed value at holdout_inputs > [2] > records > [0] > value does not match the reference at grounding path holdout_inputs > [2] > records > [0] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0086",
+      "criterion": "the value at grounding path holdout_inputs > [2] > records > [1] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "e002",
+        "anchor_0_0": "the observed value at holdout_inputs > [2] > records > [1] > id does not match the reference at grounding path holdout_inputs > [2] > records > [1] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0087",
+      "criterion": "the value at grounding path holdout_inputs > [2] > records > [1] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "x",
+        "anchor_0_0": "the observed value at holdout_inputs > [2] > records > [1] > value does not match the reference at grounding path holdout_inputs > [2] > records > [1] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0088",
+      "criterion": "the value at grounding path holdout_inputs > [2] > records > [2] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "e003",
+        "anchor_0_0": "the observed value at holdout_inputs > [2] > records > [2] > id does not match the reference at grounding path holdout_inputs > [2] > records > [2] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0089",
+      "criterion": "the value at grounding path holdout_inputs > [2] > records > [2] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "   ",
+        "anchor_0_0": "the observed value at holdout_inputs > [2] > records > [2] > value does not match the reference at grounding path holdout_inputs > [2] > records > [2] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0090",
+      "criterion": "the value at grounding path import_chain_levels_agent_must_trace > [0] > cli_module_imports_helpers equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "myapp.cli imports myapp.helpers at module top",
+        "anchor_0_0": "the observed value at import_chain_levels_agent_must_trace > [0] > cli_module_imports_helpers does not match the reference at grounding path import_chain_levels_agent_must_trace > [0] > cli_module_imports_helpers"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0091",
+      "criterion": "the value at grounding path import_chain_levels_agent_must_trace > [1] > helpers_module_imports_optional equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "myapp.helpers imports orjson at module top unguarded",
+        "anchor_0_0": "the observed value at import_chain_levels_agent_must_trace > [1] > helpers_module_imports_optional does not match the reference at grounding path import_chain_levels_agent_must_trace > [1] > helpers_module_imports_optional"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0092",
+      "criterion": "the value at grounding path import_chain_levels_agent_must_trace > [2] > optional_absent_from_environment equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "orjson declared in pyproject.toml optional-dependencies.perf but not installed",
+        "anchor_0_0": "the observed value at import_chain_levels_agent_must_trace > [2] > optional_absent_from_environment does not match the reference at grounding path import_chain_levels_agent_must_trace > [2] > optional_absent_from_environment"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0093",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [0] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "cli.py must still import from myapp.helpers and route process subcommand through helpers.process_records",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [0] > description does not match the reference at grounding path invariants_the_fix_must_preserve > [0] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0094",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [0] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "I1_helpers_still_named_from_cli",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [0] > id does not match the reference at grounding path invariants_the_fix_must_preserve > [0] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0095",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [1] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "helpers.py must still name a JSON serializer (orjson or json), either directly imported or guarded, so the intended serialization path is not stubbed out",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [1] > description does not match the reference at grounding path invariants_the_fix_must_preserve > [1] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0096",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [1] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "I2_helpers_still_names_orjson_or_json_as_serializer",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [1] > id does not match the reference at grounding path invariants_the_fix_must_preserve > [1] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0097",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [2] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "helpers.py must expose process_records as a callable with a signature that accepts a list of record dicts",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [2] > description does not match the reference at grounding path invariants_the_fix_must_preserve > [2] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0098",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [2] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "I3_process_records_is_a_function",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [2] > id does not match the reference at grounding path invariants_the_fix_must_preserve > [2] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0099",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [3] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "the bytes written to /workspace/output.txt must parse as a JSON list of record objects with id and value fields",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [3] > description does not match the reference at grounding path invariants_the_fix_must_preserve > [3] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0100",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [3] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "I4_output_bytes_are_valid_json",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [3] > id does not match the reference at grounding path invariants_the_fix_must_preserve > [3] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0101",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [4] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "for every input record, the corresponding output record's value must equal its normalized form (strip then uppercase for string values)",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [4] > description does not match the reference at grounding path invariants_the_fix_must_preserve > [4] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0102",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [4] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "I5_output_records_match_expected_normalization",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [4] > id does not match the reference at grounding path invariants_the_fix_must_preserve > [4] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0103",
+      "criterion": "the value at grounding path misleading_traceback_bottom_message equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "ModuleNotFoundError: No module named 'orjson'",
+        "anchor_0_0": "the observed value at misleading_traceback_bottom_message does not match the reference at grounding path misleading_traceback_bottom_message"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0104",
+      "criterion": "the value at grounding path misleading_traceback_shape matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "Traceback (most recent call last):\n  File \"/usr/local/bin/myapp\", line 5, in <module>\n    from myapp.cli import main\n  File \"/workspace/myapp/myapp/cli.py\", line X, in <module>\n    from myapp import helpers\n  File \"/workspace/myapp/myapp/helpers.py\", line 1, in <module>\n    import orjson\nModuleNotFoundError: No module named 'orjson'\n",
+        "anchor_0_0": "the observed value at misleading_traceback_shape does not match the reference at grounding path misleading_traceback_shape"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0105",
+      "criterion": "the value at grounding path misleading_traceback_top_user_frame_module equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "myapp/helpers.py",
+        "anchor_0_0": "the observed value at misleading_traceback_top_user_frame_module does not match the reference at grounding path misleading_traceback_top_user_frame_module"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0106",
+      "criterion": "the value at grounding path normalization_semantics > algorithm equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "strip_surrounding_whitespace_then_uppercase_string_values",
+        "anchor_0_0": "the observed value at normalization_semantics > algorithm does not match the reference at grounding path normalization_semantics > algorithm"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0107",
+      "criterion": "the value at grounding path normalization_semantics > applied_to equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "value_field_of_each_record",
+        "anchor_0_0": "the observed value at normalization_semantics > applied_to does not match the reference at grounding path normalization_semantics > applied_to"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0108",
+      "criterion": "the value at grounding path normalization_semantics > formal equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "normalize(value) := value.strip().upper() if isinstance(value, str) else value",
+        "anchor_0_0": "the observed value at normalization_semantics > formal does not match the reference at grounding path normalization_semantics > formal"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0109",
+      "criterion": "the value at grounding path normalization_semantics > preserved_field equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "id_field_passes_through_unchanged",
+        "anchor_0_0": "the observed value at normalization_semantics > preserved_field does not match the reference at grounding path normalization_semantics > preserved_field"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0110",
+      "criterion": "the value at grounding path optional_dependency_target equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "orjson",
+        "anchor_0_0": "the observed value at optional_dependency_target does not match the reference at grounding path optional_dependency_target"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0111",
+      "criterion": "the value at grounding path package_import_root equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "myapp",
+        "anchor_0_0": "the observed value at package_import_root does not match the reference at grounding path package_import_root"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0112",
+      "criterion": "the value at grounding path package_name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "myapp",
+        "anchor_0_0": "the observed value at package_name does not match the reference at grounding path package_name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0113",
+      "criterion": "the value at grounding path package_source_root equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/myapp",
+        "anchor_0_0": "the observed value at package_source_root does not match the reference at grounding path package_source_root"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0114",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [0] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "no-network policy blocks egress; command fails without effect",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [0] > rejection does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [0] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0115",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [0] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "pip install orjson from public index",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [0] > route does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [0] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0116",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [1] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "myapp --help may pass but myapp process fails because process_records is unresolvable",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [1] > rejection does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [1] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0117",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [1] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "rewrite cli.py to not import helpers",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [1] > route does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [1] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0118",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [2] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "holdout inputs produce empty output that does not match expected normalized records",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [2] > rejection does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [2] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0119",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [2] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "stub helpers.process_records to return b\"[]\"",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [2] > route does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [2] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0120",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [3] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "holdout inputs the agent cannot see feed different records; hardcoded output fails on holdout",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [3] > rejection does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [3] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0121",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [3] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "hardcode return value for visible input in helpers.process_records",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [3] > route does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [3] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0122",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [4] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "cold-start replay reinstalls the package and overwrites the wrapper; also fails on holdout inputs",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [4] > rejection does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [4] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0123",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [4] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "replace /usr/local/bin/myapp with shell wrapper printing expected bytes",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [4] > route does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [4] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0124",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [5] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "process_records still tries to call orjson.dumps and crashes with NameError at call time",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [5] > rejection does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [5] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0125",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [5] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "delete the orjson import without adding a fallback serializer",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [5] > route does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [5] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0126",
+      "criterion": "the value at grounding path primary_lever equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "tool-failure-recovery",
+        "anchor_0_0": "the observed value at primary_lever does not match the reference at grounding path primary_lever"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0127",
+      "criterion": "the value at grounding path pyproject_extras_key equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "perf",
+        "anchor_0_0": "the observed value at pyproject_extras_key does not match the reference at grounding path pyproject_extras_key"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0128",
+      "criterion": "the value at grounding path reference_solution_path_b_summary matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "Edit /workspace/myapp/myapp/helpers.py so the orjson import is guarded\nby try/except ImportError with a stdlib json fallback that returns\nthe same bytes shape orjson.dumps returns. Both branches must feed\nthrough the same _normalize_record path so behavior is identical.\nNo pip install, no reinstall of myapp needed because the source is\neditable-installed and picked up on next invocation.\n",
+        "anchor_0_0": "the observed value at reference_solution_path_b_summary does not match the reference at grounding path reference_solution_path_b_summary"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0129",
+      "criterion": "the value at grounding path visible_probe_expected_output_records > [0] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "r001",
+        "anchor_0_0": "the observed value at visible_probe_expected_output_records > [0] > id does not match the reference at grounding path visible_probe_expected_output_records > [0] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0130",
+      "criterion": "the value at grounding path visible_probe_expected_output_records > [0] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "HELLO WORLD",
+        "anchor_0_0": "the observed value at visible_probe_expected_output_records > [0] > value does not match the reference at grounding path visible_probe_expected_output_records > [0] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0131",
+      "criterion": "the value at grounding path visible_probe_expected_output_records > [1] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "r002",
+        "anchor_0_0": "the observed value at visible_probe_expected_output_records > [1] > id does not match the reference at grounding path visible_probe_expected_output_records > [1] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0132",
+      "criterion": "the value at grounding path visible_probe_expected_output_records > [1] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "PYTHON 3.11",
+        "anchor_0_0": "the observed value at visible_probe_expected_output_records > [1] > value does not match the reference at grounding path visible_probe_expected_output_records > [1] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0133",
+      "criterion": "the value at grounding path visible_probe_expected_output_records > [2] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "r003",
+        "anchor_0_0": "the observed value at visible_probe_expected_output_records > [2] > id does not match the reference at grounding path visible_probe_expected_output_records > [2] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0134",
+      "criterion": "the value at grounding path visible_probe_expected_output_records > [2] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "ORJSON-OPTIONAL",
+        "anchor_0_0": "the observed value at visible_probe_expected_output_records > [2] > value does not match the reference at grounding path visible_probe_expected_output_records > [2] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0135",
+      "criterion": "the value at grounding path visible_probe_expected_output_records > [3] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "r004",
+        "anchor_0_0": "the observed value at visible_probe_expected_output_records > [3] > id does not match the reference at grounding path visible_probe_expected_output_records > [3] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0136",
+      "criterion": "the value at grounding path visible_probe_expected_output_records > [3] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "NORMALIZE ME",
+        "anchor_0_0": "the observed value at visible_probe_expected_output_records > [3] > value does not match the reference at grounding path visible_probe_expected_output_records > [3] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0137",
+      "criterion": "the value at grounding path visible_probe_input_path_in_container equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/input.txt",
+        "anchor_0_0": "the observed value at visible_probe_input_path_in_container does not match the reference at grounding path visible_probe_input_path_in_container"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0138",
+      "criterion": "the value at grounding path visible_probe_input_records > [0] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "r001",
+        "anchor_0_0": "the observed value at visible_probe_input_records > [0] > id does not match the reference at grounding path visible_probe_input_records > [0] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0139",
+      "criterion": "the value at grounding path visible_probe_input_records > [0] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": " hello world ",
+        "anchor_0_0": "the observed value at visible_probe_input_records > [0] > value does not match the reference at grounding path visible_probe_input_records > [0] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0140",
+      "criterion": "the value at grounding path visible_probe_input_records > [1] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "r002",
+        "anchor_0_0": "the observed value at visible_probe_input_records > [1] > id does not match the reference at grounding path visible_probe_input_records > [1] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0141",
+      "criterion": "the value at grounding path visible_probe_input_records > [1] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "  Python 3.11  ",
+        "anchor_0_0": "the observed value at visible_probe_input_records > [1] > value does not match the reference at grounding path visible_probe_input_records > [1] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0142",
+      "criterion": "the value at grounding path visible_probe_input_records > [2] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "r003",
+        "anchor_0_0": "the observed value at visible_probe_input_records > [2] > id does not match the reference at grounding path visible_probe_input_records > [2] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0143",
+      "criterion": "the value at grounding path visible_probe_input_records > [2] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "orjson-optional",
+        "anchor_0_0": "the observed value at visible_probe_input_records > [2] > value does not match the reference at grounding path visible_probe_input_records > [2] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0144",
+      "criterion": "the value at grounding path visible_probe_input_records > [3] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "r004",
+        "anchor_0_0": "the observed value at visible_probe_input_records > [3] > id does not match the reference at grounding path visible_probe_input_records > [3] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0145",
+      "criterion": "the value at grounding path visible_probe_input_records > [3] > value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": " NORMALIZE me ",
+        "anchor_0_0": "the observed value at visible_probe_input_records > [3] > value does not match the reference at grounding path visible_probe_input_records > [3] > value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0146",
+      "criterion": "the value at grounding path visible_probe_output_path_in_container equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/output.txt",
+        "anchor_0_0": "the observed value at visible_probe_output_path_in_container does not match the reference at grounding path visible_probe_output_path_in_container"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    }
+  ]
+}

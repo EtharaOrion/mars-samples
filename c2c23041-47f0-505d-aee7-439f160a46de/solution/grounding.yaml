@@ -1,0 +1,98 @@
+schema: forge.grounding/v1
+task_slug: nginx-mtls-forward-auth-single-service
+invocation: 22
+canary_a: FORGE_HOLDOUT_CANARY_6D7CD476202FDE97C238650ACA015B0B
+canary_b: FORGE_HOLDOUT_CANARY_4380D5C5411CD6806ABCC343A9FA0F8D
+
+three_authored_files_shape_contract:
+  - path: /workspace/nginx.conf
+    presence: required
+    nonempty: required
+    utf8: required
+  - path: /workspace/mime.types
+    presence: required
+    nonempty: required
+    utf8: required
+  - path: /workspace/reload.sh
+    presence: required
+    nonempty: required
+    utf8: required
+    mode_bit_owner_exec: required
+
+reload_sh_success_contract:
+  exit_code: 0
+  nginx_t_recheck_exit_code: 0
+  tcp_443_bound_within_seconds: 5
+
+reference_probe_truth_table:
+  canonical_response_form: |
+    Ordered 8-tuple in probe-id order:
+    (probe_id, http_status_code, response_body_sha256_hex_or_null,
+     upstream_observed_subject_or_null)
+  rows:
+    - probe: P1
+      status: 200
+      body_sha256: c19511a15470c746f541a5eda64d7f2f4eea4ffeb54f92b7ec963450fd8f90d5
+      upstream_observed_subject: 'CN=svc-alpha,O=Ethara'
+    - probe: P2
+      status: 404
+      body_sha256: null
+      upstream_observed_subject: null
+    - probe: P3
+      status: 495
+      body_sha256: null
+      upstream_observed_subject: null
+    - probe: P4
+      status: 495
+      body_sha256: null
+      upstream_observed_subject: null
+    - probe: P5
+      status: 495
+      body_sha256: null
+      upstream_observed_subject: null
+    - probe: P6
+      status: 496
+      body_sha256: null
+      upstream_observed_subject: null
+    - probe: P7
+      curl_exit_nonzero: true
+      status: 0
+      body_sha256: null
+      upstream_observed_subject: null
+    - probe: P8
+      status: 301
+      body_sha256: null
+      location_header: 'https://localhost/foo'
+      upstream_observed_subject: null
+
+reference_upstream_observed_subject_map:
+  P1: 'CN=svc-alpha,O=Ethara'
+
+bound_log_field_set:
+  - request_id
+  - remote_addr
+  - ts_iso8601
+  - request_method
+  - request_uri
+  - http_host
+  - status
+  - body_bytes_sent
+  - request_time_seconds
+  - ssl_client_verify
+  - ssl_client_s_dn
+  - http_user_agent
+
+reference_log_record_P1:
+  status: 200
+  ssl_client_verify: SUCCESS
+  ssl_client_s_dn_regex: '^CN=svc-alpha,O=Ethara$'
+
+reference_client_cn_pattern: 'CN=svc-[a-z0-9]+,O=Ethara'
+
+combined_line_budget: 220
+
+reference_pki_authoring_recipe: baked at image build via /tmp/build_pki.sh with pinned serials 0x1001,0x2001,0x3001,0x4001,0x4002,0x4003,0x4004,0x9001 and pinned -not_before/-not_after for the expired client
+
+reference_nginx_conf_body: embedded in tests/grader.py under REFERENCE_NGINX_CONF constant
+reference_mime_types_body: embedded in tests/grader.py under REFERENCE_MIME_TYPES constant
+reference_reload_sh_body: embedded in tests/grader.py under REFERENCE_RELOAD_SH constant

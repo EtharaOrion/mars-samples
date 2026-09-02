@@ -1,9 +1,0 @@
-services:
-  app:
-    build: ./app
-  checker:
-    build: ./checker
-    depends_on:
-      - app
-    volumes:
-      - ./out:/out

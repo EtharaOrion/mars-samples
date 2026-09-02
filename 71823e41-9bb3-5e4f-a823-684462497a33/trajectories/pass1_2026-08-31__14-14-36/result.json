@@ -1,0 +1,117 @@
+{
+    "id": "fdda8472-be9a-4432-8f8f-ad14606b4d5a",
+    "task_name": "71823e41-9bb3-5e4f-a823-684462497a33",
+    "trial_name": "71823e41-9bb3-5e4f-a823-68446249__Yq8fjbg",
+    "trial_uri": "file:///Users/apple/Sources/office/mars-anubis/mars/jobs/2026-08-31__14-14-36/71823e41-9bb3-5e4f-a823-68446249__Yq8fjbg",
+    "task_id": {
+        "path": "/Users/apple/Sources/office/mars-anubis/mars/dataset/71823e41-9bb3-5e4f-a823-684462497a33"
+    },
+    "source": null,
+    "task_checksum": "a89c9b129c52b06e34e8bcea768f1e61487152fbd2b824fbae08af6827a04cac",
+    "config": {
+        "task": {
+            "path": "/Users/apple/Sources/office/mars-anubis/mars/dataset/71823e41-9bb3-5e4f-a823-684462497a33",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "71823e41-9bb3-5e4f-a823-68446249__Yq8fjbg",
+        "trials_dir": "jobs/2026-08-31__14-14-36",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": 5.0,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "claude-code",
+            "import_path": null,
+            "model_name": "claude-opus-4-8",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "c2f42fd5-b9ef-40cc-91be-8f67830ec788",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.251",
+        "model_info": {
+            "name": "claude-opus-4-8",
+            "provider": null
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 716129,
+        "n_cache_tokens": 650732,
+        "n_output_tokens": 25434,
+        "cost_usd": 1.3699122499999998,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "p_patch_sh_exit_code": 0,
+            "p_readiness_ms_elapsed": 366995,
+            "reward": 0.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-08-31T08:44:36.668420Z",
+    "finished_at": "2026-08-31T08:57:45.378197Z",
+    "environment_setup": {
+        "started_at": "2026-08-31T08:44:36.719050Z",
+        "finished_at": "2026-08-31T08:44:40.119284Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-08-31T08:44:40.119643Z",
+        "finished_at": "2026-08-31T08:45:47.181841Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-08-31T08:45:47.182754Z",
+        "finished_at": "2026-08-31T08:51:31.410077Z"
+    },
+    "verifier": {
+        "started_at": "2026-08-31T08:51:32.858084Z",
+        "finished_at": "2026-08-31T08:57:40.655714Z"
+    },
+    "step_results": null
+}

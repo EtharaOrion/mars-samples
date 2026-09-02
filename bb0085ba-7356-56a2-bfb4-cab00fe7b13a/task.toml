@@ -1,0 +1,55 @@
+schema_version = "1.1"
+
+[task]
+name = "mars/cli-yq-preserve-anchor-alias-in-update-v2"
+description = "Update two scalars in a YAML file with mikefarah yq while preserving BOTH the mapping anchor (which yq preserves natively) and the sequence-element anchor (which mikefarah yq silently drops on write). The agent must observe the naive-attempt symptom, diagnose the sequence-anchor loss, and apply a workaround (post-yq awk/sed re-injection of the dropped anchor label, or reserialization via python3 + ruamel.yaml). The verifier grades structural anchor/alias literal counts, yq-eval value readbacks, and alias-following readbacks that prove both anchors still resolve to updated content, on both the public config and a private holdout with distinct anchor names, paths, and values."
+authors = [{ name = "mars-forge" }]
+keywords = ["yq", "yaml", "mikefarah", "anchor-alias", "sequence-element-anchor", "cli-shell-pipeline", "verifier-hardness", "silent-bug-workaround"]
+
+[metadata]
+mars_sub_type = "cli"
+mars_archetype = "cli-shell-pipeline"
+mars_maturity = "draft"
+mars_tier = "frontier-defeat"
+mars_disposition_ceiling = "HOLD:PILOT_REQUIRED"
+mars_forge_contract_sha256 = "7fa61afd155a88f234f6c741a34546782fa0f53ca44afd5ead5a71094a7e5655"
+mars_forge_invocation = "35"
+mars_primary_hardness_lever = "verifier-hardness"
+mars_legacy_predecessor_uuid = "f12bdf4b-be9e-5e4e-a2b8-d752280227ee"
+mars_task_uuid = "bb0085ba-7356-56a2-bfb4-cab00fe7b13a"
+
+[verifier]
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 900.0
+
+[environment]
+build_timeout_sec = 900.0
+cpus = 2
+memory_mb = 2048
+storage_mb = 4096
+gpus = 0
+network_mode = "public"
+
+[verifier.env]
+[environment.env]
+[solution.env]
+
+[[artifacts]]
+source = "/workspace/input.yaml"
+
+[[artifacts]]
+source = "/workspace/expected_output.yaml"
+
+[[artifacts]]
+source = "/workspace/observed_naive_attempt.txt"
+
+[[artifacts]]
+source = "/workspace/solve.sh"
+
+[prosecutor]
+mode = "harness_provided"
+delegate = "harness/mars_council.py"
+in_container_stub = "tests/run_prosecutor_judge.py"
+note = "3-judge Claude council runs on host post-container; in-container stub is a no-op marker for G-VER-INVARIANCE"

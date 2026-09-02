@@ -1,0 +1,135 @@
+{
+    "id": "f3aa7951-425e-42e3-8c59-2ca9b9118783",
+    "task_name": "mars/configure-makefile-phony-implicit-rule-conflict-v2",
+    "trial_name": "adb91cfe-6e89-50c8-b126-2ff48447__tAqoJ4h",
+    "trial_uri": "file:///Users/apple/Sources/office/mars-anubis/mars/jobs/2026-08-31__14-43-53/adb91cfe-6e89-50c8-b126-2ff48447__tAqoJ4h",
+    "task_id": {
+        "path": "/Users/apple/Sources/office/mars-anubis/mars/dataset/adb91cfe-6e89-50c8-b126-2ff48447593b"
+    },
+    "source": null,
+    "task_checksum": "126b21dc98d80b44938c2941da241b68b70c6ca498d09421cda7b74bc1625faf",
+    "config": {
+        "task": {
+            "path": "/Users/apple/Sources/office/mars-anubis/mars/dataset/adb91cfe-6e89-50c8-b126-2ff48447593b",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "adb91cfe-6e89-50c8-b126-2ff48447__tAqoJ4h",
+        "trials_dir": "jobs/2026-08-31__14-43-53",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": 5.0,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "claude-code",
+            "import_path": null,
+            "model_name": "claude-opus-4-8",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "390664e5-11ae-4b54-9652-8e5eab4275e6",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.251",
+        "model_info": {
+            "name": "claude-opus-4-8",
+            "provider": null
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 101746,
+        "n_cache_tokens": 75145,
+        "n_output_tokens": 1235,
+        "cost_usd": 0.23469375,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0,
+            "p_root_makefile_present": 1,
+            "p_subdir_makefile_present": 1,
+            "p_root_makefile_carries_recursive_make_c_subdir": 1,
+            "p_subdir_makefile_declares_test_rule": 1,
+            "p_subdir_makefile_declares_build_rule": 1,
+            "p_root_makefile_no_rm_test_or_build_shortcut": 1,
+            "p_subdir_makefile_no_rm_test_or_build_in_test_or_build_recipe_shortcut": 1,
+            "p_root_makefile_phony_covers_test": 1,
+            "p_root_makefile_phony_covers_build": 1,
+            "p_subdir_makefile_phony_covers_test": 1,
+            "p_subdir_makefile_phony_covers_build": 1,
+            "p_inv1_make_test_first_exit_zero_and_markers_present": 1,
+            "p_inv2_make_test_second_exit_zero_and_markers_present": 1,
+            "p_inv3_make_build_first_exit_zero_and_markers_present": 1,
+            "p_inv4_make_build_second_exit_zero_and_markers_present": 1,
+            "j_inv1_returncode": 0,
+            "j_inv2_returncode": 0,
+            "j_inv3_returncode": 0,
+            "j_inv4_returncode": 0,
+            "j_final_reward": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-08-31T09:13:53.643766Z",
+    "finished_at": "2026-08-31T09:15:55.935900Z",
+    "environment_setup": {
+        "started_at": "2026-08-31T09:13:53.699193Z",
+        "finished_at": "2026-08-31T09:13:58.725373Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-08-31T09:13:58.725709Z",
+        "finished_at": "2026-08-31T09:15:28.046439Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-08-31T09:15:28.067830Z",
+        "finished_at": "2026-08-31T09:15:48.773344Z"
+    },
+    "verifier": {
+        "started_at": "2026-08-31T09:15:51.478535Z",
+        "finished_at": "2026-08-31T09:15:51.966957Z"
+    },
+    "step_results": null
+}

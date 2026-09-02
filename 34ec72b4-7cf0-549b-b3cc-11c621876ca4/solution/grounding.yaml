@@ -1,0 +1,178 @@
+schema: forge.grounding/v1
+task_slug: fix-python-entrypoint-refactor-drift-v2
+canary_a: FORGE_HOLDOUT_CANARY_5DDE55F921B68068A698FDB6170A798A
+canary_b_reference_only: FORGE_HOLDOUT_CANARY_71AE654D5B83FDCB3B22D9CA02ABBF90
+task_lever_label: entrypoint_function_imports_from_an_absent_optional_package_agent_must_trace_transitive_import_failure_through_two_levels
+archetype: build-fix
+primary_lever: tool-failure-recovery
+
+optional_dependency_target: orjson
+pyproject_extras_key: perf
+csv_module_choice: orjson
+
+package_name: myapp
+package_source_root: /workspace/myapp
+package_import_root: myapp
+console_script_name: myapp
+console_script_target: myapp.cli:main
+
+import_chain_levels_agent_must_trace:
+- cli_module_imports_helpers: myapp.cli imports myapp.helpers at module top
+- helpers_module_imports_optional: myapp.helpers imports orjson at module top unguarded
+- optional_absent_from_environment: orjson declared in pyproject.toml optional-dependencies.perf but not installed
+
+authored_manifest_of_broken_state:
+  pyproject_dependencies_value: '[]'
+  pyproject_optional_dependencies_perf_value: '["orjson>=3.9,<4"]'
+  helpers_py_top_import_statement: import orjson
+  cli_py_top_import_statement: from myapp import helpers
+  console_script_generated_at: /usr/local/bin/myapp
+  console_script_imports: from myapp.cli import main
+
+misleading_traceback_top_user_frame_module: myapp/helpers.py
+misleading_traceback_bottom_message: 'ModuleNotFoundError: No module named ''orjson'''
+misleading_traceback_shape: |
+  Traceback (most recent call last):
+    File "/usr/local/bin/myapp", line 5, in <module>
+      from myapp.cli import main
+    File "/workspace/myapp/myapp/cli.py", line X, in <module>
+      from myapp import helpers
+    File "/workspace/myapp/myapp/helpers.py", line 1, in <module>
+      import orjson
+  ModuleNotFoundError: No module named 'orjson'
+
+false_lead_probes:
+- probe: pip_install_orjson_from_pypi
+  expected_outcome: no_network_egress_pip_fails_with_index_or_connection_error
+- probe: pip_install_dash_e_myapp_reinstall
+  expected_outcome: install_completes_but_myapp_still_fails_because_orjson_still_absent
+- probe: edit_cli_py_to_remove_import_of_helpers
+  expected_outcome: myapp_help_may_succeed_but_myapp_process_fails_because_process_records_unresolvable
+- probe: edit_cli_py_main_signature
+  expected_outcome: signature_change_does_not_address_top_of_file_import_chain_failure
+
+canonical_fix_path_selected: path_b_guarded_import_with_functional_fallback
+canonical_fix_path_selection_rationale: |
+  Path a (pip install orjson==3.9.*) requires network egress which the
+  container denies. Path b (guard the helpers.py import and provide a
+  stdlib json fallback that produces the same bytes) is more idiomatic
+  for optional-dependency handling, works offline, and preserves the
+  import chain that the package was designed around.
+
+acceptable_fix_paths:
+- id: path_a_install_optional_dependency
+  description: install orjson (declared in pyproject optional-dependencies.perf) so the unguarded import in helpers.py resolves
+  requires_network: true
+  works_in_this_environment: false
+- id: path_b_guarded_import_with_functional_fallback
+  description: rewrite helpers.py to guard the orjson import with try/except and fall back to a stdlib json serializer that produces byte-identical output for the record shape the CLI handles
+  requires_network: false
+  works_in_this_environment: true
+
+visible_probe_input_path_in_container: /workspace/input.txt
+visible_probe_output_path_in_container: /workspace/output.txt
+
+visible_probe_input_records:
+- {id: r001, value: ' hello world '}
+- {id: r002, value: '  Python 3.11  '}
+- {id: r003, value: orjson-optional}
+- {id: r004, value: ' NORMALIZE me '}
+
+visible_probe_expected_output_records:
+- {id: r001, value: HELLO WORLD}
+- {id: r002, value: PYTHON 3.11}
+- {id: r003, value: ORJSON-OPTIONAL}
+- {id: r004, value: NORMALIZE ME}
+
+holdout_inputs:
+- name: holdout_alpha
+  records:
+  - {id: h001, value: '  alpha beta  '}
+  - {id: h002, value: gamma}
+  - {id: h003, value: ' Delta-Echo '}
+- name: holdout_mixed
+  records:
+  - {id: m001, value: mixed_case_HELLO}
+  - {id: m002, value: '   spaced   '}
+  - {id: m003, value: ' 12345 '}
+  - {id: m004, value: 'punctuation!'}
+- name: holdout_edge
+  records:
+  - {id: e001, value: ''}
+  - {id: e002, value: 'x'}
+  - {id: e003, value: '   '}
+
+holdout_expected_outputs:
+- name: holdout_alpha
+  records:
+  - {id: h001, value: ALPHA BETA}
+  - {id: h002, value: GAMMA}
+  - {id: h003, value: DELTA-ECHO}
+- name: holdout_mixed
+  records:
+  - {id: m001, value: MIXED_CASE_HELLO}
+  - {id: m002, value: SPACED}
+  - {id: m003, value: '12345'}
+  - {id: m004, value: 'PUNCTUATION!'}
+- name: holdout_edge
+  records:
+  - {id: e001, value: ''}
+  - {id: e002, value: X}
+  - {id: e003, value: ''}
+
+normalization_semantics:
+  algorithm: strip_surrounding_whitespace_then_uppercase_string_values
+  formal: 'normalize(value) := value.strip().upper() if isinstance(value, str) else value'
+  applied_to: value_field_of_each_record
+  preserved_field: id_field_passes_through_unchanged
+
+forbidden_shortcut_patterns:
+- id: rewrite_helpers_to_no_op
+  description: replace process_records body to return b"[]" or hardcoded bytes that ignore input records
+  detection: holdout inputs produce wrong output; ast walk of helpers.py finds no reference to _normalize_record or equivalent record transformation
+- id: remove_orjson_import_and_replace_with_stub
+  description: delete orjson import entirely and replace with an unrelated stub that neither imports json nor performs the intended transformation
+  detection: ast walk of helpers.py finds no orjson reference AND no json module reference AND no functional serialization call
+- id: edit_cli_main_signature
+  description: rewrite main() to bypass helpers.process_records and hardcode output values
+  detection: ast walk of cli.py finds no helpers.process_records call OR the process subcommand handler no longer routes through the helpers module
+- id: shell_wrapper_at_usr_local_bin_myapp
+  description: replace /usr/local/bin/myapp with a bash script that echoes hardcoded output for the visible input
+  detection: cold-start replay reinstalls the package and regenerates the entry-point script from pyproject.toml; the bash wrapper is overwritten and fails on holdout inputs
+- id: install_orjson_from_pypi
+  description: reach out to a public PyPI index to install orjson
+  detection: no-network policy blocks the install; agent's pip command fails; even if it somehow succeeded the pyproject.toml would still not declare orjson as a real dependency
+
+invariants_the_fix_must_preserve:
+- id: I1_helpers_still_named_from_cli
+  description: cli.py must still import from myapp.helpers and route process subcommand through helpers.process_records
+- id: I2_helpers_still_names_orjson_or_json_as_serializer
+  description: helpers.py must still name a JSON serializer (orjson or json), either directly imported or guarded, so the intended serialization path is not stubbed out
+- id: I3_process_records_is_a_function
+  description: helpers.py must expose process_records as a callable with a signature that accepts a list of record dicts
+- id: I4_output_bytes_are_valid_json
+  description: the bytes written to /workspace/output.txt must parse as a JSON list of record objects with id and value fields
+- id: I5_output_records_match_expected_normalization
+  description: for every input record, the corresponding output record's value must equal its normalized form (strip then uppercase for string values)
+
+reference_solution_path_b_summary: |
+  Edit /workspace/myapp/myapp/helpers.py so the orjson import is guarded
+  by try/except ImportError with a stdlib json fallback that returns
+  the same bytes shape orjson.dumps returns. Both branches must feed
+  through the same _normalize_record path so behavior is identical.
+  No pip install, no reinstall of myapp needed because the source is
+  editable-installed and picked up on next invocation.
+
+plausible_wrong_routes_and_why_rejected:
+- route: pip install orjson from public index
+  rejection: no-network policy blocks egress; command fails without effect
+- route: rewrite cli.py to not import helpers
+  rejection: myapp --help may pass but myapp process fails because process_records is unresolvable
+- route: stub helpers.process_records to return b"[]"
+  rejection: holdout inputs produce empty output that does not match expected normalized records
+- route: hardcode return value for visible input in helpers.process_records
+  rejection: holdout inputs the agent cannot see feed different records; hardcoded output fails on holdout
+- route: replace /usr/local/bin/myapp with shell wrapper printing expected bytes
+  rejection: cold-start replay reinstalls the package and overwrites the wrapper; also fails on holdout inputs
+- route: delete the orjson import without adding a fallback serializer
+  rejection: process_records still tries to call orjson.dumps and crashes with NameError at call time

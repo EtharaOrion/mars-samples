@@ -1,0 +1,30 @@
+# /etc/app/config.py -- application configuration baseline for FORGE inv-27.
+# corruption_bootstrap.sh at image build time applies sed -i to set
+#   CACHE_LOCK_TTL_SECONDS = 1     (P2 seed: undersized vs catalog fill duration)
+# Agent's patch.sh must restore CACHE_LOCK_TTL_SECONDS above the fill
+# duration ceiling (>=30) OR route the fix through the C-ORDERING
+# equivalent PSYCOPG2_PREPARE_THRESHOLD=None.
+
+POSTGRES_HOST = "127.0.0.1"
+POSTGRES_PORT = 6432
+POSTGRES_DB = "appdb"
+POSTGRES_USER = "app"
+POSTGRES_PASSWORD = "app-password"
+
+REDIS_HOST = "127.0.0.1"
+REDIS_PORT = 6379
+
+CACHE_LOCK_KEY = "cache_fill:catalog"
+CACHE_LOCK_TTL_SECONDS = 30
+
+WORKER_CONCURRENCY = 50
+
+PSYCOPG2_PREPARE_THRESHOLD = 5
+
+CATALOG_QUERY = "SELECT catalog_id, sku, description, price, tags FROM catalog WHERE catalog_id >= %s ORDER BY catalog_id LIMIT %s"
+
+CATALOG_FETCH_BATCH_SIZE = 250
+
+WORKER_INSERT_REQUESTS_SQL = "INSERT INTO requests (request_id, worker_id, payload) VALUES (%s, %s, %s)"
+
+WORKER_INSERT_AUDIT_SQL = "INSERT INTO audit (worker_id, request_id, note) VALUES (%s, %s, %s)"

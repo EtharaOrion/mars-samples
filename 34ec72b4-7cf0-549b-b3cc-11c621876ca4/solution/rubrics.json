@@ -1,0 +1,2825 @@
+{
+  "schema": "forge.rubric_bundle/v1",
+  "task_uuid": "34ec72b4-7cf0-549b-b3cc-11c621876ca4",
+  "task_slug": "fix-python-entrypoint-refactor-drift-v2",
+  "generated_by": "dataset/<uuid>/solution/recompute.py",
+  "source_of_truth": "dataset/<uuid>/solution/grounding.yaml",
+  "bound_by_contract": "seed/contract.yaml#rubric",
+  "compiled_item_weight_share": 0.9794520547945206,
+  "compilation_floor": 0.8,
+  "compilation_floor_note": "per_seed_contract_yaml_rubric_block_and_invariant_24",
+  "item_count": 146,
+  "items": [
+    {
+      "id": "R0001",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path acceptable_fix_paths > [0] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "acceptable_fix_paths",
+        0,
+        "description"
+      ],
+      "grounding_path_display": "acceptable_fix_paths > [0] > description",
+      "expected_literal": "install orjson (declared in pyproject optional-dependencies.perf) so the unguarded import in helpers.py resolves"
+    },
+    {
+      "id": "R0002",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path acceptable_fix_paths > [0] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "acceptable_fix_paths",
+        0,
+        "id"
+      ],
+      "grounding_path_display": "acceptable_fix_paths > [0] > id",
+      "expected_literal": "path_a_install_optional_dependency"
+    },
+    {
+      "id": "R0003",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path acceptable_fix_paths > [0] > requires_network equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "acceptable_fix_paths",
+        0,
+        "requires_network"
+      ],
+      "grounding_path_display": "acceptable_fix_paths > [0] > requires_network",
+      "expected_literal": true
+    },
+    {
+      "id": "R0004",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path acceptable_fix_paths > [0] > works_in_this_environment equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "acceptable_fix_paths",
+        0,
+        "works_in_this_environment"
+      ],
+      "grounding_path_display": "acceptable_fix_paths > [0] > works_in_this_environment",
+      "expected_literal": false
+    },
+    {
+      "id": "R0005",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path acceptable_fix_paths > [1] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "acceptable_fix_paths",
+        1,
+        "description"
+      ],
+      "grounding_path_display": "acceptable_fix_paths > [1] > description",
+      "expected_literal": "rewrite helpers.py to guard the orjson import with try/except and fall back to a stdlib json serializer that produces byte-identical output for the record shape the CLI handles"
+    },
+    {
+      "id": "R0006",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path acceptable_fix_paths > [1] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "acceptable_fix_paths",
+        1,
+        "id"
+      ],
+      "grounding_path_display": "acceptable_fix_paths > [1] > id",
+      "expected_literal": "path_b_guarded_import_with_functional_fallback"
+    },
+    {
+      "id": "R0007",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path acceptable_fix_paths > [1] > requires_network equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "acceptable_fix_paths",
+        1,
+        "requires_network"
+      ],
+      "grounding_path_display": "acceptable_fix_paths > [1] > requires_network",
+      "expected_literal": false
+    },
+    {
+      "id": "R0008",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path acceptable_fix_paths > [1] > works_in_this_environment equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "acceptable_fix_paths",
+        1,
+        "works_in_this_environment"
+      ],
+      "grounding_path_display": "acceptable_fix_paths > [1] > works_in_this_environment",
+      "expected_literal": true
+    },
+    {
+      "id": "R0009",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path archetype equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "archetype"
+      ],
+      "grounding_path_display": "archetype",
+      "expected_literal": "build-fix"
+    },
+    {
+      "id": "R0010",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > cli_py_top_import_statement equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "cli_py_top_import_statement"
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > cli_py_top_import_statement",
+      "expected_literal": "from myapp import helpers"
+    },
+    {
+      "id": "R0011",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > console_script_generated_at equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "console_script_generated_at"
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > console_script_generated_at",
+      "expected_literal": "/usr/local/bin/myapp"
+    },
+    {
+      "id": "R0012",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > console_script_imports equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "console_script_imports"
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > console_script_imports",
+      "expected_literal": "from myapp.cli import main"
+    },
+    {
+      "id": "R0013",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > helpers_py_top_import_statement equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "helpers_py_top_import_statement"
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > helpers_py_top_import_statement",
+      "expected_literal": "import orjson"
+    },
+    {
+      "id": "R0014",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > pyproject_dependencies_value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "pyproject_dependencies_value"
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > pyproject_dependencies_value",
+      "expected_literal": "[]"
+    },
+    {
+      "id": "R0015",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > pyproject_optional_dependencies_perf_value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "pyproject_optional_dependencies_perf_value"
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > pyproject_optional_dependencies_perf_value",
+      "expected_literal": "[\"orjson>=3.9,<4\"]"
+    },
+    {
+      "id": "R0016",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path canonical_fix_path_selected equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "canonical_fix_path_selected"
+      ],
+      "grounding_path_display": "canonical_fix_path_selected",
+      "expected_literal": "path_b_guarded_import_with_functional_fallback"
+    },
+    {
+      "id": "R0017",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path canonical_fix_path_selection_rationale matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "canonical_fix_path_selection_rationale"
+      ],
+      "grounding_path_display": "canonical_fix_path_selection_rationale",
+      "expected_literal": "Path a (pip install orjson==3.9.*) requires network egress which the\ncontainer denies. Path b (guard the helpers.py import and provide a\nstdlib json fallback that produces the same bytes) is more idiomatic\nfor optional-dependency handling, works offline, and preserves the\nimport chain that the package was designed around.\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0018",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path console_script_name equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "console_script_name"
+      ],
+      "grounding_path_display": "console_script_name",
+      "expected_literal": "myapp"
+    },
+    {
+      "id": "R0019",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path console_script_target equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "console_script_target"
+      ],
+      "grounding_path_display": "console_script_target",
+      "expected_literal": "myapp.cli:main"
+    },
+    {
+      "id": "R0020",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path csv_module_choice equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "csv_module_choice"
+      ],
+      "grounding_path_display": "csv_module_choice",
+      "expected_literal": "orjson"
+    },
+    {
+      "id": "R0021",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [0] > expected_outcome equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        0,
+        "expected_outcome"
+      ],
+      "grounding_path_display": "false_lead_probes > [0] > expected_outcome",
+      "expected_literal": "no_network_egress_pip_fails_with_index_or_connection_error"
+    },
+    {
+      "id": "R0022",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [0] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        0,
+        "probe"
+      ],
+      "grounding_path_display": "false_lead_probes > [0] > probe",
+      "expected_literal": "pip_install_orjson_from_pypi"
+    },
+    {
+      "id": "R0023",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [1] > expected_outcome equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        1,
+        "expected_outcome"
+      ],
+      "grounding_path_display": "false_lead_probes > [1] > expected_outcome",
+      "expected_literal": "install_completes_but_myapp_still_fails_because_orjson_still_absent"
+    },
+    {
+      "id": "R0024",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [1] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        1,
+        "probe"
+      ],
+      "grounding_path_display": "false_lead_probes > [1] > probe",
+      "expected_literal": "pip_install_dash_e_myapp_reinstall"
+    },
+    {
+      "id": "R0025",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [2] > expected_outcome equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        2,
+        "expected_outcome"
+      ],
+      "grounding_path_display": "false_lead_probes > [2] > expected_outcome",
+      "expected_literal": "myapp_help_may_succeed_but_myapp_process_fails_because_process_records_unresolvable"
+    },
+    {
+      "id": "R0026",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [2] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        2,
+        "probe"
+      ],
+      "grounding_path_display": "false_lead_probes > [2] > probe",
+      "expected_literal": "edit_cli_py_to_remove_import_of_helpers"
+    },
+    {
+      "id": "R0027",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [3] > expected_outcome equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        3,
+        "expected_outcome"
+      ],
+      "grounding_path_display": "false_lead_probes > [3] > expected_outcome",
+      "expected_literal": "signature_change_does_not_address_top_of_file_import_chain_failure"
+    },
+    {
+      "id": "R0028",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [3] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        3,
+        "probe"
+      ],
+      "grounding_path_display": "false_lead_probes > [3] > probe",
+      "expected_literal": "edit_cli_py_main_signature"
+    },
+    {
+      "id": "R0029",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [0] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        0,
+        "description"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [0] > description",
+      "expected_literal": "replace process_records body to return b\"[]\" or hardcoded bytes that ignore input records"
+    },
+    {
+      "id": "R0030",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [0] > detection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        0,
+        "detection"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [0] > detection",
+      "expected_literal": "holdout inputs produce wrong output; ast walk of helpers.py finds no reference to _normalize_record or equivalent record transformation"
+    },
+    {
+      "id": "R0031",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [0] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        0,
+        "id"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [0] > id",
+      "expected_literal": "rewrite_helpers_to_no_op"
+    },
+    {
+      "id": "R0032",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [1] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        1,
+        "description"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [1] > description",
+      "expected_literal": "delete orjson import entirely and replace with an unrelated stub that neither imports json nor performs the intended transformation"
+    },
+    {
+      "id": "R0033",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [1] > detection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        1,
+        "detection"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [1] > detection",
+      "expected_literal": "ast walk of helpers.py finds no orjson reference AND no json module reference AND no functional serialization call"
+    },
+    {
+      "id": "R0034",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [1] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        1,
+        "id"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [1] > id",
+      "expected_literal": "remove_orjson_import_and_replace_with_stub"
+    },
+    {
+      "id": "R0035",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [2] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        2,
+        "description"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [2] > description",
+      "expected_literal": "rewrite main() to bypass helpers.process_records and hardcode output values"
+    },
+    {
+      "id": "R0036",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [2] > detection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        2,
+        "detection"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [2] > detection",
+      "expected_literal": "ast walk of cli.py finds no helpers.process_records call OR the process subcommand handler no longer routes through the helpers module"
+    },
+    {
+      "id": "R0037",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [2] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        2,
+        "id"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [2] > id",
+      "expected_literal": "edit_cli_main_signature"
+    },
+    {
+      "id": "R0038",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [3] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        3,
+        "description"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [3] > description",
+      "expected_literal": "replace /usr/local/bin/myapp with a bash script that echoes hardcoded output for the visible input"
+    },
+    {
+      "id": "R0039",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [3] > detection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        3,
+        "detection"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [3] > detection",
+      "expected_literal": "cold-start replay reinstalls the package and regenerates the entry-point script from pyproject.toml; the bash wrapper is overwritten and fails on holdout inputs"
+    },
+    {
+      "id": "R0040",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [3] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        3,
+        "id"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [3] > id",
+      "expected_literal": "shell_wrapper_at_usr_local_bin_myapp"
+    },
+    {
+      "id": "R0041",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [4] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        4,
+        "description"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [4] > description",
+      "expected_literal": "reach out to a public PyPI index to install orjson"
+    },
+    {
+      "id": "R0042",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [4] > detection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        4,
+        "detection"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [4] > detection",
+      "expected_literal": "no-network policy blocks the install; agent's pip command fails; even if it somehow succeeded the pyproject.toml would still not declare orjson as a real dependency"
+    },
+    {
+      "id": "R0043",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [4] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        4,
+        "id"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [4] > id",
+      "expected_literal": "install_orjson_from_pypi"
+    },
+    {
+      "id": "R0044",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [0] > name equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        0,
+        "name"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [0] > name",
+      "expected_literal": "holdout_alpha"
+    },
+    {
+      "id": "R0045",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [0] > records > [0] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        0,
+        "records",
+        0,
+        "id"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [0] > records > [0] > id",
+      "expected_literal": "h001"
+    },
+    {
+      "id": "R0046",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [0] > records > [0] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        0,
+        "records",
+        0,
+        "value"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [0] > records > [0] > value",
+      "expected_literal": "ALPHA BETA"
+    },
+    {
+      "id": "R0047",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [0] > records > [1] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        0,
+        "records",
+        1,
+        "id"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [0] > records > [1] > id",
+      "expected_literal": "h002"
+    },
+    {
+      "id": "R0048",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [0] > records > [1] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        0,
+        "records",
+        1,
+        "value"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [0] > records > [1] > value",
+      "expected_literal": "GAMMA"
+    },
+    {
+      "id": "R0049",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [0] > records > [2] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        0,
+        "records",
+        2,
+        "id"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [0] > records > [2] > id",
+      "expected_literal": "h003"
+    },
+    {
+      "id": "R0050",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [0] > records > [2] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        0,
+        "records",
+        2,
+        "value"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [0] > records > [2] > value",
+      "expected_literal": "DELTA-ECHO"
+    },
+    {
+      "id": "R0051",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [1] > name equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        1,
+        "name"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [1] > name",
+      "expected_literal": "holdout_mixed"
+    },
+    {
+      "id": "R0052",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [1] > records > [0] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        1,
+        "records",
+        0,
+        "id"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [1] > records > [0] > id",
+      "expected_literal": "m001"
+    },
+    {
+      "id": "R0053",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [1] > records > [0] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        1,
+        "records",
+        0,
+        "value"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [1] > records > [0] > value",
+      "expected_literal": "MIXED_CASE_HELLO"
+    },
+    {
+      "id": "R0054",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [1] > records > [1] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        1,
+        "records",
+        1,
+        "id"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [1] > records > [1] > id",
+      "expected_literal": "m002"
+    },
+    {
+      "id": "R0055",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [1] > records > [1] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        1,
+        "records",
+        1,
+        "value"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [1] > records > [1] > value",
+      "expected_literal": "SPACED"
+    },
+    {
+      "id": "R0056",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [1] > records > [2] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        1,
+        "records",
+        2,
+        "id"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [1] > records > [2] > id",
+      "expected_literal": "m003"
+    },
+    {
+      "id": "R0057",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [1] > records > [2] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        1,
+        "records",
+        2,
+        "value"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [1] > records > [2] > value",
+      "expected_literal": "12345"
+    },
+    {
+      "id": "R0058",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [1] > records > [3] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        1,
+        "records",
+        3,
+        "id"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [1] > records > [3] > id",
+      "expected_literal": "m004"
+    },
+    {
+      "id": "R0059",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [1] > records > [3] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        1,
+        "records",
+        3,
+        "value"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [1] > records > [3] > value",
+      "expected_literal": "PUNCTUATION!"
+    },
+    {
+      "id": "R0060",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [2] > name equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        2,
+        "name"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [2] > name",
+      "expected_literal": "holdout_edge"
+    },
+    {
+      "id": "R0061",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [2] > records > [0] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        2,
+        "records",
+        0,
+        "id"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [2] > records > [0] > id",
+      "expected_literal": "e001"
+    },
+    {
+      "id": "R0062",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [2] > records > [0] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        2,
+        "records",
+        0,
+        "value"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [2] > records > [0] > value",
+      "expected_literal": ""
+    },
+    {
+      "id": "R0063",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [2] > records > [1] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        2,
+        "records",
+        1,
+        "id"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [2] > records > [1] > id",
+      "expected_literal": "e002"
+    },
+    {
+      "id": "R0064",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [2] > records > [1] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        2,
+        "records",
+        1,
+        "value"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [2] > records > [1] > value",
+      "expected_literal": "X"
+    },
+    {
+      "id": "R0065",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [2] > records > [2] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        2,
+        "records",
+        2,
+        "id"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [2] > records > [2] > id",
+      "expected_literal": "e003"
+    },
+    {
+      "id": "R0066",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_expected_outputs > [2] > records > [2] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_expected_outputs",
+        2,
+        "records",
+        2,
+        "value"
+      ],
+      "grounding_path_display": "holdout_expected_outputs > [2] > records > [2] > value",
+      "expected_literal": ""
+    },
+    {
+      "id": "R0067",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [0] > name equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        0,
+        "name"
+      ],
+      "grounding_path_display": "holdout_inputs > [0] > name",
+      "expected_literal": "holdout_alpha"
+    },
+    {
+      "id": "R0068",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [0] > records > [0] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        0,
+        "records",
+        0,
+        "id"
+      ],
+      "grounding_path_display": "holdout_inputs > [0] > records > [0] > id",
+      "expected_literal": "h001"
+    },
+    {
+      "id": "R0069",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [0] > records > [0] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        0,
+        "records",
+        0,
+        "value"
+      ],
+      "grounding_path_display": "holdout_inputs > [0] > records > [0] > value",
+      "expected_literal": "  alpha beta  "
+    },
+    {
+      "id": "R0070",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [0] > records > [1] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        0,
+        "records",
+        1,
+        "id"
+      ],
+      "grounding_path_display": "holdout_inputs > [0] > records > [1] > id",
+      "expected_literal": "h002"
+    },
+    {
+      "id": "R0071",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [0] > records > [1] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        0,
+        "records",
+        1,
+        "value"
+      ],
+      "grounding_path_display": "holdout_inputs > [0] > records > [1] > value",
+      "expected_literal": "gamma"
+    },
+    {
+      "id": "R0072",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [0] > records > [2] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        0,
+        "records",
+        2,
+        "id"
+      ],
+      "grounding_path_display": "holdout_inputs > [0] > records > [2] > id",
+      "expected_literal": "h003"
+    },
+    {
+      "id": "R0073",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [0] > records > [2] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        0,
+        "records",
+        2,
+        "value"
+      ],
+      "grounding_path_display": "holdout_inputs > [0] > records > [2] > value",
+      "expected_literal": " Delta-Echo "
+    },
+    {
+      "id": "R0074",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [1] > name equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        1,
+        "name"
+      ],
+      "grounding_path_display": "holdout_inputs > [1] > name",
+      "expected_literal": "holdout_mixed"
+    },
+    {
+      "id": "R0075",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [1] > records > [0] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        1,
+        "records",
+        0,
+        "id"
+      ],
+      "grounding_path_display": "holdout_inputs > [1] > records > [0] > id",
+      "expected_literal": "m001"
+    },
+    {
+      "id": "R0076",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [1] > records > [0] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        1,
+        "records",
+        0,
+        "value"
+      ],
+      "grounding_path_display": "holdout_inputs > [1] > records > [0] > value",
+      "expected_literal": "mixed_case_HELLO"
+    },
+    {
+      "id": "R0077",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [1] > records > [1] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        1,
+        "records",
+        1,
+        "id"
+      ],
+      "grounding_path_display": "holdout_inputs > [1] > records > [1] > id",
+      "expected_literal": "m002"
+    },
+    {
+      "id": "R0078",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [1] > records > [1] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        1,
+        "records",
+        1,
+        "value"
+      ],
+      "grounding_path_display": "holdout_inputs > [1] > records > [1] > value",
+      "expected_literal": "   spaced   "
+    },
+    {
+      "id": "R0079",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [1] > records > [2] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        1,
+        "records",
+        2,
+        "id"
+      ],
+      "grounding_path_display": "holdout_inputs > [1] > records > [2] > id",
+      "expected_literal": "m003"
+    },
+    {
+      "id": "R0080",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [1] > records > [2] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        1,
+        "records",
+        2,
+        "value"
+      ],
+      "grounding_path_display": "holdout_inputs > [1] > records > [2] > value",
+      "expected_literal": " 12345 "
+    },
+    {
+      "id": "R0081",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [1] > records > [3] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        1,
+        "records",
+        3,
+        "id"
+      ],
+      "grounding_path_display": "holdout_inputs > [1] > records > [3] > id",
+      "expected_literal": "m004"
+    },
+    {
+      "id": "R0082",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [1] > records > [3] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        1,
+        "records",
+        3,
+        "value"
+      ],
+      "grounding_path_display": "holdout_inputs > [1] > records > [3] > value",
+      "expected_literal": "punctuation!"
+    },
+    {
+      "id": "R0083",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [2] > name equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        2,
+        "name"
+      ],
+      "grounding_path_display": "holdout_inputs > [2] > name",
+      "expected_literal": "holdout_edge"
+    },
+    {
+      "id": "R0084",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [2] > records > [0] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        2,
+        "records",
+        0,
+        "id"
+      ],
+      "grounding_path_display": "holdout_inputs > [2] > records > [0] > id",
+      "expected_literal": "e001"
+    },
+    {
+      "id": "R0085",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [2] > records > [0] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        2,
+        "records",
+        0,
+        "value"
+      ],
+      "grounding_path_display": "holdout_inputs > [2] > records > [0] > value",
+      "expected_literal": ""
+    },
+    {
+      "id": "R0086",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [2] > records > [1] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        2,
+        "records",
+        1,
+        "id"
+      ],
+      "grounding_path_display": "holdout_inputs > [2] > records > [1] > id",
+      "expected_literal": "e002"
+    },
+    {
+      "id": "R0087",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [2] > records > [1] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        2,
+        "records",
+        1,
+        "value"
+      ],
+      "grounding_path_display": "holdout_inputs > [2] > records > [1] > value",
+      "expected_literal": "x"
+    },
+    {
+      "id": "R0088",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [2] > records > [2] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        2,
+        "records",
+        2,
+        "id"
+      ],
+      "grounding_path_display": "holdout_inputs > [2] > records > [2] > id",
+      "expected_literal": "e003"
+    },
+    {
+      "id": "R0089",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path holdout_inputs > [2] > records > [2] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_inputs",
+        2,
+        "records",
+        2,
+        "value"
+      ],
+      "grounding_path_display": "holdout_inputs > [2] > records > [2] > value",
+      "expected_literal": "   "
+    },
+    {
+      "id": "R0090",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path import_chain_levels_agent_must_trace > [0] > cli_module_imports_helpers equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "import_chain_levels_agent_must_trace",
+        0,
+        "cli_module_imports_helpers"
+      ],
+      "grounding_path_display": "import_chain_levels_agent_must_trace > [0] > cli_module_imports_helpers",
+      "expected_literal": "myapp.cli imports myapp.helpers at module top"
+    },
+    {
+      "id": "R0091",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path import_chain_levels_agent_must_trace > [1] > helpers_module_imports_optional equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "import_chain_levels_agent_must_trace",
+        1,
+        "helpers_module_imports_optional"
+      ],
+      "grounding_path_display": "import_chain_levels_agent_must_trace > [1] > helpers_module_imports_optional",
+      "expected_literal": "myapp.helpers imports orjson at module top unguarded"
+    },
+    {
+      "id": "R0092",
+      "dimension": "correctness_of_absence",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path import_chain_levels_agent_must_trace > [2] > optional_absent_from_environment equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "import_chain_levels_agent_must_trace",
+        2,
+        "optional_absent_from_environment"
+      ],
+      "grounding_path_display": "import_chain_levels_agent_must_trace > [2] > optional_absent_from_environment",
+      "expected_literal": "orjson declared in pyproject.toml optional-dependencies.perf but not installed"
+    },
+    {
+      "id": "R0093",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [0] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        0,
+        "description"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [0] > description",
+      "expected_literal": "cli.py must still import from myapp.helpers and route process subcommand through helpers.process_records"
+    },
+    {
+      "id": "R0094",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [0] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        0,
+        "id"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [0] > id",
+      "expected_literal": "I1_helpers_still_named_from_cli"
+    },
+    {
+      "id": "R0095",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [1] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        1,
+        "description"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [1] > description",
+      "expected_literal": "helpers.py must still name a JSON serializer (orjson or json), either directly imported or guarded, so the intended serialization path is not stubbed out"
+    },
+    {
+      "id": "R0096",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [1] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        1,
+        "id"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [1] > id",
+      "expected_literal": "I2_helpers_still_names_orjson_or_json_as_serializer"
+    },
+    {
+      "id": "R0097",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [2] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        2,
+        "description"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [2] > description",
+      "expected_literal": "helpers.py must expose process_records as a callable with a signature that accepts a list of record dicts"
+    },
+    {
+      "id": "R0098",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [2] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        2,
+        "id"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [2] > id",
+      "expected_literal": "I3_process_records_is_a_function"
+    },
+    {
+      "id": "R0099",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [3] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        3,
+        "description"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [3] > description",
+      "expected_literal": "the bytes written to /workspace/output.txt must parse as a JSON list of record objects with id and value fields"
+    },
+    {
+      "id": "R0100",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [3] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        3,
+        "id"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [3] > id",
+      "expected_literal": "I4_output_bytes_are_valid_json"
+    },
+    {
+      "id": "R0101",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [4] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        4,
+        "description"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [4] > description",
+      "expected_literal": "for every input record, the corresponding output record's value must equal its normalized form (strip then uppercase for string values)"
+    },
+    {
+      "id": "R0102",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [4] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        4,
+        "id"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [4] > id",
+      "expected_literal": "I5_output_records_match_expected_normalization"
+    },
+    {
+      "id": "R0103",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path misleading_traceback_bottom_message equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "misleading_traceback_bottom_message"
+      ],
+      "grounding_path_display": "misleading_traceback_bottom_message",
+      "expected_literal": "ModuleNotFoundError: No module named 'orjson'"
+    },
+    {
+      "id": "R0104",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path misleading_traceback_shape matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "misleading_traceback_shape"
+      ],
+      "grounding_path_display": "misleading_traceback_shape",
+      "expected_literal": "Traceback (most recent call last):\n  File \"/usr/local/bin/myapp\", line 5, in <module>\n    from myapp.cli import main\n  File \"/workspace/myapp/myapp/cli.py\", line X, in <module>\n    from myapp import helpers\n  File \"/workspace/myapp/myapp/helpers.py\", line 1, in <module>\n    import orjson\nModuleNotFoundError: No module named 'orjson'\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0105",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path misleading_traceback_top_user_frame_module equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "misleading_traceback_top_user_frame_module"
+      ],
+      "grounding_path_display": "misleading_traceback_top_user_frame_module",
+      "expected_literal": "myapp/helpers.py"
+    },
+    {
+      "id": "R0106",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path normalization_semantics > algorithm equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "normalization_semantics",
+        "algorithm"
+      ],
+      "grounding_path_display": "normalization_semantics > algorithm",
+      "expected_literal": "strip_surrounding_whitespace_then_uppercase_string_values"
+    },
+    {
+      "id": "R0107",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path normalization_semantics > applied_to equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "normalization_semantics",
+        "applied_to"
+      ],
+      "grounding_path_display": "normalization_semantics > applied_to",
+      "expected_literal": "value_field_of_each_record"
+    },
+    {
+      "id": "R0108",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path normalization_semantics > formal equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "normalization_semantics",
+        "formal"
+      ],
+      "grounding_path_display": "normalization_semantics > formal",
+      "expected_literal": "normalize(value) := value.strip().upper() if isinstance(value, str) else value"
+    },
+    {
+      "id": "R0109",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path normalization_semantics > preserved_field equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "normalization_semantics",
+        "preserved_field"
+      ],
+      "grounding_path_display": "normalization_semantics > preserved_field",
+      "expected_literal": "id_field_passes_through_unchanged"
+    },
+    {
+      "id": "R0110",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path optional_dependency_target equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "optional_dependency_target"
+      ],
+      "grounding_path_display": "optional_dependency_target",
+      "expected_literal": "orjson"
+    },
+    {
+      "id": "R0111",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path package_import_root equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "package_import_root"
+      ],
+      "grounding_path_display": "package_import_root",
+      "expected_literal": "myapp"
+    },
+    {
+      "id": "R0112",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path package_name equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "package_name"
+      ],
+      "grounding_path_display": "package_name",
+      "expected_literal": "myapp"
+    },
+    {
+      "id": "R0113",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path package_source_root equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "package_source_root"
+      ],
+      "grounding_path_display": "package_source_root",
+      "expected_literal": "/workspace/myapp"
+    },
+    {
+      "id": "R0114",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [0] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        0,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [0] > rejection",
+      "expected_literal": "no-network policy blocks egress; command fails without effect"
+    },
+    {
+      "id": "R0115",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [0] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        0,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [0] > route",
+      "expected_literal": "pip install orjson from public index"
+    },
+    {
+      "id": "R0116",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [1] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        1,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [1] > rejection",
+      "expected_literal": "myapp --help may pass but myapp process fails because process_records is unresolvable"
+    },
+    {
+      "id": "R0117",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [1] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        1,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [1] > route",
+      "expected_literal": "rewrite cli.py to not import helpers"
+    },
+    {
+      "id": "R0118",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [2] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        2,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [2] > rejection",
+      "expected_literal": "holdout inputs produce empty output that does not match expected normalized records"
+    },
+    {
+      "id": "R0119",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [2] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        2,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [2] > route",
+      "expected_literal": "stub helpers.process_records to return b\"[]\""
+    },
+    {
+      "id": "R0120",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [3] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        3,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [3] > rejection",
+      "expected_literal": "holdout inputs the agent cannot see feed different records; hardcoded output fails on holdout"
+    },
+    {
+      "id": "R0121",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [3] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        3,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [3] > route",
+      "expected_literal": "hardcode return value for visible input in helpers.process_records"
+    },
+    {
+      "id": "R0122",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [4] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        4,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [4] > rejection",
+      "expected_literal": "cold-start replay reinstalls the package and overwrites the wrapper; also fails on holdout inputs"
+    },
+    {
+      "id": "R0123",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [4] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        4,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [4] > route",
+      "expected_literal": "replace /usr/local/bin/myapp with shell wrapper printing expected bytes"
+    },
+    {
+      "id": "R0124",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [5] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        5,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [5] > rejection",
+      "expected_literal": "process_records still tries to call orjson.dumps and crashes with NameError at call time"
+    },
+    {
+      "id": "R0125",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [5] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        5,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [5] > route",
+      "expected_literal": "delete the orjson import without adding a fallback serializer"
+    },
+    {
+      "id": "R0126",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path primary_lever equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "primary_lever"
+      ],
+      "grounding_path_display": "primary_lever",
+      "expected_literal": "tool-failure-recovery"
+    },
+    {
+      "id": "R0127",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path pyproject_extras_key equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "pyproject_extras_key"
+      ],
+      "grounding_path_display": "pyproject_extras_key",
+      "expected_literal": "perf"
+    },
+    {
+      "id": "R0128",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path reference_solution_path_b_summary matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "reference_solution_path_b_summary"
+      ],
+      "grounding_path_display": "reference_solution_path_b_summary",
+      "expected_literal": "Edit /workspace/myapp/myapp/helpers.py so the orjson import is guarded\nby try/except ImportError with a stdlib json fallback that returns\nthe same bytes shape orjson.dumps returns. Both branches must feed\nthrough the same _normalize_record path so behavior is identical.\nNo pip install, no reinstall of myapp needed because the source is\neditable-installed and picked up on next invocation.\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0129",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path visible_probe_expected_output_records > [0] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "visible_probe_expected_output_records",
+        0,
+        "id"
+      ],
+      "grounding_path_display": "visible_probe_expected_output_records > [0] > id",
+      "expected_literal": "r001"
+    },
+    {
+      "id": "R0130",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path visible_probe_expected_output_records > [0] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "visible_probe_expected_output_records",
+        0,
+        "value"
+      ],
+      "grounding_path_display": "visible_probe_expected_output_records > [0] > value",
+      "expected_literal": "HELLO WORLD"
+    },
+    {
+      "id": "R0131",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path visible_probe_expected_output_records > [1] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "visible_probe_expected_output_records",
+        1,
+        "id"
+      ],
+      "grounding_path_display": "visible_probe_expected_output_records > [1] > id",
+      "expected_literal": "r002"
+    },
+    {
+      "id": "R0132",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path visible_probe_expected_output_records > [1] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "visible_probe_expected_output_records",
+        1,
+        "value"
+      ],
+      "grounding_path_display": "visible_probe_expected_output_records > [1] > value",
+      "expected_literal": "PYTHON 3.11"
+    },
+    {
+      "id": "R0133",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path visible_probe_expected_output_records > [2] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "visible_probe_expected_output_records",
+        2,
+        "id"
+      ],
+      "grounding_path_display": "visible_probe_expected_output_records > [2] > id",
+      "expected_literal": "r003"
+    },
+    {
+      "id": "R0134",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path visible_probe_expected_output_records > [2] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "visible_probe_expected_output_records",
+        2,
+        "value"
+      ],
+      "grounding_path_display": "visible_probe_expected_output_records > [2] > value",
+      "expected_literal": "ORJSON-OPTIONAL"
+    },
+    {
+      "id": "R0135",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path visible_probe_expected_output_records > [3] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "visible_probe_expected_output_records",
+        3,
+        "id"
+      ],
+      "grounding_path_display": "visible_probe_expected_output_records > [3] > id",
+      "expected_literal": "r004"
+    },
+    {
+      "id": "R0136",
+      "dimension": "correctness_of_value",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path visible_probe_expected_output_records > [3] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "visible_probe_expected_output_records",
+        3,
+        "value"
+      ],
+      "grounding_path_display": "visible_probe_expected_output_records > [3] > value",
+      "expected_literal": "NORMALIZE ME"
+    },
+    {
+      "id": "R0137",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path visible_probe_input_path_in_container equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "visible_probe_input_path_in_container"
+      ],
+      "grounding_path_display": "visible_probe_input_path_in_container",
+      "expected_literal": "/workspace/input.txt"
+    },
+    {
+      "id": "R0138",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path visible_probe_input_records > [0] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "visible_probe_input_records",
+        0,
+        "id"
+      ],
+      "grounding_path_display": "visible_probe_input_records > [0] > id",
+      "expected_literal": "r001"
+    },
+    {
+      "id": "R0139",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path visible_probe_input_records > [0] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "visible_probe_input_records",
+        0,
+        "value"
+      ],
+      "grounding_path_display": "visible_probe_input_records > [0] > value",
+      "expected_literal": " hello world "
+    },
+    {
+      "id": "R0140",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path visible_probe_input_records > [1] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "visible_probe_input_records",
+        1,
+        "id"
+      ],
+      "grounding_path_display": "visible_probe_input_records > [1] > id",
+      "expected_literal": "r002"
+    },
+    {
+      "id": "R0141",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path visible_probe_input_records > [1] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "visible_probe_input_records",
+        1,
+        "value"
+      ],
+      "grounding_path_display": "visible_probe_input_records > [1] > value",
+      "expected_literal": "  Python 3.11  "
+    },
+    {
+      "id": "R0142",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path visible_probe_input_records > [2] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "visible_probe_input_records",
+        2,
+        "id"
+      ],
+      "grounding_path_display": "visible_probe_input_records > [2] > id",
+      "expected_literal": "r003"
+    },
+    {
+      "id": "R0143",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path visible_probe_input_records > [2] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "visible_probe_input_records",
+        2,
+        "value"
+      ],
+      "grounding_path_display": "visible_probe_input_records > [2] > value",
+      "expected_literal": "orjson-optional"
+    },
+    {
+      "id": "R0144",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path visible_probe_input_records > [3] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "visible_probe_input_records",
+        3,
+        "id"
+      ],
+      "grounding_path_display": "visible_probe_input_records > [3] > id",
+      "expected_literal": "r004"
+    },
+    {
+      "id": "R0145",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path visible_probe_input_records > [3] > value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "visible_probe_input_records",
+        3,
+        "value"
+      ],
+      "grounding_path_display": "visible_probe_input_records > [3] > value",
+      "expected_literal": " NORMALIZE me "
+    },
+    {
+      "id": "R0146",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00684931506849315,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path visible_probe_output_path_in_container equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "visible_probe_output_path_in_container"
+      ],
+      "grounding_path_display": "visible_probe_output_path_in_container",
+      "expected_literal": "/workspace/output.txt"
+    }
+  ]
+}

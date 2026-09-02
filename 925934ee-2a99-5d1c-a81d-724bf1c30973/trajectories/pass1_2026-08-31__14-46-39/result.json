@@ -1,0 +1,126 @@
+{
+    "id": "0b389015-7216-4a92-aef8-41a6981b3174",
+    "task_name": "mars/ci-gitlab-cache-key-cross-branch-stale-v2",
+    "trial_name": "925934ee-2a99-5d1c-a81d-724bf1c3__7yDSJi6",
+    "trial_uri": "file:///Users/apple/Sources/office/mars-anubis/mars/jobs/2026-08-31__14-46-39/925934ee-2a99-5d1c-a81d-724bf1c3__7yDSJi6",
+    "task_id": {
+        "path": "/Users/apple/Sources/office/mars-anubis/mars/dataset/925934ee-2a99-5d1c-a81d-724bf1c30973"
+    },
+    "source": null,
+    "task_checksum": "f505727dbeecd41027f8e649542f385bdf28664e0344421b23cfa265244f98fd",
+    "config": {
+        "task": {
+            "path": "/Users/apple/Sources/office/mars-anubis/mars/dataset/925934ee-2a99-5d1c-a81d-724bf1c30973",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "925934ee-2a99-5d1c-a81d-724bf1c3__7yDSJi6",
+        "trials_dir": "jobs/2026-08-31__14-46-39",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": 5.0,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "claude-code",
+            "import_path": null,
+            "model_name": "claude-opus-4-8",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "8b375705-2bc3-4784-b686-a19cddcf2753",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.251",
+        "model_info": {
+            "name": "claude-opus-4-8",
+            "provider": null
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 77569,
+        "n_cache_tokens": 50432,
+        "n_output_tokens": 1179,
+        "cost_usd": 0.22428974999999998,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0,
+            "p_gitlab_ci_yml_present": 1,
+            "p_populate_cache_sh_present": 1,
+            "p_freshness_probe_sh_present": 1,
+            "p_cache_stanza_present_on_at_least_one_job": 1,
+            "p_every_cached_job_key_references_CI_COMMIT_REF_SLUG": 1,
+            "p_every_cached_job_key_references_CI_ISO_WEEK": 1,
+            "p_no_cached_job_key_contains_literal_week_or_year_token": 1,
+            "p_freshness_probe_behavior_intact": 1,
+            "p_pipeline_sim_current_week_all_jobs_exit_zero_and_freshness_probe_ok": 1,
+            "j_yaml_parse_ok": 1,
+            "j_final_reward": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-08-31T09:16:40.530899Z",
+    "finished_at": "2026-08-31T09:18:32.090228Z",
+    "environment_setup": {
+        "started_at": "2026-08-31T09:16:40.646317Z",
+        "finished_at": "2026-08-31T09:16:44.934876Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-08-31T09:16:44.935152Z",
+        "finished_at": "2026-08-31T09:18:09.896393Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-08-31T09:18:09.897065Z",
+        "finished_at": "2026-08-31T09:18:26.355021Z"
+    },
+    "verifier": {
+        "started_at": "2026-08-31T09:18:28.289993Z",
+        "finished_at": "2026-08-31T09:18:28.703138Z"
+    },
+    "step_results": null
+}

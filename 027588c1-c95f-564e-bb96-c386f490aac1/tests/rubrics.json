@@ -1,0 +1,2558 @@
+{
+  "schema": "mars.rubric_set/v2_council_only",
+  "bundle_id": "027588c1-c95f-564e-bb96-c386f490aac1",
+  "floor": 30,
+  "note": "regenerated from solution/rubrics.json by harness/mars_rubric_id_reconciler.py to close G-RUB-COMPLETENESS.unreconciled_rubric_id; 1:1 id mapping preserves the recompute.py chain",
+  "rubrics": [
+    {
+      "id": "R0001",
+      "criterion": "the value at grounding path alternative_paths_that_also_work_but_this_verifier_grades_differently > [0] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "path_a_cjs_shim_uses_dynamic_import_and_awaits_it_synchronously_via_deasync",
+        "anchor_0_0": "the observed value at alternative_paths_that_also_work_but_this_verifier_grades_differently > [0] > id does not match the reference at grounding path alternative_paths_that_also_work_but_this_verifier_grades_differently > [0] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0002",
+      "criterion": "the value at grounding path alternative_paths_that_also_work_but_this_verifier_grades_differently > [0] > reason_rejected equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "deasync_native_binding_requires_c_plus_plus_toolchain_and_native_addon_load_not_available_offline_in_slim_base_image",
+        "anchor_0_0": "the observed value at alternative_paths_that_also_work_but_this_verifier_grades_differently > [0] > reason_rejected does not match the reference at grounding path alternative_paths_that_also_work_but_this_verifier_grades_differently > [0] > reason_rejected"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0003",
+      "criterion": "the value at grounding path alternative_paths_that_also_work_but_this_verifier_grades_differently > [1] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "path_b_regenerate_a_full_iife_bundle_via_rollup_with_topLevelAwait_plugin",
+        "anchor_0_0": "the observed value at alternative_paths_that_also_work_but_this_verifier_grades_differently > [1] > id does not match the reference at grounding path alternative_paths_that_also_work_but_this_verifier_grades_differently > [1] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0004",
+      "criterion": "the value at grounding path alternative_paths_that_also_work_but_this_verifier_grades_differently > [1] > reason_rejected equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "rollup_topLevelAwait_plugin_produces_an_iife_wrapper_but_the_verifier_dynamic_import_static_check_on_the_cjs_entry_still_requires_the_import_call_to_be_visible_in_the_cjs_entry_source",
+        "anchor_0_0": "the observed value at alternative_paths_that_also_work_but_this_verifier_grades_differently > [1] > reason_rejected does not match the reference at grounding path alternative_paths_that_also_work_but_this_verifier_grades_differently > [1] > reason_rejected"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0005",
+      "criterion": "the value at grounding path alternative_paths_that_also_work_but_this_verifier_grades_differently > [2] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "path_c_publish_a_separate_synchronous_cjs_build_from_a_second_source_tree_without_top_level_await",
+        "anchor_0_0": "the observed value at alternative_paths_that_also_work_but_this_verifier_grades_differently > [2] > id does not match the reference at grounding path alternative_paths_that_also_work_but_this_verifier_grades_differently > [2] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0006",
+      "criterion": "the value at grounding path alternative_paths_that_also_work_but_this_verifier_grades_differently > [2] > reason_rejected equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "source_bytes_sha256_check_pins_src_index_ts_and_src_loader_ts_so_no_alternate_source_tree_can_exist_under_src",
+        "anchor_0_0": "the observed value at alternative_paths_that_also_work_but_this_verifier_grades_differently > [2] > reason_rejected does not match the reference at grounding path alternative_paths_that_also_work_but_this_verifier_grades_differently > [2] > reason_rejected"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0007",
+      "criterion": "the value at grounding path archetype equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "build-configure",
+        "anchor_0_0": "the observed value at archetype does not match the reference at grounding path archetype"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0008",
+      "criterion": "the value at grounding path canonical_fix_bytes_diff_from_initial > esm_build_produced_by_running_tsc_dash_p_tsconfig_dot_esm_dot_json equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at canonical_fix_bytes_diff_from_initial > esm_build_produced_by_running_tsc_dash_p_tsconfig_dot_esm_dot_json does not match the reference at grounding path canonical_fix_bytes_diff_from_initial > esm_build_produced_by_running_tsc_dash_p_tsconfig_dot_esm_dot_json"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0009",
+      "criterion": "the value at grounding path canonical_fix_bytes_diff_from_initial > new_files_authored_under_dist > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "dist/cjs/index.cjs",
+        "anchor_0_0": "the observed value at canonical_fix_bytes_diff_from_initial > new_files_authored_under_dist > [0] does not match the reference at grounding path canonical_fix_bytes_diff_from_initial > new_files_authored_under_dist > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0010",
+      "criterion": "the value at grounding path canonical_fix_bytes_diff_from_initial > new_files_content_shape > dist_cjs_index_cjs equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "module_dot_exports_equals_dynamic_import_call_of_relative_esm_index_js",
+        "anchor_0_0": "the observed value at canonical_fix_bytes_diff_from_initial > new_files_content_shape > dist_cjs_index_cjs does not match the reference at grounding path canonical_fix_bytes_diff_from_initial > new_files_content_shape > dist_cjs_index_cjs"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0011",
+      "criterion": "the value at grounding path canonical_fix_bytes_diff_from_initial > no_edits_to_consumers equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at canonical_fix_bytes_diff_from_initial > no_edits_to_consumers does not match the reference at grounding path canonical_fix_bytes_diff_from_initial > no_edits_to_consumers"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0012",
+      "criterion": "the value at grounding path canonical_fix_bytes_diff_from_initial > no_source_edits_under_src equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at canonical_fix_bytes_diff_from_initial > no_source_edits_under_src does not match the reference at grounding path canonical_fix_bytes_diff_from_initial > no_source_edits_under_src"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0013",
+      "criterion": "the value at grounding path canonical_fix_bytes_diff_from_initial > package_json_exports_dot > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "require_condition_added_pointing_at_dist_slash_cjs_slash_index_dot_cjs",
+        "anchor_0_0": "the observed value at canonical_fix_bytes_diff_from_initial > package_json_exports_dot > [0] does not match the reference at grounding path canonical_fix_bytes_diff_from_initial > package_json_exports_dot > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0014",
+      "criterion": "the value at grounding path canonical_fix_bytes_diff_from_initial > package_json_type_field equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "remains_module",
+        "anchor_0_0": "the observed value at canonical_fix_bytes_diff_from_initial > package_json_type_field does not match the reference at grounding path canonical_fix_bytes_diff_from_initial > package_json_type_field"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0015",
+      "criterion": "the value at grounding path canonical_fix_path_selected equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "package_exports_import_esm_plus_require_cjs_shim_that_dynamic_imports_the_esm_entry",
+        "anchor_0_0": "the observed value at canonical_fix_path_selected does not match the reference at grounding path canonical_fix_path_selected"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0016",
+      "criterion": "the value at grounding path canonical_fix_rationale matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "The ESM entry cannot be loaded synchronously because it uses top-level\nawait, which is valid ES2022 ESM but cannot be lowered to synchronous\nCommonJS by any transpiler. tsup, esbuild with format cjs, and tsc with\nmodule commonjs each refuse the transform explicitly. Any working dual\npackage must therefore route the CJS consumer through a dynamic import,\nwhich returns a Promise that resolves once the ESM entry finishes its\ntop-level await. The idiomatic shim is a one-line CJS file whose\nmodule.ex...[truncated]",
+        "anchor_0_0": "the observed value at canonical_fix_rationale does not match the reference at grounding path canonical_fix_rationale"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0017",
+      "criterion": "the value at grounding path consumer_files_that_must_stay_byte_identical > [0] > rel_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "esm-consumer.mjs",
+        "anchor_0_0": "the observed value at consumer_files_that_must_stay_byte_identical > [0] > rel_path does not match the reference at grounding path consumer_files_that_must_stay_byte_identical > [0] > rel_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0018",
+      "criterion": "the value at grounding path consumer_files_that_must_stay_byte_identical > [0] > sha256 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "36b76a66ffa101c1a44a9d3a505a8eef76cff404a4bc6ff384cad8961e1f32fd",
+        "anchor_0_0": "the observed value at consumer_files_that_must_stay_byte_identical > [0] > sha256 does not match the reference at grounding path consumer_files_that_must_stay_byte_identical > [0] > sha256"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0019",
+      "criterion": "the value at grounding path consumer_files_that_must_stay_byte_identical > [1] > rel_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "cjs-consumer.cjs",
+        "anchor_0_0": "the observed value at consumer_files_that_must_stay_byte_identical > [1] > rel_path does not match the reference at grounding path consumer_files_that_must_stay_byte_identical > [1] > rel_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0020",
+      "criterion": "the value at grounding path consumer_files_that_must_stay_byte_identical > [1] > sha256 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "7cc5b6347f9c8faac5d72cab6dc1e21b1bf5e76a2b4df7428df6622ff474e362",
+        "anchor_0_0": "the observed value at consumer_files_that_must_stay_byte_identical > [1] > sha256 does not match the reference at grounding path consumer_files_that_must_stay_byte_identical > [1] > sha256"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0021",
+      "criterion": "the value at grounding path expected_stdout_bytes_utf8 matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "config.name=@pkg/dual\nconfig.ready=true\nconfig.seed=42\ncombine=alpha::beta\nVERSION=1.0.0\n",
+        "anchor_0_0": "the observed value at expected_stdout_bytes_utf8 does not match the reference at grounding path expected_stdout_bytes_utf8"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0022",
+      "criterion": "the value at grounding path expected_stdout_line_1 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "config.name=@pkg/dual",
+        "anchor_0_0": "the observed value at expected_stdout_line_1 does not match the reference at grounding path expected_stdout_line_1"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0023",
+      "criterion": "the value at grounding path expected_stdout_line_2 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "config.ready=true",
+        "anchor_0_0": "the observed value at expected_stdout_line_2 does not match the reference at grounding path expected_stdout_line_2"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0024",
+      "criterion": "the value at grounding path expected_stdout_line_3 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "config.seed=42",
+        "anchor_0_0": "the observed value at expected_stdout_line_3 does not match the reference at grounding path expected_stdout_line_3"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0025",
+      "criterion": "the value at grounding path expected_stdout_line_4 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "combine=alpha::beta",
+        "anchor_0_0": "the observed value at expected_stdout_line_4 does not match the reference at grounding path expected_stdout_line_4"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0026",
+      "criterion": "the value at grounding path expected_stdout_line_5 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "VERSION=1.0.0",
+        "anchor_0_0": "the observed value at expected_stdout_line_5 does not match the reference at grounding path expected_stdout_line_5"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0027",
+      "criterion": "the value at grounding path expected_stdout_terminator equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "single_trailing_newline",
+        "anchor_0_0": "the observed value at expected_stdout_terminator does not match the reference at grounding path expected_stdout_terminator"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0028",
+      "criterion": "the value at grounding path false_lead_probes > [0] > expected_outcome equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "esbuild_or_tsup_errors_top_level_await_is_currently_not_supported_with_the_cjs_output_format_no_cjs_bundle_written",
+        "anchor_0_0": "the observed value at false_lead_probes > [0] > expected_outcome does not match the reference at grounding path false_lead_probes > [0] > expected_outcome"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0029",
+      "criterion": "the value at grounding path false_lead_probes > [0] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "run_tsup_with_format_cjs_esm_or_esbuild_with_platform_node_format_cjs",
+        "anchor_0_0": "the observed value at false_lead_probes > [0] > probe does not match the reference at grounding path false_lead_probes > [0] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0030",
+      "criterion": "the value at grounding path false_lead_probes > [1] > expected_outcome equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "tsc_error_TS1378_top_level_await_expressions_are_only_allowed_when_module_option_is_set_to_es2022_esnext_system_node16_nodenext_or_preserve_no_cjs_emit_written",
+        "anchor_0_0": "the observed value at false_lead_probes > [1] > expected_outcome does not match the reference at grounding path false_lead_probes > [1] > expected_outcome"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0031",
+      "criterion": "the value at grounding path false_lead_probes > [1] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "run_tsc_with_module_commonjs_or_module_node16_module_commonjs_variant",
+        "anchor_0_0": "the observed value at false_lead_probes > [1] > probe does not match the reference at grounding path false_lead_probes > [1] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0032",
+      "criterion": "the value at grounding path false_lead_probes > [2] > expected_outcome equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "verifier_source_bytes_sha256_check_rejects_the_edited_src_index_ts",
+        "anchor_0_0": "the observed value at false_lead_probes > [2] > expected_outcome does not match the reference at grounding path false_lead_probes > [2] > expected_outcome"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0033",
+      "criterion": "the value at grounding path false_lead_probes > [2] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "delete_or_rewrite_the_top_level_await_in_src_index_ts_to_get_sync_cjs",
+        "anchor_0_0": "the observed value at false_lead_probes > [2] > probe does not match the reference at grounding path false_lead_probes > [2] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0034",
+      "criterion": "the value at grounding path false_lead_probes > [3] > expected_outcome equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "verifier_package_type_module_check_rejects_the_flipped_type_field",
+        "anchor_0_0": "the observed value at false_lead_probes > [3] > expected_outcome does not match the reference at grounding path false_lead_probes > [3] > expected_outcome"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0035",
+      "criterion": "the value at grounding path false_lead_probes > [3] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "flip_package_json_type_field_from_module_to_commonjs_to_dodge_esm_semantics",
+        "anchor_0_0": "the observed value at false_lead_probes > [3] > probe does not match the reference at grounding path false_lead_probes > [3] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0036",
+      "criterion": "the value at grounding path false_lead_probes > [4] > expected_outcome equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "verifier_cjs_entry_dynamic_import_static_check_rejects_because_the_file_does_not_call_import_of_the_esm_entry_and_the_hardcoded_output_markers_are_detected",
+        "anchor_0_0": "the observed value at false_lead_probes > [4] > expected_outcome does not match the reference at grounding path false_lead_probes > [4] > expected_outcome"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0037",
+      "criterion": "the value at grounding path false_lead_probes > [4] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "hand_author_dist_cjs_index_cjs_that_hardcodes_module_exports_promise_resolve_with_hardcoded_expected_values",
+        "anchor_0_0": "the observed value at false_lead_probes > [4] > probe does not match the reference at grounding path false_lead_probes > [4] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0038",
+      "criterion": "the value at grounding path false_lead_probes > [5] > expected_outcome equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "verifier_consumer_bytes_sha256_check_rejects_the_edited_cjs_consumer_cjs",
+        "anchor_0_0": "the observed value at false_lead_probes > [5] > expected_outcome does not match the reference at grounding path false_lead_probes > [5] > expected_outcome"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0039",
+      "criterion": "the value at grounding path false_lead_probes > [5] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "rewrite_cjs_consumer_cjs_to_read_from_a_side_channel_or_reimplement_the_module",
+        "anchor_0_0": "the observed value at false_lead_probes > [5] > probe does not match the reference at grounding path false_lead_probes > [5] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0040",
+      "criterion": "the value at grounding path false_lead_probes > [6] > expected_outcome equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "node_cjs_loader_errors_ERR_REQUIRE_ESM_because_the_target_is_an_ESM_file_with_a_top_level_await_which_cannot_be_synchronously_required",
+        "anchor_0_0": "the observed value at false_lead_probes > [6] > expected_outcome does not match the reference at grounding path false_lead_probes > [6] > expected_outcome"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0041",
+      "criterion": "the value at grounding path false_lead_probes > [6] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "publish_only_esm_and_declare_require_condition_pointing_at_the_esm_index_js",
+        "anchor_0_0": "the observed value at false_lead_probes > [6] > probe does not match the reference at grounding path false_lead_probes > [6] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0042",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [0] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "agent rewrites export const config equals await loadConfig to a synchronous export to make tsc module commonjs succeed",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [0] > description does not match the reference at grounding path forbidden_shortcut_patterns > [0] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0043",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [0] > detection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "verifier I1 sha256 compare of src/index.ts rejects",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [0] > detection does not match the reference at grounding path forbidden_shortcut_patterns > [0] > detection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0044",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [0] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "shortcut_delete_top_level_await_from_src_index_ts",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [0] > id does not match the reference at grounding path forbidden_shortcut_patterns > [0] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0045",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [1] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "agent changes package.json type field from module to commonjs to dodge the ESM semantics entirely",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [1] > description does not match the reference at grounding path forbidden_shortcut_patterns > [1] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0046",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [1] > detection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "verifier P2 package type module check rejects the flipped field even if runtime consumers would happen to work",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [1] > detection does not match the reference at grounding path forbidden_shortcut_patterns > [1] > detection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0047",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [1] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "shortcut_flip_package_type_to_commonjs",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [1] > id does not match the reference at grounding path forbidden_shortcut_patterns > [1] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0048",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [2] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "agent hand-authors dist/cjs/index.cjs whose module.exports is a synthesized Promise.resolve object that hardcodes config name and combine result and VERSION without ever loading the ESM entry",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [2] > description does not match the reference at grounding path forbidden_shortcut_patterns > [2] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0049",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [2] > detection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "verifier S2 dynamic-import call absence check rejects OR S3 hardcoded-output marker substring check rejects",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [2] > detection does not match the reference at grounding path forbidden_shortcut_patterns > [2] > detection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0050",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [2] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "shortcut_hardcode_dist_cjs_index_cjs_to_fake_the_expected_values",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [2] > id does not match the reference at grounding path forbidden_shortcut_patterns > [2] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0051",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [3] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "agent rewrites cjs-consumer.cjs to import via ESM dynamic import from a hardcoded relative path bypassing package name resolution",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [3] > description does not match the reference at grounding path forbidden_shortcut_patterns > [3] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0052",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [3] > detection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "verifier C1 sha256 compare of cjs-consumer.cjs rejects",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [3] > detection does not match the reference at grounding path forbidden_shortcut_patterns > [3] > detection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0053",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [3] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "shortcut_edit_cjs_consumer_cjs_to_bypass_require_by_name",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [3] > id does not match the reference at grounding path forbidden_shortcut_patterns > [3] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0054",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [4] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "agent installs an older typescript that predates top-level await support or an older node",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [4] > description does not match the reference at grounding path forbidden_shortcut_patterns > [4] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0055",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [4] > detection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "verifier I3 tsc version probe rejects the drift and container has no network egress",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [4] > detection does not match the reference at grounding path forbidden_shortcut_patterns > [4] > detection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0056",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [4] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "shortcut_downgrade_typescript_or_node_version_to_get_a_different_top_level_await_behavior",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [4] > id does not match the reference at grounding path forbidden_shortcut_patterns > [4] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0057",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [5] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "agent adds a require condition that points at ./dist/esm/index.js itself hoping node will accept it",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [5] > description does not match the reference at grounding path forbidden_shortcut_patterns > [5] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0058",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [5] > detection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "node cjs loader errors ERR_REQUIRE_ESM when it hits the ESM file with top-level await; R3 cjs consumer returncode nonzero",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [5] > detection does not match the reference at grounding path forbidden_shortcut_patterns > [5] > detection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0059",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [5] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "shortcut_declare_require_condition_that_points_at_the_esm_entry_directly",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [5] > id does not match the reference at grounding path forbidden_shortcut_patterns > [5] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0060",
+      "criterion": "the value at grounding path initial_package_json_exports_shape > dot_condition_import_present equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_package_json_exports_shape > dot_condition_import_present does not match the reference at grounding path initial_package_json_exports_shape > dot_condition_import_present"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0061",
+      "criterion": "the value at grounding path initial_package_json_exports_shape > dot_condition_require_present_initial_state equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "the value at grounding path initial_package_json_exports_shape > dot_condition_require_present_initial_state equals the frozen literal",
+        "anchor_0_0": "the observed value at initial_package_json_exports_shape > dot_condition_require_present_initial_state does not match the reference at grounding path initial_package_json_exports_shape > dot_condition_require_present_initial_state"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0062",
+      "criterion": "the value at grounding path initial_package_json_exports_shape > dot_condition_types_present equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_package_json_exports_shape > dot_condition_types_present does not match the reference at grounding path initial_package_json_exports_shape > dot_condition_types_present"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0063",
+      "criterion": "the value at grounding path initial_package_json_exports_shape > package_type_field equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "module",
+        "anchor_0_0": "the observed value at initial_package_json_exports_shape > package_type_field does not match the reference at grounding path initial_package_json_exports_shape > package_type_field"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0064",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [0] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "src/index.ts and src/loader.ts must sha256-match the seeded digest at grade time; the top-level await in src/index.ts stays intact",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [0] > description does not match the reference at grounding path invariants_the_fix_must_preserve > [0] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0065",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [0] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "I1_source_bytes_unchanged",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [0] > id does not match the reference at grounding path invariants_the_fix_must_preserve > [0] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0066",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [1] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "esm-consumer.mjs and cjs-consumer.cjs are verifier-owned probes and must sha256-match the seeded digest at grade time",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [1] > description does not match the reference at grounding path invariants_the_fix_must_preserve > [1] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0067",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [1] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "C1_consumer_bytes_unchanged",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [1] > id does not match the reference at grounding path invariants_the_fix_must_preserve > [1] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0068",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [2] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "tsc --version output must still name the seeded pinned typescript version 5.7.2",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [2] > description does not match the reference at grounding path invariants_the_fix_must_preserve > [2] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0069",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [2] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "I3_typescript_version_unchanged",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [2] > id does not match the reference at grounding path invariants_the_fix_must_preserve > [2] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0070",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [3] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "package.json type field must remain the literal string module after the fix",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [3] > description does not match the reference at grounding path invariants_the_fix_must_preserve > [3] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0071",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [3] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "P2_package_type_module",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [3] > id does not match the reference at grounding path invariants_the_fix_must_preserve > [3] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0072",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [4] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "package.json exports.\".\" must be an object that declares both an import condition and a require condition pointing at real files under /workspace/app",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [4] > description does not match the reference at grounding path invariants_the_fix_must_preserve > [4] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0073",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [4] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "P3_exports_dual_conditions",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [4] > id does not match the reference at grounding path invariants_the_fix_must_preserve > [4] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0074",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [5] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "the file named by exports.\".\"require must contain a dynamic import call visible in source outside of comments",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [5] > description does not match the reference at grounding path invariants_the_fix_must_preserve > [5] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0075",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [5] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "S2_cjs_entry_uses_dynamic_import",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [5] > id does not match the reference at grounding path invariants_the_fix_must_preserve > [5] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0076",
+      "criterion": "the value at grounding path node_runtime_pinned equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "node:20-slim",
+        "anchor_0_0": "the observed value at node_runtime_pinned does not match the reference at grounding path node_runtime_pinned"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0077",
+      "criterion": "the value at grounding path package_json_name_field_value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "@pkg/dual",
+        "anchor_0_0": "the observed value at package_json_name_field_value does not match the reference at grounding path package_json_name_field_value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0078",
+      "criterion": "the value at grounding path package_json_type_field_value equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "module",
+        "anchor_0_0": "the observed value at package_json_type_field_value does not match the reference at grounding path package_json_type_field_value"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0079",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [0] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "source bytes sha256 rejects; the top-level await IS the pinned failure surface",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [0] > rejection does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [0] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0080",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [0] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "rewrite src/index.ts to remove the top-level await and expose a lazy loadConfig getter instead",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [0] > route does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [0] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0081",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [1] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "no network egress and slim base image lacks a C++ toolchain to build native addons",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [1] > rejection does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [1] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0082",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [1] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "install a native binding like deasync to synchronously drain the Promise inside the CJS shim",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [1] > route does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [1] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0083",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [2] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "tsc errors TS1378 on the top-level await; no CJS emit produced",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [2] > rejection does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [2] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0084",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [2] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "transpile the whole tree to CJS by running tsc --module commonjs",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [2] > route does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [2] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0085",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [3] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "tsup wraps esbuild which errors on top-level await when the output format is cjs",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [3] > rejection does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [3] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0086",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [3] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "rely on tsup --format cjs,esm to produce both bundles",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [3] > route does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [3] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0087",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [4] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "Node's CJS loader errors ERR_REQUIRE_ESM on a module with top-level await; the CJS consumer runs but exits nonzero",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [4] > rejection does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [4] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0088",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [4] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "point exports.require at the ESM entry and hope Node's require() accepts it",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [4] > route does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [4] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0089",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [5] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "source bytes rejects the src/index.ts edit AND package type module check rejects the type field flip",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [5] > rejection does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [5] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0090",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [5] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "change package.json type to commonjs and re-author the ESM entry as a CJS module",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [5] > route does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [5] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0091",
+      "criterion": "the value at grounding path primary_lever equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "verifier-hardness",
+        "anchor_0_0": "the observed value at primary_lever does not match the reference at grounding path primary_lever"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0092",
+      "criterion": "the value at grounding path reference_solve_summary matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "Run the ESM build to populate dist/esm. Author dist/cjs/index.cjs whose\nsingle non-comment statement is module.exports equals import of the\nrelative path ../esm/index.js. Overwrite package.json to declare a\nrequire condition under exports.\".\" pointing at dist/cjs/index.cjs and\nkeep the existing import condition and the package type module. Then\nrun the ESM consumer and the CJS consumer from /workspace/consumers/\nand confirm both print the five expected lines terminated by a single\ntrailing newli...[truncated]",
+        "anchor_0_0": "the observed value at reference_solve_summary does not match the reference at grounding path reference_solve_summary"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0093",
+      "criterion": "the value at grounding path source_files_that_must_stay_byte_identical > [0] > rel_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "src/index.ts",
+        "anchor_0_0": "the observed value at source_files_that_must_stay_byte_identical > [0] > rel_path does not match the reference at grounding path source_files_that_must_stay_byte_identical > [0] > rel_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0094",
+      "criterion": "the value at grounding path source_files_that_must_stay_byte_identical > [0] > sha256 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "2e5f6a9a084c4365321c65a2d02ce5bbe5e6b7461333cc6a163f49ab64e89a74",
+        "anchor_0_0": "the observed value at source_files_that_must_stay_byte_identical > [0] > sha256 does not match the reference at grounding path source_files_that_must_stay_byte_identical > [0] > sha256"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0095",
+      "criterion": "the value at grounding path source_files_that_must_stay_byte_identical > [1] > rel_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "src/loader.ts",
+        "anchor_0_0": "the observed value at source_files_that_must_stay_byte_identical > [1] > rel_path does not match the reference at grounding path source_files_that_must_stay_byte_identical > [1] > rel_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0096",
+      "criterion": "the value at grounding path source_files_that_must_stay_byte_identical > [1] > sha256 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "e77b1a1a6ca80ed7546d1d5c1b56ab37866c8f2d9458df40dafb8d5bd9e6e2de",
+        "anchor_0_0": "the observed value at source_files_that_must_stay_byte_identical > [1] > sha256 does not match the reference at grounding path source_files_that_must_stay_byte_identical > [1] > sha256"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0097",
+      "criterion": "the value at grounding path source_index_ts_shape > binds_top_level_await equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at source_index_ts_shape > binds_top_level_await does not match the reference at grounding path source_index_ts_shape > binds_top_level_await"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0098",
+      "criterion": "the value at grounding path source_index_ts_shape > importer_target equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "./loader.js",
+        "anchor_0_0": "the observed value at source_index_ts_shape > importer_target does not match the reference at grounding path source_index_ts_shape > importer_target"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0099",
+      "criterion": "the value at grounding path source_index_ts_shape > regular_named_exports > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "combine",
+        "anchor_0_0": "the observed value at source_index_ts_shape > regular_named_exports > [0] does not match the reference at grounding path source_index_ts_shape > regular_named_exports > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0100",
+      "criterion": "the value at grounding path source_index_ts_shape > regular_named_exports > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "VERSION",
+        "anchor_0_0": "the observed value at source_index_ts_shape > regular_named_exports > [1] does not match the reference at grounding path source_index_ts_shape > regular_named_exports > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0101",
+      "criterion": "the value at grounding path source_index_ts_shape > target_extension_uses_js_because_bundler_moduleResolution_rewrites_ts_at_authoring equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "the value at grounding path source_index_ts_shape > target_extension_uses_js_because_bundler_moduleResolution_rewrites_ts_at_authoring equals the frozen literal",
+        "anchor_0_0": "the observed value at source_index_ts_shape > target_extension_uses_js_because_bundler_moduleResolution_rewrites_ts_at_authoring does not match the reference at grounding path source_index_ts_shape > target_extension_uses_js_because_bundler_moduleResolution_rewrites_ts_at_authoring"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0102",
+      "criterion": "the value at grounding path source_index_ts_shape > top_level_await_export_name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "config",
+        "anchor_0_0": "the observed value at source_index_ts_shape > top_level_await_export_name does not match the reference at grounding path source_index_ts_shape > top_level_await_export_name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0103",
+      "criterion": "the value at grounding path symptom_at_container_build > observed_build_output_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/observed_build.txt",
+        "anchor_0_0": "the observed value at symptom_at_container_build > observed_build_output_path does not match the reference at grounding path symptom_at_container_build > observed_build_output_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0104",
+      "criterion": "the value at grounding path symptom_at_container_build > observed_build_produces_esm_dist equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at symptom_at_container_build > observed_build_produces_esm_dist does not match the reference at grounding path symptom_at_container_build > observed_build_produces_esm_dist"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0105",
+      "criterion": "the value at grounding path symptom_at_container_build > observed_build_returncode equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "the value at grounding path symptom_at_container_build > observed_build_returncode equals the frozen literal",
+        "anchor_0_0": "the observed value at symptom_at_container_build > observed_build_returncode does not match the reference at grounding path symptom_at_container_build > observed_build_returncode"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0106",
+      "criterion": "the value at grounding path symptom_at_container_build > observed_cjs_error_class equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "ERR_PACKAGE_PATH_NOT_EXPORTED_or_ERR_REQUIRE_ESM_depending_on_node_variant",
+        "anchor_0_0": "the observed value at symptom_at_container_build > observed_cjs_error_class does not match the reference at grounding path symptom_at_container_build > observed_cjs_error_class"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0107",
+      "criterion": "the value at grounding path symptom_at_container_build > observed_cjs_error_message_shape equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "No \"exports\" main defined in /workspace/app/package.json OR require() of ES Module /workspace/app/dist/esm/index.js not supported.",
+        "anchor_0_0": "the observed value at symptom_at_container_build > observed_cjs_error_message_shape does not match the reference at grounding path symptom_at_container_build > observed_cjs_error_message_shape"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0108",
+      "criterion": "the value at grounding path symptom_at_container_build > observed_cjs_output_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/observed_cjs.txt",
+        "anchor_0_0": "the observed value at symptom_at_container_build > observed_cjs_output_path does not match the reference at grounding path symptom_at_container_build > observed_cjs_output_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0109",
+      "criterion": "the value at grounding path symptom_at_container_build > observed_cjs_returncode equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "1",
+        "anchor_0_0": "the observed value at symptom_at_container_build > observed_cjs_returncode does not match the reference at grounding path symptom_at_container_build > observed_cjs_returncode"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0110",
+      "criterion": "the value at grounding path symptom_at_container_build > observed_esm_output_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/observed_esm.txt",
+        "anchor_0_0": "the observed value at symptom_at_container_build > observed_esm_output_path does not match the reference at grounding path symptom_at_container_build > observed_esm_output_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0111",
+      "criterion": "the value at grounding path symptom_at_container_build > observed_esm_returncode equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "the value at grounding path symptom_at_container_build > observed_esm_returncode equals the frozen literal",
+        "anchor_0_0": "the observed value at symptom_at_container_build > observed_esm_returncode does not match the reference at grounding path symptom_at_container_build > observed_esm_returncode"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0112",
+      "criterion": "the value at grounding path symptom_at_container_build > observed_esm_stdout_matches_expected equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at symptom_at_container_build > observed_esm_stdout_matches_expected does not match the reference at grounding path symptom_at_container_build > observed_esm_stdout_matches_expected"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0113",
+      "criterion": "the value at grounding path symptom_at_container_build > root_cause_at_authoring equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "package_json_exports_dot_declares_only_import_condition_not_require_condition_and_source_index_ts_uses_top_level_await_which_cannot_be_lowered_to_synchronous_cjs",
+        "anchor_0_0": "the observed value at symptom_at_container_build > root_cause_at_authoring does not match the reference at grounding path symptom_at_container_build > root_cause_at_authoring"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0114",
+      "criterion": "the value at grounding path typescript_version_pinned equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "5.7.2",
+        "anchor_0_0": "the observed value at typescript_version_pinned does not match the reference at grounding path typescript_version_pinned"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0115",
+      "criterion": "the value at grounding path verifier_gates_ordered > [0] > comparator equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "sha256_equality_against_pinned_digests",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [0] > comparator does not match the reference at grounding path verifier_gates_ordered > [0] > comparator"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0116",
+      "criterion": "the value at grounding path verifier_gates_ordered > [0] > fail_reason_code equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "I1_source_file_bytes_mutated_or_I1_source_file_missing",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [0] > fail_reason_code does not match the reference at grounding path verifier_gates_ordered > [0] > fail_reason_code"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0117",
+      "criterion": "the value at grounding path verifier_gates_ordered > [0] > gate_id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "I1_source_bytes_sha256_check",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [0] > gate_id does not match the reference at grounding path verifier_gates_ordered > [0] > gate_id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0118",
+      "criterion": "the value at grounding path verifier_gates_ordered > [0] > target equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "/workspace/app/src/index.ts, /workspace/app/src/loader.ts",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [0] > target does not match the reference at grounding path verifier_gates_ordered > [0] > target"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0119",
+      "criterion": "the value at grounding path verifier_gates_ordered > [1] > comparator equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "sha256_equality_against_pinned_digests",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [1] > comparator does not match the reference at grounding path verifier_gates_ordered > [1] > comparator"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0120",
+      "criterion": "the value at grounding path verifier_gates_ordered > [1] > fail_reason_code equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "C1_consumer_file_bytes_mutated_or_C1_consumer_file_missing",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [1] > fail_reason_code does not match the reference at grounding path verifier_gates_ordered > [1] > fail_reason_code"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0121",
+      "criterion": "the value at grounding path verifier_gates_ordered > [1] > gate_id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "C1_consumer_bytes_sha256_check",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [1] > gate_id does not match the reference at grounding path verifier_gates_ordered > [1] > gate_id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0122",
+      "criterion": "the value at grounding path verifier_gates_ordered > [1] > target equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "/workspace/consumers/esm-consumer.mjs, /workspace/consumers/cjs-consumer.cjs",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [1] > target does not match the reference at grounding path verifier_gates_ordered > [1] > target"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0123",
+      "criterion": "the value at grounding path verifier_gates_ordered > [2] > comparator equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "string_contains_expected_version_5_7_2",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [2] > comparator does not match the reference at grounding path verifier_gates_ordered > [2] > comparator"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0124",
+      "criterion": "the value at grounding path verifier_gates_ordered > [2] > fail_reason_code equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "I3_tsc_version_drift",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [2] > fail_reason_code does not match the reference at grounding path verifier_gates_ordered > [2] > fail_reason_code"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0125",
+      "criterion": "the value at grounding path verifier_gates_ordered > [2] > gate_id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "I3_typescript_version_probe",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [2] > gate_id does not match the reference at grounding path verifier_gates_ordered > [2] > gate_id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0126",
+      "criterion": "the value at grounding path verifier_gates_ordered > [2] > target equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "./node_modules/.bin/tsc --version output",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [2] > target does not match the reference at grounding path verifier_gates_ordered > [2] > target"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0127",
+      "criterion": "the value at grounding path verifier_gates_ordered > [3] > comparator equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "json_load_returns_a_dict",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [3] > comparator does not match the reference at grounding path verifier_gates_ordered > [3] > comparator"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0128",
+      "criterion": "the value at grounding path verifier_gates_ordered > [3] > fail_reason_code equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "P1_package_json_not_valid_json",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [3] > fail_reason_code does not match the reference at grounding path verifier_gates_ordered > [3] > fail_reason_code"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0129",
+      "criterion": "the value at grounding path verifier_gates_ordered > [3] > gate_id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "P1_package_json_parseable",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [3] > gate_id does not match the reference at grounding path verifier_gates_ordered > [3] > gate_id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0130",
+      "criterion": "the value at grounding path verifier_gates_ordered > [3] > target equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "/workspace/app/package.json",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [3] > target does not match the reference at grounding path verifier_gates_ordered > [3] > target"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0131",
+      "criterion": "the value at grounding path verifier_gates_ordered > [4] > comparator equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "string_equals_module",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [4] > comparator does not match the reference at grounding path verifier_gates_ordered > [4] > comparator"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0132",
+      "criterion": "the value at grounding path verifier_gates_ordered > [4] > fail_reason_code equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "P2_package_json_type_field_not_module",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [4] > fail_reason_code does not match the reference at grounding path verifier_gates_ordered > [4] > fail_reason_code"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0133",
+      "criterion": "the value at grounding path verifier_gates_ordered > [4] > gate_id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "P2_package_type_module",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [4] > gate_id does not match the reference at grounding path verifier_gates_ordered > [4] > gate_id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0134",
+      "criterion": "the value at grounding path verifier_gates_ordered > [4] > target equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "parsed_package.type",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [4] > target does not match the reference at grounding path verifier_gates_ordered > [4] > target"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0135",
+      "criterion": "the value at grounding path verifier_gates_ordered > [5] > comparator equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "is_object_with_import_and_require_string_targets_each_starting_with_dot_slash",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [5] > comparator does not match the reference at grounding path verifier_gates_ordered > [5] > comparator"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0136",
+      "criterion": "the value at grounding path verifier_gates_ordered > [5] > fail_reason_code equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "P3_or_P4_or_P5_or_P6_exports_shape_invalid",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [5] > fail_reason_code does not match the reference at grounding path verifier_gates_ordered > [5] > fail_reason_code"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0137",
+      "criterion": "the value at grounding path verifier_gates_ordered > [5] > gate_id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "P3_exports_dot_object",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [5] > gate_id does not match the reference at grounding path verifier_gates_ordered > [5] > gate_id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0138",
+      "criterion": "the value at grounding path verifier_gates_ordered > [5] > target equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "parsed_package.exports.\".\"",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [5] > target does not match the reference at grounding path verifier_gates_ordered > [5] > target"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0139",
+      "criterion": "the value at grounding path verifier_gates_ordered > [6] > comparator equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "path_exists_and_is_file",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [6] > comparator does not match the reference at grounding path verifier_gates_ordered > [6] > comparator"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0140",
+      "criterion": "the value at grounding path verifier_gates_ordered > [6] > fail_reason_code equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "E1_esm_entry_file_missing",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [6] > fail_reason_code does not match the reference at grounding path verifier_gates_ordered > [6] > fail_reason_code"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0141",
+      "criterion": "the value at grounding path verifier_gates_ordered > [6] > gate_id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "E1_esm_entry_file_exists",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [6] > gate_id does not match the reference at grounding path verifier_gates_ordered > [6] > gate_id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0142",
+      "criterion": "the value at grounding path verifier_gates_ordered > [6] > target equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "file_at_resolved_import_condition_target_under_workspace_app",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [6] > target does not match the reference at grounding path verifier_gates_ordered > [6] > target"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0143",
+      "criterion": "the value at grounding path verifier_gates_ordered > [7] > comparator equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "path_exists_and_is_file",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [7] > comparator does not match the reference at grounding path verifier_gates_ordered > [7] > comparator"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0144",
+      "criterion": "the value at grounding path verifier_gates_ordered > [7] > fail_reason_code equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "E2_cjs_entry_file_missing",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [7] > fail_reason_code does not match the reference at grounding path verifier_gates_ordered > [7] > fail_reason_code"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0145",
+      "criterion": "the value at grounding path verifier_gates_ordered > [7] > gate_id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "E2_cjs_entry_file_exists",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [7] > gate_id does not match the reference at grounding path verifier_gates_ordered > [7] > gate_id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0146",
+      "criterion": "the value at grounding path verifier_gates_ordered > [7] > target equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "file_at_resolved_require_condition_target_under_workspace_app",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [7] > target does not match the reference at grounding path verifier_gates_ordered > [7] > target"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0147",
+      "criterion": "the value at grounding path verifier_gates_ordered > [8] > comparator equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "regex_search_for_word_boundary_import_open_paren",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [8] > comparator does not match the reference at grounding path verifier_gates_ordered > [8] > comparator"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0148",
+      "criterion": "the value at grounding path verifier_gates_ordered > [8] > fail_reason_code equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "S2_cjs_entry_missing_dynamic_import_call",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [8] > fail_reason_code does not match the reference at grounding path verifier_gates_ordered > [8] > fail_reason_code"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0149",
+      "criterion": "the value at grounding path verifier_gates_ordered > [8] > gate_id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "S2_cjs_entry_source_contains_dynamic_import_call",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [8] > gate_id does not match the reference at grounding path verifier_gates_ordered > [8] > gate_id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0150",
+      "criterion": "the value at grounding path verifier_gates_ordered > [8] > target equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "text_of_cjs_entry_file_stripped_of_line_and_block_comments",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [8] > target does not match the reference at grounding path verifier_gates_ordered > [8] > target"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0151",
+      "criterion": "the value at grounding path verifier_gates_ordered > [9] > comparator equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "substring_absence_of_each_forbidden_marker_config_dot_name_and_combine_and_VERSION_literal_output_lines",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [9] > comparator does not match the reference at grounding path verifier_gates_ordered > [9] > comparator"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0152",
+      "criterion": "the value at grounding path verifier_gates_ordered > [9] > fail_reason_code equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "S3_cjs_entry_hardcodes_expected_output_marker",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [9] > fail_reason_code does not match the reference at grounding path verifier_gates_ordered > [9] > fail_reason_code"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0153",
+      "criterion": "the value at grounding path verifier_gates_ordered > [9] > gate_id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "S3_cjs_entry_source_free_of_hardcoded_output_markers",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [9] > gate_id does not match the reference at grounding path verifier_gates_ordered > [9] > gate_id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0154",
+      "criterion": "the value at grounding path verifier_gates_ordered > [9] > target equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "text_of_cjs_entry_file",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [9] > target does not match the reference at grounding path verifier_gates_ordered > [9] > target"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0155",
+      "criterion": "the value at grounding path verifier_gates_ordered > [10] > comparator equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "returncode_zero",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [10] > comparator does not match the reference at grounding path verifier_gates_ordered > [10] > comparator"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0156",
+      "criterion": "the value at grounding path verifier_gates_ordered > [10] > fail_reason_code equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "R1_esm_consumer_returncode_nonzero",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [10] > fail_reason_code does not match the reference at grounding path verifier_gates_ordered > [10] > fail_reason_code"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0157",
+      "criterion": "the value at grounding path verifier_gates_ordered > [10] > gate_id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "R1_esm_consumer_returncode_zero",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [10] > gate_id does not match the reference at grounding path verifier_gates_ordered > [10] > gate_id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0158",
+      "criterion": "the value at grounding path verifier_gates_ordered > [10] > target equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "node /workspace/consumers/esm-consumer.mjs",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [10] > target does not match the reference at grounding path verifier_gates_ordered > [10] > target"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0159",
+      "criterion": "the value at grounding path verifier_gates_ordered > [11] > comparator equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "byte_exact_string_equality_against_five_expected_lines_plus_trailing_newline",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [11] > comparator does not match the reference at grounding path verifier_gates_ordered > [11] > comparator"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0160",
+      "criterion": "the value at grounding path verifier_gates_ordered > [11] > fail_reason_code equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "R2_esm_consumer_stdout_bytes_mismatch",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [11] > fail_reason_code does not match the reference at grounding path verifier_gates_ordered > [11] > fail_reason_code"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0161",
+      "criterion": "the value at grounding path verifier_gates_ordered > [11] > gate_id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "R2_esm_consumer_stdout_bytes_exact",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [11] > gate_id does not match the reference at grounding path verifier_gates_ordered > [11] > gate_id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0162",
+      "criterion": "the value at grounding path verifier_gates_ordered > [11] > target equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "stdout of node /workspace/consumers/esm-consumer.mjs",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [11] > target does not match the reference at grounding path verifier_gates_ordered > [11] > target"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0163",
+      "criterion": "the value at grounding path verifier_gates_ordered > [12] > comparator equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "returncode_zero",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [12] > comparator does not match the reference at grounding path verifier_gates_ordered > [12] > comparator"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0164",
+      "criterion": "the value at grounding path verifier_gates_ordered > [12] > fail_reason_code equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "R3_cjs_consumer_returncode_nonzero",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [12] > fail_reason_code does not match the reference at grounding path verifier_gates_ordered > [12] > fail_reason_code"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0165",
+      "criterion": "the value at grounding path verifier_gates_ordered > [12] > gate_id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "R3_cjs_consumer_returncode_zero",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [12] > gate_id does not match the reference at grounding path verifier_gates_ordered > [12] > gate_id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0166",
+      "criterion": "the value at grounding path verifier_gates_ordered > [12] > target equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "node /workspace/consumers/cjs-consumer.cjs",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [12] > target does not match the reference at grounding path verifier_gates_ordered > [12] > target"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0167",
+      "criterion": "the value at grounding path verifier_gates_ordered > [13] > comparator equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "byte_exact_string_equality_against_five_expected_lines_plus_trailing_newline",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [13] > comparator does not match the reference at grounding path verifier_gates_ordered > [13] > comparator"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0168",
+      "criterion": "the value at grounding path verifier_gates_ordered > [13] > fail_reason_code equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "R4_cjs_consumer_stdout_bytes_mismatch",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [13] > fail_reason_code does not match the reference at grounding path verifier_gates_ordered > [13] > fail_reason_code"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0169",
+      "criterion": "the value at grounding path verifier_gates_ordered > [13] > gate_id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "R4_cjs_consumer_stdout_bytes_exact",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [13] > gate_id does not match the reference at grounding path verifier_gates_ordered > [13] > gate_id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0170",
+      "criterion": "the value at grounding path verifier_gates_ordered > [13] > target equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "stdout of node /workspace/consumers/cjs-consumer.cjs",
+        "anchor_0_0": "the observed value at verifier_gates_ordered > [13] > target does not match the reference at grounding path verifier_gates_ordered > [13] > target"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    }
+  ]
+}

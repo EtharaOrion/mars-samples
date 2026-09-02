@@ -1,0 +1,58 @@
+schema_version = "1.4"
+
+[task]
+name = "mars/pipe-jstack-deadlock-vs-contention"
+description = "Read a HotSpot jstack thread dump and, using a compositional shell pipeline, classify each BLOCKED thread as either a true-deadlock cycle member or a contention-only waiter. Emit a canonical tab-separated report at /workspace/out/report.tsv listing DEADLOCKED_THREAD_COUNT, CONTENTION_THREAD_COUNT, then ascending lists of DEADLOCK_LOCK and CONTENTION_LOCK addresses. Any weaker treatment (grep BLOCKED, hardcoded ratio split, treating every waiting-to-lock as deadlock, treating park/waiting-on as monitor-entry blocking, or inverting ownership) yields a plausible non-empty output that fails D3."
+authors = [{ name = "mars-forge" }]
+keywords = ["cli", "shell-pipeline", "jstack", "gawk", "python3", "coreutils"]
+
+[metadata]
+mars_sub_type = "cli"
+mars_archetype = "cli-shell-pipeline"
+mars_maturity = "draft"
+mars_tier = "at_baseline"
+mars_disposition_ceiling = "HOLD:PILOT_REQUIRED"
+mars_forge_contract_sha256 = "d6d54ff0e53d2e11a504b3372bb20455ab5d6174bf9befee88c357ba2443c54c"
+mars_primary_hardness_lever = "compositional-multi-domain-reasoning"
+
+[verifier]
+timeout_sec = 300.0
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 1200.0
+cpus = 2
+memory_mb = 2048
+storage_mb = 4096
+gpus = 0
+network_mode = "public"
+
+[environment.healthcheck]
+command = "gawk --version > /dev/null 2>&1 && python3 --version > /dev/null 2>&1 && sort --version > /dev/null 2>&1"
+interval_sec = 2.0
+timeout_sec = 5.0
+start_period_sec = 3.0
+retries = 3
+
+[verifier.env]
+
+[environment.env]
+
+[solution.env]
+
+[[artifacts]]
+source = "/workspace/input"
+
+[[artifacts]]
+source = "/workspace/out"
+
+[[artifacts]]
+source = "/workspace/README_FOR_AGENT.md"
+
+[prosecutor]
+mode = "harness_provided"
+delegate = "harness/mars_council.py"
+in_container_stub = "tests/run_prosecutor_judge.py"
+note = "3-judge Claude council runs on host post-container; in-container stub is a no-op marker for G-VER-INVARIANCE"

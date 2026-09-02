@@ -1,0 +1,231 @@
+schema: forge.grounding/v1
+task_slug: configure-vite-dual-esm-cjs-exports-v3
+canary_a: FORGE_HOLDOUT_CANARY_3609B7D635F886C9D0DC7DCFA8A18394
+canary_b_reference_only: FORGE_HOLDOUT_CANARY_71D9590F37529FF6569AEDFC08DA6283
+task_lever_label: instruction_no_longer_enumerates_tsup_tsc_rollup_source_esm_uses_top_level_await_agent_must_detect_and_use_dynamic_import_shim_for_cjs_entry
+archetype: build-configure
+primary_lever: verifier-hardness
+
+typescript_version_pinned: 5.7.2
+node_runtime_pinned: node:20-slim
+package_json_type_field_value: module
+package_json_name_field_value: '@pkg/dual'
+
+source_files_that_must_stay_byte_identical:
+- rel_path: src/index.ts
+  sha256: 2e5f6a9a084c4365321c65a2d02ce5bbe5e6b7461333cc6a163f49ab64e89a74
+- rel_path: src/loader.ts
+  sha256: e77b1a1a6ca80ed7546d1d5c1b56ab37866c8f2d9458df40dafb8d5bd9e6e2de
+
+consumer_files_that_must_stay_byte_identical:
+- rel_path: esm-consumer.mjs
+  sha256: 36b76a66ffa101c1a44a9d3a505a8eef76cff404a4bc6ff384cad8961e1f32fd
+- rel_path: cjs-consumer.cjs
+  sha256: 7cc5b6347f9c8faac5d72cab6dc1e21b1bf5e76a2b4df7428df6622ff474e362
+
+source_index_ts_shape:
+  binds_top_level_await: true
+  top_level_await_export_name: config
+  regular_named_exports:
+  - combine
+  - VERSION
+  importer_target: ./loader.js
+  target_extension_uses_js_because_bundler_moduleResolution_rewrites_ts_at_authoring: false
+
+initial_package_json_exports_shape:
+  dot_condition_types_present: true
+  dot_condition_import_present: true
+  dot_condition_require_present_initial_state: false
+  package_type_field: module
+
+expected_stdout_bytes_utf8: "config.name=@pkg/dual\nconfig.ready=true\nconfig.seed=42\ncombine=alpha::beta\nVERSION=1.0.0\n"
+expected_stdout_line_1: 'config.name=@pkg/dual'
+expected_stdout_line_2: 'config.ready=true'
+expected_stdout_line_3: 'config.seed=42'
+expected_stdout_line_4: 'combine=alpha::beta'
+expected_stdout_line_5: 'VERSION=1.0.0'
+expected_stdout_terminator: single_trailing_newline
+
+symptom_at_container_build:
+  observed_build_output_path: /workspace/observed_build.txt
+  observed_build_returncode: 0
+  observed_build_produces_esm_dist: true
+  observed_esm_output_path: /workspace/observed_esm.txt
+  observed_esm_returncode: 0
+  observed_esm_stdout_matches_expected: true
+  observed_cjs_output_path: /workspace/observed_cjs.txt
+  observed_cjs_returncode: 1
+  observed_cjs_error_class: ERR_PACKAGE_PATH_NOT_EXPORTED_or_ERR_REQUIRE_ESM_depending_on_node_variant
+  observed_cjs_error_message_shape: 'No "exports" main defined in /workspace/app/package.json OR require() of ES Module /workspace/app/dist/esm/index.js not supported.'
+  root_cause_at_authoring: 'package_json_exports_dot_declares_only_import_condition_not_require_condition_and_source_index_ts_uses_top_level_await_which_cannot_be_lowered_to_synchronous_cjs'
+
+false_lead_probes:
+- probe: run_tsup_with_format_cjs_esm_or_esbuild_with_platform_node_format_cjs
+  expected_outcome: esbuild_or_tsup_errors_top_level_await_is_currently_not_supported_with_the_cjs_output_format_no_cjs_bundle_written
+- probe: run_tsc_with_module_commonjs_or_module_node16_module_commonjs_variant
+  expected_outcome: tsc_error_TS1378_top_level_await_expressions_are_only_allowed_when_module_option_is_set_to_es2022_esnext_system_node16_nodenext_or_preserve_no_cjs_emit_written
+- probe: delete_or_rewrite_the_top_level_await_in_src_index_ts_to_get_sync_cjs
+  expected_outcome: verifier_source_bytes_sha256_check_rejects_the_edited_src_index_ts
+- probe: flip_package_json_type_field_from_module_to_commonjs_to_dodge_esm_semantics
+  expected_outcome: verifier_package_type_module_check_rejects_the_flipped_type_field
+- probe: hand_author_dist_cjs_index_cjs_that_hardcodes_module_exports_promise_resolve_with_hardcoded_expected_values
+  expected_outcome: verifier_cjs_entry_dynamic_import_static_check_rejects_because_the_file_does_not_call_import_of_the_esm_entry_and_the_hardcoded_output_markers_are_detected
+- probe: rewrite_cjs_consumer_cjs_to_read_from_a_side_channel_or_reimplement_the_module
+  expected_outcome: verifier_consumer_bytes_sha256_check_rejects_the_edited_cjs_consumer_cjs
+- probe: publish_only_esm_and_declare_require_condition_pointing_at_the_esm_index_js
+  expected_outcome: node_cjs_loader_errors_ERR_REQUIRE_ESM_because_the_target_is_an_ESM_file_with_a_top_level_await_which_cannot_be_synchronously_required
+
+canonical_fix_path_selected: package_exports_import_esm_plus_require_cjs_shim_that_dynamic_imports_the_esm_entry
+canonical_fix_bytes_diff_from_initial:
+  package_json_exports_dot:
+  - require_condition_added_pointing_at_dist_slash_cjs_slash_index_dot_cjs
+  package_json_type_field: remains_module
+  new_files_authored_under_dist:
+  - dist/cjs/index.cjs
+  new_files_content_shape:
+    dist_cjs_index_cjs: 'module_dot_exports_equals_dynamic_import_call_of_relative_esm_index_js'
+  no_source_edits_under_src: true
+  no_edits_to_consumers: true
+  esm_build_produced_by_running_tsc_dash_p_tsconfig_dot_esm_dot_json: true
+
+canonical_fix_rationale: |
+  The ESM entry cannot be loaded synchronously because it uses top-level
+  await, which is valid ES2022 ESM but cannot be lowered to synchronous
+  CommonJS by any transpiler. tsup, esbuild with format cjs, and tsc with
+  module commonjs each refuse the transform explicitly. Any working dual
+  package must therefore route the CJS consumer through a dynamic import,
+  which returns a Promise that resolves once the ESM entry finishes its
+  top-level await. The idiomatic shim is a one-line CJS file whose
+  module.exports is the Promise returned by import of the ESM entry. The
+  CJS consumer treats the required value as a thenable and reads named
+  bindings off the fulfilled value. The package.json exports map declares
+  the shim under the require condition and the real ESM entry under the
+  import condition, so Node's ESM resolver hits the ESM entry directly
+  and the CJS resolver hits the shim. Preserving the source bytes and the
+  package type field is what forces the agent onto this route rather than
+  onto the dead-end routes that either erase the top-level await or flip
+  the whole package to commonjs.
+
+alternative_paths_that_also_work_but_this_verifier_grades_differently:
+- id: path_a_cjs_shim_uses_dynamic_import_and_awaits_it_synchronously_via_deasync
+  reason_rejected: deasync_native_binding_requires_c_plus_plus_toolchain_and_native_addon_load_not_available_offline_in_slim_base_image
+- id: path_b_regenerate_a_full_iife_bundle_via_rollup_with_topLevelAwait_plugin
+  reason_rejected: rollup_topLevelAwait_plugin_produces_an_iife_wrapper_but_the_verifier_dynamic_import_static_check_on_the_cjs_entry_still_requires_the_import_call_to_be_visible_in_the_cjs_entry_source
+- id: path_c_publish_a_separate_synchronous_cjs_build_from_a_second_source_tree_without_top_level_await
+  reason_rejected: source_bytes_sha256_check_pins_src_index_ts_and_src_loader_ts_so_no_alternate_source_tree_can_exist_under_src
+
+verifier_gates_ordered:
+- gate_id: I1_source_bytes_sha256_check
+  target: /workspace/app/src/index.ts, /workspace/app/src/loader.ts
+  comparator: sha256_equality_against_pinned_digests
+  fail_reason_code: I1_source_file_bytes_mutated_or_I1_source_file_missing
+- gate_id: C1_consumer_bytes_sha256_check
+  target: /workspace/consumers/esm-consumer.mjs, /workspace/consumers/cjs-consumer.cjs
+  comparator: sha256_equality_against_pinned_digests
+  fail_reason_code: C1_consumer_file_bytes_mutated_or_C1_consumer_file_missing
+- gate_id: I3_typescript_version_probe
+  target: ./node_modules/.bin/tsc --version output
+  comparator: string_contains_expected_version_5_7_2
+  fail_reason_code: I3_tsc_version_drift
+- gate_id: P1_package_json_parseable
+  target: /workspace/app/package.json
+  comparator: json_load_returns_a_dict
+  fail_reason_code: P1_package_json_not_valid_json
+- gate_id: P2_package_type_module
+  target: parsed_package.type
+  comparator: string_equals_module
+  fail_reason_code: P2_package_json_type_field_not_module
+- gate_id: P3_exports_dot_object
+  target: parsed_package.exports."."
+  comparator: is_object_with_import_and_require_string_targets_each_starting_with_dot_slash
+  fail_reason_code: P3_or_P4_or_P5_or_P6_exports_shape_invalid
+- gate_id: E1_esm_entry_file_exists
+  target: file_at_resolved_import_condition_target_under_workspace_app
+  comparator: path_exists_and_is_file
+  fail_reason_code: E1_esm_entry_file_missing
+- gate_id: E2_cjs_entry_file_exists
+  target: file_at_resolved_require_condition_target_under_workspace_app
+  comparator: path_exists_and_is_file
+  fail_reason_code: E2_cjs_entry_file_missing
+- gate_id: S2_cjs_entry_source_contains_dynamic_import_call
+  target: text_of_cjs_entry_file_stripped_of_line_and_block_comments
+  comparator: regex_search_for_word_boundary_import_open_paren
+  fail_reason_code: S2_cjs_entry_missing_dynamic_import_call
+- gate_id: S3_cjs_entry_source_free_of_hardcoded_output_markers
+  target: text_of_cjs_entry_file
+  comparator: substring_absence_of_each_forbidden_marker_config_dot_name_and_combine_and_VERSION_literal_output_lines
+  fail_reason_code: S3_cjs_entry_hardcodes_expected_output_marker
+- gate_id: R1_esm_consumer_returncode_zero
+  target: node /workspace/consumers/esm-consumer.mjs
+  comparator: returncode_zero
+  fail_reason_code: R1_esm_consumer_returncode_nonzero
+- gate_id: R2_esm_consumer_stdout_bytes_exact
+  target: stdout of node /workspace/consumers/esm-consumer.mjs
+  comparator: byte_exact_string_equality_against_five_expected_lines_plus_trailing_newline
+  fail_reason_code: R2_esm_consumer_stdout_bytes_mismatch
+- gate_id: R3_cjs_consumer_returncode_zero
+  target: node /workspace/consumers/cjs-consumer.cjs
+  comparator: returncode_zero
+  fail_reason_code: R3_cjs_consumer_returncode_nonzero
+- gate_id: R4_cjs_consumer_stdout_bytes_exact
+  target: stdout of node /workspace/consumers/cjs-consumer.cjs
+  comparator: byte_exact_string_equality_against_five_expected_lines_plus_trailing_newline
+  fail_reason_code: R4_cjs_consumer_stdout_bytes_mismatch
+
+forbidden_shortcut_patterns:
+- id: shortcut_delete_top_level_await_from_src_index_ts
+  description: agent rewrites export const config equals await loadConfig to a synchronous export to make tsc module commonjs succeed
+  detection: verifier I1 sha256 compare of src/index.ts rejects
+- id: shortcut_flip_package_type_to_commonjs
+  description: agent changes package.json type field from module to commonjs to dodge the ESM semantics entirely
+  detection: verifier P2 package type module check rejects the flipped field even if runtime consumers would happen to work
+- id: shortcut_hardcode_dist_cjs_index_cjs_to_fake_the_expected_values
+  description: agent hand-authors dist/cjs/index.cjs whose module.exports is a synthesized Promise.resolve object that hardcodes config name and combine result and VERSION without ever loading the ESM entry
+  detection: verifier S2 dynamic-import call absence check rejects OR S3 hardcoded-output marker substring check rejects
+- id: shortcut_edit_cjs_consumer_cjs_to_bypass_require_by_name
+  description: agent rewrites cjs-consumer.cjs to import via ESM dynamic import from a hardcoded relative path bypassing package name resolution
+  detection: verifier C1 sha256 compare of cjs-consumer.cjs rejects
+- id: shortcut_downgrade_typescript_or_node_version_to_get_a_different_top_level_await_behavior
+  description: agent installs an older typescript that predates top-level await support or an older node
+  detection: verifier I3 tsc version probe rejects the drift and container has no network egress
+- id: shortcut_declare_require_condition_that_points_at_the_esm_entry_directly
+  description: agent adds a require condition that points at ./dist/esm/index.js itself hoping node will accept it
+  detection: node cjs loader errors ERR_REQUIRE_ESM when it hits the ESM file with top-level await; R3 cjs consumer returncode nonzero
+
+invariants_the_fix_must_preserve:
+- id: I1_source_bytes_unchanged
+  description: src/index.ts and src/loader.ts must sha256-match the seeded digest at grade time; the top-level await in src/index.ts stays intact
+- id: C1_consumer_bytes_unchanged
+  description: esm-consumer.mjs and cjs-consumer.cjs are verifier-owned probes and must sha256-match the seeded digest at grade time
+- id: I3_typescript_version_unchanged
+  description: tsc --version output must still name the seeded pinned typescript version 5.7.2
+- id: P2_package_type_module
+  description: package.json type field must remain the literal string module after the fix
+- id: P3_exports_dual_conditions
+  description: package.json exports."." must be an object that declares both an import condition and a require condition pointing at real files under /workspace/app
+- id: S2_cjs_entry_uses_dynamic_import
+  description: the file named by exports."."require must contain a dynamic import call visible in source outside of comments
+
+reference_solve_summary: |
+  Run the ESM build to populate dist/esm. Author dist/cjs/index.cjs whose
+  single non-comment statement is module.exports equals import of the
+  relative path ../esm/index.js. Overwrite package.json to declare a
+  require condition under exports."." pointing at dist/cjs/index.cjs and
+  keep the existing import condition and the package type module. Then
+  run the ESM consumer and the CJS consumer from /workspace/consumers/
+  and confirm both print the five expected lines terminated by a single
+  trailing newline.
+
+plausible_wrong_routes_and_why_rejected:
+- route: rewrite src/index.ts to remove the top-level await and expose a lazy loadConfig getter instead
+  rejection: source bytes sha256 rejects; the top-level await IS the pinned failure surface
+- route: install a native binding like deasync to synchronously drain the Promise inside the CJS shim
+  rejection: no network egress and slim base image lacks a C++ toolchain to build native addons
+- route: transpile the whole tree to CJS by running tsc --module commonjs
+  rejection: tsc errors TS1378 on the top-level await; no CJS emit produced
+- route: rely on tsup --format cjs,esm to produce both bundles
+  rejection: tsup wraps esbuild which errors on top-level await when the output format is cjs
+- route: point exports.require at the ESM entry and hope Node's require() accepts it
+  rejection: Node's CJS loader errors ERR_REQUIRE_ESM on a module with top-level await; the CJS consumer runs but exits nonzero
+- route: change package.json type to commonjs and re-author the ESM entry as a CJS module
+  rejection: source bytes rejects the src/index.ts edit AND package type module check rejects the type field flip

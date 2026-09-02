@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    options {
+        timestamps()
+    }
+
+    stages {
+        stage('Lint') {
+            steps {
+                sh 'mvn -o -B -e checkstyle:check'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'mvn -o -B -e -DskipTests package'
+            }
+        }
+
+        stage('Docs') {
+            steps {
+                sh 'mvn -o -B -e javadoc:javadoc'
+            }
+        }
+    }
+}

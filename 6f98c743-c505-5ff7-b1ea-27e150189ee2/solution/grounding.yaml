@@ -1,0 +1,101 @@
+grounding:
+  task_slug: "cargo-audit-triage"
+  contract_sha256: "8de8843f23cc018e515c67ce90f9d7c54aa8596b9a0fbb3a26e418153ae0762e"
+  canary_a_placeholder: "FORGE_HOLDOUT_CANARY_092B325A63EA0F52B518F4F530D6D3E6"
+  canary_b_placeholder: "FORGE_HOLDOUT_CANARY_A73F913491F0BE198F72547C7978B67E"
+  bash_invocation_contract:
+    invocation_form: "bash /workspace/solve.sh from a shell rooted at /workspace/ with LC_ALL=C"
+    tools_on_path: [bash, gawk, sed, grep, sort, uniq, python3, diffutils, jq, patch]
+    network_policy: "no-network"
+    workspace_root: "/workspace"
+    input_workspace_path: "/workspace/input/workspace"
+    input_audit_jsonl_path: "/workspace/input/audit.jsonl"
+    input_now_txt_path: "/workspace/input/NOW.txt"
+    output_path: "/workspace/out/triage.tsv"
+  output_file_shape_contract:
+    path: "/workspace/out/triage.tsv"
+    field_separator: "0x09"
+    field_count: 3
+    non_empty: true
+    utf8: true
+    trailing_newline: true
+  per_field_schema_shape_regex_family:
+    field_1_severity_bucket: '^(CRITICAL|HIGH|MEDIUM)$'
+    field_2_advisory_id: '^RUSTSEC-[0-9]{4}-[0-9]{4}$'
+    field_3_join_key: '^[a-z0-9][a-z0-9_-]*:(direct|transitive):[a-z0-9][a-z0-9_-]*$'
+  canonical_output_form:
+    line_shape: "<severity_bucket>\t<advisory_id>\t<join_key>\n"
+    trailing_newline_per_row: true
+    severity_bucket_closed_set: [CRITICAL, HIGH, MEDIUM]
+    dep_kind_closed_set: [direct, transitive]
+  row_ordering_comparator_contract:
+    primary_key: severity_rank_descending
+    secondary_key: advisory_id_ascending_byte_order_lex
+    tertiary_key: join_key_ascending_byte_order_lex
+    severity_rank_map: {CRITICAL: 3, HIGH: 2, MEDIUM: 1}
+    interleaving_of_severity_buckets_allowed: false
+    locale: "C"
+  bound_shortcut_pattern_set:
+    - 'FORGE_HOLDOUT_CANARY_[A-Z0-9]{32}'
+    - 'solution/grounding\.yaml'
+    - 'solution/TRUTH\.md'
+    - 'dataset/[0-9a-f-]{36}/(solution|tests)/'
+    - '/holdout/'
+    - 'HARDCODED_TRIAGE_RECITAL_BEGIN'
+    - 'HARDCODED_TRIAGE_RECITAL_END'
+    - 'reference_row_set'
+    - 'reference_advisory_id_set'
+    - 'reference_join_key_set'
+    - 'reference_severity_bucket_set'
+    - 'canonical_output_form'
+    - 'per_field_schema_shape_regex_family'
+    - 'row_ordering_comparator_contract'
+    - '(^|[^_a-zA-Z])date\s+(-d\s+|-I|-u\s|\+%)'
+    - '\bdatetime\.now\s*\('
+    - '\bdatetime\.today\s*\('
+    - '\bdate\.today\s*\('
+    - '\btime\.time\s*\('
+    - '\btime\.localtime\s*\('
+    - '\btime\.gmtime\s*\('
+    - '\bcargo\s+(update|publish|yank|install|search|owner|login)\b'
+    - '\bcargo\s+audit\s+fetch\b'
+    - '\bcurl\b'
+    - '\bwget\b'
+    - '\bgit\s+clone\b'
+    - '/tests/grader\.py'
+    - 'EXPECTED_LINES'
+    - 'EXPECTED_TSV_SHA256'
+    - 'from\s+grader\s+import'
+    - 'sys\.path\.insert\s*\([^)]*[''"]/?tests'
+    - 'sys\.path\.append\s*\([^)]*[''"]/?tests'
+    - 'import\s+importlib.*\.import_module\s*\([''"]grader'
+  solve_script_line_budget: 90
+  reference_now_date: "2026-08-04"
+  reference_ninety_day_window_endpoints:
+    inclusive_lo: "2026-05-06"
+    inclusive_hi: "2026-08-04"
+  reference_workspace_member_manifest_map: {"alpha-svc": {"build_dependencies": [], "dependencies": ["libwebkit"], "dev_dependencies": [], "path": "alpha-svc"}, "beta-lib": {"build_dependencies": [], "dependencies": ["httpx-rust"], "dev_dependencies": [], "path": "beta-lib"}, "delta-worker": {"build_dependencies": ["codegen-macros"], "dependencies": ["zstream-rt"], "dev_dependencies": [], "path": "delta-worker"}, "gamma-cli": {"build_dependencies": [], "dependencies": ["serde-marss"], "dev_dependencies": ["mockery-mini"], "path": "gamma-cli"}}
+  reference_direct_dependency_map: {"alpha-svc": ["libwebkit"], "beta-lib": ["httpx-rust"], "delta-worker": ["zstream-rt"], "gamma-cli": ["serde-marss"]}
+  reference_transitive_dependency_map: {"alpha-svc": ["httpio-net"], "beta-lib": ["qxml-parser"], "delta-worker": [], "gamma-cli": []}
+  reference_row_set:
+    row_count: 7
+    stream_sha256: "b8618aa3e18567caa3386a44ac8c35c939f93566af6eeedab03c4b5e86c28cfb"
+    first_row: "CRITICAL	RUSTSEC-2026-0001	alpha-svc:direct:libwebkit"
+    last_row: "MEDIUM	RUSTSEC-2026-0012	alpha-svc:transitive:httpio-net"
+    rows: ["CRITICAL\tRUSTSEC-2026-0001\talpha-svc:direct:libwebkit", "CRITICAL\tRUSTSEC-2026-0002\talpha-svc:transitive:httpio-net", "HIGH\tRUSTSEC-2026-0003\tbeta-lib:direct:httpx-rust", "HIGH\tRUSTSEC-2026-0004\tdelta-worker:direct:zstream-rt", "MEDIUM\tRUSTSEC-2026-0005\tbeta-lib:transitive:qxml-parser", "MEDIUM\tRUSTSEC-2026-0011\talpha-svc:direct:libwebkit", "MEDIUM\tRUSTSEC-2026-0012\talpha-svc:transitive:httpio-net"]
+  reference_advisory_id_set: ["RUSTSEC-2026-0001", "RUSTSEC-2026-0002", "RUSTSEC-2026-0003", "RUSTSEC-2026-0004", "RUSTSEC-2026-0005", "RUSTSEC-2026-0011", "RUSTSEC-2026-0012"]
+  reference_join_key_set: ["alpha-svc:direct:libwebkit", "alpha-svc:transitive:httpio-net", "beta-lib:direct:httpx-rust", "beta-lib:transitive:qxml-parser", "delta-worker:direct:zstream-rt"]
+  reference_severity_bucket_set: ["CRITICAL", "HIGH", "MEDIUM"]
+  corpus:
+    workspace_member_count: 4
+    audit_record_count: 12
+    kept_after_severity_filter: 10
+    kept_after_date_window: 7
+    kept_after_workspace_cross_join: 7
+    dropped_by_severity_low: 1
+    dropped_by_date_window_boundary_exclusive: 1
+    dropped_by_workspace_cross_join_orphan: 1
+    dropped_by_dep_kind_dev_only: 1
+    dropped_by_dep_kind_build_only: 1
+    naive_grep_i_critical_false_positive_advisory_id: "RUSTSEC-2026-0011"
+    naive_grep_i_critical_false_negative_advisory_id: "RUSTSEC-2026-0001"

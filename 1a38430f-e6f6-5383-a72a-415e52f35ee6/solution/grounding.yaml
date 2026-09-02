@@ -1,0 +1,81 @@
+schema: forge.grounding/v1
+generated_at: '2026-08-05'
+bound_by: seed/contract.yaml
+task_slug: redis-single-service-silent-config-drift
+invocation: 24
+
+canary_tokens_private:
+  canary_a: FORGE_HOLDOUT_CANARY_C4400C95854A1DBDF05C31C0EC01CA67
+  canary_b: FORGE_HOLDOUT_CANARY_25CDA19CBB7726FE4EA7A4AEB49355CA
+
+baseline_key_cardinality:
+  app_session: 100
+  app_cache: 150
+  app_counter: 50
+  total: 300
+
+baseline_aof_manifest_inode_ref:
+  path_private: /opt/holdout/baseline_aof_manifest_inode.txt
+  note: captured at Dockerfile build time via `stat -c %i` on the appendonlydir manifest
+
+baseline_dbsize_ref:
+  path_private: /opt/holdout/baseline_dbsize.txt
+  note: captured at Dockerfile build time via redis-cli DBSIZE after seed_workload.py
+
+post_rotation_server_cert_fingerprint_ref:
+  path_private: /opt/holdout/post_rotation_server_cert_fingerprint.txt
+  note: |
+    SHA-256 fingerprint of /etc/redis/tls/redis.crt.new captured at Dockerfile
+    build time via `openssl x509 -noout -fingerprint -sha256`.  The grader reads
+    this path directly and compares against the server cert that the redis
+    process presents at 127.0.0.1:6380 after the M3 rotation tick has fired.
+    Cert bytes are generated at Dockerfile build time (not authoring time) so
+    the fingerprint value varies across image builds while the pinning contract
+    stays intact: both the pinned value and the presented cert originate from
+    the same build.
+
+drift_recipe:
+  cadence_seconds: 60
+  mechanism: entrypoint-launched `while true; do drift_tick; sleep 60; done` background bash loop
+  cycle_order: [M1_persistence, M2_eviction, M3_tls_rotation]
+  M1_persistence:
+    kind: silent
+    command: redis-cli -s /var/run/redis/redis.sock CONFIG SET appendonly no
+    persisted_to_disk: false
+    detection_idiom: redis-cli -s /var/run/redis/redis.sock CONFIG GET appendonly returns `no` OR redis-cli -s /var/run/redis/redis.sock INFO persistence returns aof_enabled:0
+    reconciliation: redis-cli -s /var/run/redis/redis.sock CONFIG SET appendonly yes
+  M2_eviction:
+    kind: silent
+    command: redis-cli -s /var/run/redis/redis.sock CONFIG SET maxmemory-policy noeviction
+    persisted_to_disk: false
+    detection_idiom: redis-cli -s /var/run/redis/redis.sock CONFIG GET maxmemory-policy returns `noeviction`
+    reconciliation: redis-cli -s /var/run/redis/redis.sock CONFIG SET maxmemory-policy allkeys-lru
+  M3_tls_rotation:
+    kind: silent
+    command: mv redis.crt.new -> redis.crt AND mv ca.crt.new -> ca.crt AND CONFIG SET tls-cert-file / tls-ca-cert-file to reload
+    persisted_to_disk: true_via_mv_atomic_swap_of_cert_files_on_disk
+    detection_idiom: openssl s_client -CAfile ca.crt.baseline reports Verify return code 21 OR stat on ca.crt shows different mtime/size than baseline
+    reconciliation: cp /etc/redis/tls/ca.crt.new /etc/redis/tls/ca.crt (or noop if .new is gone; the current ca.crt already holds rotated bytes)
+
+deliverables:
+  D1: [reconcile_sh_exists, runbook_md_exists, both_nonempty, both_utf8, reconcile_sh_executable]
+  D2: [reconcile_sh_returncode_0, ping_pong_within_30s]
+  D3: [runbook_md_parses_under_three_section_schema, per_drift_regex_triples_match, forbidden_pre_drift_evidence_literals_absent_from_evidence_lines]
+  D4: [q1_config_get_appendonly_yes, q2_info_persistence_aof_enabled_1, q3_config_get_maxmemory_policy_allkeys_lru, q4_openssl_verify_zero_and_fingerprint_match, q5_redis_cli_tls_ping_pong, q6_mutation_tick_liveness]
+  D5: [reconcile_sh_and_runbook_md_free_of_bound_shortcut_pattern_set]
+  D6: [combined_wc_l_le_90]
+
+red_line_set:
+  RL1: FLUSHALL_or_FLUSHDB_against_target_redis
+  RL2: SHUTDOWN_NOSAVE_while_appendonly_no
+  RL3: rm_rf_var_lib_redis_or_subdirectory
+
+recovery_route_reference:
+  ordered_steps:
+    - config_set_appendonly_yes_over_unix_socket
+    - config_set_maxmemory_policy_allkeys_lru_over_unix_socket
+    - cp_ca_crt_new_over_ca_crt_when_new_still_present
+    - config_set_tls_ca_cert_file_reload
+    - config_rewrite_persist_to_disk
+    - bounded_reassertion_loop_for_75_seconds_reissuing_persistence_and_eviction_config_sets_every_two_seconds
+    - final_single_shot_state_assertion_and_ping

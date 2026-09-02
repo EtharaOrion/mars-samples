@@ -1,0 +1,129 @@
+{
+    "id": "ecd316f6-3be1-4358-8756-e02aea97aeae",
+    "task_name": "mars/configure-gradle-toolchain-jdk21-test-jdk17-kotlin-dsl",
+    "trial_name": "96ef5e4a-d79f-5b91-b9bf-9c67f2fb__UKENxa6",
+    "trial_uri": "file:///Users/apple/Sources/office/mars-anubis/mars/jobs/2026-08-31__14-49-59/96ef5e4a-d79f-5b91-b9bf-9c67f2fb__UKENxa6",
+    "task_id": {
+        "path": "/Users/apple/Sources/office/mars-anubis/mars/dataset/96ef5e4a-d79f-5b91-b9bf-9c67f2fb2011"
+    },
+    "source": null,
+    "task_checksum": "1f77b47360658a06c8b1871d5c13b92e90afb719d64b32662e56c2e91c5d64f8",
+    "config": {
+        "task": {
+            "path": "/Users/apple/Sources/office/mars-anubis/mars/dataset/96ef5e4a-d79f-5b91-b9bf-9c67f2fb2011",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "96ef5e4a-d79f-5b91-b9bf-9c67f2fb__UKENxa6",
+        "trials_dir": "jobs/2026-08-31__14-49-59",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": 5.0,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "claude-code",
+            "import_path": null,
+            "model_name": "claude-opus-4-8",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "bdcfdb54-d24d-47db-a69c-d5f5625d33ea",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.251",
+        "model_info": {
+            "name": "claude-opus-4-8",
+            "provider": null
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 130084,
+        "n_cache_tokens": 102827,
+        "n_output_tokens": 1630,
+        "cost_usd": 0.26250725,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0,
+            "p_build_gradle_kts_present": 1,
+            "p_settings_gradle_kts_present": 1,
+            "p_groovy_build_gradle_absent": 1,
+            "p_groovy_settings_gradle_absent": 1,
+            "p_toolchain_block_present_in_kotlin_syntax": 1,
+            "p_toolchain_language_version_pinned_to_21": 1,
+            "p_no_groovy_syntax_residue_in_build_gradle_kts": 1,
+            "p_gradle_build_exit_zero": 1,
+            "p_main_class_bytecode_major_version_is_61": 1,
+            "p_gradle_test_exit_zero": 1,
+            "p_gradle_binary_available": 1,
+            "j_gradle_build_returncode": 0,
+            "j_gradle_test_returncode": 0,
+            "j_final_reward": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-08-31T09:20:00.804892Z",
+    "finished_at": "2026-08-31T09:26:59.881830Z",
+    "environment_setup": {
+        "started_at": "2026-08-31T09:20:00.904089Z",
+        "finished_at": "2026-08-31T09:20:06.071630Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-08-31T09:20:06.072004Z",
+        "finished_at": "2026-08-31T09:24:47.730961Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-08-31T09:24:47.752989Z",
+        "finished_at": "2026-08-31T09:26:15.767029Z"
+    },
+    "verifier": {
+        "started_at": "2026-08-31T09:26:18.417934Z",
+        "finished_at": "2026-08-31T09:26:55.736714Z"
+    },
+    "step_results": null
+}

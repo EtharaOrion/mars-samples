@@ -1,0 +1,137 @@
+{
+  "schema": "forge.expected_output/v1",
+  "task_uuid": "027588c1-c95f-564e-bb96-c386f490aac1",
+  "task_slug": "configure-vite-dual-esm-cjs-exports-v3",
+  "generated_by": "solution/recompute.py",
+  "source_of_truth": "solution/grounding.yaml",
+  "expected_stdout_bytes_utf8": "config.name=@pkg/dual\nconfig.ready=true\nconfig.seed=42\ncombine=alpha::beta\nVERSION=1.0.0\n",
+  "expected_stdout_lines": [
+    "config.name=@pkg/dual",
+    "config.ready=true",
+    "config.seed=42",
+    "combine=alpha::beta",
+    "VERSION=1.0.0"
+  ],
+  "expected_stdout_terminator": "single_trailing_newline",
+  "verifier_gates_ordered": [
+    {
+      "gate_id": "I1_source_bytes_sha256_check",
+      "target": "/workspace/app/src/index.ts, /workspace/app/src/loader.ts",
+      "comparator": "sha256_equality_against_pinned_digests",
+      "fail_reason_code": "I1_source_file_bytes_mutated_or_I1_source_file_missing"
+    },
+    {
+      "gate_id": "C1_consumer_bytes_sha256_check",
+      "target": "/workspace/consumers/esm-consumer.mjs, /workspace/consumers/cjs-consumer.cjs",
+      "comparator": "sha256_equality_against_pinned_digests",
+      "fail_reason_code": "C1_consumer_file_bytes_mutated_or_C1_consumer_file_missing"
+    },
+    {
+      "gate_id": "I3_typescript_version_probe",
+      "target": "./node_modules/.bin/tsc --version output",
+      "comparator": "string_contains_expected_version_5_7_2",
+      "fail_reason_code": "I3_tsc_version_drift"
+    },
+    {
+      "gate_id": "P1_package_json_parseable",
+      "target": "/workspace/app/package.json",
+      "comparator": "json_load_returns_a_dict",
+      "fail_reason_code": "P1_package_json_not_valid_json"
+    },
+    {
+      "gate_id": "P2_package_type_module",
+      "target": "parsed_package.type",
+      "comparator": "string_equals_module",
+      "fail_reason_code": "P2_package_json_type_field_not_module"
+    },
+    {
+      "gate_id": "P3_exports_dot_object",
+      "target": "parsed_package.exports.\".\"",
+      "comparator": "is_object_with_import_and_require_string_targets_each_starting_with_dot_slash",
+      "fail_reason_code": "P3_or_P4_or_P5_or_P6_exports_shape_invalid"
+    },
+    {
+      "gate_id": "E1_esm_entry_file_exists",
+      "target": "file_at_resolved_import_condition_target_under_workspace_app",
+      "comparator": "path_exists_and_is_file",
+      "fail_reason_code": "E1_esm_entry_file_missing"
+    },
+    {
+      "gate_id": "E2_cjs_entry_file_exists",
+      "target": "file_at_resolved_require_condition_target_under_workspace_app",
+      "comparator": "path_exists_and_is_file",
+      "fail_reason_code": "E2_cjs_entry_file_missing"
+    },
+    {
+      "gate_id": "S2_cjs_entry_source_contains_dynamic_import_call",
+      "target": "text_of_cjs_entry_file_stripped_of_line_and_block_comments",
+      "comparator": "regex_search_for_word_boundary_import_open_paren",
+      "fail_reason_code": "S2_cjs_entry_missing_dynamic_import_call"
+    },
+    {
+      "gate_id": "S3_cjs_entry_source_free_of_hardcoded_output_markers",
+      "target": "text_of_cjs_entry_file",
+      "comparator": "substring_absence_of_each_forbidden_marker_config_dot_name_and_combine_and_VERSION_literal_output_lines",
+      "fail_reason_code": "S3_cjs_entry_hardcodes_expected_output_marker"
+    },
+    {
+      "gate_id": "R1_esm_consumer_returncode_zero",
+      "target": "node /workspace/consumers/esm-consumer.mjs",
+      "comparator": "returncode_zero",
+      "fail_reason_code": "R1_esm_consumer_returncode_nonzero"
+    },
+    {
+      "gate_id": "R2_esm_consumer_stdout_bytes_exact",
+      "target": "stdout of node /workspace/consumers/esm-consumer.mjs",
+      "comparator": "byte_exact_string_equality_against_five_expected_lines_plus_trailing_newline",
+      "fail_reason_code": "R2_esm_consumer_stdout_bytes_mismatch"
+    },
+    {
+      "gate_id": "R3_cjs_consumer_returncode_zero",
+      "target": "node /workspace/consumers/cjs-consumer.cjs",
+      "comparator": "returncode_zero",
+      "fail_reason_code": "R3_cjs_consumer_returncode_nonzero"
+    },
+    {
+      "gate_id": "R4_cjs_consumer_stdout_bytes_exact",
+      "target": "stdout of node /workspace/consumers/cjs-consumer.cjs",
+      "comparator": "byte_exact_string_equality_against_five_expected_lines_plus_trailing_newline",
+      "fail_reason_code": "R4_cjs_consumer_stdout_bytes_mismatch"
+    }
+  ],
+  "source_files_that_must_stay_byte_identical": [
+    {
+      "rel_path": "src/index.ts",
+      "sha256": "2e5f6a9a084c4365321c65a2d02ce5bbe5e6b7461333cc6a163f49ab64e89a74"
+    },
+    {
+      "rel_path": "src/loader.ts",
+      "sha256": "e77b1a1a6ca80ed7546d1d5c1b56ab37866c8f2d9458df40dafb8d5bd9e6e2de"
+    }
+  ],
+  "consumer_files_that_must_stay_byte_identical": [
+    {
+      "rel_path": "esm-consumer.mjs",
+      "sha256": "36b76a66ffa101c1a44a9d3a505a8eef76cff404a4bc6ff384cad8961e1f32fd"
+    },
+    {
+      "rel_path": "cjs-consumer.cjs",
+      "sha256": "7cc5b6347f9c8faac5d72cab6dc1e21b1bf5e76a2b4df7428df6622ff474e362"
+    }
+  ],
+  "canonical_fix_bytes_diff_from_initial": {
+    "package_json_exports_dot": [
+      "require_condition_added_pointing_at_dist_slash_cjs_slash_index_dot_cjs"
+    ],
+    "package_json_type_field": "remains_module",
+    "new_files_authored_under_dist": [
+      "dist/cjs/index.cjs"
+    ],
+    "new_files_content_shape": {
+      "dist_cjs_index_cjs": "module_dot_exports_equals_dynamic_import_call_of_relative_esm_index_js"
+    },
+    "no_source_edits_under_src": true,
+    "no_edits_to_consumers": true,
+    "esm_build_produced_by_running_tsc_dash_p_tsconfig_dot_esm_dot_json": true
+  }
+}

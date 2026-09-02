@@ -1,0 +1,43 @@
+binding_block:
+  binding_envelope_payload_type: application/vnd.mars.provenance.v1+yaml
+  binding_envelope_predicate: mars.provenance/v1
+  canonical_bundle_hash: 4f6a3f8ad18eca53287b89f977de1ab677346b12c856a4a0449d5a66ff92812c
+  canonical_payload_hash: 16f70b16bcb7f5148445a6c2dcf23cbc9250cb9509d22b480dd1112addd45bce
+  pinned_image_digest: sha256:7b140f374b289a7c2befc338f42ebe6441b7ea838a042bbd5acbfca6ec875818
+canary_a: 3ca92682ea4fd69a260bb0f3ca589e6d
+canary_b: 7b7fb95c1c9aacecabb4e6ca9168f27a
+canary_normalization_domain: mars.canary_norm/v1
+canonical_content_hash: 4f6a3f8ad18eca53287b89f977de1ab677346b12c856a4a0449d5a66ff92812c
+hash_coverage_file_count: 19
+image_digest: sha256:7b140f374b289a7c2befc338f42ebe6441b7ea838a042bbd5acbfca6ec875818
+schema: mars.provenance/v1
+screening_expires_at: '2027-02-28T00:00:00Z'
+screening_interval_days: 180
+screening_measured_at: '2026-09-01T00:00:00Z'
+screening_roots:
+  exclusion_list_root:
+    digest: sha256:42b0b1d84e06e9053157da1ce4ed5a2fe0984f42e9fb0c05632cfd1f73ff940b
+    identity: mars.contamination.exclusion_list
+  freeze_date_table_root:
+    digest: sha256:82bea9efdf11835009990a36b29d7caa0334c6df66a120577c6dabae7896e7a3
+    identity: mars.contamination.freeze_date_table
+  near_duplicate_index_root:
+    digest: sha256:7ce80c7a0ab3774be129a74d7fa08ea80e64d57e43fff741917c379171cbff24
+    identity: mars.contamination.near_duplicate_index
+    neardup_review_threshold: 0.7
+    neardup_threshold: 0.85
+  source_attestation_trust_root:
+    digest: sha256:8995054eeae615ced209cc5f359d6e455c8935071474d3912d45f25fc52f9d6c
+    identity: mars.source_attestation.trust_root
+signed_at: '2026-09-01T13:13:20Z'
+signer_identity: mars-pilot-signer
+signer_kid: mars-pilot-signer-400e19c54ea7
+task_uuid: 2a3cd918-df3e-5192-b3ad-13597f43fab7
+upstream_provenance:
+  license: MIT
+  modifications: null
+  origin: original
+  provenance_date: '2026-09-01'
+  source: author_original
+  source_kind: author_original
+  upstream_identity: null

@@ -1,0 +1,130 @@
+{
+  "schema": "forge.expected_output/v1",
+  "task_uuid": "6090baab-d22a-5a40-8b74-3a86c3da6a49",
+  "task_slug": "fix-tsc-paths-runtime-resolver-drift-v2",
+  "generated_by": "solution/recompute.py",
+  "source_of_truth": "solution/grounding.yaml",
+  "expected_stdout_bytes_utf8": "Hello, Mars!\nGoodbye, Mars.\n",
+  "expected_stdout_lines": [
+    "Hello, Mars!",
+    "Goodbye, Mars."
+  ],
+  "expected_stdout_terminator": "single_trailing_newline",
+  "verifier_gates_ordered": [
+    {
+      "gate_id": "I1_source_bytes_sha256_check",
+      "target": "package.json, src/index.ts, src/greet.ts, src/farewell.ts",
+      "comparator": "sha256_equality_against_pinned_digests",
+      "fail_reason_code": "I1_source_file_bytes_mutated"
+    },
+    {
+      "gate_id": "I2_forbidden_node_modules_check",
+      "target": "/workspace/app/node_modules/",
+      "comparator": "directory_absence_of_each_forbidden_package_name",
+      "forbidden_package_names_covered_in_verifier": [
+        "ts-node",
+        "tsx",
+        "tsconfig-paths",
+        "tsc-alias",
+        "esbuild",
+        "esbuild-register",
+        "swc",
+        "@swc/core",
+        "@swc-node/register",
+        "@esbuild-kit/esm-loader",
+        "@esbuild-kit/cjs-loader",
+        "bun",
+        "deno"
+      ],
+      "fail_reason_code": "I2_forbidden_runtime_shim_installed"
+    },
+    {
+      "gate_id": "I3_typescript_version_probe",
+      "target": "./node_modules/.bin/tsc --version output",
+      "comparator": "string_contains_expected_version_5_7_2",
+      "fail_reason_code": "I3_tsc_version_drift"
+    },
+    {
+      "gate_id": "T1_tsconfig_json_parseable",
+      "target": "/workspace/app/tsconfig.json",
+      "comparator": "json_load_returns_a_dict",
+      "fail_reason_code": "T1_tsconfig_json_not_valid_json"
+    },
+    {
+      "gate_id": "T2_tsconfig_moduleResolution_bundler",
+      "target": "parsed_tsconfig.compilerOptions.moduleResolution",
+      "comparator": "string_lower_equals_bundler",
+      "fail_reason_code": "T2_tsconfig_moduleResolution_not_bundler"
+    },
+    {
+      "gate_id": "T3_tsconfig_noEmit_off",
+      "target": "parsed_tsconfig.compilerOptions.noEmit",
+      "comparator": "value_is_not_true",
+      "fail_reason_code": "T3_tsconfig_noEmit_still_true_no_dist_will_be_emitted"
+    },
+    {
+      "gate_id": "E1_tsc_noemit_clean",
+      "target": "./node_modules/.bin/tsc --project ./tsconfig.json --noEmit",
+      "comparator": "returncode_zero_and_no_error_TS_N_regex_hit_in_stdout_or_stderr",
+      "fail_reason_code": "E1_tsc_noemit_reported_diagnostics"
+    },
+    {
+      "gate_id": "E2_tsc_emit_succeeds",
+      "target": "./node_modules/.bin/tsc --project ./tsconfig.json",
+      "comparator": "returncode_zero_and_dist_index_js_exists_after_run",
+      "fail_reason_code": "E2_tsc_emit_produced_no_dist_index_js"
+    },
+    {
+      "gate_id": "R1_node_dist_index_js_returncode_zero",
+      "target": "node /workspace/app/dist/index.js",
+      "comparator": "returncode_zero",
+      "fail_reason_code": "R1_node_returncode_nonzero"
+    },
+    {
+      "gate_id": "R2_node_stdout_bytes_exact",
+      "target": "stdout of node /workspace/app/dist/index.js",
+      "comparator": "byte_exact_string_equality_against_hello_mars_goodbye_mars_two_lines_trailing_newline",
+      "fail_reason_code": "R2_node_stdout_bytes_mismatch"
+    }
+  ],
+  "source_files_that_must_stay_byte_identical": [
+    {
+      "rel_path": "package.json",
+      "sha256": "5a868b8a2b3cfc703e1e99dd6adc87979a00ad1dd8b08597fd6311d345fad8d0"
+    },
+    {
+      "rel_path": "src/index.ts",
+      "sha256": "1dbc6460131acd49ba893ab582a8b44a41f81bdcea3787d369d693349d4a2138"
+    },
+    {
+      "rel_path": "src/greet.ts",
+      "sha256": "ddadb22209a4466c1f4c6075e56c0317cfe9a29fed48c6dacdb3241447368efc"
+    },
+    {
+      "rel_path": "src/farewell.ts",
+      "sha256": "8f1e67b3f0fac8ccc06877b5fc89a79109ed56f0991585670cfc32473cb4f207"
+    }
+  ],
+  "canonical_fix_bytes_diff_from_initial": {
+    "removed_or_flipped": [
+      "compilerOptions.noEmit_removed_or_set_to_false"
+    ],
+    "changed": [
+      "compilerOptions.module_changed_from_esnext_to_preserve",
+      "compilerOptions.moduleResolution_changed_from_node_to_bundler"
+    ],
+    "added": [
+      "compilerOptions.rewriteRelativeImportExtensions_added_and_set_to_true"
+    ],
+    "unchanged": [
+      "compilerOptions.target_remains_es2022",
+      "compilerOptions.outDir_remains_dist",
+      "compilerOptions.rootDir_remains_src",
+      "compilerOptions.allowImportingTsExtensions_remains_true_or_becomes_implicit_via_rewriteRelativeImportExtensions",
+      "compilerOptions.esModuleInterop_remains_true",
+      "compilerOptions.strict_remains_true",
+      "compilerOptions.skipLibCheck_remains_true",
+      "include_remains_src_star_star_dot_ts"
+    ]
+  }
+}

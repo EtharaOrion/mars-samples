@@ -1,0 +1,58 @@
+schema_version = "1.4"
+
+[task]
+name = "mars/cargo-audit-triage"
+description = "Read a pre-provisioned Rust cargo workspace tree at /workspace/input/workspace/, a companion cargo-audit JSONL advisory stream at /workspace/input/audit.jsonl, and a pinned reference date at /workspace/input/NOW.txt, and emit a canonical tab-separated triage report at /workspace/out/triage.tsv listing every (advisory, member) pair whose advisory falls in the CRITICAL/HIGH/MEDIUM severity buckets by CVSS numeric threshold AND within the 90-day inclusive trailing window ending at NOW.txt AND whose vulnerable package is reachable from the workspace member's [dependencies] closure (direct OR transitive). Rows are ordered severity_rank DESC, advisory_id ASC, join_key ASC."
+authors = [{ name = "mars-forge" }]
+keywords = ["cli", "shell-pipeline", "cargo-audit", "jq", "tomllib", "coreutils"]
+
+[metadata]
+mars_sub_type = "cli"
+mars_archetype = "cli-shell-pipeline"
+mars_maturity = "draft"
+mars_tier = "at_baseline"
+mars_disposition_ceiling = "HOLD:PILOT_REQUIRED"
+mars_forge_contract_sha256 = "8de8843f23cc018e515c67ce90f9d7c54aa8596b9a0fbb3a26e418153ae0762e"
+mars_primary_hardness_lever = "compositional-multi-domain-reasoning"
+
+[verifier]
+timeout_sec = 300.0
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 1200.0
+cpus = 2
+memory_mb = 2048
+storage_mb = 4096
+gpus = 0
+network_mode = "public"
+
+[environment.healthcheck]
+command = "jq --version > /dev/null 2>&1 && python3 -c 'import tomllib' > /dev/null 2>&1 && sort --version > /dev/null 2>&1"
+interval_sec = 2.0
+timeout_sec = 5.0
+start_period_sec = 3.0
+retries = 3
+
+[verifier.env]
+
+[environment.env]
+
+[solution.env]
+
+[[artifacts]]
+source = "/workspace/input"
+
+[[artifacts]]
+source = "/workspace/out"
+
+[[artifacts]]
+source = "/workspace/README_FOR_AGENT.md"
+
+[prosecutor]
+mode = "harness_provided"
+delegate = "harness/mars_council.py"
+in_container_stub = "tests/run_prosecutor_judge.py"
+note = "3-judge Claude council runs on host post-container; in-container stub is a no-op marker for G-VER-INVARIANCE"

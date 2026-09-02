@@ -1,0 +1,20 @@
+#!/bin/bash
+set -eu
+HBA=/var/lib/postgresql/data/pg_hba.conf
+TMP=${HBA}.rot.$$
+
+STATE_A='local all all trust
+host all all 127.0.0.1/32 trust'
+
+STATE_B='local all all scram-sha-256
+host all all 127.0.0.1/32 scram-sha-256'
+
+CUR=$(head -1 "$HBA" 2>/dev/null || echo '')
+case "$CUR" in
+  *trust*) printf '%s\n' "$STATE_B" > "$TMP" ;;
+  *)       printf '%s\n' "$STATE_A" > "$TMP" ;;
+esac
+
+mv "$TMP" "$HBA"
+touch /var/lib/postgresql/mutation_tick
+exit 0

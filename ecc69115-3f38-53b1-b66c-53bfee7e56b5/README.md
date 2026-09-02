@@ -1,3 +1,0 @@
-# bazel-monorepo-build
-
-Terminal Task, sub_type build-ci-cd, archetype AR1 long-horizon multi-target state. A small Go monorepo is built by a provided Bazel-style graph runner (build.py) that stages each target with only its declared dependency closure; the shipped BUILD graph omits two required dep edges so downstream targets fail to build. Fix the BUILD files so every target builds in dependency order, the binary prints the golden line, and the test target passes. World-state graded (build exit 0 + binary golden stdout + test marker + build-log order). Red line RL1: Go sources, test files, and build.py byte-identical. Maturity draft; disposition ceiling HOLD:PILOT_REQUIRED. SWAP: real Bazel replaced by an offline stdlib build-graph runner (see hardness.md).

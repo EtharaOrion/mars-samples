@@ -1,0 +1,247 @@
+schema: forge.grounding/v1
+task_slug: fix-tsc-paths-runtime-resolver-drift-v2
+canary_a: FORGE_HOLDOUT_CANARY_8466A644288F24876270ED67CDF455EA
+canary_b_reference_only: FORGE_HOLDOUT_CANARY_C1125110D16C53D9F0EE7783B2019AC8
+task_lever_label: remove_enumerated_approaches_only_moduleResolution_bundler_works_agent_must_discover_by_trial
+archetype: build-fix
+primary_lever: shortcut-resistance
+
+typescript_version_pinned: 5.7.2
+node_runtime_pinned: node:20-slim
+package_json_type_field_value: module
+package_json_main_field_value: dist/index.js
+
+source_files_that_must_stay_byte_identical:
+- rel_path: package.json
+  sha256: 5a868b8a2b3cfc703e1e99dd6adc87979a00ad1dd8b08597fd6311d345fad8d0
+- rel_path: src/index.ts
+  sha256: 1dbc6460131acd49ba893ab582a8b44a41f81bdcea3787d369d693349d4a2138
+- rel_path: src/greet.ts
+  sha256: ddadb22209a4466c1f4c6075e56c0317cfe9a29fed48c6dacdb3241447368efc
+- rel_path: src/farewell.ts
+  sha256: 8f1e67b3f0fac8ccc06877b5fc89a79109ed56f0991585670cfc32473cb4f207
+
+source_index_ts_import_shape:
+  first_import: 'import { greet } from "./greet.ts";'
+  second_import: 'import { farewell } from "./farewell.ts";'
+  imports_use_ts_extensions: true
+  imports_are_relative: true
+  imports_use_paths_aliases: false
+
+initial_tsconfig_bytes_manifest:
+  compilerOptions.target: es2022
+  compilerOptions.module: esnext
+  compilerOptions.moduleResolution: node
+  compilerOptions.outDir: dist
+  compilerOptions.rootDir: src
+  compilerOptions.allowImportingTsExtensions: true
+  compilerOptions.noEmit: true
+  compilerOptions.esModuleInterop: true
+  compilerOptions.strict: true
+  compilerOptions.skipLibCheck: true
+  compilerOptions.forceConsistentCasingInFileNames: true
+  include: [src/**/*.ts]
+
+expected_stdout_bytes_utf8: "Hello, Mars!\nGoodbye, Mars.\n"
+expected_stdout_line_1: 'Hello, Mars!'
+expected_stdout_line_2: 'Goodbye, Mars.'
+expected_stdout_terminator: single_trailing_newline
+
+symptom_at_container_build:
+  observed_tsc_output_path: /workspace/observed_tsc.txt
+  observed_tsc_returncode: 0
+  observed_tsc_stderr_contains_error: false
+  observed_node_output_path: /workspace/observed_node.txt
+  observed_node_returncode: 1
+  observed_node_error_class: ERR_MODULE_NOT_FOUND
+  observed_node_error_message_shape: 'Cannot find module ''/workspace/app/dist/index.js'''
+  root_cause_at_authoring: 'initial_tsconfig_has_noEmit_true_so_dist_index_js_is_never_written_and_node_cannot_find_it'
+
+false_lead_probes:
+- probe: run_npm_install_of_ts_node_or_tsx_or_esbuild_or_tsc_alias_or_tsconfig_paths
+  expected_outcome: no_network_egress_npm_install_fails_with_connection_error_and_verifier_would_reject_via_forbidden_node_modules_check
+- probe: rewrite_src_index_ts_to_replace_dot_ts_extensions_with_dot_js_extensions
+  expected_outcome: verifier_source_bytes_sha256_check_rejects_the_edited_file
+- probe: hand_author_dist_index_js_by_copy_of_src_files_transpiled_via_babel_or_manual_edit
+  expected_outcome: verifier_re_runs_tsc_from_agent_tsconfig_which_overwrites_dist_index_js
+- probe: remove_noEmit_true_but_keep_moduleResolution_node_and_leave_allowImportingTsExtensions_true
+  expected_outcome: tsc_error_TS5096_allowImportingTsExtensions_requires_noEmit_or_emitDeclarationOnly_or_rewriteRelativeImportExtensions
+- probe: change_moduleResolution_to_node16_or_nodenext_and_remove_noEmit
+  expected_outcome: verifier_tsconfig_bundler_binding_check_rejects_because_moduleResolution_is_not_bundler
+- probe: change_moduleResolution_to_classic_and_remove_noEmit
+  expected_outcome: verifier_tsconfig_bundler_binding_check_rejects_because_moduleResolution_is_not_bundler
+- probe: downgrade_typescript_to_a_version_below_5_7_that_lacks_rewriteRelativeImportExtensions
+  expected_outcome: verifier_tsc_version_probe_rejects_because_reported_version_differs_from_5_7_2
+
+canonical_fix_path_selected: bundler_module_preserve_with_rewriteRelativeImportExtensions
+canonical_fix_bytes_diff_from_initial:
+  removed_or_flipped:
+  - compilerOptions.noEmit_removed_or_set_to_false
+  changed:
+  - compilerOptions.module_changed_from_esnext_to_preserve
+  - compilerOptions.moduleResolution_changed_from_node_to_bundler
+  added:
+  - compilerOptions.rewriteRelativeImportExtensions_added_and_set_to_true
+  unchanged:
+  - compilerOptions.target_remains_es2022
+  - compilerOptions.outDir_remains_dist
+  - compilerOptions.rootDir_remains_src
+  - compilerOptions.allowImportingTsExtensions_remains_true_or_becomes_implicit_via_rewriteRelativeImportExtensions
+  - compilerOptions.esModuleInterop_remains_true
+  - compilerOptions.strict_remains_true
+  - compilerOptions.skipLibCheck_remains_true
+  - include_remains_src_star_star_dot_ts
+
+canonical_fix_rationale: |
+  The source uses ts extensions in relative import specifiers because the
+  package.json type field is module which puts node esm mode in play and
+  esm requires explicit extensions on relative imports; ts extensions were
+  the modern typescript-native way to preserve editor-time and typechecker-
+  time resolution against src files while allowing the compiler to rewrite
+  those specifiers to js at emit. The initial tsconfig set noEmit true so
+  tsc never populated dist and node could not find the entry file. Simply
+  turning noEmit off is not sufficient because allowImportingTsExtensions
+  requires one of noEmit or emitDeclarationOnly or
+  rewriteRelativeImportExtensions to remain set, and rewriteRelativeImport
+  Extensions is the only one that actually populates dist with js. The
+  moduleResolution setting must be bundler so the compiler will accept ts
+  extensions in source and emit js extensions after the rewrite in a way
+  the node esm loader can resolve at runtime under the intended module
+  preserve emit; node16 and nodenext and node10 and classic each carry
+  their own resolution or emit assumptions that the verifier's bundler-
+  binding gate rejects even when they happen to compile cleanly.
+
+alternative_paths_that_also_compile_but_verifier_rejects:
+- id: path_a_moduleResolution_node10_with_rewriteRelativeImportExtensions
+  reason_rejected: verifier_tsconfig_bundler_binding_check_requires_moduleResolution_bundler
+- id: path_b_moduleResolution_node16_with_module_node16_and_rewriteRelativeImportExtensions
+  reason_rejected: verifier_tsconfig_bundler_binding_check_requires_moduleResolution_bundler
+- id: path_c_moduleResolution_nodenext_with_module_nodenext_and_rewriteRelativeImportExtensions
+  reason_rejected: verifier_tsconfig_bundler_binding_check_requires_moduleResolution_bundler
+- id: path_d_moduleResolution_classic_with_rewriteRelativeImportExtensions
+  reason_rejected: verifier_tsconfig_bundler_binding_check_requires_moduleResolution_bundler
+
+why_the_verifier_hardpins_bundler:
+  design_intent: |
+    The task's primary lever is shortcut-resistance. The naive agent will
+    experimentally toggle moduleResolution until tsc stops complaining and
+    node stops crashing, and the first setting that clears both bars is
+    frequently node16 or nodenext because they are the well-known esm
+    defaults. The redesign hardpins bundler at the verifier boundary so
+    the agent must either read the tsc documentation carefully or exhaust
+    the option space and observe that only bundler is graded as accepted;
+    a naive lexical shortcut such as "swap in the first ESM-friendly
+    moduleResolution" scores zero.
+  frontier_defeat_hypothesis: |
+    A frontier model that has memorized the tsc option table can produce
+    bundler as the first attempt only if it correctly identifies module
+    preserve and rewriteRelativeImportExtensions as the pair binding
+    bundler at the emit boundary. A model that memorized instead the
+    incident-response reflex "set moduleResolution to nodenext when
+    module-not-found strikes" writes bytes that clear tsc but score zero.
+
+verifier_gates_ordered:
+- gate_id: I1_source_bytes_sha256_check
+  target: package.json, src/index.ts, src/greet.ts, src/farewell.ts
+  comparator: sha256_equality_against_pinned_digests
+  fail_reason_code: I1_source_file_bytes_mutated
+- gate_id: I2_forbidden_node_modules_check
+  target: /workspace/app/node_modules/
+  comparator: directory_absence_of_each_forbidden_package_name
+  forbidden_package_names_covered_in_verifier:
+  - ts-node
+  - tsx
+  - tsconfig-paths
+  - tsc-alias
+  - esbuild
+  - esbuild-register
+  - swc
+  - '@swc/core'
+  - '@swc-node/register'
+  - '@esbuild-kit/esm-loader'
+  - '@esbuild-kit/cjs-loader'
+  - bun
+  - deno
+  fail_reason_code: I2_forbidden_runtime_shim_installed
+- gate_id: I3_typescript_version_probe
+  target: ./node_modules/.bin/tsc --version output
+  comparator: string_contains_expected_version_5_7_2
+  fail_reason_code: I3_tsc_version_drift
+- gate_id: T1_tsconfig_json_parseable
+  target: /workspace/app/tsconfig.json
+  comparator: json_load_returns_a_dict
+  fail_reason_code: T1_tsconfig_json_not_valid_json
+- gate_id: T2_tsconfig_moduleResolution_bundler
+  target: parsed_tsconfig.compilerOptions.moduleResolution
+  comparator: string_lower_equals_bundler
+  fail_reason_code: T2_tsconfig_moduleResolution_not_bundler
+- gate_id: T3_tsconfig_noEmit_off
+  target: parsed_tsconfig.compilerOptions.noEmit
+  comparator: value_is_not_true
+  fail_reason_code: T3_tsconfig_noEmit_still_true_no_dist_will_be_emitted
+- gate_id: E1_tsc_noemit_clean
+  target: ./node_modules/.bin/tsc --project ./tsconfig.json --noEmit
+  comparator: returncode_zero_and_no_error_TS_N_regex_hit_in_stdout_or_stderr
+  fail_reason_code: E1_tsc_noemit_reported_diagnostics
+- gate_id: E2_tsc_emit_succeeds
+  target: ./node_modules/.bin/tsc --project ./tsconfig.json
+  comparator: returncode_zero_and_dist_index_js_exists_after_run
+  fail_reason_code: E2_tsc_emit_produced_no_dist_index_js
+- gate_id: R1_node_dist_index_js_returncode_zero
+  target: node /workspace/app/dist/index.js
+  comparator: returncode_zero
+  fail_reason_code: R1_node_returncode_nonzero
+- gate_id: R2_node_stdout_bytes_exact
+  target: stdout of node /workspace/app/dist/index.js
+  comparator: byte_exact_string_equality_against_hello_mars_goodbye_mars_two_lines_trailing_newline
+  fail_reason_code: R2_node_stdout_bytes_mismatch
+
+forbidden_shortcut_patterns:
+- id: shortcut_change_source_extensions
+  description: rewrite ./greet.ts to ./greet.js in src/index.ts to make node esm resolve without rewriteRelativeImportExtensions
+  detection: verifier I1 sha256 compare of src/index.ts rejects
+- id: shortcut_bypass_tsc_by_prewriting_dist
+  description: hand-author /workspace/app/dist/index.js bytes that already print the two lines
+  detection: verifier E2 runs tsc under the agent tsconfig which either fails or overwrites dist with real emit that must satisfy R1 and R2
+- id: shortcut_install_ts_node_or_tsx_runtime_loader
+  description: reach npm for a runtime loader such as ts-node or tsx or esbuild-register
+  detection: no-network policy denies egress AND verifier I2 rejects the presence of any forbidden node module
+- id: shortcut_downgrade_typescript_to_avoid_rewrite_extension_dependency
+  description: install an older typescript that predates rewriteRelativeImportExtensions and use paths mapping instead
+  detection: verifier I3 tsc version probe rejects because the reported version no longer contains 5.7.2
+- id: shortcut_pick_first_moduleResolution_that_silences_tsc
+  description: change moduleResolution to node16 or nodenext because ESM lore says use nodenext when unsure
+  detection: verifier T2 rejects because the string does not lower-equal bundler even when node runtime happens to succeed
+
+invariants_the_fix_must_preserve:
+- id: I1_source_bytes_unchanged
+  description: package.json and every src ts file must sha256-match the seeded digest at grade time
+- id: I2_no_runtime_shim_installed
+  description: no forbidden runtime loader or bundler package under node_modules
+- id: I3_typescript_version_unchanged
+  description: tsc --version must still name the seeded pinned typescript version 5.7.2
+- id: T2_tsconfig_moduleResolution_bundler
+  description: tsconfig.json compilerOptions.moduleResolution must lower-equal bundler after the fix
+- id: T3_tsconfig_noEmit_off
+  description: tsconfig.json compilerOptions.noEmit must not be true after the fix or dist will never be populated
+
+reference_solve_summary: |
+  Overwrite /workspace/app/tsconfig.json with a compilerOptions block that
+  sets moduleResolution to bundler, module to preserve, rewriteRelative
+  ImportExtensions to true, allowImportingTsExtensions to true, keeps
+  target es2022 and outDir dist and rootDir src, and removes noEmit or
+  sets it to false. Run ./node_modules/.bin/tsc from /workspace/app to
+  populate dist. Then node /workspace/app/dist/index.js should print
+  Hello, Mars! and Goodbye, Mars. on two lines with a trailing newline.
+
+plausible_wrong_routes_and_why_rejected:
+- route: install ts-node then invoke it against src/index.ts directly to sidestep tsc
+  rejection: no-network AND ts-node is in the forbidden list AND the verifier reads dist/index.js not src
+- route: keep noEmit true and hand-copy source to dist as a shell one-liner
+  rejection: verifier E2 re-runs tsc which respects the agent tsconfig; noEmit=true means dist is not written and E2 fails
+- route: change moduleResolution to nodenext and add module=nodenext plus rewriteRelativeImportExtensions
+  rejection: node runtime would in fact succeed but the verifier T2 gate byte-rejects because moduleResolution is not bundler
+- route: strip the .ts extension from imports in src/index.ts to sidestep rewriteRelativeImportExtensions
+  rejection: verifier I1 rejects because src/index.ts sha256 no longer matches
+- route: introduce a paths mapping in tsconfig instead of enabling rewriteRelativeImportExtensions
+  rejection: tsc paths mapping never propagates to Node runtime; the emitted dist/index.js would still name ./greet.ts unless rewriteRelativeImportExtensions is set; runtime R1 fails

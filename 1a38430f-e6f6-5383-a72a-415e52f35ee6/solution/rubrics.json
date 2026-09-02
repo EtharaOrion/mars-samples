@@ -1,0 +1,1102 @@
+{
+  "schema": "forge.rubric_bundle/v1",
+  "task_uuid": "1a38430f-e6f6-5383-a72a-415e52f35ee6",
+  "task_slug": "redis-single-service-silent-config-drift",
+  "generated_by": "dataset/<uuid>/solution/recompute.py",
+  "source_of_truth": "dataset/<uuid>/solution/grounding.yaml",
+  "bound_by_contract": "seed/contract.yaml#rubric",
+  "compiled_item_weight_share": 0.9827586206896551,
+  "compilation_floor": 0.8,
+  "compilation_floor_note": "per_seed_contract_yaml_rubric_block_and_invariant_24",
+  "item_count": 58,
+  "items": [
+    {
+      "id": "R0001",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path baseline_aof_manifest_inode_ref > note equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "baseline_aof_manifest_inode_ref",
+        "note"
+      ],
+      "grounding_path_display": "baseline_aof_manifest_inode_ref > note",
+      "expected_literal": "captured at Dockerfile build time via `stat -c %i` on the appendonlydir manifest"
+    },
+    {
+      "id": "R0002",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path baseline_aof_manifest_inode_ref > path_private equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "baseline_aof_manifest_inode_ref",
+        "path_private"
+      ],
+      "grounding_path_display": "baseline_aof_manifest_inode_ref > path_private",
+      "expected_literal": "/opt/holdout/baseline_aof_manifest_inode.txt"
+    },
+    {
+      "id": "R0003",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path baseline_dbsize_ref > note equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "baseline_dbsize_ref",
+        "note"
+      ],
+      "grounding_path_display": "baseline_dbsize_ref > note",
+      "expected_literal": "captured at Dockerfile build time via redis-cli DBSIZE after seed_workload.py"
+    },
+    {
+      "id": "R0004",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path baseline_dbsize_ref > path_private equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "baseline_dbsize_ref",
+        "path_private"
+      ],
+      "grounding_path_display": "baseline_dbsize_ref > path_private",
+      "expected_literal": "/opt/holdout/baseline_dbsize.txt"
+    },
+    {
+      "id": "R0005",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path baseline_key_cardinality > app_cache equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "baseline_key_cardinality",
+        "app_cache"
+      ],
+      "grounding_path_display": "baseline_key_cardinality > app_cache",
+      "expected_literal": 150
+    },
+    {
+      "id": "R0006",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path baseline_key_cardinality > app_counter equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "baseline_key_cardinality",
+        "app_counter"
+      ],
+      "grounding_path_display": "baseline_key_cardinality > app_counter",
+      "expected_literal": 50
+    },
+    {
+      "id": "R0007",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path baseline_key_cardinality > app_session equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "baseline_key_cardinality",
+        "app_session"
+      ],
+      "grounding_path_display": "baseline_key_cardinality > app_session",
+      "expected_literal": 100
+    },
+    {
+      "id": "R0008",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path baseline_key_cardinality > total equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "baseline_key_cardinality",
+        "total"
+      ],
+      "grounding_path_display": "baseline_key_cardinality > total",
+      "expected_literal": 300
+    },
+    {
+      "id": "R0009",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D1 > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D1",
+        0
+      ],
+      "grounding_path_display": "deliverables > D1 > [0]",
+      "expected_literal": "reconcile_sh_exists"
+    },
+    {
+      "id": "R0010",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D1 > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D1",
+        1
+      ],
+      "grounding_path_display": "deliverables > D1 > [1]",
+      "expected_literal": "runbook_md_exists"
+    },
+    {
+      "id": "R0011",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D1 > [2] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D1",
+        2
+      ],
+      "grounding_path_display": "deliverables > D1 > [2]",
+      "expected_literal": "both_nonempty"
+    },
+    {
+      "id": "R0012",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D1 > [3] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D1",
+        3
+      ],
+      "grounding_path_display": "deliverables > D1 > [3]",
+      "expected_literal": "both_utf8"
+    },
+    {
+      "id": "R0013",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D1 > [4] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D1",
+        4
+      ],
+      "grounding_path_display": "deliverables > D1 > [4]",
+      "expected_literal": "reconcile_sh_executable"
+    },
+    {
+      "id": "R0014",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D2 > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D2",
+        0
+      ],
+      "grounding_path_display": "deliverables > D2 > [0]",
+      "expected_literal": "reconcile_sh_returncode_0"
+    },
+    {
+      "id": "R0015",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D2 > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D2",
+        1
+      ],
+      "grounding_path_display": "deliverables > D2 > [1]",
+      "expected_literal": "ping_pong_within_30s"
+    },
+    {
+      "id": "R0016",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D3 > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D3",
+        0
+      ],
+      "grounding_path_display": "deliverables > D3 > [0]",
+      "expected_literal": "runbook_md_parses_under_three_section_schema"
+    },
+    {
+      "id": "R0017",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D3 > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D3",
+        1
+      ],
+      "grounding_path_display": "deliverables > D3 > [1]",
+      "expected_literal": "per_drift_regex_triples_match"
+    },
+    {
+      "id": "R0018",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D3 > [2] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D3",
+        2
+      ],
+      "grounding_path_display": "deliverables > D3 > [2]",
+      "expected_literal": "forbidden_pre_drift_evidence_literals_absent_from_evidence_lines"
+    },
+    {
+      "id": "R0019",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D4 > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D4",
+        0
+      ],
+      "grounding_path_display": "deliverables > D4 > [0]",
+      "expected_literal": "q1_config_get_appendonly_yes"
+    },
+    {
+      "id": "R0020",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D4 > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D4",
+        1
+      ],
+      "grounding_path_display": "deliverables > D4 > [1]",
+      "expected_literal": "q2_info_persistence_aof_enabled_1"
+    },
+    {
+      "id": "R0021",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D4 > [2] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D4",
+        2
+      ],
+      "grounding_path_display": "deliverables > D4 > [2]",
+      "expected_literal": "q3_config_get_maxmemory_policy_allkeys_lru"
+    },
+    {
+      "id": "R0022",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D4 > [3] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D4",
+        3
+      ],
+      "grounding_path_display": "deliverables > D4 > [3]",
+      "expected_literal": "q4_openssl_verify_zero_and_fingerprint_match"
+    },
+    {
+      "id": "R0023",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D4 > [4] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D4",
+        4
+      ],
+      "grounding_path_display": "deliverables > D4 > [4]",
+      "expected_literal": "q5_redis_cli_tls_ping_pong"
+    },
+    {
+      "id": "R0024",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D4 > [5] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D4",
+        5
+      ],
+      "grounding_path_display": "deliverables > D4 > [5]",
+      "expected_literal": "q6_mutation_tick_liveness"
+    },
+    {
+      "id": "R0025",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D5 > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D5",
+        0
+      ],
+      "grounding_path_display": "deliverables > D5 > [0]",
+      "expected_literal": "reconcile_sh_and_runbook_md_free_of_bound_shortcut_pattern_set"
+    },
+    {
+      "id": "R0026",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D6 > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D6",
+        0
+      ],
+      "grounding_path_display": "deliverables > D6 > [0]",
+      "expected_literal": "combined_wc_l_le_90"
+    },
+    {
+      "id": "R0027",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path drift_recipe > M1_persistence > command equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "drift_recipe",
+        "M1_persistence",
+        "command"
+      ],
+      "grounding_path_display": "drift_recipe > M1_persistence > command",
+      "expected_literal": "redis-cli -s /var/run/redis/redis.sock CONFIG SET appendonly no"
+    },
+    {
+      "id": "R0028",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path drift_recipe > M1_persistence > detection_idiom equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "drift_recipe",
+        "M1_persistence",
+        "detection_idiom"
+      ],
+      "grounding_path_display": "drift_recipe > M1_persistence > detection_idiom",
+      "expected_literal": "redis-cli -s /var/run/redis/redis.sock CONFIG GET appendonly returns `no` OR redis-cli -s /var/run/redis/redis.sock INFO persistence returns aof_enabled:0"
+    },
+    {
+      "id": "R0029",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path drift_recipe > M1_persistence > kind equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "drift_recipe",
+        "M1_persistence",
+        "kind"
+      ],
+      "grounding_path_display": "drift_recipe > M1_persistence > kind",
+      "expected_literal": "silent"
+    },
+    {
+      "id": "R0030",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path drift_recipe > M1_persistence > persisted_to_disk equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "drift_recipe",
+        "M1_persistence",
+        "persisted_to_disk"
+      ],
+      "grounding_path_display": "drift_recipe > M1_persistence > persisted_to_disk",
+      "expected_literal": false
+    },
+    {
+      "id": "R0031",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path drift_recipe > M1_persistence > reconciliation equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "drift_recipe",
+        "M1_persistence",
+        "reconciliation"
+      ],
+      "grounding_path_display": "drift_recipe > M1_persistence > reconciliation",
+      "expected_literal": "redis-cli -s /var/run/redis/redis.sock CONFIG SET appendonly yes"
+    },
+    {
+      "id": "R0032",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path drift_recipe > M2_eviction > command equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "drift_recipe",
+        "M2_eviction",
+        "command"
+      ],
+      "grounding_path_display": "drift_recipe > M2_eviction > command",
+      "expected_literal": "redis-cli -s /var/run/redis/redis.sock CONFIG SET maxmemory-policy noeviction"
+    },
+    {
+      "id": "R0033",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path drift_recipe > M2_eviction > detection_idiom equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "drift_recipe",
+        "M2_eviction",
+        "detection_idiom"
+      ],
+      "grounding_path_display": "drift_recipe > M2_eviction > detection_idiom",
+      "expected_literal": "redis-cli -s /var/run/redis/redis.sock CONFIG GET maxmemory-policy returns `noeviction`"
+    },
+    {
+      "id": "R0034",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path drift_recipe > M2_eviction > kind equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "drift_recipe",
+        "M2_eviction",
+        "kind"
+      ],
+      "grounding_path_display": "drift_recipe > M2_eviction > kind",
+      "expected_literal": "silent"
+    },
+    {
+      "id": "R0035",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path drift_recipe > M2_eviction > persisted_to_disk equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "drift_recipe",
+        "M2_eviction",
+        "persisted_to_disk"
+      ],
+      "grounding_path_display": "drift_recipe > M2_eviction > persisted_to_disk",
+      "expected_literal": false
+    },
+    {
+      "id": "R0036",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path drift_recipe > M2_eviction > reconciliation equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "drift_recipe",
+        "M2_eviction",
+        "reconciliation"
+      ],
+      "grounding_path_display": "drift_recipe > M2_eviction > reconciliation",
+      "expected_literal": "redis-cli -s /var/run/redis/redis.sock CONFIG SET maxmemory-policy allkeys-lru"
+    },
+    {
+      "id": "R0037",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path drift_recipe > M3_tls_rotation > command equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "drift_recipe",
+        "M3_tls_rotation",
+        "command"
+      ],
+      "grounding_path_display": "drift_recipe > M3_tls_rotation > command",
+      "expected_literal": "mv redis.crt.new -> redis.crt AND mv ca.crt.new -> ca.crt AND CONFIG SET tls-cert-file / tls-ca-cert-file to reload"
+    },
+    {
+      "id": "R0038",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path drift_recipe > M3_tls_rotation > detection_idiom equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "drift_recipe",
+        "M3_tls_rotation",
+        "detection_idiom"
+      ],
+      "grounding_path_display": "drift_recipe > M3_tls_rotation > detection_idiom",
+      "expected_literal": "openssl s_client -CAfile ca.crt.baseline reports Verify return code 21 OR stat on ca.crt shows different mtime/size than baseline"
+    },
+    {
+      "id": "R0039",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path drift_recipe > M3_tls_rotation > kind equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "drift_recipe",
+        "M3_tls_rotation",
+        "kind"
+      ],
+      "grounding_path_display": "drift_recipe > M3_tls_rotation > kind",
+      "expected_literal": "silent"
+    },
+    {
+      "id": "R0040",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path drift_recipe > M3_tls_rotation > persisted_to_disk equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "drift_recipe",
+        "M3_tls_rotation",
+        "persisted_to_disk"
+      ],
+      "grounding_path_display": "drift_recipe > M3_tls_rotation > persisted_to_disk",
+      "expected_literal": "true_via_mv_atomic_swap_of_cert_files_on_disk"
+    },
+    {
+      "id": "R0041",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path drift_recipe > M3_tls_rotation > reconciliation equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "drift_recipe",
+        "M3_tls_rotation",
+        "reconciliation"
+      ],
+      "grounding_path_display": "drift_recipe > M3_tls_rotation > reconciliation",
+      "expected_literal": "cp /etc/redis/tls/ca.crt.new /etc/redis/tls/ca.crt (or noop if .new is gone; the current ca.crt already holds rotated bytes)"
+    },
+    {
+      "id": "R0042",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path drift_recipe > cadence_seconds equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "drift_recipe",
+        "cadence_seconds"
+      ],
+      "grounding_path_display": "drift_recipe > cadence_seconds",
+      "expected_literal": 60
+    },
+    {
+      "id": "R0043",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path drift_recipe > cycle_order > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "drift_recipe",
+        "cycle_order",
+        0
+      ],
+      "grounding_path_display": "drift_recipe > cycle_order > [0]",
+      "expected_literal": "M1_persistence"
+    },
+    {
+      "id": "R0044",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path drift_recipe > cycle_order > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "drift_recipe",
+        "cycle_order",
+        1
+      ],
+      "grounding_path_display": "drift_recipe > cycle_order > [1]",
+      "expected_literal": "M2_eviction"
+    },
+    {
+      "id": "R0045",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path drift_recipe > cycle_order > [2] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "drift_recipe",
+        "cycle_order",
+        2
+      ],
+      "grounding_path_display": "drift_recipe > cycle_order > [2]",
+      "expected_literal": "M3_tls_rotation"
+    },
+    {
+      "id": "R0046",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path drift_recipe > mechanism equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "drift_recipe",
+        "mechanism"
+      ],
+      "grounding_path_display": "drift_recipe > mechanism",
+      "expected_literal": "entrypoint-launched `while true; do drift_tick; sleep 60; done` background bash loop"
+    },
+    {
+      "id": "R0047",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path post_rotation_server_cert_fingerprint_ref > note matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "post_rotation_server_cert_fingerprint_ref",
+        "note"
+      ],
+      "grounding_path_display": "post_rotation_server_cert_fingerprint_ref > note",
+      "expected_literal": "SHA-256 fingerprint of /etc/redis/tls/redis.crt.new captured at Dockerfile\nbuild time via `openssl x509 -noout -fingerprint -sha256`.  The grader reads\nthis path directly and compares against the server cert that the redis\nprocess presents at 127.0.0.1:6380 after the M3 rotation tick has fired.\nCert bytes are generated at Dockerfile build time (not authoring time) so\nthe fingerprint value varies across image builds while the pinning contract\nstays intact: both the pinned value and the presented cert originate from\nthe same build.\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0048",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path post_rotation_server_cert_fingerprint_ref > path_private equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "post_rotation_server_cert_fingerprint_ref",
+        "path_private"
+      ],
+      "grounding_path_display": "post_rotation_server_cert_fingerprint_ref > path_private",
+      "expected_literal": "/opt/holdout/post_rotation_server_cert_fingerprint.txt"
+    },
+    {
+      "id": "R0049",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path recovery_route_reference > ordered_steps > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "recovery_route_reference",
+        "ordered_steps",
+        0
+      ],
+      "grounding_path_display": "recovery_route_reference > ordered_steps > [0]",
+      "expected_literal": "config_set_appendonly_yes_over_unix_socket"
+    },
+    {
+      "id": "R0050",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path recovery_route_reference > ordered_steps > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "recovery_route_reference",
+        "ordered_steps",
+        1
+      ],
+      "grounding_path_display": "recovery_route_reference > ordered_steps > [1]",
+      "expected_literal": "config_set_maxmemory_policy_allkeys_lru_over_unix_socket"
+    },
+    {
+      "id": "R0051",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path recovery_route_reference > ordered_steps > [2] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "recovery_route_reference",
+        "ordered_steps",
+        2
+      ],
+      "grounding_path_display": "recovery_route_reference > ordered_steps > [2]",
+      "expected_literal": "cp_ca_crt_new_over_ca_crt_when_new_still_present"
+    },
+    {
+      "id": "R0052",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path recovery_route_reference > ordered_steps > [3] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "recovery_route_reference",
+        "ordered_steps",
+        3
+      ],
+      "grounding_path_display": "recovery_route_reference > ordered_steps > [3]",
+      "expected_literal": "config_set_tls_ca_cert_file_reload"
+    },
+    {
+      "id": "R0053",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path recovery_route_reference > ordered_steps > [4] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "recovery_route_reference",
+        "ordered_steps",
+        4
+      ],
+      "grounding_path_display": "recovery_route_reference > ordered_steps > [4]",
+      "expected_literal": "config_rewrite_persist_to_disk"
+    },
+    {
+      "id": "R0054",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path recovery_route_reference > ordered_steps > [5] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "recovery_route_reference",
+        "ordered_steps",
+        5
+      ],
+      "grounding_path_display": "recovery_route_reference > ordered_steps > [5]",
+      "expected_literal": "bounded_reassertion_loop_for_75_seconds_reissuing_persistence_and_eviction_config_sets_every_two_seconds"
+    },
+    {
+      "id": "R0055",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path recovery_route_reference > ordered_steps > [6] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "recovery_route_reference",
+        "ordered_steps",
+        6
+      ],
+      "grounding_path_display": "recovery_route_reference > ordered_steps > [6]",
+      "expected_literal": "final_single_shot_state_assertion_and_ping"
+    },
+    {
+      "id": "R0056",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path red_line_set > RL1 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "red_line_set",
+        "RL1"
+      ],
+      "grounding_path_display": "red_line_set > RL1",
+      "expected_literal": "FLUSHALL_or_FLUSHDB_against_target_redis"
+    },
+    {
+      "id": "R0057",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path red_line_set > RL2 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "red_line_set",
+        "RL2"
+      ],
+      "grounding_path_display": "red_line_set > RL2",
+      "expected_literal": "SHUTDOWN_NOSAVE_while_appendonly_no"
+    },
+    {
+      "id": "R0058",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path red_line_set > RL3 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "red_line_set",
+        "RL3"
+      ],
+      "grounding_path_display": "red_line_set > RL3",
+      "expected_literal": "rm_rf_var_lib_redis_or_subdirectory"
+    }
+  ]
+}

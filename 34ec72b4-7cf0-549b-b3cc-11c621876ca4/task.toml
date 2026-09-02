@@ -1,0 +1,63 @@
+schema_version = "1.4"
+
+[task]
+name = "mars/fix-python-entrypoint-refactor-drift-v2"
+description = "Fix a Python console-script entry-point whose module chain imports a declared-but-unavailable optional third-party package two levels below the top of the traceback."
+authors = [{ name = "mars-forge" }]
+keywords = ["python", "packaging", "entry-points", "optional-dependencies", "import-chain", "build-fix"]
+
+[metadata]
+mars_sub_type = "build-ci-cd"
+mars_archetype = "build-fix"
+mars_maturity = "draft"
+mars_tier = "frontier-defeat-target"
+mars_disposition_ceiling = "HOLD:PILOT_REQUIRED"
+mars_forge_contract_sha256 = "7fa61afd155a88f234f6c741a34546782fa0f53ca44afd5ead5a71094a7e5655"
+mars_slot_index = 6
+mars_slot_slug = "fix-python-entrypoint-refactor-drift-v2"
+mars_legacy_predecessor_uuid = "a2333a9d-41ef-568d-80d3-200049e2e99c"
+mars_task_uuid = "34ec72b4-7cf0-549b-b3cc-11c621876ca4"
+
+[verifier]
+timeout_sec = 300.0
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+build_timeout_sec = 900.0
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0
+network_mode = "public"
+
+[verifier.env]
+
+[environment.env]
+
+[solution.env]
+
+[[artifacts]]
+source = "/workspace/myapp/pyproject.toml"
+
+[[artifacts]]
+source = "/workspace/myapp/myapp/helpers.py"
+
+[[artifacts]]
+source = "/workspace/myapp/myapp/cli.py"
+
+[[artifacts]]
+source = "/workspace/observed_error.txt"
+
+[[artifacts]]
+source = "/workspace/prebuild_install_log.txt"
+
+[[artifacts]]
+source = "/workspace/output.txt"
+
+[prosecutor]
+mode = "harness_provided"
+delegate = "harness/mars_council.py"
+in_container_stub = "tests/run_prosecutor_judge.py"
+note = "3-judge Claude council runs on host post-container; in-container stub is a no-op marker for G-VER-INVARIANCE"

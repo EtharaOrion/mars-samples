@@ -1,0 +1,249 @@
+{
+  "schema": "forge.rubrics/v1",
+  "task_uuid": "c6fc843e-738f-5a2f-98af-067d9e24b756",
+  "task_slug": "cli-tsc-root-cause-triage-from-40-errors-v2",
+  "canary_b_reference": "FORGE_HOLDOUT_CANARY_727AEE22F04B3B8BF28C9910F67BA7FF",
+  "compilation_floor": 0.8,
+  "items": [
+    {
+      "id": "R001",
+      "dimension": "presence",
+      "weight": 3,
+      "evaluation_target": "workspace",
+      "criterion": "every_required_source_file_present_after_agent_edits",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py::REQUIRED_SOURCE_FILES presence loop",
+      "mode": "compiled"
+    },
+    {
+      "id": "R002",
+      "dimension": "byte_integrity",
+      "weight": 3,
+      "evaluation_target": "workspace/tsconfig.json",
+      "criterion": "tsconfig_json_sha256_matches_baseline",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py::TSCONFIG_BASELINE_SHA256 comparison",
+      "mode": "compiled"
+    },
+    {
+      "id": "R003",
+      "dimension": "byte_integrity",
+      "weight": 3,
+      "evaluation_target": "workspace/package.json",
+      "criterion": "package_json_sha256_matches_baseline",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py::PACKAGE_JSON_BASELINE_SHA256 comparison",
+      "mode": "compiled"
+    },
+    {
+      "id": "R004",
+      "dimension": "shortcut_resistance",
+      "weight": 3,
+      "evaluation_target": "src/*.ts + types/*.d.ts",
+      "criterion": "no_source_file_contains_ts_ignore_marker",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py::SHORTCUT_PATTERNS[ts_ignore_marker]",
+      "mode": "compiled"
+    },
+    {
+      "id": "R005",
+      "dimension": "shortcut_resistance",
+      "weight": 3,
+      "evaluation_target": "src/*.ts + types/*.d.ts",
+      "criterion": "no_source_file_contains_ts_nocheck_marker",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py::SHORTCUT_PATTERNS[ts_nocheck_marker]",
+      "mode": "compiled"
+    },
+    {
+      "id": "R006",
+      "dimension": "shortcut_resistance",
+      "weight": 3,
+      "evaluation_target": "src/*.ts + types/*.d.ts",
+      "criterion": "no_source_file_contains_ts_expect_error_marker",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py::SHORTCUT_PATTERNS[ts_expect_error_marker]",
+      "mode": "compiled"
+    },
+    {
+      "id": "R007",
+      "dimension": "shortcut_resistance",
+      "weight": 3,
+      "evaluation_target": "src/*.ts + types/*.d.ts",
+      "criterion": "no_source_file_contains_any_type_annotation",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py::SHORTCUT_PATTERNS[any_type_annotation]",
+      "mode": "compiled"
+    },
+    {
+      "id": "R008",
+      "dimension": "shortcut_resistance",
+      "weight": 3,
+      "evaluation_target": "src/*.ts + types/*.d.ts",
+      "criterion": "no_source_file_contains_any_generic_argument",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py::SHORTCUT_PATTERNS[any_generic_argument]",
+      "mode": "compiled"
+    },
+    {
+      "id": "R009",
+      "dimension": "dynamic_typecheck",
+      "weight": 5,
+      "evaluation_target": "workspace",
+      "criterion": "npx_tsc_noEmit_exits_zero",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py::subprocess.run(npx tsc --noEmit)",
+      "mode": "compiled"
+    },
+    {
+      "id": "R010",
+      "dimension": "root_cause_fix",
+      "weight": 5,
+      "evaluation_target": "solution",
+      "criterion": "tsc_noEmit_zero_implies_types_external_api_d_ts_ApiUser_id_declared_number",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py::D4_tsc_noEmit_returncode_nonzero",
+      "mode": "compiled"
+    },
+    {
+      "id": "R011",
+      "dimension": "root_cause_fix",
+      "weight": 5,
+      "evaluation_target": "solution",
+      "criterion": "tsc_noEmit_zero_implies_src_models_user_ts_constructor_accepts_displayName",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py::D4_tsc_noEmit_returncode_nonzero",
+      "mode": "compiled"
+    },
+    {
+      "id": "R012",
+      "dimension": "root_cause_fix",
+      "weight": 5,
+      "evaluation_target": "solution",
+      "criterion": "tsc_noEmit_zero_implies_src_services_auth_service_ts_authenticate_is_async_and_awaits_createSession",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py::D4_tsc_noEmit_returncode_nonzero",
+      "mode": "compiled"
+    },
+    {
+      "id": "R013",
+      "dimension": "root_cause_fix",
+      "weight": 5,
+      "evaluation_target": "solution",
+      "criterion": "tsc_noEmit_zero_implies_src_utils_logger_ts_log_returns_void_not_boolean",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py::D4_tsc_noEmit_returncode_nonzero",
+      "mode": "compiled"
+    },
+    {
+      "id": "R014",
+      "dimension": "presence",
+      "weight": 1,
+      "evaluation_target": "src/index.ts",
+      "criterion": "file_src_index.ts_exists",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py D1 loop over src/index.ts",
+      "mode": "compiled"
+    },
+    {
+      "id": "R015",
+      "dimension": "presence",
+      "weight": 1,
+      "evaluation_target": "src/models/user.ts",
+      "criterion": "file_src_models_user.ts_exists",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py D1 loop over src/models/user.ts",
+      "mode": "compiled"
+    },
+    {
+      "id": "R016",
+      "dimension": "presence",
+      "weight": 1,
+      "evaluation_target": "src/models/order.ts",
+      "criterion": "file_src_models_order.ts_exists",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py D1 loop over src/models/order.ts",
+      "mode": "compiled"
+    },
+    {
+      "id": "R017",
+      "dimension": "presence",
+      "weight": 1,
+      "evaluation_target": "src/models/account.ts",
+      "criterion": "file_src_models_account.ts_exists",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py D1 loop over src/models/account.ts",
+      "mode": "compiled"
+    },
+    {
+      "id": "R018",
+      "dimension": "presence",
+      "weight": 1,
+      "evaluation_target": "src/services/auth.service.ts",
+      "criterion": "file_src_services_auth.service.ts_exists",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py D1 loop over src/services/auth.service.ts",
+      "mode": "compiled"
+    },
+    {
+      "id": "R019",
+      "dimension": "presence",
+      "weight": 1,
+      "evaluation_target": "src/services/payment.service.ts",
+      "criterion": "file_src_services_payment.service.ts_exists",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py D1 loop over src/services/payment.service.ts",
+      "mode": "compiled"
+    },
+    {
+      "id": "R020",
+      "dimension": "presence",
+      "weight": 1,
+      "evaluation_target": "src/services/notification.service.ts",
+      "criterion": "file_src_services_notification.service.ts_exists",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py D1 loop over src/services/notification.service.ts",
+      "mode": "compiled"
+    },
+    {
+      "id": "R021",
+      "dimension": "presence",
+      "weight": 1,
+      "evaluation_target": "src/utils/logger.ts",
+      "criterion": "file_src_utils_logger.ts_exists",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py D1 loop over src/utils/logger.ts",
+      "mode": "compiled"
+    },
+    {
+      "id": "R022",
+      "dimension": "presence",
+      "weight": 1,
+      "evaluation_target": "src/utils/formatter.ts",
+      "criterion": "file_src_utils_formatter.ts_exists",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py D1 loop over src/utils/formatter.ts",
+      "mode": "compiled"
+    },
+    {
+      "id": "R023",
+      "dimension": "presence",
+      "weight": 1,
+      "evaluation_target": "src/utils/validator.ts",
+      "criterion": "file_src_utils_validator.ts_exists",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py D1 loop over src/utils/validator.ts",
+      "mode": "compiled"
+    },
+    {
+      "id": "R024",
+      "dimension": "presence",
+      "weight": 1,
+      "evaluation_target": "types/external-api.d.ts",
+      "criterion": "file_types_external-api.d.ts_exists",
+      "judgment": "pass_when_criterion_holds_else_fail",
+      "evidence": "grader.py D1 loop over types/external-api.d.ts",
+      "mode": "compiled"
+    }
+  ]
+}

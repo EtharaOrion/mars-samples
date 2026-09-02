@@ -1,0 +1,878 @@
+{
+  "schema": "mars.rubric_set/v2_council_only",
+  "bundle_id": "6c16beb4-e9fd-5c53-8599-763c1309ab48",
+  "floor": 0.8,
+  "note": "regenerated from solution/rubrics.json by harness/mars_rubric_id_reconciler.py to close G-RUB-COMPLETENESS.unreconciled_rubric_id; 1:1 id mapping preserves the recompute.py chain",
+  "rubrics": [
+    {
+      "id": "R0001",
+      "criterion": "the value at grounding path alternative_valid_solution_summary matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "Edit /workspace/webhook_sender/Cargo.toml so that the rustls features\nlist is [\"std\", \"tls12\", \"aws-lc-rs\"] instead of [\"std\", \"tls12\",\n\"ring\"]. Symmetric to the reference solution; produces the identical\ngraded outcome.\n",
+        "anchor_0_0": "the observed value at alternative_valid_solution_summary does not match the reference at grounding path alternative_valid_solution_summary"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0002",
+      "criterion": "the value at grounding path alternative_valid_unified_target equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "aws-lc-rs",
+        "anchor_0_0": "the observed value at alternative_valid_unified_target does not match the reference at grounding path alternative_valid_unified_target"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0003",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > cargo_feature_unification_produces_rustls_with_features > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "std",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > cargo_feature_unification_produces_rustls_with_features > [0] does not match the reference at grounding path authored_manifest_of_broken_state > cargo_feature_unification_produces_rustls_with_features > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0004",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > cargo_feature_unification_produces_rustls_with_features > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "tls12",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > cargo_feature_unification_produces_rustls_with_features > [1] does not match the reference at grounding path authored_manifest_of_broken_state > cargo_feature_unification_produces_rustls_with_features > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0005",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > cargo_feature_unification_produces_rustls_with_features > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "ring",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > cargo_feature_unification_produces_rustls_with_features > [2] does not match the reference at grounding path authored_manifest_of_broken_state > cargo_feature_unification_produces_rustls_with_features > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0006",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > cargo_feature_unification_produces_rustls_with_features > [3] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "aws-lc-rs",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > cargo_feature_unification_produces_rustls_with_features > [3] does not match the reference at grounding path authored_manifest_of_broken_state > cargo_feature_unification_produces_rustls_with_features > [3]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0007",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > runtime_panic_root_cause matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "rustls 0.23 process_default_provider() panics when both ring and\naws-lc-rs crypto provider features are compiled in and no\nprocess-level default provider has been explicitly installed via\nCryptoProvider::install_default().\n",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > runtime_panic_root_cause does not match the reference at grounding path authored_manifest_of_broken_state > runtime_panic_root_cause"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0008",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > workspace_member_api_gateway_rustls_features > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "std",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > workspace_member_api_gateway_rustls_features > [0] does not match the reference at grounding path authored_manifest_of_broken_state > workspace_member_api_gateway_rustls_features > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0009",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > workspace_member_api_gateway_rustls_features > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "tls12",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > workspace_member_api_gateway_rustls_features > [1] does not match the reference at grounding path authored_manifest_of_broken_state > workspace_member_api_gateway_rustls_features > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0010",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > workspace_member_api_gateway_rustls_features > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "aws-lc-rs",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > workspace_member_api_gateway_rustls_features > [2] does not match the reference at grounding path authored_manifest_of_broken_state > workspace_member_api_gateway_rustls_features > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0011",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > workspace_member_webhook_sender_rustls_features > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "std",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > workspace_member_webhook_sender_rustls_features > [0] does not match the reference at grounding path authored_manifest_of_broken_state > workspace_member_webhook_sender_rustls_features > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0012",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > workspace_member_webhook_sender_rustls_features > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "tls12",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > workspace_member_webhook_sender_rustls_features > [1] does not match the reference at grounding path authored_manifest_of_broken_state > workspace_member_webhook_sender_rustls_features > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0013",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > workspace_member_webhook_sender_rustls_features > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "ring",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > workspace_member_webhook_sender_rustls_features > [2] does not match the reference at grounding path authored_manifest_of_broken_state > workspace_member_webhook_sender_rustls_features > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0014",
+      "criterion": "the value at grounding path false_lead_expected_outcome_a equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "cold_start_rebuild_still_produces_panic_at_runtime",
+        "anchor_0_0": "the observed value at false_lead_expected_outcome_a does not match the reference at grounding path false_lead_expected_outcome_a"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0015",
+      "criterion": "the value at grounding path false_lead_expected_outcome_b equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "mock_server_is_https_only_on_8443_so_http_get_fails",
+        "anchor_0_0": "the observed value at false_lead_expected_outcome_b does not match the reference at grounding path false_lead_expected_outcome_b"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0016",
+      "criterion": "the value at grounding path false_lead_expected_outcome_c equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "target_binary_no_longer_compiles_because_it_imports_api_gateway",
+        "anchor_0_0": "the observed value at false_lead_expected_outcome_c does not match the reference at grounding path false_lead_expected_outcome_c"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0017",
+      "criterion": "the value at grounding path false_lead_probe_a equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "agent_swallows_the_panic_via_result_ignore_pattern",
+        "anchor_0_0": "the observed value at false_lead_probe_a does not match the reference at grounding path false_lead_probe_a"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0018",
+      "criterion": "the value at grounding path false_lead_probe_b equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "agent_switches_to_http_not_https_to_avoid_tls_entirely",
+        "anchor_0_0": "the observed value at false_lead_probe_b does not match the reference at grounding path false_lead_probe_b"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0019",
+      "criterion": "the value at grounding path false_lead_probe_c equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "agent_removes_api_gateway_from_workspace_members",
+        "anchor_0_0": "the observed value at false_lead_probe_c does not match the reference at grounding path false_lead_probe_c"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0020",
+      "criterion": "the value at grounding path holdout_endpoints > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "service_endpoint_response_body",
+        "anchor_1_0": "/probe_alpha_7f2e",
+        "anchor_0_0": "the observed value at holdout_endpoints > [0] does not match the reference at grounding path holdout_endpoints > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0021",
+      "criterion": "the value at grounding path holdout_endpoints > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "service_endpoint_response_body",
+        "anchor_1_0": "/probe_beta_a3d1",
+        "anchor_0_0": "the observed value at holdout_endpoints > [1] does not match the reference at grounding path holdout_endpoints > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0022",
+      "criterion": "the value at grounding path holdout_endpoints > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "service_endpoint_response_body",
+        "anchor_1_0": "/probe_gamma_e58c",
+        "anchor_0_0": "the observed value at holdout_endpoints > [2] does not match the reference at grounding path holdout_endpoints > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0023",
+      "criterion": "the value at grounding path holdout_expected_response_bytes > /probe_alpha_7f2e matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "service_endpoint_response_body",
+        "anchor_1_0": "TOKEN_ALPHA_9c14b3e7\n",
+        "anchor_0_0": "the observed value at holdout_expected_response_bytes > /probe_alpha_7f2e does not match the reference at grounding path holdout_expected_response_bytes > /probe_alpha_7f2e"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0024",
+      "criterion": "the value at grounding path holdout_expected_response_bytes > /probe_beta_a3d1 matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "service_endpoint_response_body",
+        "anchor_1_0": "TOKEN_BETA_5f2a89d4\n",
+        "anchor_0_0": "the observed value at holdout_expected_response_bytes > /probe_beta_a3d1 does not match the reference at grounding path holdout_expected_response_bytes > /probe_beta_a3d1"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0025",
+      "criterion": "the value at grounding path holdout_expected_response_bytes > /probe_gamma_e58c matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "service_endpoint_response_body",
+        "anchor_1_0": "TOKEN_GAMMA_1b7c204e\n",
+        "anchor_0_0": "the observed value at holdout_expected_response_bytes > /probe_gamma_e58c does not match the reference at grounding path holdout_expected_response_bytes > /probe_gamma_e58c"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0026",
+      "criterion": "the value at grounding path https_mock_server_listen equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "127.0.0.1:8443",
+        "anchor_0_0": "the observed value at https_mock_server_listen does not match the reference at grounding path https_mock_server_listen"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0027",
+      "criterion": "the value at grounding path https_mock_server_root_cert_in_trust_store_at equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/usr/local/share/ca-certificates/mars-mock.crt",
+        "anchor_0_0": "the observed value at https_mock_server_root_cert_in_trust_store_at does not match the reference at grounding path https_mock_server_root_cert_in_trust_store_at"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0028",
+      "criterion": "the value at grounding path https_mock_server_root_cert_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/srv/https-mock/certs/cert.pem",
+        "anchor_0_0": "the observed value at https_mock_server_root_cert_path does not match the reference at grounding path https_mock_server_root_cert_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0029",
+      "criterion": "the value at grounding path judge_probe_pairs > [0] > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "/probe_alpha_7f2e",
+        "anchor_0_0": "the observed value at judge_probe_pairs > [0] > [0] does not match the reference at grounding path judge_probe_pairs > [0] > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0030",
+      "criterion": "the value at grounding path judge_probe_pairs > [0] > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "/probe_beta_a3d1",
+        "anchor_0_0": "the observed value at judge_probe_pairs > [0] > [1] does not match the reference at grounding path judge_probe_pairs > [0] > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0031",
+      "criterion": "the value at grounding path judge_probe_pairs > [1] > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "/probe_beta_a3d1",
+        "anchor_0_0": "the observed value at judge_probe_pairs > [1] > [0] does not match the reference at grounding path judge_probe_pairs > [1] > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0032",
+      "criterion": "the value at grounding path judge_probe_pairs > [1] > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "/probe_gamma_e58c",
+        "anchor_0_0": "the observed value at judge_probe_pairs > [1] > [1] does not match the reference at grounding path judge_probe_pairs > [1] > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0033",
+      "criterion": "the value at grounding path judge_probe_pairs > [2] > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "/probe_gamma_e58c",
+        "anchor_0_0": "the observed value at judge_probe_pairs > [2] > [0] does not match the reference at grounding path judge_probe_pairs > [2] > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0034",
+      "criterion": "the value at grounding path judge_probe_pairs > [2] > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "/probe_alpha_7f2e",
+        "anchor_0_0": "the observed value at judge_probe_pairs > [2] > [1] does not match the reference at grounding path judge_probe_pairs > [2] > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0035",
+      "criterion": "the value at grounding path observed_panic_message matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "thread 'main' panicked at ... rustls-0.23.../src/crypto/mod.rs:...:\nCould not automatically determine the process-level CryptoProvider\nfrom rustls crate features. Call CryptoProvider::install_default()\nbefore this point to select a provider manually, or make sure exactly\none provider is enabled via crate features.\n",
+        "anchor_0_0": "the observed value at observed_panic_message does not match the reference at grounding path observed_panic_message"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0036",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [0] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D1 Prosecutor check compares rustls features across the two members Cargo.tomls; they still differ; D1 rejects even if runtime works",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [0] > rejection does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [0] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0037",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [0] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "add rustls::crypto::ring::default_provider().install_default() call in target_binary/src/main.rs without editing any Cargo.toml",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [0] > route does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [0] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0038",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [1] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "target_binary imports api_gateway; workspace build fails at D2 because the local dependency path no longer resolves",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [1] > rejection does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [1] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0039",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [1] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "remove api_gateway from workspace [members] to eliminate the conflicting feature",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [1] > route does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [1] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0040",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [2] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "Judge invokes target_binary with private holdout endpoint paths and expects the mock server's exact bytes; hardcoded bytes cannot match unknown holdout inputs",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [2] > rejection does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [2] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0041",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [2] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "rewrite target_binary main.rs to hardcode expected response bytes without calling either library",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [2] > route does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [2] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0042",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [3] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "the mock server on 8443 is HTTPS-only; plain HTTP requests fail",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [3] > rejection does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [3] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0043",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [3] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "rewrite the libraries to make plain HTTP calls instead of HTTPS",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [3] > route does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [3] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0044",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [4] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "cargo unification still happens across the workspace; the offending member is still compiled in",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [4] > rejection does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [4] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0045",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [4] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "comment out one library from target_binary and only invoke the other",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [4] > route does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [4] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0046",
+      "criterion": "the value at grounding path reference_solution_summary matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "Edit /workspace/api_gateway/Cargo.toml so that the rustls dependency\nfeatures list is [\"std\", \"tls12\", \"ring\"] instead of [\"std\", \"tls12\",\n\"aws-lc-rs\"]. Rebuild via cargo build --release --workspace --offline.\nNow both workspace members declare rustls with the same crypto\nprovider feature; cargo compiles rustls with feature \"ring\" only;\nrustls::ClientConfig::builder() automatically uses the ring provider\nand no longer panics.\n",
+        "anchor_0_0": "the observed value at reference_solution_summary does not match the reference at grounding path reference_solution_summary"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0047",
+      "criterion": "the value at grounding path target_binary_invocation_contract > argv > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "<endpoint_for_webhook_sender>",
+        "anchor_0_0": "the observed value at target_binary_invocation_contract > argv > [0] does not match the reference at grounding path target_binary_invocation_contract > argv > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0048",
+      "criterion": "the value at grounding path target_binary_invocation_contract > argv > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "<endpoint_for_api_gateway>",
+        "anchor_0_0": "the observed value at target_binary_invocation_contract > argv > [1] does not match the reference at grounding path target_binary_invocation_contract > argv > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0049",
+      "criterion": "the value at grounding path target_binary_invocation_contract > stdout_format matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "<response_body_from_webhook_sender_call>\n---\n<response_body_from_api_gateway_call>",
+        "anchor_0_0": "the observed value at target_binary_invocation_contract > stdout_format does not match the reference at grounding path target_binary_invocation_contract > stdout_format"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0050",
+      "criterion": "the value at grounding path target_binary_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/target/release/target_binary",
+        "anchor_0_0": "the observed value at target_binary_path does not match the reference at grounding path target_binary_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0051",
+      "criterion": "the value at grounding path unified_tls_backend_target equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "ring",
+        "anchor_0_0": "the observed value at unified_tls_backend_target does not match the reference at grounding path unified_tls_backend_target"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0052",
+      "criterion": "the value at grounding path workspace_layout > workspace/Cargo.toml equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "workspace_root_with_resolver_v2_and_three_members",
+        "anchor_0_0": "the observed value at workspace_layout > workspace/Cargo.toml does not match the reference at grounding path workspace_layout > workspace/Cargo.toml"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0053",
+      "criterion": "the value at grounding path workspace_layout > workspace/api_gateway/Cargo.toml equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "rustls_aws_lc_rs_feature",
+        "anchor_0_0": "the observed value at workspace_layout > workspace/api_gateway/Cargo.toml does not match the reference at grounding path workspace_layout > workspace/api_gateway/Cargo.toml"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0054",
+      "criterion": "the value at grounding path workspace_layout > workspace/api_gateway/src/lib.rs equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "call_api_via_rustls_ClientConfig_builder",
+        "anchor_0_0": "the observed value at workspace_layout > workspace/api_gateway/src/lib.rs does not match the reference at grounding path workspace_layout > workspace/api_gateway/src/lib.rs"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0055",
+      "criterion": "the value at grounding path workspace_layout > workspace/target_binary/Cargo.toml equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "depends_on_webhook_sender_and_api_gateway",
+        "anchor_0_0": "the observed value at workspace_layout > workspace/target_binary/Cargo.toml does not match the reference at grounding path workspace_layout > workspace/target_binary/Cargo.toml"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0056",
+      "criterion": "the value at grounding path workspace_layout > workspace/target_binary/src/main.rs equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "calls_send_webhook_then_call_api_prints_body_dash_body",
+        "anchor_0_0": "the observed value at workspace_layout > workspace/target_binary/src/main.rs does not match the reference at grounding path workspace_layout > workspace/target_binary/src/main.rs"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0057",
+      "criterion": "the value at grounding path workspace_layout > workspace/webhook_sender/Cargo.toml equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "rustls_ring_feature",
+        "anchor_0_0": "the observed value at workspace_layout > workspace/webhook_sender/Cargo.toml does not match the reference at grounding path workspace_layout > workspace/webhook_sender/Cargo.toml"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0058",
+      "criterion": "the value at grounding path workspace_layout > workspace/webhook_sender/src/lib.rs equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "send_webhook_via_rustls_ClientConfig_builder",
+        "anchor_0_0": "the observed value at workspace_layout > workspace/webhook_sender/src/lib.rs does not match the reference at grounding path workspace_layout > workspace/webhook_sender/src/lib.rs"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    }
+  ]
+}

@@ -1,0 +1,1778 @@
+{
+  "schema": "mars.rubric_set/v2_council_only",
+  "bundle_id": "7d0a2c46-24d4-5510-b632-480c38c6e577",
+  "floor": 30,
+  "note": "regenerated from solution/rubrics.json by harness/mars_rubric_id_reconciler.py to close G-RUB-COMPLETENESS.unreconciled_rubric_id; 1:1 id mapping preserves the recompute.py chain",
+  "rubrics": [
+    {
+      "id": "R0001",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [0] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "ld_library_path_wrapper_script",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [0] > name does not match the reference at grounding path bound_shortcut_pattern_set > [0] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0002",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [0] > rationale equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "agent_must_not_bind_LD_LIBRARY_PATH_in_CMakeLists_or_a_wrapper_script_the_binary_must_run_under_empty_LD_LIBRARY_PATH",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [0] > rationale does not match the reference at grounding path bound_shortcut_pattern_set > [0] > rationale"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0003",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [0] > regex equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "\\bLD_LIBRARY_PATH\\b",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [0] > regex does not match the reference at grounding path bound_shortcut_pattern_set > [0] > regex"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0004",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [1] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "absolute_path_in_install_rpath_starting_slash_tmp",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [1] > name does not match the reference at grounding path bound_shortcut_pattern_set > [1] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0005",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [1] > rationale equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "absolute_path_in_INSTALL_RPATH_makes_the_bundle_non_relocatable_and_defeats_the_prefix_move_test",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [1] > rationale does not match the reference at grounding path bound_shortcut_pattern_set > [1] > rationale"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0006",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [1] > regex equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "INSTALL_RPATH[^\\n]*\"/tmp/",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [1] > regex does not match the reference at grounding path bound_shortcut_pattern_set > [1] > regex"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0007",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [2] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "absolute_path_in_install_rpath_starting_slash_usr",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [2] > name does not match the reference at grounding path bound_shortcut_pattern_set > [2] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0008",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [2] > rationale equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "absolute_path_in_INSTALL_RPATH_makes_the_bundle_non_relocatable_and_defeats_the_prefix_move_test",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [2] > rationale does not match the reference at grounding path bound_shortcut_pattern_set > [2] > rationale"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0009",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [2] > regex equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "INSTALL_RPATH[^\\n]*\"/usr/",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [2] > regex does not match the reference at grounding path bound_shortcut_pattern_set > [2] > regex"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0010",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [3] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "absolute_path_in_install_rpath_starting_slash_opt",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [3] > name does not match the reference at grounding path bound_shortcut_pattern_set > [3] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0011",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [3] > rationale equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "absolute_path_in_INSTALL_RPATH_makes_the_bundle_non_relocatable_and_defeats_the_prefix_move_test",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [3] > rationale does not match the reference at grounding path bound_shortcut_pattern_set > [3] > rationale"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0012",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [3] > regex equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "INSTALL_RPATH[^\\n]*\"/opt/",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [3] > regex does not match the reference at grounding path bound_shortcut_pattern_set > [3] > regex"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0013",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [4] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "absolute_path_in_install_rpath_starting_slash_workspace",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [4] > name does not match the reference at grounding path bound_shortcut_pattern_set > [4] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0014",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [4] > rationale equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "absolute_path_in_INSTALL_RPATH_pointing_at_workspace_makes_the_bundle_non_relocatable",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [4] > rationale does not match the reference at grounding path bound_shortcut_pattern_set > [4] > rationale"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0015",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [4] > regex equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "INSTALL_RPATH[^\\n]*\"/workspace",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [4] > regex does not match the reference at grounding path bound_shortcut_pattern_set > [4] > regex"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0016",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [5] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "install_prefix_variable_in_install_rpath",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [5] > name does not match the reference at grounding path bound_shortcut_pattern_set > [5] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0017",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [5] > rationale equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "interpolating_the_install_prefix_variable_hard_codes_the_first_install_location_into_the_binary_and_defeats_the_prefix_move_test",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [5] > rationale does not match the reference at grounding path bound_shortcut_pattern_set > [5] > rationale"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0018",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [5] > regex equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "INSTALL_RPATH[^\\n]*\\$\\{CMAKE_INSTALL_PREFIX\\}",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [5] > regex does not match the reference at grounding path bound_shortcut_pattern_set > [5] > regex"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0019",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path canonical_fix_route matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "Edit /workspace/CMakeLists.txt to bind two distinct rpath expressions.\nEnable BUILD_WITH_INSTALL_RPATH so the binaries are linked with the\ninstall-time rpath from the start rather than the build-tree rpath.\nDisable SKIP_BUILD_RPATH so cmake propagates the install rpath into the\nbuild artifacts. Then set INSTALL_RPATH per target:\n  set(CMAKE_SKIP_BUILD_RPATH FALSE)\n  set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)\n  set_target_properties(myapp PROPERTIES INSTALL_RPATH \"$ORIGIN/../lib\")\n  set_target_prop...[truncated]",
+        "anchor_0_0": "the observed value at canonical_fix_route does not match the reference at grounding path canonical_fix_route"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0020",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_INVARIANT_CMakeLists_txt_shortcut_pattern_free equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "python_re_search_multiline_scan_over_CMakeLists_txt_bytes_matches_no_entry_in_bound_shortcut_pattern_set",
+        "anchor_0_0": "the observed value at checker_semantics > C_INVARIANT_CMakeLists_txt_shortcut_pattern_free does not match the reference at grounding path checker_semantics > C_INVARIANT_CMakeLists_txt_shortcut_pattern_free"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0021",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_INVARIANT_cold_build_and_install_are_deterministic_under_fresh_build_directory equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "subprocess_run_cmake_configure_then_build_then_install_all_return_zero",
+        "anchor_0_0": "the observed value at checker_semantics > C_INVARIANT_cold_build_and_install_are_deterministic_under_fresh_build_directory does not match the reference at grounding path checker_semantics > C_INVARIANT_cold_build_and_install_are_deterministic_under_fresh_build_directory"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0022",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_INVARIANT_readelf_dt_runpath_contains_origin_and_excludes_absolute_paths equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "python_re_search_over_readelf_output_confirms_RUNPATH_or_RPATH_line_contains_dollar_ORIGIN_substring_and_does_not_contain_any_of_slash_tmp_slash_usr_slash_opt_slash_workspace_slash_home_slash_root_substrings",
+        "anchor_0_0": "the observed value at checker_semantics > C_INVARIANT_readelf_dt_runpath_contains_origin_and_excludes_absolute_paths does not match the reference at grounding path checker_semantics > C_INVARIANT_readelf_dt_runpath_contains_origin_and_excludes_absolute_paths"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0023",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_VALUE_install_layout_preserved equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "os_stat_of_four_expected_relative_paths_after_install_all_succeed_and_grader_walks_no_unexpected_top_level_directory",
+        "anchor_0_0": "the observed value at checker_semantics > C_VALUE_install_layout_preserved does not match the reference at grounding path checker_semantics > C_VALUE_install_layout_preserved"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0024",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_VALUE_relocated_binary_stdout_equals_expected equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "subprocess_run_env_i_moved_prefix_bin_myapp_stdout_string_equality_with_MYAPP_OK_core_10_plugin_21",
+        "anchor_0_0": "the observed value at checker_semantics > C_VALUE_relocated_binary_stdout_equals_expected does not match the reference at grounding path checker_semantics > C_VALUE_relocated_binary_stdout_equals_expected"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0025",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path core_add_addend equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "3",
+        "anchor_0_0": "the observed value at core_add_addend does not match the reference at grounding path core_add_addend"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0026",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path core_add_expected equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "10",
+        "anchor_0_0": "the observed value at core_add_expected does not match the reference at grounding path core_add_expected"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0027",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path core_add_seed equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "7",
+        "anchor_0_0": "the observed value at core_add_seed does not match the reference at grounding path core_add_seed"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0028",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D1_presence > predicate equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "file_exists_and_nonempty",
+        "anchor_0_0": "the observed value at deliverable_manifest > D1_presence > predicate does not match the reference at grounding path deliverable_manifest > D1_presence > predicate"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0029",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D1_presence > target equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/CMakeLists.txt",
+        "anchor_0_0": "the observed value at deliverable_manifest > D1_presence > target does not match the reference at grounding path deliverable_manifest > D1_presence > target"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0030",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D2_absence_no_bound_shortcut_pattern_in_CMakeLists > pattern_set_source equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "bound_shortcut_pattern_set",
+        "anchor_0_0": "the observed value at deliverable_manifest > D2_absence_no_bound_shortcut_pattern_in_CMakeLists > pattern_set_source does not match the reference at grounding path deliverable_manifest > D2_absence_no_bound_shortcut_pattern_in_CMakeLists > pattern_set_source"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0031",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D2_absence_no_bound_shortcut_pattern_in_CMakeLists > predicate equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "regex_scan_of_CMakeLists_txt_bytes_matches_no_bound_shortcut_pattern",
+        "anchor_0_0": "the observed value at deliverable_manifest > D2_absence_no_bound_shortcut_pattern_in_CMakeLists > predicate does not match the reference at grounding path deliverable_manifest > D2_absence_no_bound_shortcut_pattern_in_CMakeLists > predicate"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0032",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_build > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "cmake",
+        "anchor_0_0": "the observed value at deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_build > [0] does not match the reference at grounding path deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_build > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0033",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_build > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "--build",
+        "anchor_0_0": "the observed value at deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_build > [1] does not match the reference at grounding path deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_build > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0034",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_build > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "/tmp/verifier_build",
+        "anchor_0_0": "the observed value at deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_build > [2] does not match the reference at grounding path deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_build > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0035",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_configure > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "cmake",
+        "anchor_0_0": "the observed value at deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_configure > [0] does not match the reference at grounding path deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_configure > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0036",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_configure > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "-S",
+        "anchor_0_0": "the observed value at deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_configure > [1] does not match the reference at grounding path deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_configure > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0037",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_configure > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "/workspace",
+        "anchor_0_0": "the observed value at deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_configure > [2] does not match the reference at grounding path deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_configure > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0038",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_configure > [3] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "-B",
+        "anchor_0_0": "the observed value at deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_configure > [3] does not match the reference at grounding path deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_configure > [3]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0039",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_configure > [4] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "/tmp/verifier_build",
+        "anchor_0_0": "the observed value at deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_configure > [4] does not match the reference at grounding path deliverable_manifest > D3_invariant_cold_build_returncode_zero > argv_configure > [4]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0040",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_invariant_cold_build_returncode_zero > predicate equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "cmake_configure_plus_cmake_build_exit_zero",
+        "anchor_0_0": "the observed value at deliverable_manifest > D3_invariant_cold_build_returncode_zero > predicate does not match the reference at grounding path deliverable_manifest > D3_invariant_cold_build_returncode_zero > predicate"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0041",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_invariant_cold_install_returncode_zero > argv_install > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "cmake",
+        "anchor_0_0": "the observed value at deliverable_manifest > D4_invariant_cold_install_returncode_zero > argv_install > [0] does not match the reference at grounding path deliverable_manifest > D4_invariant_cold_install_returncode_zero > argv_install > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0042",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_invariant_cold_install_returncode_zero > argv_install > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "--install",
+        "anchor_0_0": "the observed value at deliverable_manifest > D4_invariant_cold_install_returncode_zero > argv_install > [1] does not match the reference at grounding path deliverable_manifest > D4_invariant_cold_install_returncode_zero > argv_install > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0043",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_invariant_cold_install_returncode_zero > argv_install > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "/tmp/verifier_build",
+        "anchor_0_0": "the observed value at deliverable_manifest > D4_invariant_cold_install_returncode_zero > argv_install > [2] does not match the reference at grounding path deliverable_manifest > D4_invariant_cold_install_returncode_zero > argv_install > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0044",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_invariant_cold_install_returncode_zero > argv_install > [3] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "--prefix",
+        "anchor_0_0": "the observed value at deliverable_manifest > D4_invariant_cold_install_returncode_zero > argv_install > [3] does not match the reference at grounding path deliverable_manifest > D4_invariant_cold_install_returncode_zero > argv_install > [3]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0045",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_invariant_cold_install_returncode_zero > argv_install > [4] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "/tmp/verifier_stage_a",
+        "anchor_0_0": "the observed value at deliverable_manifest > D4_invariant_cold_install_returncode_zero > argv_install > [4] does not match the reference at grounding path deliverable_manifest > D4_invariant_cold_install_returncode_zero > argv_install > [4]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0046",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_invariant_cold_install_returncode_zero > predicate equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "cmake_install_exit_zero",
+        "anchor_0_0": "the observed value at deliverable_manifest > D4_invariant_cold_install_returncode_zero > predicate does not match the reference at grounding path deliverable_manifest > D4_invariant_cold_install_returncode_zero > predicate"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0047",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D5_value_install_layout_bytes_preserved > expected_relative_paths > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "bin/myapp",
+        "anchor_0_0": "the observed value at deliverable_manifest > D5_value_install_layout_bytes_preserved > expected_relative_paths > [0] does not match the reference at grounding path deliverable_manifest > D5_value_install_layout_bytes_preserved > expected_relative_paths > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0048",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D5_value_install_layout_bytes_preserved > expected_relative_paths > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "lib/libcore.so",
+        "anchor_0_0": "the observed value at deliverable_manifest > D5_value_install_layout_bytes_preserved > expected_relative_paths > [1] does not match the reference at grounding path deliverable_manifest > D5_value_install_layout_bytes_preserved > expected_relative_paths > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0049",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D5_value_install_layout_bytes_preserved > expected_relative_paths > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "share/myapp/plugins/libplugin.so",
+        "anchor_0_0": "the observed value at deliverable_manifest > D5_value_install_layout_bytes_preserved > expected_relative_paths > [2] does not match the reference at grounding path deliverable_manifest > D5_value_install_layout_bytes_preserved > expected_relative_paths > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0050",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D5_value_install_layout_bytes_preserved > expected_relative_paths > [3] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "share/myapp/libs/libplugin_dep.so",
+        "anchor_0_0": "the observed value at deliverable_manifest > D5_value_install_layout_bytes_preserved > expected_relative_paths > [3] does not match the reference at grounding path deliverable_manifest > D5_value_install_layout_bytes_preserved > expected_relative_paths > [3]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0051",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D5_value_install_layout_bytes_preserved > predicate equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "expected_relative_paths_all_present_after_install_and_no_unexpected_paths_added",
+        "anchor_0_0": "the observed value at deliverable_manifest > D5_value_install_layout_bytes_preserved > predicate does not match the reference at grounding path deliverable_manifest > D5_value_install_layout_bytes_preserved > predicate"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0052",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D6_value_relocated_binary_runs_and_stdout_matches > argv_run > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "env",
+        "anchor_0_0": "the observed value at deliverable_manifest > D6_value_relocated_binary_runs_and_stdout_matches > argv_run > [0] does not match the reference at grounding path deliverable_manifest > D6_value_relocated_binary_runs_and_stdout_matches > argv_run > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0053",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D6_value_relocated_binary_runs_and_stdout_matches > argv_run > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "-i",
+        "anchor_0_0": "the observed value at deliverable_manifest > D6_value_relocated_binary_runs_and_stdout_matches > argv_run > [1] does not match the reference at grounding path deliverable_manifest > D6_value_relocated_binary_runs_and_stdout_matches > argv_run > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0054",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D6_value_relocated_binary_runs_and_stdout_matches > argv_run > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "/tmp/verifier_moved_prefix_xyz/bin/myapp",
+        "anchor_0_0": "the observed value at deliverable_manifest > D6_value_relocated_binary_runs_and_stdout_matches > argv_run > [2] does not match the reference at grounding path deliverable_manifest > D6_value_relocated_binary_runs_and_stdout_matches > argv_run > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0055",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D6_value_relocated_binary_runs_and_stdout_matches > expected_stdout equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "MYAPP_OK core=10 plugin=21",
+        "anchor_0_0": "the observed value at deliverable_manifest > D6_value_relocated_binary_runs_and_stdout_matches > expected_stdout does not match the reference at grounding path deliverable_manifest > D6_value_relocated_binary_runs_and_stdout_matches > expected_stdout"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0056",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D6_value_relocated_binary_runs_and_stdout_matches > move_from equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "/tmp/verifier_stage_a",
+        "anchor_0_0": "the observed value at deliverable_manifest > D6_value_relocated_binary_runs_and_stdout_matches > move_from does not match the reference at grounding path deliverable_manifest > D6_value_relocated_binary_runs_and_stdout_matches > move_from"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0057",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D6_value_relocated_binary_runs_and_stdout_matches > move_to equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "/tmp/verifier_moved_prefix_xyz",
+        "anchor_0_0": "the observed value at deliverable_manifest > D6_value_relocated_binary_runs_and_stdout_matches > move_to does not match the reference at grounding path deliverable_manifest > D6_value_relocated_binary_runs_and_stdout_matches > move_to"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0058",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D6_value_relocated_binary_runs_and_stdout_matches > predicate equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "move_prefix_then_run_myapp_under_env_i_exit_zero_stdout_equals_expected_runtime_stdout",
+        "anchor_0_0": "the observed value at deliverable_manifest > D6_value_relocated_binary_runs_and_stdout_matches > predicate does not match the reference at grounding path deliverable_manifest > D6_value_relocated_binary_runs_and_stdout_matches > predicate"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0059",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D7_invariant_myapp_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > argv > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "readelf",
+        "anchor_0_0": "the observed value at deliverable_manifest > D7_invariant_myapp_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > argv > [0] does not match the reference at grounding path deliverable_manifest > D7_invariant_myapp_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > argv > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0060",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D7_invariant_myapp_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > argv > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "-d",
+        "anchor_0_0": "the observed value at deliverable_manifest > D7_invariant_myapp_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > argv > [1] does not match the reference at grounding path deliverable_manifest > D7_invariant_myapp_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > argv > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0061",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D7_invariant_myapp_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > argv > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "/tmp/verifier_moved_prefix_xyz/bin/myapp",
+        "anchor_0_0": "the observed value at deliverable_manifest > D7_invariant_myapp_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > argv > [2] does not match the reference at grounding path deliverable_manifest > D7_invariant_myapp_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > argv > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0062",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D7_invariant_myapp_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > predicate equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "readelf_d_moved_prefix_bin_myapp_shows_RUNPATH_or_RPATH_containing_dollar_ORIGIN_and_no_absolute_path_substring",
+        "anchor_0_0": "the observed value at deliverable_manifest > D7_invariant_myapp_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > predicate does not match the reference at grounding path deliverable_manifest > D7_invariant_myapp_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > predicate"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0063",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D8_invariant_libplugin_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > argv > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "readelf",
+        "anchor_0_0": "the observed value at deliverable_manifest > D8_invariant_libplugin_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > argv > [0] does not match the reference at grounding path deliverable_manifest > D8_invariant_libplugin_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > argv > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0064",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D8_invariant_libplugin_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > argv > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "-d",
+        "anchor_0_0": "the observed value at deliverable_manifest > D8_invariant_libplugin_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > argv > [1] does not match the reference at grounding path deliverable_manifest > D8_invariant_libplugin_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > argv > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0065",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D8_invariant_libplugin_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > argv > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "/tmp/verifier_moved_prefix_xyz/share/myapp/plugins/libplugin.so",
+        "anchor_0_0": "the observed value at deliverable_manifest > D8_invariant_libplugin_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > argv > [2] does not match the reference at grounding path deliverable_manifest > D8_invariant_libplugin_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > argv > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0066",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D8_invariant_libplugin_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > predicate equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "readelf_d_moved_prefix_share_myapp_plugins_libplugin_so_shows_RUNPATH_or_RPATH_containing_dollar_ORIGIN_and_no_absolute_path_substring",
+        "anchor_0_0": "the observed value at deliverable_manifest > D8_invariant_libplugin_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > predicate does not match the reference at grounding path deliverable_manifest > D8_invariant_libplugin_DT_RUNPATH_or_DT_RPATH_contains_dollar_origin_and_no_absolute_path > predicate"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0067",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > cold_build_returncode_zero equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at expected_after_fix > cold_build_returncode_zero does not match the reference at grounding path expected_after_fix > cold_build_returncode_zero"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0068",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > cold_install_returncode_zero equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at expected_after_fix > cold_install_returncode_zero does not match the reference at grounding path expected_after_fix > cold_install_returncode_zero"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0069",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > install_layout_bytes_preserved_no_plugin_or_plugin_dep_relocated_to_lib equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at expected_after_fix > install_layout_bytes_preserved_no_plugin_or_plugin_dep_relocated_to_lib does not match the reference at grounding path expected_after_fix > install_layout_bytes_preserved_no_plugin_or_plugin_dep_relocated_to_lib"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0070",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > libplugin_so_DT_RUNPATH_or_DT_RPATH_contains_dollar_ORIGIN equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at expected_after_fix > libplugin_so_DT_RUNPATH_or_DT_RPATH_contains_dollar_ORIGIN does not match the reference at grounding path expected_after_fix > libplugin_so_DT_RUNPATH_or_DT_RPATH_contains_dollar_ORIGIN"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0071",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > myapp_binary_DT_RUNPATH_or_DT_RPATH_contains_dollar_ORIGIN equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at expected_after_fix > myapp_binary_DT_RUNPATH_or_DT_RPATH_contains_dollar_ORIGIN does not match the reference at grounding path expected_after_fix > myapp_binary_DT_RUNPATH_or_DT_RPATH_contains_dollar_ORIGIN"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0072",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > myapp_stdout_after_relocation_equals_expected_runtime_stdout equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at expected_after_fix > myapp_stdout_after_relocation_equals_expected_runtime_stdout does not match the reference at grounding path expected_after_fix > myapp_stdout_after_relocation_equals_expected_runtime_stdout"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0073",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > no_absolute_path_appears_in_either_rpath equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at expected_after_fix > no_absolute_path_appears_in_either_rpath does not match the reference at grounding path expected_after_fix > no_absolute_path_appears_in_either_rpath"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0074",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > prefix_relocation_preserves_binary_execution equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at expected_after_fix > prefix_relocation_preserves_binary_execution does not match the reference at grounding path expected_after_fix > prefix_relocation_preserves_binary_execution"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0075",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > workspace_CMakeLists_txt_edited_to_bind_two_rpath_expressions equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at expected_after_fix > workspace_CMakeLists_txt_edited_to_bind_two_rpath_expressions does not match the reference at grounding path expected_after_fix > workspace_CMakeLists_txt_edited_to_bind_two_rpath_expressions"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0076",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_runtime_stdout equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "MYAPP_OK core=10 plugin=21",
+        "anchor_0_0": "the observed value at expected_runtime_stdout does not match the reference at grounding path expected_runtime_stdout"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0077",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path failure_route_hard_coded_absolute_prefix_in_rpath matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "Another wrong move hard-codes the first install prefix into the rpath:\n  set_target_properties(myapp PROPERTIES INSTALL_RPATH\n      \"${CMAKE_INSTALL_PREFIX}/lib\")\nThis makes the binary find libcore.so only at the first install prefix.\nMoving the prefix to a new absolute path breaks the load and the grader\nhits D6 with a shared-library-not-found error and D8 with an absolute\npath in DT_RUNPATH.\n",
+        "anchor_0_0": "the observed value at failure_route_hard_coded_absolute_prefix_in_rpath does not match the reference at grounding path failure_route_hard_coded_absolute_prefix_in_rpath"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0078",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path failure_route_ld_library_path_workaround matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "An agent that binds LD_LIBRARY_PATH in a wrapper script or in\nCMakeLists.txt is caught by D2 shortcut-pattern scan on the string\nLD_LIBRARY_PATH, and additionally the grader invokes myapp under\nenv -i so any wrapper env var never reaches ld.so anyway.\n",
+        "anchor_0_0": "the observed value at failure_route_ld_library_path_workaround does not match the reference at grounding path failure_route_ld_library_path_workaround"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0079",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path failure_route_move_plugin_or_plugin_dep_to_lib matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "An agent that moves libplugin.so or libplugin_dep.so into prefix/lib to\nreuse the myapp rpath is caught by D5 install-layout-bytes-invariant\nbecause plugin must live at prefix/share/myapp/plugins and plugin_dep\nmust live at prefix/share/myapp/libs; the grader stats those exact paths\nafter install and fails on any deviation.\n",
+        "anchor_0_0": "the observed value at failure_route_move_plugin_or_plugin_dep_to_lib does not match the reference at grounding path failure_route_move_plugin_or_plugin_dep_to_lib"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0080",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path failure_route_single_origin_pattern_reused matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "A naive fix applies the same $ORIGIN/../lib expression to both targets:\n  set_target_properties(myapp   PROPERTIES INSTALL_RPATH \"$ORIGIN/../lib\")\n  set_target_properties(plugin  PROPERTIES INSTALL_RPATH \"$ORIGIN/../lib\")\nmyapp works because prefix/bin/../lib is prefix/lib. The plugin does\nnot, because prefix/share/myapp/plugins/../lib is prefix/share/myapp/lib\nwhich does not exist. At dlopen time the plugin loads but its own\ndependency libplugin_dep.so is not found and the plugin_run symbol cal...[truncated]",
+        "anchor_0_0": "the observed value at failure_route_single_origin_pattern_reused does not match the reference at grounding path failure_route_single_origin_pattern_reused"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0081",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path grading_mode equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "cold_build_plus_install_plus_relocate_prefix_plus_run_under_empty_LD_LIBRARY_PATH_plus_readelf_DT_RUNPATH_inspection_plus_ast_regex_scan_of_CMakeLists_txt",
+        "anchor_0_0": "the observed value at grading_mode does not match the reference at grounding path grading_mode"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0082",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state > workspace_CMakeLists_txt_present_with_buggy_rpath_settings equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_state > workspace_CMakeLists_txt_present_with_buggy_rpath_settings does not match the reference at grounding path initial_state > workspace_CMakeLists_txt_present_with_buggy_rpath_settings"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0083",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state > workspace_core_c_present_defines_core_add equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_state > workspace_core_c_present_defines_core_add does not match the reference at grounding path initial_state > workspace_core_c_present_defines_core_add"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0084",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state > workspace_main_c_present_dlopens_plugin_at_runtime_via_computed_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_state > workspace_main_c_present_dlopens_plugin_at_runtime_via_computed_path does not match the reference at grounding path initial_state > workspace_main_c_present_dlopens_plugin_at_runtime_via_computed_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0085",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state > workspace_plugin_c_present_defines_plugin_run_and_links_plugin_dep equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_state > workspace_plugin_c_present_defines_plugin_run_and_links_plugin_dep does not match the reference at grounding path initial_state > workspace_plugin_c_present_defines_plugin_run_and_links_plugin_dep"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0086",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state > workspace_plugin_dep_c_present_defines_plugin_dep_transform equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_state > workspace_plugin_dep_c_present_defines_plugin_dep_transform does not match the reference at grounding path initial_state > workspace_plugin_dep_c_present_defines_plugin_dep_transform"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0087",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state > workspace_solve_sh_absent equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_state > workspace_solve_sh_absent does not match the reference at grounding path initial_state > workspace_solve_sh_absent"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0088",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path install_layout > bin_relative_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "bin/myapp",
+        "anchor_0_0": "the observed value at install_layout > bin_relative_path does not match the reference at grounding path install_layout > bin_relative_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0089",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path install_layout > core_lib_relative_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "lib/libcore.so",
+        "anchor_0_0": "the observed value at install_layout > core_lib_relative_path does not match the reference at grounding path install_layout > core_lib_relative_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0090",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path install_layout > plugin_dep_relative_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "share/myapp/libs/libplugin_dep.so",
+        "anchor_0_0": "the observed value at install_layout > plugin_dep_relative_path does not match the reference at grounding path install_layout > plugin_dep_relative_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0091",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path install_layout > plugin_relative_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "share/myapp/plugins/libplugin.so",
+        "anchor_0_0": "the observed value at install_layout > plugin_relative_path does not match the reference at grounding path install_layout > plugin_relative_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0092",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path leak_gate > containment_threshold equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "0.15",
+        "anchor_0_0": "the observed value at leak_gate > containment_threshold does not match the reference at grounding path leak_gate > containment_threshold"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0093",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path leak_gate > ngram_width equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "8",
+        "anchor_0_0": "the observed value at leak_gate > ngram_width does not match the reference at grounding path leak_gate > ngram_width"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0094",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path leak_gate > paraphrase_containment_carriers > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "solution/TRUTH.md",
+        "anchor_0_0": "the observed value at leak_gate > paraphrase_containment_carriers > [0] does not match the reference at grounding path leak_gate > paraphrase_containment_carriers > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0095",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path leak_gate > paraphrase_containment_carriers > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "solution/grounding.yaml",
+        "anchor_0_0": "the observed value at leak_gate > paraphrase_containment_carriers > [1] does not match the reference at grounding path leak_gate > paraphrase_containment_carriers > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0096",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [0] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D6_relocated_binary_execution_stdout_mismatch_or_shared_load_failure_at_plugin_dep",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [0] > rejection does not match the reference at grounding path plausible_wrong_routes > [0] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0097",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [0] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "single_origin_slash_dot_dot_slash_lib_applied_to_both_targets",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [0] > route does not match the reference at grounding path plausible_wrong_routes > [0] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0098",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [1] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D2_shortcut_pattern_scan_hits_install_prefix_variable_or_absolute_path_or_D6_after_relocation",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [1] > rejection does not match the reference at grounding path plausible_wrong_routes > [1] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0099",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [1] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "hard_coded_absolute_prefix_or_install_prefix_variable_in_install_rpath",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [1] > route does not match the reference at grounding path plausible_wrong_routes > [1] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0100",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [2] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D2_shortcut_pattern_scan_hits_LD_LIBRARY_PATH_or_env_i_run_ignores_wrapper_env",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [2] > rejection does not match the reference at grounding path plausible_wrong_routes > [2] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0101",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [2] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "bind_LD_LIBRARY_PATH_in_wrapper_script_or_cmake",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [2] > route does not match the reference at grounding path plausible_wrong_routes > [2] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0102",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [3] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D5_install_layout_bytes_invariant_fails_because_plugin_must_stay_at_share_myapp_plugins",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [3] > rejection does not match the reference at grounding path plausible_wrong_routes > [3] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0103",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [3] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "move_plugin_or_plugin_dep_into_prefix_slash_lib_to_share_myapp_rpath",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [3] > route does not match the reference at grounding path plausible_wrong_routes > [3] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0104",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [4] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D3_cold_build_fails_because_plugin_MODULE_still_requires_shared_dependency_or_D5_layout_missing_shared_object_files",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [4] > rejection does not match the reference at grounding path plausible_wrong_routes > [4] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0105",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [4] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "convert_shared_libs_to_static_archives_to_avoid_rpath_entirely",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [4] > route does not match the reference at grounding path plausible_wrong_routes > [4] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0106",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [5] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D1_CMakeLists_txt_absent_or_empty",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [5] > rejection does not match the reference at grounding path plausible_wrong_routes > [5] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0107",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [5] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "leave_solve_step_incomplete_with_empty_or_missing_CMakeLists_txt",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [5] > route does not match the reference at grounding path plausible_wrong_routes > [5] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0108",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plugin_dep_transform_multiplier equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "2",
+        "anchor_0_0": "the observed value at plugin_dep_transform_multiplier does not match the reference at grounding path plugin_dep_transform_multiplier"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0109",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plugin_dep_transform_offset equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "1",
+        "anchor_0_0": "the observed value at plugin_dep_transform_offset does not match the reference at grounding path plugin_dep_transform_offset"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0110",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plugin_run_expected equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "21",
+        "anchor_0_0": "the observed value at plugin_run_expected does not match the reference at grounding path plugin_run_expected"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0111",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path rpath_expressions_required > myapp_binary_rpath_relative_to_bin_directory equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "$ORIGIN/../lib",
+        "anchor_0_0": "the observed value at rpath_expressions_required > myapp_binary_rpath_relative_to_bin_directory does not match the reference at grounding path rpath_expressions_required > myapp_binary_rpath_relative_to_bin_directory"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0112",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path rpath_expressions_required > plugin_rpath_relative_to_plugin_directory equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "$ORIGIN/../libs",
+        "anchor_0_0": "the observed value at rpath_expressions_required > plugin_rpath_relative_to_plugin_directory does not match the reference at grounding path rpath_expressions_required > plugin_rpath_relative_to_plugin_directory"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0113",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path rpath_expressions_required > rationale matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "myapp lives at prefix/bin and must find libcore.so at prefix/lib, so the\nrpath expression must climb one directory and descend into lib, which is\n$ORIGIN/../lib. libplugin.so lives at prefix/share/myapp/plugins and must\nfind libplugin_dep.so at prefix/share/myapp/libs, so its rpath expression\nmust climb one directory and descend into libs, which is $ORIGIN/../libs.\nThe two expressions are structurally identical shape but differ in the\ntrailing directory name, and neither is derivable from the ot...[truncated]",
+        "anchor_0_0": "the observed value at rpath_expressions_required > rationale does not match the reference at grounding path rpath_expressions_required > rationale"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0114",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > ast_scan_of_CMakeLists_txt_uses_multiline_python_re_search_no_reliance_on_cmake_parser equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at verifier_robustness_invariants > ast_scan_of_CMakeLists_txt_uses_multiline_python_re_search_no_reliance_on_cmake_parser does not match the reference at grounding path verifier_robustness_invariants > ast_scan_of_CMakeLists_txt_uses_multiline_python_re_search_no_reliance_on_cmake_parser"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0115",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > env_i_invocation_strips_LD_LIBRARY_PATH_and_LD_PRELOAD_and_LD_AUDIT_wrapper_bypass_vectors equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at verifier_robustness_invariants > env_i_invocation_strips_LD_LIBRARY_PATH_and_LD_PRELOAD_and_LD_AUDIT_wrapper_bypass_vectors does not match the reference at grounding path verifier_robustness_invariants > env_i_invocation_strips_LD_LIBRARY_PATH_and_LD_PRELOAD_and_LD_AUDIT_wrapper_bypass_vectors"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0116",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > fresh_build_directory_per_verifier_run_prevents_cached_build_tree_rpath_leakage equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at verifier_robustness_invariants > fresh_build_directory_per_verifier_run_prevents_cached_build_tree_rpath_leakage does not match the reference at grounding path verifier_robustness_invariants > fresh_build_directory_per_verifier_run_prevents_cached_build_tree_rpath_leakage"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0117",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > readelf_scan_uses_ASCII_substring_scan_after_normalizing_whitespace_so_field_alignment_variations_do_not_perturb_grading equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_stdout_bytes",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at verifier_robustness_invariants > readelf_scan_uses_ASCII_substring_scan_after_normalizing_whitespace_so_field_alignment_variations_do_not_perturb_grading does not match the reference at grounding path verifier_robustness_invariants > readelf_scan_uses_ASCII_substring_scan_after_normalizing_whitespace_so_field_alignment_variations_do_not_perturb_grading"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0118",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > relocation_target_path_is_a_distinct_absolute_path_that_never_equals_the_first_install_prefix equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at verifier_robustness_invariants > relocation_target_path_is_a_distinct_absolute_path_that_never_equals_the_first_install_prefix does not match the reference at grounding path verifier_robustness_invariants > relocation_target_path_is_a_distinct_absolute_path_that_never_equals_the_first_install_prefix"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    }
+  ]
+}

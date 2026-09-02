@@ -1,0 +1,69 @@
+schema: forge.grounding/v1
+task_slug: cli-awk-fixed-width-with-embedded-escapes
+canary_b: 9c7eec72f59556e8b6354c299ce26fe8
+
+public_expected_column_three_sequence:
+  record_count: 7
+  values:
+  - "Bay Area North"
+  - "EMEA-West"
+  - "APAC-South\tRegion"
+  - "LATAM-North"
+  - "US-West"
+  - "MENA\tNorth"
+  - "Nordics-EU"
+
+holdout_expected_column_three_sequence:
+  record_count: 10
+  values:
+  - "Alps-Central"
+  - "Andes-South"
+  - "Sahel-North\tZone"
+  - "Baltic-East"
+  - "Iberia-West"
+  - "Kerala\tCoastal"
+  - "Steppes-Central"
+  - "Deccan-Interior"
+  - "Rockies-West"
+  - "Sahara\tNorth"
+
+holdout_embedded_tab_and_continuation_layout:
+  embedded_tab_positions:
+  - {record: 2, field: 2, before_bytes: "Julia", after_bytes: "Lin"}
+  - {record: 3, field: 3, before_bytes: "Sahel-North", after_bytes: "Zone"}
+  - {record: 6, field: 3, before_bytes: "Kerala", after_bytes: "Coastal", split_by_continuation: true}
+  - {record: 10, field: 3, before_bytes: "Sahara", after_bytes: "North"}
+  backslash_continuation_positions:
+  - {record: 4, field: 4, splits: 1}
+  - {record: 5, field: 2, splits: 1}
+  - {record: 6, field: 3, splits: 1}
+  - {record: 8, field: 2, splits: 1}
+
+bound_shortcut_pattern_set:
+- '\bpython3?\b'
+- '\bperl\b'
+- '\bsed\b'
+- '\bruby\b'
+- '\bcut\b'
+- '\bcolumn\b'
+- '\btr\b'
+- '\bmawk\b'
+- '\bcat\s+[^|<]*expected'
+- '\bcat\s+/verifier'
+- '\bcp\s+[^|<]*expected'
+
+gawk_invocation_contract:
+  binary_path: /usr/bin/gawk
+  update_alternatives_binding: awk_resolves_to_gawk_via_update_alternatives_set_awk_slash_usr_slash_bin_slash_gawk
+  reference_form: |
+    awk '
+      { rec = $0
+        while (rec ~ /\\$/) {
+          sub(/\\$/, "", rec)
+          if ((getline more) > 0) { rec = rec more } else { break }
+        }
+        n = split(rec, cols, "|")
+        if (n >= 3) print gensub(/^[ \t]+|[ \t]+$/, "", "g", cols[3])
+      }
+    ' "$1"
+  gawk_only_feature_used: gensub_function_which_is_absent_from_mawk_and_from_posix_awk

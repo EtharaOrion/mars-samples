@@ -1,0 +1,75 @@
+schema_version = "1.4"
+
+[task]
+name = "mars/configure-vite-dual-esm-cjs-exports-v3"
+description = "Configure a TypeScript library that must publish as a dual ESM+CJS package where the ESM entry uses top-level await. The naive attempts (tsup --format cjs,esm, tsc --module commonjs, rollup without a shim) all break because top-level await cannot be lowered to synchronous CJS. The agent must keep the ESM source unchanged, declare an exports map with import and require conditions, and shape the CJS entry as a dynamic-import shim so it resolves to a thenable whose fulfilled value carries the named exports."
+authors = [{ name = "mars-forge" }]
+keywords = ["typescript", "esm", "cjs", "top-level-await", "dual-package", "exports-map", "dynamic-import", "build-configure"]
+
+[metadata]
+mars_sub_type = "build-ci-cd"
+mars_archetype = "build-configure"
+mars_maturity = "draft"
+mars_tier = "frontier-defeat-target"
+mars_disposition_ceiling = "HOLD:PILOT_REQUIRED"
+mars_forge_contract_sha256 = "7fa61afd155a88f234f6c741a34546782fa0f53ca44afd5ead5a71094a7e5655"
+mars_slot_index = 11
+mars_slot_slug = "configure-vite-dual-esm-cjs-exports-v3"
+mars_legacy_predecessor_uuid = "ecc17a33-b3c1-54c8-bcb3-5f9d11f3216c"
+mars_task_uuid = "027588c1-c95f-564e-bb96-c386f490aac1"
+
+[verifier]
+timeout_sec = 300.0
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+build_timeout_sec = 900.0
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0
+network_mode = "public"
+
+[verifier.env]
+
+[environment.env]
+
+[solution.env]
+
+[[artifacts]]
+source = "/workspace/app/package.json"
+
+[[artifacts]]
+source = "/workspace/app/tsconfig.esm.json"
+
+[[artifacts]]
+source = "/workspace/app/src/index.ts"
+
+[[artifacts]]
+source = "/workspace/app/src/loader.ts"
+
+[[artifacts]]
+source = "/workspace/consumers/esm-consumer.mjs"
+
+[[artifacts]]
+source = "/workspace/consumers/cjs-consumer.cjs"
+
+[[artifacts]]
+source = "/workspace/observed_build.txt"
+
+[[artifacts]]
+source = "/workspace/observed_esm.txt"
+
+[[artifacts]]
+source = "/workspace/observed_cjs.txt"
+
+[[artifacts]]
+source = "/workspace/prebuild_install_log.txt"
+
+[prosecutor]
+mode = "harness_provided"
+delegate = "harness/mars_council.py"
+in_container_stub = "tests/run_prosecutor_judge.py"
+note = "3-judge Claude council runs on host post-container; in-container stub is a no-op marker for G-VER-INVARIANCE"

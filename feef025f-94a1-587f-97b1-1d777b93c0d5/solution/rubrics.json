@@ -1,0 +1,1549 @@
+{
+  "schema": "forge.rubric_bundle/v1",
+  "task_uuid": "feef025f-94a1-587f-97b1-1d777b93c0d5",
+  "task_slug": "fix-go-mod-replace-vendor-desync-v2",
+  "generated_by": "dataset/<uuid>/solution/recompute.py",
+  "source_of_truth": "dataset/<uuid>/solution/grounding.yaml",
+  "bound_by_contract": "seed/contract.yaml#rubric",
+  "compiled_item_weight_share": 0.9397590361445783,
+  "compilation_floor": 0.8,
+  "compilation_floor_note": "per_seed_contract_yaml_rubric_block_and_invariant_24",
+  "item_count": 83,
+  "items": [
+    {
+      "id": "R0001",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path acceptable_fix_paths > [0] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "acceptable_fix_paths",
+        0,
+        "description"
+      ],
+      "grounding_path_display": "acceptable_fix_paths > [0] > description",
+      "expected_literal": "edit /workspace/mylib/go.mod to declare `module example.com/mylib` instead of `module example.com/mylib-WRONG`"
+    },
+    {
+      "id": "R0002",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path acceptable_fix_paths > [0] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "acceptable_fix_paths",
+        0,
+        "id"
+      ],
+      "grounding_path_display": "acceptable_fix_paths > [0] > id",
+      "expected_literal": "path_b_edit_local_target_gomod"
+    },
+    {
+      "id": "R0003",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path acceptable_fix_paths > [0] > preserves_local_replace_target_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "acceptable_fix_paths",
+        0,
+        "preserves_local_replace_target_path"
+      ],
+      "grounding_path_display": "acceptable_fix_paths > [0] > preserves_local_replace_target_path",
+      "expected_literal": true
+    },
+    {
+      "id": "R0004",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path acceptable_fix_paths > [0] > preserves_replace_directive equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "acceptable_fix_paths",
+        0,
+        "preserves_replace_directive"
+      ],
+      "grounding_path_display": "acceptable_fix_paths > [0] > preserves_replace_directive",
+      "expected_literal": true
+    },
+    {
+      "id": "R0005",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path acceptable_fix_paths > [0] > preserves_root_module_declaration equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "acceptable_fix_paths",
+        0,
+        "preserves_root_module_declaration"
+      ],
+      "grounding_path_display": "acceptable_fix_paths > [0] > preserves_root_module_declaration",
+      "expected_literal": true
+    },
+    {
+      "id": "R0006",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path acceptable_fix_paths > [0] > requires_network equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "acceptable_fix_paths",
+        0,
+        "requires_network"
+      ],
+      "grounding_path_display": "acceptable_fix_paths > [0] > requires_network",
+      "expected_literal": false
+    },
+    {
+      "id": "R0007",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path acceptable_fix_paths > [0] > works_in_this_environment equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "acceptable_fix_paths",
+        0,
+        "works_in_this_environment"
+      ],
+      "grounding_path_display": "acceptable_fix_paths > [0] > works_in_this_environment",
+      "expected_literal": true
+    },
+    {
+      "id": "R0008",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path archetype equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "archetype"
+      ],
+      "grounding_path_display": "archetype",
+      "expected_literal": "build-fix"
+    },
+    {
+      "id": "R0009",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > local_gomod_module_line equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "local_gomod_module_line"
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > local_gomod_module_line",
+      "expected_literal": "module example.com/mylib-WRONG"
+    },
+    {
+      "id": "R0010",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > local_gomod_module_line_intentional equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "local_gomod_module_line_intentional"
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > local_gomod_module_line_intentional",
+      "expected_literal": true
+    },
+    {
+      "id": "R0011",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > local_gomod_module_line_is_the_single_broken_line equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "local_gomod_module_line_is_the_single_broken_line"
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > local_gomod_module_line_is_the_single_broken_line",
+      "expected_literal": true
+    },
+    {
+      "id": "R0012",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > root_gomod_module_line equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "root_gomod_module_line"
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > root_gomod_module_line",
+      "expected_literal": "module example.com/myapp"
+    },
+    {
+      "id": "R0013",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > root_gomod_replace_line equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "root_gomod_replace_line"
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > root_gomod_replace_line",
+      "expected_literal": "replace example.com/mylib => ../mylib"
+    },
+    {
+      "id": "R0014",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > root_gomod_require_line equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "root_gomod_require_line"
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > root_gomod_require_line",
+      "expected_literal": "require example.com/mylib v0.0.0-00010101000000-000000000000"
+    },
+    {
+      "id": "R0015",
+      "dimension": "correctness_of_value",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path canonical_fix_path_selected equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "canonical_fix_path_selected"
+      ],
+      "grounding_path_display": "canonical_fix_path_selected",
+      "expected_literal": "path_b_edit_local_target_gomod_module_declaration"
+    },
+    {
+      "id": "R0016",
+      "dimension": "correctness_of_value",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path canonical_fix_path_selection_rationale matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "canonical_fix_path_selection_rationale"
+      ],
+      "grounding_path_display": "canonical_fix_path_selection_rationale",
+      "expected_literal": "The mismatch is between two declarations: the replace directive in\nthe root go.mod (which names the module identity `example.com/mylib`\nthat the root project imports) and the module declaration in the\nlocal target's go.mod (which names `example.com/mylib-WRONG`). The\nroot project's imports and the replace directive are semantically\ncorrect; the broken byte is the `-WRONG` suffix in the local\ntarget's go.mod module line. Editing the local target's go.mod is\nthe minimum-change fix that keeps every design invariant intact.\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0017",
+      "dimension": "correctness_of_value",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [0] > expected_outcome equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        0,
+        "expected_outcome"
+      ],
+      "grounding_path_display": "false_lead_probes > [0] > expected_outcome",
+      "expected_literal": "both commands fail with the same replacement-module diagnostic; no forward progress; vendor tree is not written"
+    },
+    {
+      "id": "R0018",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [0] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        0,
+        "probe"
+      ],
+      "grounding_path_display": "false_lead_probes > [0] > probe",
+      "expected_literal": "run_go_mod_vendor_and_go_mod_tidy_in_myapp"
+    },
+    {
+      "id": "R0019",
+      "dimension": "correctness_of_value",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [1] > expected_outcome equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        1,
+        "expected_outcome"
+      ],
+      "grounding_path_display": "false_lead_probes > [1] > expected_outcome",
+      "expected_literal": "build now tries to fetch example.com/mylib from a proxy; container has no network; command fails with a proxy or dial error; invariant I3 also fails at grade time"
+    },
+    {
+      "id": "R0020",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [1] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        1,
+        "probe"
+      ],
+      "grounding_path_display": "false_lead_probes > [1] > probe",
+      "expected_literal": "delete_the_replace_directive_from_root_go_mod"
+    },
+    {
+      "id": "R0021",
+      "dimension": "correctness_of_value",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [2] > expected_outcome equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        2,
+        "expected_outcome"
+      ],
+      "grounding_path_display": "false_lead_probes > [2] > expected_outcome",
+      "expected_literal": "root module identity drift; invariant I2 fails; even if build passes, grade is zero"
+    },
+    {
+      "id": "R0022",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [2] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        2,
+        "probe"
+      ],
+      "grounding_path_display": "false_lead_probes > [2] > probe",
+      "expected_literal": "rename_root_module_in_root_go_mod_to_example_com_mylib_WRONG"
+    },
+    {
+      "id": "R0023",
+      "dimension": "correctness_of_value",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [3] > expected_outcome equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        3,
+        "expected_outcome"
+      ],
+      "grounding_path_display": "false_lead_probes > [3] > expected_outcome",
+      "expected_literal": "no network to fetch it; invariant I4 fails because /workspace/mylib is no longer the referenced target"
+    },
+    {
+      "id": "R0024",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probes > [3] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probes",
+        3,
+        "probe"
+      ],
+      "grounding_path_display": "false_lead_probes > [3] > probe",
+      "expected_literal": "swap_replace_target_from_dotdot_mylib_to_a_public_module"
+    },
+    {
+      "id": "R0025",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [0] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        0,
+        "description"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [0] > description",
+      "expected_literal": "agent deletes the `replace example.com/mylib => ../mylib` line from root go.mod hoping the build will silently succeed against a resolved module"
+    },
+    {
+      "id": "R0026",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [0] > detection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        0,
+        "detection"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [0] > detection",
+      "expected_literal": "invariant I3 static check on root go.mod parses the replace set and requires the exact directive to remain present"
+    },
+    {
+      "id": "R0027",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [0] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        0,
+        "id"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [0] > id",
+      "expected_literal": "delete_replace_directive_from_root_gomod"
+    },
+    {
+      "id": "R0028",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [1] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        1,
+        "description"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [1] > description",
+      "expected_literal": "agent edits root go.mod `module example.com/myapp` line to match the mismatched local target, or edits it to `example.com/mylib-WRONG` chasing the diagnostic"
+    },
+    {
+      "id": "R0029",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [1] > detection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        1,
+        "detection"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [1] > detection",
+      "expected_literal": "invariant I2 static check on root go.mod requires module declaration to remain `example.com/myapp`"
+    },
+    {
+      "id": "R0030",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [1] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        1,
+        "id"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [1] > id",
+      "expected_literal": "rename_root_module_to_match_local_target"
+    },
+    {
+      "id": "R0031",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [2] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        2,
+        "description"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [2] > description",
+      "expected_literal": "agent replaces `../mylib` with a remote module import path or a different local path, or removes the /workspace/mylib directory entirely"
+    },
+    {
+      "id": "R0032",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [2] > detection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        2,
+        "detection"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [2] > detection",
+      "expected_literal": "invariant I3 requires the replace target string to remain `../mylib`; invariant I4 requires /workspace/mylib/go.mod to remain present"
+    },
+    {
+      "id": "R0033",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [2] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        2,
+        "id"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [2] > id",
+      "expected_literal": "move_replace_target_off_local_dotdot_mylib"
+    },
+    {
+      "id": "R0034",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [3] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        3,
+        "description"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [3] > description",
+      "expected_literal": "agent stubs the test binary or overrides `go test ./...` behavior in an attempt to fake a passing test run"
+    },
+    {
+      "id": "R0035",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [3] > detection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        3,
+        "detection"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [3] > detection",
+      "expected_literal": "cold_start_replay runs `go test -count=1 ./...` with `-count=1` disabling the test result cache; go test still exercises the real test binary compiled from the real source"
+    },
+    {
+      "id": "R0036",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [3] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        3,
+        "id"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [3] > id",
+      "expected_literal": "hardcode_go_test_pass_via_stub"
+    },
+    {
+      "id": "R0037",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [4] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        4,
+        "description"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [4] > description",
+      "expected_literal": "agent compiles the myapp binary out of band and drops it somewhere in $PATH so that later go commands appear to succeed"
+    },
+    {
+      "id": "R0038",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [4] > detection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        4,
+        "detection"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [4] > detection",
+      "expected_literal": "grader runs the go toolchain against the source tree, not against a prebuilt binary; a precompiled artifact does not satisfy `go build ./...` because go re-invokes the compiler on the source"
+    },
+    {
+      "id": "R0039",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [4] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "forbidden_shortcut_patterns",
+        4,
+        "id"
+      ],
+      "grounding_path_display": "forbidden_shortcut_patterns > [4] > id",
+      "expected_literal": "precompile_and_swap_myapp_binary_into_gopath_bin"
+    },
+    {
+      "id": "R0040",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [0] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        0,
+        "description"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [0] > description",
+      "expected_literal": "/workspace/myapp/go.mod exists and parses as a valid go.mod"
+    },
+    {
+      "id": "R0041",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [0] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        0,
+        "id"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [0] > id",
+      "expected_literal": "I1_root_gomod_present"
+    },
+    {
+      "id": "R0042",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [1] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        1,
+        "description"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [1] > description",
+      "expected_literal": "/workspace/myapp/go.mod continues to declare `module example.com/myapp`"
+    },
+    {
+      "id": "R0043",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [1] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        1,
+        "id"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [1] > id",
+      "expected_literal": "I2_root_module_declaration_unchanged"
+    },
+    {
+      "id": "R0044",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [2] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        2,
+        "description"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [2] > description",
+      "expected_literal": "/workspace/myapp/go.mod continues to carry a `replace example.com/mylib => ../mylib` directive in either single-line or block form"
+    },
+    {
+      "id": "R0045",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [2] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        2,
+        "id"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [2] > id",
+      "expected_literal": "I3_replace_directive_still_present"
+    },
+    {
+      "id": "R0046",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [3] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        3,
+        "description"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [3] > description",
+      "expected_literal": "/workspace/mylib is a directory containing a go.mod file"
+    },
+    {
+      "id": "R0047",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [3] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        3,
+        "id"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [3] > id",
+      "expected_literal": "I4_local_replace_target_present"
+    },
+    {
+      "id": "R0048",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [4] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        4,
+        "description"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [4] > description",
+      "expected_literal": "/workspace/mylib/go.mod now declares `module example.com/mylib` matching the replace directive in the root project"
+    },
+    {
+      "id": "R0049",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [4] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        4,
+        "id"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [4] > id",
+      "expected_literal": "I5_local_target_module_declaration_fixed"
+    },
+    {
+      "id": "R0050",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [5] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        5,
+        "description"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [5] > description",
+      "expected_literal": "go mod verify run in /workspace/myapp exits with status 0"
+    },
+    {
+      "id": "R0051",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [5] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        5,
+        "id"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [5] > id",
+      "expected_literal": "D1_go_mod_verify_exits_zero"
+    },
+    {
+      "id": "R0052",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [6] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        6,
+        "description"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [6] > description",
+      "expected_literal": "go build ./... run in /workspace/myapp exits with status 0 with no unresolved imports"
+    },
+    {
+      "id": "R0053",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [6] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        6,
+        "id"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [6] > id",
+      "expected_literal": "D2_go_build_exits_zero"
+    },
+    {
+      "id": "R0054",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [7] > description equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        7,
+        "description"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [7] > description",
+      "expected_literal": "go test -count=1 ./... run in /workspace/myapp exits with status 0 with every test passing"
+    },
+    {
+      "id": "R0055",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [7] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "invariants_the_fix_must_preserve",
+        7,
+        "id"
+      ],
+      "grounding_path_display": "invariants_the_fix_must_preserve > [7] > id",
+      "expected_literal": "D3_go_test_exits_zero"
+    },
+    {
+      "id": "R0056",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path local_target_gomod_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "local_target_gomod_path"
+      ],
+      "grounding_path_display": "local_target_gomod_path",
+      "expected_literal": "/workspace/mylib/go.mod"
+    },
+    {
+      "id": "R0057",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path local_target_lib_go_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "local_target_lib_go_path"
+      ],
+      "grounding_path_display": "local_target_lib_go_path",
+      "expected_literal": "/workspace/mylib/lib.go"
+    },
+    {
+      "id": "R0058",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path local_target_module_path_broken equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "local_target_module_path_broken"
+      ],
+      "grounding_path_display": "local_target_module_path_broken",
+      "expected_literal": "example.com/mylib-WRONG"
+    },
+    {
+      "id": "R0059",
+      "dimension": "correctness_of_value",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path local_target_module_path_fixed equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "local_target_module_path_fixed"
+      ],
+      "grounding_path_display": "local_target_module_path_fixed",
+      "expected_literal": "example.com/mylib"
+    },
+    {
+      "id": "R0060",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path local_target_source_root equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "local_target_source_root"
+      ],
+      "grounding_path_display": "local_target_source_root",
+      "expected_literal": "/workspace/mylib"
+    },
+    {
+      "id": "R0061",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path misleading_first_read matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "misleading_first_read"
+      ],
+      "grounding_path_display": "misleading_first_read",
+      "expected_literal": "The error mentions the string `example.com/mylib` in the root project\n(which is the file the agent will open first because the reflex says\n\"the go.mod that fails to build must be the one to edit\"). Root\ngo.mod already spells the module path correctly. The mismatched\ndeclaration lives at /workspace/mylib/go.mod, which is not on the\ncompile path of the failing top-level command.\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0062",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path observed_error_shape_summary matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "observed_error_shape_summary"
+      ],
+      "grounding_path_display": "observed_error_shape_summary",
+      "expected_literal": "When the container build ran `go mod verify`, `go build ./...`, and\n`go test ./...` from /workspace/myapp, all three commands emitted the\nsame underlying diagnostic:\n  go: example.com/myapp imports example.com/mylib: replacement module\n  directive example.com/mylib => ../mylib: pointed at module\n  example.com/mylib-WRONG (want example.com/mylib)\nSome Go versions also print an alternate form:\n  module declaration mismatch: got example.com/mylib-WRONG, want\n  example.com/mylib\nBoth forms name the same defect: the module declared at\n/workspace/mylib/go.mod does not match the replaced import path in\n/workspace/myapp/go.mod.\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0063",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [0] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        0,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [0] > rejection",
+      "expected_literal": "both commands fail with the same declaration-mismatch diagnostic; vendor tree is never written; agent burns wall clock but bytes on disk do not change"
+    },
+    {
+      "id": "R0064",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [0] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        0,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [0] > route",
+      "expected_literal": "run go mod vendor + go mod tidy repeatedly"
+    },
+    {
+      "id": "R0065",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [1] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        1,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [1] > rejection",
+      "expected_literal": "invariant I2 requires root module identity to remain `example.com/myapp`; the grader static-parses the root go.mod"
+    },
+    {
+      "id": "R0066",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [1] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        1,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [1] > route",
+      "expected_literal": "rename root module declaration to `example.com/mylib-WRONG` or to `example.com/mylib`"
+    },
+    {
+      "id": "R0067",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [2] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        2,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [2] > rejection",
+      "expected_literal": "no network egress; the fetch fails; even if it succeeded, invariant I3 fails"
+    },
+    {
+      "id": "R0068",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [2] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        2,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [2] > route",
+      "expected_literal": "delete the replace directive so the build falls through to a proxy fetch"
+    },
+    {
+      "id": "R0069",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [3] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        3,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [3] > rejection",
+      "expected_literal": "GOPROXY is set to `off` in the environment; the container has no network access"
+    },
+    {
+      "id": "R0070",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [3] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        3,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [3] > route",
+      "expected_literal": "install the missing module through GOPROXY"
+    },
+    {
+      "id": "R0071",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [4] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        4,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [4] > rejection",
+      "expected_literal": "the grader runs the go toolchain end-to-end from source; a precompiled binary does not satisfy `go build ./...`"
+    },
+    {
+      "id": "R0072",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [4] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        4,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [4] > route",
+      "expected_literal": "precompile the myapp binary out of band and drop it in PATH"
+    },
+    {
+      "id": "R0073",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path primary_lever equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "primary_lever"
+      ],
+      "grounding_path_display": "primary_lever",
+      "expected_literal": "long-horizon-agentic-coherence"
+    },
+    {
+      "id": "R0074",
+      "dimension": "correctness_of_value",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path reference_solution_path_b_summary matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "reference_solution_path_b_summary"
+      ],
+      "grounding_path_display": "reference_solution_path_b_summary",
+      "expected_literal": "Edit /workspace/mylib/go.mod so its module declaration reads\n`module example.com/mylib` instead of `module example.com/mylib-WRONG`.\nEvery other file stays exactly as authored. The `go` toolchain\nre-reads the local target's go.mod on the next command, and because\nthe declared module now matches the replace directive in the root\nproject, the build resolves, the tests link, and all three graded\ncommands exit 0.\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0075",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path replace_target_relative_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "replace_target_relative_path"
+      ],
+      "grounding_path_display": "replace_target_relative_path",
+      "expected_literal": "../mylib"
+    },
+    {
+      "id": "R0076",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path replaced_module_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "replaced_module_path"
+      ],
+      "grounding_path_display": "replaced_module_path",
+      "expected_literal": "example.com/mylib"
+    },
+    {
+      "id": "R0077",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path root_module_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "root_module_path"
+      ],
+      "grounding_path_display": "root_module_path",
+      "expected_literal": "example.com/myapp"
+    },
+    {
+      "id": "R0078",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path root_project_gomod_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "root_project_gomod_path"
+      ],
+      "grounding_path_display": "root_project_gomod_path",
+      "expected_literal": "/workspace/myapp/go.mod"
+    },
+    {
+      "id": "R0079",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path root_project_main_go_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "root_project_main_go_path"
+      ],
+      "grounding_path_display": "root_project_main_go_path",
+      "expected_literal": "/workspace/myapp/main.go"
+    },
+    {
+      "id": "R0080",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path root_project_source_root equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "root_project_source_root"
+      ],
+      "grounding_path_display": "root_project_source_root",
+      "expected_literal": "/workspace/myapp"
+    },
+    {
+      "id": "R0081",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path root_project_test_go_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "root_project_test_go_path"
+      ],
+      "grounding_path_display": "root_project_test_go_path",
+      "expected_literal": "/workspace/myapp/main_test.go"
+    },
+    {
+      "id": "R0082",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path visible_probe_input_path_in_container equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "visible_probe_input_path_in_container"
+      ],
+      "grounding_path_display": "visible_probe_input_path_in_container",
+      "expected_literal": "/workspace/observed_error.txt"
+    },
+    {
+      "id": "R0083",
+      "dimension": "correctness_of_effect",
+      "weight": 0.012048192771084338,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path visible_probe_output_notes > cold_start_behavior_description matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "visible_probe_output_notes",
+        "cold_start_behavior_description"
+      ],
+      "grounding_path_display": "visible_probe_output_notes > cold_start_behavior_description",
+      "expected_literal": "The verifier clears the go build cache (`go clean -cache -testcache`) then re-runs all three commands from /workspace/myapp. Any fix that survives cold-start replay must have moved bytes on disk in a way that the go toolchain picks up from a cold cache.",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    }
+  ]
+}

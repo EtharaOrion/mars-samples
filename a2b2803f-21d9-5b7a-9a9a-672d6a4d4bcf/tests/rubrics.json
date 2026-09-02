@@ -1,0 +1,3668 @@
+{
+  "schema": "mars.rubric_set/v2_council_only",
+  "bundle_id": "a2b2803f-21d9-5b7a-9a9a-672d6a4d4bcf",
+  "floor": 30,
+  "note": "regenerated from solution/rubrics.json by harness/mars_rubric_id_reconciler.py to close G-RUB-COMPLETENESS.unreconciled_rubric_id; 1:1 id mapping preserves the recompute.py chain",
+  "rubrics": [
+    {
+      "id": "R0001",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [0] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "system_call",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [0] > name does not match the reference at grounding path bound_shortcut_pattern_set > [0] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0002",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [0] > rationale equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "system_shell_escape_could_read_expected_csv_or_holdout_bytes_at_run_time",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [0] > rationale does not match the reference at grounding path bound_shortcut_pattern_set > [0] > rationale"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0003",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [0] > regex equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "\\bsystem\\s*\\(",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [0] > regex does not match the reference at grounding path bound_shortcut_pattern_set > [0] > regex"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0004",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [1] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "input_builtin",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [1] > name does not match the reference at grounding path bound_shortcut_pattern_set > [1] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0005",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [1] > rationale equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "input_builtin_reads_next_json_value_from_a_second_file_potentially_reaching_holdout_or_expected",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [1] > rationale does not match the reference at grounding path bound_shortcut_pattern_set > [1] > rationale"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0006",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [1] > regex equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "\\binput\\s*(?![a-zA-Z_])",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [1] > regex does not match the reference at grounding path bound_shortcut_pattern_set > [1] > regex"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0007",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [2] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "inputs_builtin",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [2] > name does not match the reference at grounding path bound_shortcut_pattern_set > [2] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0008",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [2] > rationale equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "inputs_builtin_streams_remaining_json_values_from_a_second_file",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [2] > rationale does not match the reference at grounding path bound_shortcut_pattern_set > [2] > rationale"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0009",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [2] > regex equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "\\binputs\\s*(?![a-zA-Z_])",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [2] > regex does not match the reference at grounding path bound_shortcut_pattern_set > [2] > regex"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0010",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [3] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "env_lookup",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [3] > name does not match the reference at grounding path bound_shortcut_pattern_set > [3] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0011",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [3] > rationale equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "env_dot_lookup_could_read_a_verifier_env_variable_carrying_expected_bytes",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [3] > rationale does not match the reference at grounding path bound_shortcut_pattern_set > [3] > rationale"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0012",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [3] > regex equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "\\benv\\.",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [3] > regex does not match the reference at grounding path bound_shortcut_pattern_set > [3] > regex"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0013",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [4] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "dollar_ENV",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [4] > name does not match the reference at grounding path bound_shortcut_pattern_set > [4] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0014",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [4] > rationale equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "dollar_ENV_lookup_same_class_as_env_dot_lookup",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [4] > rationale does not match the reference at grounding path bound_shortcut_pattern_set > [4] > rationale"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0015",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [4] > regex equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "\\$ENV\\b",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [4] > regex does not match the reference at grounding path bound_shortcut_pattern_set > [4] > regex"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0016",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [5] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "dollar_loc",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [5] > name does not match the reference at grounding path bound_shortcut_pattern_set > [5] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0017",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [5] > rationale equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "dollar_loc_leaks_program_location_metadata_and_can_be_abused_to_infer_file_layout",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [5] > rationale does not match the reference at grounding path bound_shortcut_pattern_set > [5] > rationale"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0018",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [5] > regex equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "\\$__loc__\\b",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [5] > regex does not match the reference at grounding path bound_shortcut_pattern_set > [5] > regex"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0019",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [6] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "include_directive",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [6] > name does not match the reference at grounding path bound_shortcut_pattern_set > [6] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0020",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [6] > rationale equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "include_directive_pulls_external_jq_module_defeating_bundle_hermeticity",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [6] > rationale does not match the reference at grounding path bound_shortcut_pattern_set > [6] > rationale"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0021",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [6] > regex equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "include\\s+\"",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [6] > regex does not match the reference at grounding path bound_shortcut_pattern_set > [6] > regex"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0022",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [7] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "import_directive",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [7] > name does not match the reference at grounding path bound_shortcut_pattern_set > [7] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0023",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [7] > rationale equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "import_directive_same_class_as_include",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [7] > rationale does not match the reference at grounding path bound_shortcut_pattern_set > [7] > rationale"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0024",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [7] > regex equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "import\\s+\"",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [7] > regex does not match the reference at grounding path bound_shortcut_pattern_set > [7] > regex"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0025",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [8] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "shebang",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [8] > name does not match the reference at grounding path bound_shortcut_pattern_set > [8] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0026",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [8] > rationale equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "shebang_first_line_indicates_program_is_meant_to_shell_out_rather_than_be_a_pure_jq_program",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [8] > rationale does not match the reference at grounding path bound_shortcut_pattern_set > [8] > rationale"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0027",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [8] > regex equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "^#!\\s*/",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [8] > regex does not match the reference at grounding path bound_shortcut_pattern_set > [8] > regex"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0028",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [9] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "naive_text_join_without_at_csv",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [9] > name does not match the reference at grounding path bound_shortcut_pattern_set > [9] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0029",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [9] > rationale equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "literal_string_interpolation_of_the_form_backslash_openparen_dot_field_closeparen_comma_indicates_the_agent_is_concatenating_csv_bytes_by_hand_and_will_fail_on_any_tag_carrying_embedded_comma_double_quote_or_newline",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [9] > rationale does not match the reference at grounding path bound_shortcut_pattern_set > [9] > rationale"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0030",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [9] > regex equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "\"\\\\\\(\\.\\w+\\)[,;]",
+        "anchor_0_0": "the observed value at bound_shortcut_pattern_set > [9] > regex does not match the reference at grounding path bound_shortcut_pattern_set > [9] > regex"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0031",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path canonical_fix_route matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "Author /workspace/solve.jq containing exactly one jq program:\n  [\"id\",\"name\",\"tags\"], (.[] | [.id, .name, (.tags | join(\";\"))]) | @csv\nThe header row is emitted via a literal string array. Each input\nrecord is projected to three columns where the tags array is\njoined by ';' inside a single field and the whole row is passed\nthrough @csv. @csv wraps every string in double quotes and\ndoubles any embedded double-quote octet, so embedded \",\", '\"',\n';', and newline bytes in tag payloads survive the ro...[truncated]",
+        "anchor_0_0": "the observed value at canonical_fix_route does not match the reference at grounding path canonical_fix_route"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0032",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_ABSENCE_no_shortcut_pattern equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "python_re_search_multiline_word_boundary_scan_over_solve_jq_bytes_matches_no_entry_in_bound_shortcut_pattern_set",
+        "anchor_0_0": "the observed value at checker_semantics > C_ABSENCE_no_shortcut_pattern does not match the reference at grounding path checker_semantics > C_ABSENCE_no_shortcut_pattern"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0033",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_INVARIANT_jq_as_transform_binary equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "grader_invokes_jq_dash_r_dash_f_solve_jq_input_json_directly_agent_output_is_stdout_of_that_invocation_not_any_file_the_agent_wrote_by_a_side_channel",
+        "anchor_0_0": "the observed value at checker_semantics > C_INVARIANT_jq_as_transform_binary does not match the reference at grounding path checker_semantics > C_INVARIANT_jq_as_transform_binary"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0034",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_VALUE_holdout equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "python_stdlib_csv_reader_default_excel_dialect_row_list_equality_between_agent_stdout_on_holdout_input_and_pinned_holdout_expected",
+        "anchor_0_0": "the observed value at checker_semantics > C_VALUE_holdout does not match the reference at grounding path checker_semantics > C_VALUE_holdout"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0035",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_VALUE_public equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "python_stdlib_csv_reader_default_excel_dialect_row_list_equality_between_agent_stdout_and_pinned_expected",
+        "anchor_0_0": "the observed value at checker_semantics > C_VALUE_public does not match the reference at grounding path checker_semantics > C_VALUE_public"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0036",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path csv_dialect_options > delimiter equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": ",",
+        "anchor_0_0": "the observed value at csv_dialect_options > delimiter does not match the reference at grounding path csv_dialect_options > delimiter"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0037",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path csv_dialect_options > doublequote equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at csv_dialect_options > doublequote does not match the reference at grounding path csv_dialect_options > doublequote"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0038",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path csv_dialect_options > escapechar equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "The agent MUST produce a workspace state whose value at grounding path csv_dialect_options > escapechar equals the frozen literal",
+        "anchor_0_0": "the observed value at csv_dialect_options > escapechar does not match the reference at grounding path csv_dialect_options > escapechar"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0039",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path csv_dialect_options > intra_tag_join_character equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": ";",
+        "anchor_0_0": "the observed value at csv_dialect_options > intra_tag_join_character does not match the reference at grounding path csv_dialect_options > intra_tag_join_character"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0040",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path csv_dialect_options > lineterminator equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "LF",
+        "anchor_0_0": "the observed value at csv_dialect_options > lineterminator does not match the reference at grounding path csv_dialect_options > lineterminator"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0041",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path csv_dialect_options > quotechar equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "\"",
+        "anchor_0_0": "the observed value at csv_dialect_options > quotechar does not match the reference at grounding path csv_dialect_options > quotechar"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0042",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path csv_dialect_options > quoting equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "QUOTE_NONNUMERIC",
+        "anchor_0_0": "the observed value at csv_dialect_options > quoting does not match the reference at grounding path csv_dialect_options > quoting"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0043",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D1_presence > predicate equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "file_exists_and_nonempty",
+        "anchor_0_0": "the observed value at deliverable_manifest > D1_presence > predicate does not match the reference at grounding path deliverable_manifest > D1_presence > predicate"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0044",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D1_presence > target equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/solve.jq",
+        "anchor_0_0": "the observed value at deliverable_manifest > D1_presence > target does not match the reference at grounding path deliverable_manifest > D1_presence > target"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0045",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D2_invariant_jq_runs_clean_on_public_input > argv > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "jq",
+        "anchor_0_0": "the observed value at deliverable_manifest > D2_invariant_jq_runs_clean_on_public_input > argv > [0] does not match the reference at grounding path deliverable_manifest > D2_invariant_jq_runs_clean_on_public_input > argv > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0046",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D2_invariant_jq_runs_clean_on_public_input > argv > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "-r",
+        "anchor_0_0": "the observed value at deliverable_manifest > D2_invariant_jq_runs_clean_on_public_input > argv > [1] does not match the reference at grounding path deliverable_manifest > D2_invariant_jq_runs_clean_on_public_input > argv > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0047",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D2_invariant_jq_runs_clean_on_public_input > argv > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "-f",
+        "anchor_0_0": "the observed value at deliverable_manifest > D2_invariant_jq_runs_clean_on_public_input > argv > [2] does not match the reference at grounding path deliverable_manifest > D2_invariant_jq_runs_clean_on_public_input > argv > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0048",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D2_invariant_jq_runs_clean_on_public_input > argv > [3] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/solve.jq",
+        "anchor_0_0": "the observed value at deliverable_manifest > D2_invariant_jq_runs_clean_on_public_input > argv > [3] does not match the reference at grounding path deliverable_manifest > D2_invariant_jq_runs_clean_on_public_input > argv > [3]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0049",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D2_invariant_jq_runs_clean_on_public_input > argv > [4] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/tags.json",
+        "anchor_0_0": "the observed value at deliverable_manifest > D2_invariant_jq_runs_clean_on_public_input > argv > [4] does not match the reference at grounding path deliverable_manifest > D2_invariant_jq_runs_clean_on_public_input > argv > [4]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0050",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D2_invariant_jq_runs_clean_on_public_input > predicate equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "jq_exit_zero_and_stdout_nonempty",
+        "anchor_0_0": "the observed value at deliverable_manifest > D2_invariant_jq_runs_clean_on_public_input > predicate does not match the reference at grounding path deliverable_manifest > D2_invariant_jq_runs_clean_on_public_input > predicate"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0051",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_value_public_row_list > got equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "parse_csv(stdout_of_D2)",
+        "anchor_0_0": "the observed value at deliverable_manifest > D3_value_public_row_list > got does not match the reference at grounding path deliverable_manifest > D3_value_public_row_list > got"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0052",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_value_public_row_list > pinned_expected_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/tests/expected_output.csv",
+        "anchor_0_0": "the observed value at deliverable_manifest > D3_value_public_row_list > pinned_expected_path does not match the reference at grounding path deliverable_manifest > D3_value_public_row_list > pinned_expected_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0053",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_value_public_row_list > predicate equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "csv_reader_row_list_equality",
+        "anchor_0_0": "the observed value at deliverable_manifest > D3_value_public_row_list > predicate does not match the reference at grounding path deliverable_manifest > D3_value_public_row_list > predicate"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0054",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_value_public_row_list > want equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "parse_csv_of_pinned_expected_public",
+        "anchor_0_0": "the observed value at deliverable_manifest > D3_value_public_row_list > want does not match the reference at grounding path deliverable_manifest > D3_value_public_row_list > want"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0055",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_value_holdout_row_list > got equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "parse_csv(stdout_of_jq_on_holdout_input)",
+        "anchor_0_0": "the observed value at deliverable_manifest > D4_value_holdout_row_list > got does not match the reference at grounding path deliverable_manifest > D4_value_holdout_row_list > got"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0056",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_value_holdout_row_list > pinned_expected_holdout_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/tests/holdout_expected.csv",
+        "anchor_0_0": "the observed value at deliverable_manifest > D4_value_holdout_row_list > pinned_expected_holdout_path does not match the reference at grounding path deliverable_manifest > D4_value_holdout_row_list > pinned_expected_holdout_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0057",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_value_holdout_row_list > pinned_holdout_input_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/tests/holdout_tags.json",
+        "anchor_0_0": "the observed value at deliverable_manifest > D4_value_holdout_row_list > pinned_holdout_input_path does not match the reference at grounding path deliverable_manifest > D4_value_holdout_row_list > pinned_holdout_input_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0058",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_value_holdout_row_list > predicate equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "csv_reader_row_list_equality",
+        "anchor_0_0": "the observed value at deliverable_manifest > D4_value_holdout_row_list > predicate does not match the reference at grounding path deliverable_manifest > D4_value_holdout_row_list > predicate"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0059",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_value_holdout_row_list > want equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "parse_csv_of_pinned_expected_holdout",
+        "anchor_0_0": "the observed value at deliverable_manifest > D4_value_holdout_row_list > want does not match the reference at grounding path deliverable_manifest > D4_value_holdout_row_list > want"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0060",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D5_absence_no_bound_shortcut_pattern_in_solve_jq > pattern_set_source equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "bound_shortcut_pattern_set",
+        "anchor_0_0": "the observed value at deliverable_manifest > D5_absence_no_bound_shortcut_pattern_in_solve_jq > pattern_set_source does not match the reference at grounding path deliverable_manifest > D5_absence_no_bound_shortcut_pattern_in_solve_jq > pattern_set_source"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0061",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D5_absence_no_bound_shortcut_pattern_in_solve_jq > predicate equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "regex_scan_of_solve_jq_bytes_matches_no_bound_shortcut_pattern",
+        "anchor_0_0": "the observed value at deliverable_manifest > D5_absence_no_bound_shortcut_pattern_in_solve_jq > predicate does not match the reference at grounding path deliverable_manifest > D5_absence_no_bound_shortcut_pattern_in_solve_jq > predicate"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0062",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > jq_on_holdout_input_returncode equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > jq_on_holdout_input_returncode equals the frozen literal",
+        "anchor_0_0": "the observed value at expected_after_fix > jq_on_holdout_input_returncode does not match the reference at grounding path expected_after_fix > jq_on_holdout_input_returncode"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0063",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > jq_on_holdout_input_row_parsed_csv_equals_holdout_expected equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at expected_after_fix > jq_on_holdout_input_row_parsed_csv_equals_holdout_expected does not match the reference at grounding path expected_after_fix > jq_on_holdout_input_row_parsed_csv_equals_holdout_expected"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0064",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > jq_on_public_input_returncode equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "command_exit_code",
+        "anchor_1_0": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > jq_on_public_input_returncode equals the frozen literal",
+        "anchor_0_0": "the observed value at expected_after_fix > jq_on_public_input_returncode does not match the reference at grounding path expected_after_fix > jq_on_public_input_returncode"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0065",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > jq_on_public_input_row_parsed_csv_equals_public_expected equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at expected_after_fix > jq_on_public_input_row_parsed_csv_equals_public_expected does not match the reference at grounding path expected_after_fix > jq_on_public_input_row_parsed_csv_equals_public_expected"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0066",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > workspace_expected_csv_bytes_unchanged equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at expected_after_fix > workspace_expected_csv_bytes_unchanged does not match the reference at grounding path expected_after_fix > workspace_expected_csv_bytes_unchanged"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0067",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > workspace_solve_jq_present equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at expected_after_fix > workspace_solve_jq_present does not match the reference at grounding path expected_after_fix > workspace_solve_jq_present"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0068",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > workspace_tags_json_bytes_unchanged equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at expected_after_fix > workspace_tags_json_bytes_unchanged does not match the reference at grounding path expected_after_fix > workspace_tags_json_bytes_unchanged"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0069",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_csv_header > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "id",
+        "anchor_0_0": "the observed value at expected_csv_header > [0] does not match the reference at grounding path expected_csv_header > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0070",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_csv_header > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "name",
+        "anchor_0_0": "the observed value at expected_csv_header > [1] does not match the reference at grounding path expected_csv_header > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0071",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_csv_header > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "tags",
+        "anchor_0_0": "the observed value at expected_csv_header > [2] does not match the reference at grounding path expected_csv_header > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0072",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path failure_route_hardcode_expected matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "Reading /workspace/expected.csv and emitting its bytes directly\nfrom a jq raw-string constant passes the public check but fails\nthe holdout check under D4, because the holdout input carries\ndifferent ids, names, and tag payloads.\n",
+        "anchor_0_0": "the observed value at failure_route_hardcode_expected does not match the reference at grounding path failure_route_hardcode_expected"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0073",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path failure_route_naive_cartesian matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "Another common wrong move is\n  .[] | [.id, .name, .tags[]] | @csv\nwhich explodes each record into one csv row per tag, breaking\nthe one-record-per-row invariant. The row count mismatch alone\nfails D3, even before the tags-column-shape check runs.\n",
+        "anchor_0_0": "the observed value at failure_route_naive_cartesian does not match the reference at grounding path failure_route_naive_cartesian"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0074",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path failure_route_naive_text_interpolation matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "The classic wrong move is to write\n  .[] | \"\\(.id),\\(.name),\\(.tags | join(\";\"))\"\nwhich concatenates csv bytes by hand. Any tag carrying an\nembedded comma splits the row into extra columns, any tag\ncarrying an embedded double-quote octet breaks csv quoting,\nand any tag carrying an embedded newline splits the row across\nphysical lines. csv.reader then either raises or produces a\nrow list that does not equal the expected list, and the D3\nverifier check fires.\n",
+        "anchor_0_0": "the observed value at failure_route_naive_text_interpolation does not match the reference at grounding path failure_route_naive_text_interpolation"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0075",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path grading_mode equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "csv_reader_row_list_equality_over_public_input_and_over_private_holdout_input",
+        "anchor_0_0": "the observed value at grading_mode does not match the reference at grounding path grading_mode"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0076",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [0] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "101",
+        "anchor_0_0": "the observed value at holdout_input_records > [0] > id does not match the reference at grounding path holdout_input_records > [0] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0077",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [0] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "hold-eve",
+        "anchor_0_0": "the observed value at holdout_input_records > [0] > name does not match the reference at grounding path holdout_input_records > [0] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0078",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [0] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "auditor",
+        "anchor_0_0": "the observed value at holdout_input_records > [0] > tags > [0] does not match the reference at grounding path holdout_input_records > [0] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0079",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [1] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "102",
+        "anchor_0_0": "the observed value at holdout_input_records > [1] > id does not match the reference at grounding path holdout_input_records > [1] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0080",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [1] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "hold-frank",
+        "anchor_0_0": "the observed value at holdout_input_records > [1] > name does not match the reference at grounding path holdout_input_records > [1] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0081",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [1] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "contractor;read-only",
+        "anchor_0_0": "the observed value at holdout_input_records > [1] > tags > [0] does not match the reference at grounding path holdout_input_records > [1] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0082",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [1] > tags > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "role,ops",
+        "anchor_0_0": "the observed value at holdout_input_records > [1] > tags > [1] does not match the reference at grounding path holdout_input_records > [1] > tags > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0083",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [2] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "103",
+        "anchor_0_0": "the observed value at holdout_input_records > [2] > id does not match the reference at grounding path holdout_input_records > [2] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0084",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [2] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "hold-grace",
+        "anchor_0_0": "the observed value at holdout_input_records > [2] > name does not match the reference at grounding path holdout_input_records > [2] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0085",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [3] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "104",
+        "anchor_0_0": "the observed value at holdout_input_records > [3] > id does not match the reference at grounding path holdout_input_records > [3] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0086",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [3] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "hold-heidi",
+        "anchor_0_0": "the observed value at holdout_input_records > [3] > name does not match the reference at grounding path holdout_input_records > [3] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0087",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [3] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "admin",
+        "anchor_0_0": "the observed value at holdout_input_records > [3] > tags > [0] does not match the reference at grounding path holdout_input_records > [3] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0088",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [3] > tags > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "beta",
+        "anchor_0_0": "the observed value at holdout_input_records > [3] > tags > [1] does not match the reference at grounding path holdout_input_records > [3] > tags > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0089",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [3] > tags > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "gamma",
+        "anchor_0_0": "the observed value at holdout_input_records > [3] > tags > [2] does not match the reference at grounding path holdout_input_records > [3] > tags > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0090",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [3] > tags > [3] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "delta",
+        "anchor_0_0": "the observed value at holdout_input_records > [3] > tags > [3] does not match the reference at grounding path holdout_input_records > [3] > tags > [3]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0091",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [4] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "105",
+        "anchor_0_0": "the observed value at holdout_input_records > [4] > id does not match the reference at grounding path holdout_input_records > [4] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0092",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [4] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "hold-ivan",
+        "anchor_0_0": "the observed value at holdout_input_records > [4] > name does not match the reference at grounding path holdout_input_records > [4] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0093",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [4] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "msg=\"reviewer\"",
+        "anchor_0_0": "the observed value at holdout_input_records > [4] > tags > [0] does not match the reference at grounding path holdout_input_records > [4] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0094",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [4] > tags > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "external",
+        "anchor_0_0": "the observed value at holdout_input_records > [4] > tags > [1] does not match the reference at grounding path holdout_input_records > [4] > tags > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0095",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [5] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "106",
+        "anchor_0_0": "the observed value at holdout_input_records > [5] > id does not match the reference at grounding path holdout_input_records > [5] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0096",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [5] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "hold-judy",
+        "anchor_0_0": "the observed value at holdout_input_records > [5] > name does not match the reference at grounding path holdout_input_records > [5] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0097",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [5] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "policy=\"strict\";scope=\"all\"",
+        "anchor_0_0": "the observed value at holdout_input_records > [5] > tags > [0] does not match the reference at grounding path holdout_input_records > [5] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0098",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [6] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "107",
+        "anchor_0_0": "the observed value at holdout_input_records > [6] > id does not match the reference at grounding path holdout_input_records > [6] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0099",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [6] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "hold-kevin",
+        "anchor_0_0": "the observed value at holdout_input_records > [6] > name does not match the reference at grounding path holdout_input_records > [6] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0100",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [6] > tags > [0] matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "line1\nline2",
+        "anchor_0_0": "the observed value at holdout_input_records > [6] > tags > [0] does not match the reference at grounding path holdout_input_records > [6] > tags > [0]"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0101",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [6] > tags > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "part1,part2",
+        "anchor_0_0": "the observed value at holdout_input_records > [6] > tags > [1] does not match the reference at grounding path holdout_input_records > [6] > tags > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0102",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [7] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "108",
+        "anchor_0_0": "the observed value at holdout_input_records > [7] > id does not match the reference at grounding path holdout_input_records > [7] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0103",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [7] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "hold-laura",
+        "anchor_0_0": "the observed value at holdout_input_records > [7] > name does not match the reference at grounding path holdout_input_records > [7] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0104",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [7] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": ";prefix",
+        "anchor_0_0": "the observed value at holdout_input_records > [7] > tags > [0] does not match the reference at grounding path holdout_input_records > [7] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0105",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [7] > tags > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "suffix;",
+        "anchor_0_0": "the observed value at holdout_input_records > [7] > tags > [1] does not match the reference at grounding path holdout_input_records > [7] > tags > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0106",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_records > [7] > tags > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "e\"q\"e",
+        "anchor_0_0": "the observed value at holdout_input_records > [7] > tags > [2] does not match the reference at grounding path holdout_input_records > [7] > tags > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0107",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state > workspace_expected_csv_present_agent_visible_ground_truth equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_state > workspace_expected_csv_present_agent_visible_ground_truth does not match the reference at grounding path initial_state > workspace_expected_csv_present_agent_visible_ground_truth"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0108",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state > workspace_observed_naive_attempt_txt_present equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_state > workspace_observed_naive_attempt_txt_present does not match the reference at grounding path initial_state > workspace_observed_naive_attempt_txt_present"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0109",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state > workspace_solve_jq_absent equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_state > workspace_solve_jq_absent does not match the reference at grounding path initial_state > workspace_solve_jq_absent"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0110",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state > workspace_tags_json_present equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at initial_state > workspace_tags_json_present does not match the reference at grounding path initial_state > workspace_tags_json_present"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0111",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path leak_gate > containment_threshold equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "0.15",
+        "anchor_0_0": "the observed value at leak_gate > containment_threshold does not match the reference at grounding path leak_gate > containment_threshold"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0112",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path leak_gate > ngram_width equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "8",
+        "anchor_0_0": "the observed value at leak_gate > ngram_width does not match the reference at grounding path leak_gate > ngram_width"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0113",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path leak_gate > paraphrase_containment_carriers > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "solution/TRUTH.md",
+        "anchor_0_0": "the observed value at leak_gate > paraphrase_containment_carriers > [0] does not match the reference at grounding path leak_gate > paraphrase_containment_carriers > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0114",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path leak_gate > paraphrase_containment_carriers > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "solution/grounding.yaml",
+        "anchor_0_0": "the observed value at leak_gate > paraphrase_containment_carriers > [1] does not match the reference at grounding path leak_gate > paraphrase_containment_carriers > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0115",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [0] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D3_public_csv_row_list_mismatch_at_first_tag_carrying_embedded_comma_or_newline_or_double_quote",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [0] > rejection does not match the reference at grounding path plausible_wrong_routes > [0] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0116",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [0] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "text_interpolation_without_at_csv",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [0] > route does not match the reference at grounding path plausible_wrong_routes > [0] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0117",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [1] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D3_public_csv_row_count_mismatch",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [1] > rejection does not match the reference at grounding path plausible_wrong_routes > [1] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0118",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [1] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "cartesian_expansion_via_dot_tags_openbracket_closebracket",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [1] > route does not match the reference at grounding path plausible_wrong_routes > [1] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0119",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [2] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D4_holdout_csv_row_list_mismatch",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [2] > rejection does not match the reference at grounding path plausible_wrong_routes > [2] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0120",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [2] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "hardcode_public_expected_bytes_via_jq_raw_string",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [2] > route does not match the reference at grounding path plausible_wrong_routes > [2] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0121",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [3] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D5_bound_shortcut_pattern_system_call_matched",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [3] > rejection does not match the reference at grounding path plausible_wrong_routes > [3] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0122",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [3] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "use_system_open_paren_cat_expected_close_paren",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [3] > route does not match the reference at grounding path plausible_wrong_routes > [3] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0123",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [4] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D5_bound_shortcut_pattern_input_or_inputs_matched",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [4] > rejection does not match the reference at grounding path plausible_wrong_routes > [4] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0124",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [4] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "use_input_or_inputs_to_slurp_a_second_file",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [4] > route does not match the reference at grounding path plausible_wrong_routes > [4] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0125",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [5] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D5_bound_shortcut_pattern_include_or_import_matched",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [5] > rejection does not match the reference at grounding path plausible_wrong_routes > [5] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0126",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [5] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "include_or_import_an_external_jq_module",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [5] > route does not match the reference at grounding path plausible_wrong_routes > [5] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0127",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [6] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D5_bound_shortcut_pattern_shebang_matched",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [6] > rejection does not match the reference at grounding path plausible_wrong_routes > [6] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0128",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [6] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "begin_solve_jq_with_a_shebang_line_and_defer_to_a_shell",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [6] > route does not match the reference at grounding path plausible_wrong_routes > [6] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0129",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [7] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D5_bound_shortcut_pattern_env_lookup_or_dollar_ENV_matched",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [7] > rejection does not match the reference at grounding path plausible_wrong_routes > [7] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0130",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [7] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "read_env_variables_via_env_dot_or_dollar_ENV",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [7] > route does not match the reference at grounding path plausible_wrong_routes > [7] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0131",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [8] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "D1_solve_jq_absent_or_empty_or_D2_no_output",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [8] > rejection does not match the reference at grounding path plausible_wrong_routes > [8] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0132",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [8] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "create_empty_solve_jq_file",
+        "anchor_0_0": "the observed value at plausible_wrong_routes > [8] > route does not match the reference at grounding path plausible_wrong_routes > [8] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0133",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [0] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "1",
+        "anchor_0_0": "the observed value at public_input_records > [0] > id does not match the reference at grounding path public_input_records > [0] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0134",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [0] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "alpha-user",
+        "anchor_0_0": "the observed value at public_input_records > [0] > name does not match the reference at grounding path public_input_records > [0] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0135",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [0] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "admin",
+        "anchor_0_0": "the observed value at public_input_records > [0] > tags > [0] does not match the reference at grounding path public_input_records > [0] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0136",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [0] > tags > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "beta",
+        "anchor_0_0": "the observed value at public_input_records > [0] > tags > [1] does not match the reference at grounding path public_input_records > [0] > tags > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0137",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [1] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "2",
+        "anchor_0_0": "the observed value at public_input_records > [1] > id does not match the reference at grounding path public_input_records > [1] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0138",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [1] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "bravo-user",
+        "anchor_0_0": "the observed value at public_input_records > [1] > name does not match the reference at grounding path public_input_records > [1] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0139",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [1] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "premium;pro",
+        "anchor_0_0": "the observed value at public_input_records > [1] > tags > [0] does not match the reference at grounding path public_input_records > [1] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0140",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [2] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "3",
+        "anchor_0_0": "the observed value at public_input_records > [2] > id does not match the reference at grounding path public_input_records > [2] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0141",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [2] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "charlie-user",
+        "anchor_0_0": "the observed value at public_input_records > [2] > name does not match the reference at grounding path public_input_records > [2] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0142",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [2] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "title,with,commas",
+        "anchor_0_0": "the observed value at public_input_records > [2] > tags > [0] does not match the reference at grounding path public_input_records > [2] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0143",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [3] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "4",
+        "anchor_0_0": "the observed value at public_input_records > [3] > id does not match the reference at grounding path public_input_records > [3] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0144",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [3] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "delta-user",
+        "anchor_0_0": "the observed value at public_input_records > [3] > name does not match the reference at grounding path public_input_records > [3] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0145",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [3] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "quote\"in\"tag",
+        "anchor_0_0": "the observed value at public_input_records > [3] > tags > [0] does not match the reference at grounding path public_input_records > [3] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0146",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [4] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "5",
+        "anchor_0_0": "the observed value at public_input_records > [4] > id does not match the reference at grounding path public_input_records > [4] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0147",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [4] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "echo-user",
+        "anchor_0_0": "the observed value at public_input_records > [4] > name does not match the reference at grounding path public_input_records > [4] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0148",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [5] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "6",
+        "anchor_0_0": "the observed value at public_input_records > [5] > id does not match the reference at grounding path public_input_records > [5] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0149",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [5] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "foxtrot-user",
+        "anchor_0_0": "the observed value at public_input_records > [5] > name does not match the reference at grounding path public_input_records > [5] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0150",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [5] > tags > [0] matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "line1\nline2",
+        "anchor_0_0": "the observed value at public_input_records > [5] > tags > [0] does not match the reference at grounding path public_input_records > [5] > tags > [0]"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0151",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [6] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "7",
+        "anchor_0_0": "the observed value at public_input_records > [6] > id does not match the reference at grounding path public_input_records > [6] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0152",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [6] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "golf-user",
+        "anchor_0_0": "the observed value at public_input_records > [6] > name does not match the reference at grounding path public_input_records > [6] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0153",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [6] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "a;b",
+        "anchor_0_0": "the observed value at public_input_records > [6] > tags > [0] does not match the reference at grounding path public_input_records > [6] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0154",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [6] > tags > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "c,d",
+        "anchor_0_0": "the observed value at public_input_records > [6] > tags > [1] does not match the reference at grounding path public_input_records > [6] > tags > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0155",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [6] > tags > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "e\"f",
+        "anchor_0_0": "the observed value at public_input_records > [6] > tags > [2] does not match the reference at grounding path public_input_records > [6] > tags > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0156",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [6] > tags > [3] matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "g\nh",
+        "anchor_0_0": "the observed value at public_input_records > [6] > tags > [3] does not match the reference at grounding path public_input_records > [6] > tags > [3]"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0157",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [7] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "8",
+        "anchor_0_0": "the observed value at public_input_records > [7] > id does not match the reference at grounding path public_input_records > [7] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0158",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [7] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "hotel-user",
+        "anchor_0_0": "the observed value at public_input_records > [7] > name does not match the reference at grounding path public_input_records > [7] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0159",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [7] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "read-only",
+        "anchor_0_0": "the observed value at public_input_records > [7] > tags > [0] does not match the reference at grounding path public_input_records > [7] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0160",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [8] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "9",
+        "anchor_0_0": "the observed value at public_input_records > [8] > id does not match the reference at grounding path public_input_records > [8] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0161",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [8] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "india-user",
+        "anchor_0_0": "the observed value at public_input_records > [8] > name does not match the reference at grounding path public_input_records > [8] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0162",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [8] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "moderator",
+        "anchor_0_0": "the observed value at public_input_records > [8] > tags > [0] does not match the reference at grounding path public_input_records > [8] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0163",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [8] > tags > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "beta",
+        "anchor_0_0": "the observed value at public_input_records > [8] > tags > [1] does not match the reference at grounding path public_input_records > [8] > tags > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0164",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [8] > tags > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "vip",
+        "anchor_0_0": "the observed value at public_input_records > [8] > tags > [2] does not match the reference at grounding path public_input_records > [8] > tags > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0165",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [9] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "10",
+        "anchor_0_0": "the observed value at public_input_records > [9] > id does not match the reference at grounding path public_input_records > [9] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0166",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [9] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "juliet-user",
+        "anchor_0_0": "the observed value at public_input_records > [9] > name does not match the reference at grounding path public_input_records > [9] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0167",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [9] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "role:admin;scope:global",
+        "anchor_0_0": "the observed value at public_input_records > [9] > tags > [0] does not match the reference at grounding path public_input_records > [9] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0168",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [10] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "11",
+        "anchor_0_0": "the observed value at public_input_records > [10] > id does not match the reference at grounding path public_input_records > [10] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0169",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [10] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "kilo-user",
+        "anchor_0_0": "the observed value at public_input_records > [10] > name does not match the reference at grounding path public_input_records > [10] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0170",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [10] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "path/to,resource",
+        "anchor_0_0": "the observed value at public_input_records > [10] > tags > [0] does not match the reference at grounding path public_input_records > [10] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0171",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [11] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "12",
+        "anchor_0_0": "the observed value at public_input_records > [11] > id does not match the reference at grounding path public_input_records > [11] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0172",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [11] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "lima-user",
+        "anchor_0_0": "the observed value at public_input_records > [11] > name does not match the reference at grounding path public_input_records > [11] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0173",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [11] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "msg=\"hello world\"",
+        "anchor_0_0": "the observed value at public_input_records > [11] > tags > [0] does not match the reference at grounding path public_input_records > [11] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0174",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [12] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "13",
+        "anchor_0_0": "the observed value at public_input_records > [12] > id does not match the reference at grounding path public_input_records > [12] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0175",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [12] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "mike-user",
+        "anchor_0_0": "the observed value at public_input_records > [12] > name does not match the reference at grounding path public_input_records > [12] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0176",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [12] > tags > [0] matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "multi\nline\nvalue",
+        "anchor_0_0": "the observed value at public_input_records > [12] > tags > [0] does not match the reference at grounding path public_input_records > [12] > tags > [0]"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0177",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [13] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "14",
+        "anchor_0_0": "the observed value at public_input_records > [13] > id does not match the reference at grounding path public_input_records > [13] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0178",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [13] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "november-user",
+        "anchor_0_0": "the observed value at public_input_records > [13] > name does not match the reference at grounding path public_input_records > [13] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0179",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [13] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "contractor",
+        "anchor_0_0": "the observed value at public_input_records > [13] > tags > [0] does not match the reference at grounding path public_input_records > [13] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0180",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [14] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "15",
+        "anchor_0_0": "the observed value at public_input_records > [14] > id does not match the reference at grounding path public_input_records > [14] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0181",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [14] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "oscar-user",
+        "anchor_0_0": "the observed value at public_input_records > [14] > name does not match the reference at grounding path public_input_records > [14] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0182",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [14] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "auditor",
+        "anchor_0_0": "the observed value at public_input_records > [14] > tags > [0] does not match the reference at grounding path public_input_records > [14] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0183",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [14] > tags > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "external",
+        "anchor_0_0": "the observed value at public_input_records > [14] > tags > [1] does not match the reference at grounding path public_input_records > [14] > tags > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0184",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [14] > tags > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "reviewer",
+        "anchor_0_0": "the observed value at public_input_records > [14] > tags > [2] does not match the reference at grounding path public_input_records > [14] > tags > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0185",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [15] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "16",
+        "anchor_0_0": "the observed value at public_input_records > [15] > id does not match the reference at grounding path public_input_records > [15] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0186",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [15] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "papa-user",
+        "anchor_0_0": "the observed value at public_input_records > [15] > name does not match the reference at grounding path public_input_records > [15] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0187",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [15] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "a;b;c;d",
+        "anchor_0_0": "the observed value at public_input_records > [15] > tags > [0] does not match the reference at grounding path public_input_records > [15] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0188",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [16] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "17",
+        "anchor_0_0": "the observed value at public_input_records > [16] > id does not match the reference at grounding path public_input_records > [16] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0189",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [16] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "quebec-user",
+        "anchor_0_0": "the observed value at public_input_records > [16] > name does not match the reference at grounding path public_input_records > [16] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0190",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [16] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "x,y,z",
+        "anchor_0_0": "the observed value at public_input_records > [16] > tags > [0] does not match the reference at grounding path public_input_records > [16] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0191",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [17] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "18",
+        "anchor_0_0": "the observed value at public_input_records > [17] > id does not match the reference at grounding path public_input_records > [17] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0192",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [17] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "romeo-user",
+        "anchor_0_0": "the observed value at public_input_records > [17] > name does not match the reference at grounding path public_input_records > [17] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0193",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [17] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "\"start-quote",
+        "anchor_0_0": "the observed value at public_input_records > [17] > tags > [0] does not match the reference at grounding path public_input_records > [17] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0194",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [17] > tags > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "end-quote\"",
+        "anchor_0_0": "the observed value at public_input_records > [17] > tags > [1] does not match the reference at grounding path public_input_records > [17] > tags > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0195",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [18] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "19",
+        "anchor_0_0": "the observed value at public_input_records > [18] > id does not match the reference at grounding path public_input_records > [18] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0196",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [18] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "sierra-user",
+        "anchor_0_0": "the observed value at public_input_records > [18] > name does not match the reference at grounding path public_input_records > [18] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0197",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [18] > tags > [0] matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "carriage\r\nreturn",
+        "anchor_0_0": "the observed value at public_input_records > [18] > tags > [0] does not match the reference at grounding path public_input_records > [18] > tags > [0]"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0198",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [19] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "20",
+        "anchor_0_0": "the observed value at public_input_records > [19] > id does not match the reference at grounding path public_input_records > [19] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0199",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [19] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "tango-user",
+        "anchor_0_0": "the observed value at public_input_records > [19] > name does not match the reference at grounding path public_input_records > [19] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0200",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [19] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "gamma",
+        "anchor_0_0": "the observed value at public_input_records > [19] > tags > [0] does not match the reference at grounding path public_input_records > [19] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0201",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [19] > tags > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "delta",
+        "anchor_0_0": "the observed value at public_input_records > [19] > tags > [1] does not match the reference at grounding path public_input_records > [19] > tags > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0202",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [20] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "21",
+        "anchor_0_0": "the observed value at public_input_records > [20] > id does not match the reference at grounding path public_input_records > [20] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0203",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [20] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "uniform-user",
+        "anchor_0_0": "the observed value at public_input_records > [20] > name does not match the reference at grounding path public_input_records > [20] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0204",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [20] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "scope:tenant;env:prod",
+        "anchor_0_0": "the observed value at public_input_records > [20] > tags > [0] does not match the reference at grounding path public_input_records > [20] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0205",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [21] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "22",
+        "anchor_0_0": "the observed value at public_input_records > [21] > id does not match the reference at grounding path public_input_records > [21] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0206",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [21] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "victor-user",
+        "anchor_0_0": "the observed value at public_input_records > [21] > name does not match the reference at grounding path public_input_records > [21] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0207",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [21] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "role,billing",
+        "anchor_0_0": "the observed value at public_input_records > [21] > tags > [0] does not match the reference at grounding path public_input_records > [21] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0208",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [21] > tags > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "role,ops",
+        "anchor_0_0": "the observed value at public_input_records > [21] > tags > [1] does not match the reference at grounding path public_input_records > [21] > tags > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0209",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [22] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "23",
+        "anchor_0_0": "the observed value at public_input_records > [22] > id does not match the reference at grounding path public_input_records > [22] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0210",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [22] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "whiskey-user",
+        "anchor_0_0": "the observed value at public_input_records > [22] > name does not match the reference at grounding path public_input_records > [22] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0211",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [22] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "audit=\"passed\"",
+        "anchor_0_0": "the observed value at public_input_records > [22] > tags > [0] does not match the reference at grounding path public_input_records > [22] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0212",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [22] > tags > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "note=\"see ticket\"",
+        "anchor_0_0": "the observed value at public_input_records > [22] > tags > [1] does not match the reference at grounding path public_input_records > [22] > tags > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0213",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [23] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "24",
+        "anchor_0_0": "the observed value at public_input_records > [23] > id does not match the reference at grounding path public_input_records > [23] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0214",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [23] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "xray-user",
+        "anchor_0_0": "the observed value at public_input_records > [23] > name does not match the reference at grounding path public_input_records > [23] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0215",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [23] > tags > [0] matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "notes\nabout\nuser",
+        "anchor_0_0": "the observed value at public_input_records > [23] > tags > [0] does not match the reference at grounding path public_input_records > [23] > tags > [0]"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0216",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [24] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "25",
+        "anchor_0_0": "the observed value at public_input_records > [24] > id does not match the reference at grounding path public_input_records > [24] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0217",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [24] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "yankee-user",
+        "anchor_0_0": "the observed value at public_input_records > [24] > name does not match the reference at grounding path public_input_records > [24] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0218",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [24] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "one",
+        "anchor_0_0": "the observed value at public_input_records > [24] > tags > [0] does not match the reference at grounding path public_input_records > [24] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0219",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [25] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "26",
+        "anchor_0_0": "the observed value at public_input_records > [25] > id does not match the reference at grounding path public_input_records > [25] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0220",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [25] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "zulu-user",
+        "anchor_0_0": "the observed value at public_input_records > [25] > name does not match the reference at grounding path public_input_records > [25] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0221",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [25] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": ";leading-semi",
+        "anchor_0_0": "the observed value at public_input_records > [25] > tags > [0] does not match the reference at grounding path public_input_records > [25] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0222",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [25] > tags > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "trailing-semi;",
+        "anchor_0_0": "the observed value at public_input_records > [25] > tags > [1] does not match the reference at grounding path public_input_records > [25] > tags > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0223",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [26] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "27",
+        "anchor_0_0": "the observed value at public_input_records > [26] > id does not match the reference at grounding path public_input_records > [26] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0224",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [26] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "alpha2-user",
+        "anchor_0_0": "the observed value at public_input_records > [26] > name does not match the reference at grounding path public_input_records > [26] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0225",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [26] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": ",leading-comma",
+        "anchor_0_0": "the observed value at public_input_records > [26] > tags > [0] does not match the reference at grounding path public_input_records > [26] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0226",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [26] > tags > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "trailing-comma,",
+        "anchor_0_0": "the observed value at public_input_records > [26] > tags > [1] does not match the reference at grounding path public_input_records > [26] > tags > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0227",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [27] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "28",
+        "anchor_0_0": "the observed value at public_input_records > [27] > id does not match the reference at grounding path public_input_records > [27] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0228",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [27] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "bravo2-user",
+        "anchor_0_0": "the observed value at public_input_records > [27] > name does not match the reference at grounding path public_input_records > [27] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0229",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [27] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "\"only-quotes\"",
+        "anchor_0_0": "the observed value at public_input_records > [27] > tags > [0] does not match the reference at grounding path public_input_records > [27] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0230",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [28] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "29",
+        "anchor_0_0": "the observed value at public_input_records > [28] > id does not match the reference at grounding path public_input_records > [28] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0231",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [28] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "charlie2-user",
+        "anchor_0_0": "the observed value at public_input_records > [28] > name does not match the reference at grounding path public_input_records > [28] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0232",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [28] > tags > [0] matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "\nleading-newline",
+        "anchor_0_0": "the observed value at public_input_records > [28] > tags > [0] does not match the reference at grounding path public_input_records > [28] > tags > [0]"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0233",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [28] > tags > [1] matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "trailing-newline\n",
+        "anchor_0_0": "the observed value at public_input_records > [28] > tags > [1] does not match the reference at grounding path public_input_records > [28] > tags > [1]"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0234",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [29] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "30",
+        "anchor_0_0": "the observed value at public_input_records > [29] > id does not match the reference at grounding path public_input_records > [29] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0235",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [29] > name equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "delta2-user",
+        "anchor_0_0": "the observed value at public_input_records > [29] > name does not match the reference at grounding path public_input_records > [29] > name"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0236",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [29] > tags > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "gamma",
+        "anchor_0_0": "the observed value at public_input_records > [29] > tags > [0] does not match the reference at grounding path public_input_records > [29] > tags > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0237",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [29] > tags > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "beta",
+        "anchor_0_0": "the observed value at public_input_records > [29] > tags > [1] does not match the reference at grounding path public_input_records > [29] > tags > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0238",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_records > [29] > tags > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "alpha",
+        "anchor_0_0": "the observed value at public_input_records > [29] > tags > [2] does not match the reference at grounding path public_input_records > [29] > tags > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0239",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > bound_shortcut_pattern_scan_uses_multiline_mode_and_word_boundaries_so_a_substring_hit_inside_a_string_literal_does_not_leak equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at verifier_robustness_invariants > bound_shortcut_pattern_scan_uses_multiline_mode_and_word_boundaries_so_a_substring_hit_inside_a_string_literal_does_not_leak does not match the reference at grounding path verifier_robustness_invariants > bound_shortcut_pattern_scan_uses_multiline_mode_and_word_boundaries_so_a_substring_hit_inside_a_string_literal_does_not_leak"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0240",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > csv_row_list_equality_is_dialect_stable_via_python_csv_reader_default_excel_dialect equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at verifier_robustness_invariants > csv_row_list_equality_is_dialect_stable_via_python_csv_reader_default_excel_dialect does not match the reference at grounding path verifier_robustness_invariants > csv_row_list_equality_is_dialect_stable_via_python_csv_reader_default_excel_dialect"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0241",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > embedded_comma_in_tag_forces_csv_writer_to_quote_the_tags_column equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at verifier_robustness_invariants > embedded_comma_in_tag_forces_csv_writer_to_quote_the_tags_column does not match the reference at grounding path verifier_robustness_invariants > embedded_comma_in_tag_forces_csv_writer_to_quote_the_tags_column"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0242",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > embedded_double_quote_in_tag_forces_csv_writer_to_double_the_octet equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at verifier_robustness_invariants > embedded_double_quote_in_tag_forces_csv_writer_to_double_the_octet does not match the reference at grounding path verifier_robustness_invariants > embedded_double_quote_in_tag_forces_csv_writer_to_double_the_octet"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0243",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > embedded_newline_in_tag_survives_csv_reader_because_csv_reader_handles_multiline_quoted_fields equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at verifier_robustness_invariants > embedded_newline_in_tag_survives_csv_reader_because_csv_reader_handles_multiline_quoted_fields does not match the reference at grounding path verifier_robustness_invariants > embedded_newline_in_tag_survives_csv_reader_because_csv_reader_handles_multiline_quoted_fields"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0244",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > holdout_re_run_forces_generalization_over_hardcoding equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at verifier_robustness_invariants > holdout_re_run_forces_generalization_over_hardcoding does not match the reference at grounding path verifier_robustness_invariants > holdout_re_run_forces_generalization_over_hardcoding"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    }
+  ]
+}

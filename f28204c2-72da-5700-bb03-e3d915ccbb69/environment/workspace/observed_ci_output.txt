@@ -1,0 +1,24 @@
+=== initial simulated pytest run under the seeded workflow env + argv ===
+$ MAX_RETRIES=1 FLAKY_STATE_DIR=/tmp/flaky_convergence_state pytest --reruns 1 tests/
+============================= test session starts ==============================
+platform linux -- Python 3.11.x, pytest-8.x.x, pluggy-1.x.x
+plugins: rerunfailures-14.x
+collected 1 item
+
+tests/test_convergence.py F                                              [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_convergent_flake ____________________________
+
+    def test_convergent_flake():
+>       assert _MAX_RETRIES >= _CONVERGENCE_FLOOR, (
+E       AssertionError: MAX_RETRIES=1 is below the convergence floor 3; the retry
+E         environment is under-configured and no amount of pytest reruns will
+E         recover.
+E       assert 1 >= 3
+
+tests/test_convergence.py:47: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_convergence.py::test_convergent_flake
+============================== 1 failed in 0.02s ===============================
+exit=1

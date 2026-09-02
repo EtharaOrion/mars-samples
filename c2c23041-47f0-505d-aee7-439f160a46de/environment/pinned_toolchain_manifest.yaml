@@ -1,0 +1,24 @@
+schema: mars.pinned_toolchain/v1
+generated_at: 2026-08-04
+base_image_digest: sha256:7b140f374b289a7c2befc338f42ebe6441b7ea838a042bbd5acbfca6ec875818
+apt_packages:
+  - nginx-full        # ships http_auth_request module
+  - openssl           # PKI generation at image build
+  - curl              # verifier probe matrix
+  - python3           # upstream stub + grader
+  - jq                # verifier json helpers
+  - iproute2          # ss for port-bind polling
+  - procps            # pgrep / pkill in reload.sh
+  - ca-certificates
+no_runtime_install: true
+network_mode: no-network
+entrypoint: /entrypoint.sh
+upstream_stub:
+  path: /opt/upstream/upstream_server.py
+  bind: 127.0.0.1:8080
+  endpoints:
+    - GET /                serves /opt/upstream/index.html
+    - GET /_echo_headers   echoes incoming header block as text/plain
+pki_recipe: /tmp/build_pki.sh (baked at image build, deleted post-run)
+pki_output_root: /workspace/input/pki/
+reference_now_date: 2026-08-04

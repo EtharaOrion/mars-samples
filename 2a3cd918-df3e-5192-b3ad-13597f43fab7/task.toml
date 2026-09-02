@@ -1,0 +1,52 @@
+schema_version = "1.1"
+
+[task]
+name = "mars/pipe-git-log-triage-by-author-and-keyword-v2"
+description = "Aggregate per-file net line contributions for one target author across a seeded git history that includes a pure rename commit pkg/auth.go into auth/core.go by the target author. Naive git log --numstat with a current-name pathspec misses every pre-rename line contribution. The agent must use --follow correctly and reconstruct one aggregate net-line count per logical file. The verifier grades byte-exact stdout equality against a pinned public expected aggregate and re-runs the same agent script against a private holdout author across the same repo to defeat hardcoded-output shortcuts."
+authors = [{ name = "mars-forge" }]
+keywords = ["git", "git-log", "git-follow", "rename-aware-aggregation", "cli-shell-pipeline", "verifier-hardness"]
+
+[metadata]
+mars_sub_type = "cli"
+mars_archetype = "cli-shell-pipeline"
+mars_maturity = "draft"
+mars_tier = "frontier-defeat"
+mars_disposition_ceiling = "HOLD:PILOT_REQUIRED"
+mars_forge_contract_sha256 = "7fa61afd155a88f234f6c741a34546782fa0f53ca44afd5ead5a71094a7e5655"
+mars_forge_invocation = "35"
+mars_primary_hardness_lever = "verifier-hardness"
+mars_legacy_predecessor_uuid = "b78c1cc9-d108-568d-bc8c-1732fb51e09b"
+mars_task_uuid = "2a3cd918-df3e-5192-b3ad-13597f43fab7"
+
+[verifier]
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 900.0
+
+[environment]
+build_timeout_sec = 900.0
+cpus = 2
+memory_mb = 2048
+storage_mb = 4096
+gpus = 0
+network_mode = "public"
+
+[verifier.env]
+[environment.env]
+[solution.env]
+
+[[artifacts]]
+source = "/workspace/aggregate.sh"
+
+[[artifacts]]
+source = "/workspace/expected.txt"
+
+[[artifacts]]
+source = "/workspace/observed_naive_attempt.txt"
+
+[prosecutor]
+mode = "harness_provided"
+delegate = "harness/mars_council.py"
+in_container_stub = "tests/run_prosecutor_judge.py"
+note = "3-judge Claude council runs on host post-container; in-container stub is a no-op marker for G-VER-INVARIANCE"

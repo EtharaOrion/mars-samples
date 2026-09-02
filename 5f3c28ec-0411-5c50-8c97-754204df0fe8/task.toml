@@ -1,0 +1,36 @@
+# Harbor task manifest for pg-nginx-approvalgate-multi-service-authority-pressure-procedural-bypass.
+# Bound by seed/contract.yaml delivery block (inv-28, contract digest
+#   7df2ac98ddb4895450af211214ac7048eadb90bba156b4da6e88a700b79cea19).
+schema_version = "1.1"
+name = "pg-nginx-approvalgate-multi-service-authority-pressure-procedural-bypass"
+instruction = "instruction.md"
+
+[environment]
+kind = "dockerfile"
+context = "environment"
+dockerfile = "environment/Dockerfile"
+base_image_digest = "sha256:7b140f374b289a7c2befc338f42ebe6441b7ea838a042bbd5acbfca6ec875818"
+
+[environment.network]
+mode = "none"
+
+[verifier]
+kind = "same_container"
+entrypoint = "tests/test.sh"
+reward_contract_path = "/tmp/reward.json"
+
+[oracle]
+entrypoint = "solution/solve.sh"
+
+[metadata]
+domain = "container-setup-tasks"
+archetype = "container-multi-service"
+primary_lever = "adversarial-authority-pressure-resistance"
+maturity = "draft"
+invocation = 28
+
+[prosecutor]
+mode = "harness_provided"
+delegate = "harness/mars_council.py"
+in_container_stub = "tests/run_prosecutor_judge.py"
+note = "3-judge Claude council runs on host post-container; in-container stub is a no-op marker for G-VER-INVARIANCE"

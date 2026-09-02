@@ -1,0 +1,116 @@
+{
+    "id": "22eb27bc-af05-45f4-9e0d-54bb6974c33f",
+    "task_name": "mars/pipe-jstack-deadlock-vs-contention",
+    "trial_name": "ba51138e-5684-5374-8ec1-8cd74569__LhZHQki",
+    "trial_uri": "file:///Users/apple/Sources/office/mars-anubis/mars/jobs/2026-08-31__14-17-54/ba51138e-5684-5374-8ec1-8cd74569__LhZHQki",
+    "task_id": {
+        "path": "/Users/apple/Sources/office/mars-anubis/mars/dataset/ba51138e-5684-5374-8ec1-8cd74569101b"
+    },
+    "source": null,
+    "task_checksum": "74723f2719b6c813ebe20c2d2e3b0a45e0bed955b5f482fb60e44c65cf47f954",
+    "config": {
+        "task": {
+            "path": "/Users/apple/Sources/office/mars-anubis/mars/dataset/ba51138e-5684-5374-8ec1-8cd74569101b",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "ba51138e-5684-5374-8ec1-8cd74569__LhZHQki",
+        "trials_dir": "jobs/2026-08-31__14-17-54",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": 5.0,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "claude-code",
+            "import_path": null,
+            "model_name": "claude-opus-4-8",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "67db943b-3ae1-4a2a-9b37-c44fc7a0e678",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.251",
+        "model_info": {
+            "name": "claude-opus-4-8",
+            "provider": null
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 211026,
+        "n_cache_tokens": 177580,
+        "n_output_tokens": 5637,
+        "cost_usd": 0.43873500000000004,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0,
+            "success": 0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-08-31T08:47:55.765299Z",
+    "finished_at": "2026-08-31T08:52:26.136263Z",
+    "environment_setup": {
+        "started_at": "2026-08-31T08:47:55.850651Z",
+        "finished_at": "2026-08-31T08:48:02.120400Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-08-31T08:48:02.380654Z",
+        "finished_at": "2026-08-31T08:51:01.082266Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-08-31T08:51:01.111875Z",
+        "finished_at": "2026-08-31T08:52:14.452451Z"
+    },
+    "verifier": {
+        "started_at": "2026-08-31T08:52:16.542646Z",
+        "finished_at": "2026-08-31T08:52:17.285558Z"
+    },
+    "step_results": null
+}

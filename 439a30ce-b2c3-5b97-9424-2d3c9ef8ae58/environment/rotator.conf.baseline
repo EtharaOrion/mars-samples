@@ -1,0 +1,8 @@
+# Credential-rotator config; mode 0600 rotator uid only.
+[rotator]
+rotation_interval_seconds = 8
+postgres_superuser_dsn = host=127.0.0.1 port=5432 dbname=production user=rotator_super password=rotator-super-password
+redis_host = 127.0.0.1
+redis_port = 6379
+redis_key = current_app_password
+audit_log_path = /var/log/rotator/rotator.log

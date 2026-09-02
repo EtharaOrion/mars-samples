@@ -1,0 +1,63 @@
+schema_version = "1.4"
+
+[task]
+name = "mars/fix-go-mod-replace-vendor-desync-v2"
+description = "Fix a Go module build that fails because the root `go.mod` replace target's local `go.mod` declares a mismatched module path. Naive agents run `go mod vendor` and `go mod tidy` repeatedly; the fix requires editing the local target's module declaration to match the replace directive."
+authors = [{ name = "mars-forge" }]
+keywords = ["go", "gomod", "replace-directive", "local-module", "build-fix", "long-horizon-agentic-coherence"]
+
+[metadata]
+mars_sub_type = "build-ci-cd"
+mars_archetype = "build-fix"
+mars_maturity = "draft"
+mars_tier = "frontier-defeat-target"
+mars_disposition_ceiling = "HOLD:PILOT_REQUIRED"
+mars_forge_contract_sha256 = "7fa61afd155a88f234f6c741a34546782fa0f53ca44afd5ead5a71094a7e5655"
+mars_slot_index = 8
+mars_slot_slug = "fix-go-mod-replace-vendor-desync-v2"
+mars_legacy_predecessor_uuid = "00ae0290-6f18-5c1c-841a-414c02f70134"
+mars_task_uuid = "feef025f-94a1-587f-97b1-1d777b93c0d5"
+
+[verifier]
+timeout_sec = 600.0
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+build_timeout_sec = 900.0
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0
+network_mode = "public"
+
+[verifier.env]
+
+[environment.env]
+
+[solution.env]
+
+[[artifacts]]
+source = "/workspace/myapp/go.mod"
+
+[[artifacts]]
+source = "/workspace/myapp/main.go"
+
+[[artifacts]]
+source = "/workspace/myapp/main_test.go"
+
+[[artifacts]]
+source = "/workspace/mylib/go.mod"
+
+[[artifacts]]
+source = "/workspace/mylib/lib.go"
+
+[[artifacts]]
+source = "/workspace/observed_error.txt"
+
+[prosecutor]
+mode = "harness_provided"
+delegate = "harness/mars_council.py"
+in_container_stub = "tests/run_prosecutor_judge.py"
+note = "3-judge Claude council runs on host post-container; in-container stub is a no-op marker for G-VER-INVARIANCE"

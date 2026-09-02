@@ -1,0 +1,71 @@
+grounding:
+  task_slug: "pipe-jq-sed-awk-pipeline-order-matters"
+  contract_sha256: "dcf86050ec413309cd4e7ea31e4718f30f86fcbcedd6731b855b7583f22928a7"
+  canary_a_placeholder: "FORGE_HOLDOUT_CANARY_86713CFEE087DCECEDE7B52309370534"
+  canary_b_placeholder: "FORGE_HOLDOUT_CANARY_04271A8444D3C7DFE82743ABDE7E0FF6"
+  bash_invocation_contract:
+    invocation_form: "bash /workspace/solve.sh from a shell rooted at /workspace/"
+    tools_on_path: [bash, jq, gawk, sed, grep, sort, uniq, python3, node, diffutils]
+    network_policy: "no-network"
+    workspace_root: "/workspace"
+    input_path: "/workspace/input/audits.jsonl"
+    output_path: "/workspace/out/critical.tsv"
+  output_file_shape_contract:
+    path: "/workspace/out/critical.tsv"
+    field_separator: "0x09"
+    field_count: 4
+    non_empty: true
+    utf8: true
+    trailing_newline: true
+  per_field_schema_shape_regex_family:
+    field_1_package_name: '^(@[a-z0-9][a-z0-9._-]{0,213}/[a-z0-9][a-z0-9._-]{0,213}|[a-z0-9][a-z0-9._-]{0,213})$'
+    field_2_installed_version: '^v?[0-9]+(\.[0-9]+){0,2}([-+][0-9A-Za-z.-]+)?$'
+    field_3_ghsa_identifier: '^GHSA-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}$'
+    field_4_node_modules_path: '^[.]?node_modules(/[^/\t]+)+$'
+  canonical_output_form:
+    line_shape: "<package>\t<installed_version>\t<GHSA_identifier>\t<dependency_resolution_path>\n"
+    trailing_newline_per_row: true
+  row_ordering_comparator_contract:
+    primary_key: field_1_package_name_bytes
+    secondary_key: field_2_installed_version_bytes
+    locale: "C"
+    monotone: non_decreasing
+  test_path_regex: '(^|/)(test|__tests__)(/|$)'
+  pipeline_structure_contract:
+    required_ordered_stages: [jq, sed, awk]
+    connector: "literal | pipe operator between adjacent stages"
+    awk_family_accepted: [awk, gawk, mawk]
+    comment_lines_folded: true
+    line_continuations_folded: true
+    reason_label_on_violation: "D7_pipeline_structure_missing_jq_pipe_sed_pipe_awk_ordered_stages"
+  bound_shortcut_pattern_set:
+    - 'FORGE_HOLDOUT_CANARY_[A-Z0-9]{32}'
+    - 'solution/grounding\.yaml'
+    - 'solution/TRUTH\.md'
+    - 'dataset/[0-9a-f-]{36}/(solution|tests)/'
+    - '/holdout/'
+    - 'HARDCODED_CRITICAL_VULN_RECITAL_BEGIN'
+    - 'HARDCODED_CRITICAL_VULN_RECITAL_END'
+    - 'reference_critical_vuln_set'
+    - 'canonical_output_form'
+    - 'test_path_regex'
+    - '/tests/grader\.py'
+    - '\bEXPECTED_LINES\b'
+    - 'from\s+grader\s+import'
+    - 'sys\.path\.insert\s*\([^)]*[''"]/?tests'
+    - 'sys\.path\.append\s*\([^)]*[''"]/?tests'
+    - 'import\s+importlib.*\.import_module\s*\(\s*[''"]grader'
+  solve_script_line_budget: 60
+  reference_critical_vuln_set:
+    row_count: 21
+    stream_sha256: "61bb4292c08993565412a4bc79470c740c508926e4760b21aafc101257473e24"
+    first_row: "@angular/core	13.2.7	GHSA-a1b2-c3d4-e5f6	node_modules/@angular/core"
+    last_row: "ws	7.4.5	GHSA-6fc8-4gx4-v693	node_modules/ws"
+  corpus:
+    audits_jsonl_line_count: 64
+    critical_survivors: 21
+    critical_test_path_dropped: 8
+    critical_duplicates_deduped: 6
+    misfiled_info_dropped: 10
+    other_severity_dropped: 15
+    missing_severity_dropped: 4

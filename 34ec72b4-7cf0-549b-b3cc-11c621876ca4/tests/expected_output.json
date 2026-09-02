@@ -1,0 +1,157 @@
+{
+  "schema": "forge.expected_output/v1",
+  "task_uuid": "34ec72b4-7cf0-549b-b3cc-11c621876ca4",
+  "task_slug": "fix-python-entrypoint-refactor-drift-v2",
+  "generated_by": "solution/recompute.py",
+  "source_of_truth": "solution/grounding.yaml",
+  "normalization": {
+    "algorithm": "strip_surrounding_whitespace_then_uppercase_string_values",
+    "formal": "normalize(value) := value.strip().upper() if isinstance(value, str) else value",
+    "applied_to": "value_field_of_each_record",
+    "preserved_field": "id_field_passes_through_unchanged"
+  },
+  "visible_probe": {
+    "input_path_in_container": "/workspace/input.txt",
+    "output_path_in_container": "/workspace/output.txt",
+    "input_records": [
+      {
+        "id": "r001",
+        "value": " hello world "
+      },
+      {
+        "id": "r002",
+        "value": "  Python 3.11  "
+      },
+      {
+        "id": "r003",
+        "value": "orjson-optional"
+      },
+      {
+        "id": "r004",
+        "value": " NORMALIZE me "
+      }
+    ],
+    "expected_output_records": [
+      {
+        "id": "r001",
+        "value": "HELLO WORLD"
+      },
+      {
+        "id": "r002",
+        "value": "PYTHON 3.11"
+      },
+      {
+        "id": "r003",
+        "value": "ORJSON-OPTIONAL"
+      },
+      {
+        "id": "r004",
+        "value": "NORMALIZE ME"
+      }
+    ],
+    "expected_output_bytes_utf8": "[{\"id\":\"r001\",\"value\":\"HELLO WORLD\"},{\"id\":\"r002\",\"value\":\"PYTHON 3.11\"},{\"id\":\"r003\",\"value\":\"ORJSON-OPTIONAL\"},{\"id\":\"r004\",\"value\":\"NORMALIZE ME\"}]"
+  },
+  "holdouts": {
+    "holdout_alpha": {
+      "input_records": [
+        {
+          "id": "h001",
+          "value": "  alpha beta  "
+        },
+        {
+          "id": "h002",
+          "value": "gamma"
+        },
+        {
+          "id": "h003",
+          "value": " Delta-Echo "
+        }
+      ],
+      "expected_output_records": [
+        {
+          "id": "h001",
+          "value": "ALPHA BETA"
+        },
+        {
+          "id": "h002",
+          "value": "GAMMA"
+        },
+        {
+          "id": "h003",
+          "value": "DELTA-ECHO"
+        }
+      ],
+      "expected_output_bytes_utf8": "[{\"id\":\"h001\",\"value\":\"ALPHA BETA\"},{\"id\":\"h002\",\"value\":\"GAMMA\"},{\"id\":\"h003\",\"value\":\"DELTA-ECHO\"}]"
+    },
+    "holdout_mixed": {
+      "input_records": [
+        {
+          "id": "m001",
+          "value": "mixed_case_HELLO"
+        },
+        {
+          "id": "m002",
+          "value": "   spaced   "
+        },
+        {
+          "id": "m003",
+          "value": " 12345 "
+        },
+        {
+          "id": "m004",
+          "value": "punctuation!"
+        }
+      ],
+      "expected_output_records": [
+        {
+          "id": "m001",
+          "value": "MIXED_CASE_HELLO"
+        },
+        {
+          "id": "m002",
+          "value": "SPACED"
+        },
+        {
+          "id": "m003",
+          "value": "12345"
+        },
+        {
+          "id": "m004",
+          "value": "PUNCTUATION!"
+        }
+      ],
+      "expected_output_bytes_utf8": "[{\"id\":\"m001\",\"value\":\"MIXED_CASE_HELLO\"},{\"id\":\"m002\",\"value\":\"SPACED\"},{\"id\":\"m003\",\"value\":\"12345\"},{\"id\":\"m004\",\"value\":\"PUNCTUATION!\"}]"
+    },
+    "holdout_edge": {
+      "input_records": [
+        {
+          "id": "e001",
+          "value": ""
+        },
+        {
+          "id": "e002",
+          "value": "x"
+        },
+        {
+          "id": "e003",
+          "value": "   "
+        }
+      ],
+      "expected_output_records": [
+        {
+          "id": "e001",
+          "value": ""
+        },
+        {
+          "id": "e002",
+          "value": "X"
+        },
+        {
+          "id": "e003",
+          "value": ""
+        }
+      ],
+      "expected_output_bytes_utf8": "[{\"id\":\"e001\",\"value\":\"\"},{\"id\":\"e002\",\"value\":\"X\"},{\"id\":\"e003\",\"value\":\"\"}]"
+    }
+  }
+}

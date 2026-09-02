@@ -1,9 +1,0 @@
-repos:
-  - repo: local
-    hooks:
-      - id: forbidden-token
-        name: Forbidden token check
-        language: system
-        entry: python3 linters/forbidden_token.py
-        files: \.pyc$
-        pass_filenames: true

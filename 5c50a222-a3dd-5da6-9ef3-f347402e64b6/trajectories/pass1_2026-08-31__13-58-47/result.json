@@ -1,0 +1,116 @@
+{
+    "id": "7805eb58-d741-4b10-bf2c-ec8a1742cf6b",
+    "task_name": "5c50a222-a3dd-5da6-9ef3-f347402e64b6",
+    "trial_name": "5c50a222-a3dd-5da6-9ef3-f347402e__DDscjJN",
+    "trial_uri": "file:///Users/apple/Sources/office/mars-anubis/mars/jobs/2026-08-31__13-58-47/5c50a222-a3dd-5da6-9ef3-f347402e__DDscjJN",
+    "task_id": {
+        "path": "/Users/apple/Sources/office/mars-anubis/mars/dataset/5c50a222-a3dd-5da6-9ef3-f347402e64b6"
+    },
+    "source": null,
+    "task_checksum": "5cdcdd07d08bb88aeeb84d90c6f8b4d279b03a973fe9d2bc4f19eb477779fe53",
+    "config": {
+        "task": {
+            "path": "/Users/apple/Sources/office/mars-anubis/mars/dataset/5c50a222-a3dd-5da6-9ef3-f347402e64b6",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "5c50a222-a3dd-5da6-9ef3-f347402e__DDscjJN",
+        "trials_dir": "jobs/2026-08-31__13-58-47",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": 5.0,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "claude-code",
+            "import_path": null,
+            "model_name": "claude-opus-4-8",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "bf9e27bb-effd-4229-8d3e-ba8a8cb8e3ea",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.251",
+        "model_info": {
+            "name": "claude-opus-4-8",
+            "provider": null
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 581217,
+        "n_cache_tokens": 535257,
+        "n_output_tokens": 15288,
+        "cost_usd": 0.9370385,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "p_combined_line_budget": 200,
+            "reward": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-08-31T08:28:48.726426Z",
+    "finished_at": "2026-08-31T08:37:55.298008Z",
+    "environment_setup": {
+        "started_at": "2026-08-31T08:28:48.811699Z",
+        "finished_at": "2026-08-31T08:29:00.000694Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-08-31T08:29:00.001167Z",
+        "finished_at": "2026-08-31T08:31:12.424055Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-08-31T08:31:12.450612Z",
+        "finished_at": "2026-08-31T08:36:37.284634Z"
+    },
+    "verifier": {
+        "started_at": "2026-08-31T08:36:38.490131Z",
+        "finished_at": "2026-08-31T08:37:51.505267Z"
+    },
+    "step_results": null
+}

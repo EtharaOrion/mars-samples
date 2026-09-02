@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "myapp"
+version = "0.1.0"
+description = "A minimal record-processing CLI with an optional high-performance JSON serializer."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+perf = ["orjson>=3.9,<4"]
+
+[project.scripts]
+myapp = "myapp.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["myapp*"]

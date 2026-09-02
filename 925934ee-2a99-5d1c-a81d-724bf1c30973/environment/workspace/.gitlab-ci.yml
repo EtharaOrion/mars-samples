@@ -1,0 +1,46 @@
+# GitLab CI pipeline for the mars-ci-gitlab-cache-key-cross-branch-stale-v2
+# task. Two jobs, executed in order: `populate` seeds a cache directory
+# with a week-marker file that records the ISO week of the run, and
+# `verify` reads the cache back and runs a freshness probe that asserts
+# the recorded week matches the current ISO week the GitLab runner is
+# operating in.
+#
+# The runner exposes two GitLab predefined variables at job time:
+#   - CI_COMMIT_REF_SLUG: the branch slug of the pipeline (e.g. "main")
+#   - CI_ISO_WEEK:        the ISO week token of the pipeline
+#                         (e.g. "2026-W35"), computed by the runner
+#                         from the pipeline creation timestamp.
+#
+# The cache stanza below is deliberately naive. It keys the cache on
+# the branch slug alone, so a cache tarball populated during a prior
+# ISO week is still matched by the current-week run under the same
+# branch, and the stale week-marker inside it fails the freshness
+# probe.
+
+stages:
+  - cache_populate
+  - verify_freshness
+
+variables:
+  CACHE_DIR: ".gitlab-cache"
+
+populate:
+  stage: cache_populate
+  cache:
+    key: "$CI_COMMIT_REF_SLUG"
+    paths:
+      - .gitlab-cache/
+    policy: pull-push
+  script:
+    - mkdir -p .gitlab-cache
+    - bash scripts/populate_cache.sh .gitlab-cache
+
+verify:
+  stage: verify_freshness
+  cache:
+    key: "$CI_COMMIT_REF_SLUG"
+    paths:
+      - .gitlab-cache/
+    policy: pull
+  script:
+    - bash scripts/freshness_probe.sh .gitlab-cache

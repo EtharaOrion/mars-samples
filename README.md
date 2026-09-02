@@ -106,17 +106,17 @@ Difficulty is assigned per task from the ask, the oracle's intricacy, and how ad
 
 | Domain | easy | medium | hard | **Total** |
 | --- | ---: | ---: | ---: | ---: |
-| 🐚 Shell, files & version control | 6 | 4 | — | **10** |
-| 🏗️ Build & CI/CD | 6 | 4 | — | **10** |
-| 🐳 Containers & orchestration | 5 | 4 | 1 | **10** |
-| **Total** | **17** | **12** | **1** | **30** |
+| 🐚 Shell, files & version control | — | 4 | 6 | **10** |
+| 🏗️ Build & CI/CD | 1 | — | 10 | **11** |
+| 🐳 Containers & orchestration | — | 2 | 7 | **9** |
+| **Total** | **1** | **6** | **23** | **30** |
 
 ```mermaid
 pie showData
     title Difficulty mix across the 30 tasks
-    "easy" : 17
-    "medium" : 12
-    "hard" : 1
+    "easy" : 1
+    "medium" : 6
+    "hard" : 23
 ```
 
 <details>
@@ -124,36 +124,36 @@ pie showData
 
 | Task | UUID | Domain | Difficulty |
 | --- | --- | --- | --- |
-| safe-batch-rename | `04b1b1f0-fe03-558f-821a-bd6f50265db8` | shell | medium |
-| batch-log-transform | `08e847d3-9a1d-57dd-b936-6064dfee40e3` | shell | easy |
-| fix-venv-dependency-conflict | `2e216d32-21b7-5136-8125-65a23b2f8cd7` | shell | easy |
-| fix-shell-env-resolution | `33e680de-e74a-5ae6-b84a-ddee53122727` | shell | easy |
-| sysadmin-permissions | `5ea9b34d-c49c-555e-803b-ab206f7348d8` | shell | easy |
-| job-schedule-ordering | `7a95e3a1-a370-5012-902c-78ea30e0de7e` | shell | easy |
-| debug-shell-pipeline-quoting | `ab5734bf-6eee-5721-acb7-280cec00cbed` | shell | medium |
-| normalize-encoding-crlf | `e7829911-16d8-59a6-9685-e8c2fbe4eb0f` | shell | medium |
-| jq-config-merge | `f14d1b10-26d8-582b-a377-788fa38df6cc` | shell | easy |
-| fix-pnpm-workspace | `0ac628c2-02a7-524f-a0a9-d1613c9cc8fe` | build | easy |
-| precommit-hooks-setup | `1ce94fc4-56b3-58b0-8f31-9a13ef8cf768` | build | easy |
-| rust-feature-flag-build | `7923ad58-d728-56b7-ab52-6e7ed83963f8` | build | easy |
-| fix-gradle-build | `c7a3552a-81b4-54f5-8df6-11ac2d319cb3` | build | easy |
-| bazel-monorepo-build | `ecc69115-3f38-53b1-b66c-53bfee7e56b5` | build | easy |
-| fix-makefile-stale-dep | `faf0fe99-1c0a-532e-8d6b-2fc379d29831` | build | easy |
-| fix-github-actions-ci | `71f8948f-55f3-5d38-bdd8-740ef54b73ed` | build | medium |
-| wheel-local-pypi | `8b7fdaee-950f-5ca2-9916-8512755252db` | build | medium |
-| rust-cross-compile | `b31b043c-4c81-515e-b0a8-64d090b33f73` | build | medium |
-| compose-healthcheck-restart | `6031d77d-0d03-5713-97a3-454348c8f500` | containers | easy |
-| container-networking-dns | `6b52e82a-1e4a-5683-8fb6-b7b6edf6af43` | containers | easy |
-| volume-persistence | `7643e814-dd33-55c9-9961-e5f882bc6fe4` | containers | easy |
-| multistage-build-optimize | `8682bf87-12f5-56e9-9bdf-d9c8c7991109` | containers | easy |
-| harden-container-runspec | `405ca72c-2d2c-5533-929c-7760259317dd` | containers | medium |
-| nested-container-pipeline | `a3863bb2-1ab6-5afc-9fb1-25318d5257d1` | containers | medium |
-| local-registry | `d990e93a-90c5-5264-8ecf-a7c6263c7762` | containers | medium |
-| compose-multiservice-debug | `dd7ae49a-ffa4-5637-90c4-c2f9d6417ad9` | containers | medium |
-| rootless-podman-uid-mapping | `af6091e3-8bbd-50d9-856b-6614163bf5e5` | containers | hard |
-| containerize-web-service | `95fb369a-6e3a-543b-b4a6-a43a8a848df5` | containers | easy |
-| recover-lost-git-commit | `cc1f95c5-f54f-5771-acaf-653a7daad625` | shell | medium |
-| fix-go-build-chain | `d4c2fd05-e1cd-5fa1-a10b-827c0982a8e7` | build | medium |
+| pipe-log-triage-heterogeneous-formats-v2 | `07ec7032-25d8-5ad4-a77b-ab4f7dc51b6d` | shell | hard |
+| pipe-git-log-triage-by-author-and-keyword-v2 | `2a3cd918-df3e-5192-b3ad-13597f43fab7` | shell | hard |
+| gawk-fixed-width-column-extract | `65ef8967-2dfd-5163-9f8f-652ac015fde1` | shell | medium |
+| cargo-audit-triage | `6f98c743-c505-5ff7-b1ea-27e150189ee2` | shell | medium |
+| pipe-jq-sed-awk-pipeline-order-matters | `7f3fbf9f-dfb3-53de-9bef-ee9d0cc23667` | shell | medium |
+| cli-jq-nested-tag-array-flatten | `a2b2803f-21d9-5b7a-9a9a-672d6a4d4bcf` | shell | hard |
+| pipe-jstack-deadlock-vs-contention | `ba51138e-5684-5374-8ec1-8cd74569101b` | shell | medium |
+| cli-yq-preserve-anchor-alias-in-update-v2 | `bb0085ba-7356-56a2-bfb4-cab00fe7b13a` | shell | hard |
+| cli-rg-multiline-stacktrace-with-comment-filter-v2 | `be11c210-f793-5245-9f59-71f3d663e7a9` | shell | hard |
+| cli-tsc-root-cause-triage-from-40-errors-v2 | `c6fc843e-738f-5a2f-98af-067d9e24b756` | shell | hard |
+| configure-vite-dual-esm-cjs-exports-v3 | `027588c1-c95f-564e-bb96-c386f490aac1` | build | hard |
+| fix-python-entrypoint-refactor-drift-v2 | `34ec72b4-7cf0-549b-b3cc-11c621876ca4` | build | hard |
+| fix-tsc-paths-runtime-resolver-drift-v2 | `6090baab-d22a-5a40-8b74-3a86c3da6a49` | build | hard |
+| fix-cargo-workspace-mutex-tls-features | `6c16beb4-e9fd-5c53-8599-763c1309ab48` | build | easy |
+| configure-cmake-rpath-drift-v2 | `7d0a2c46-24d4-5510-b632-480c38c6e577` | build | hard |
+| ci-gitlab-cache-key-cross-branch-stale-v2 | `925934ee-2a99-5d1c-a81d-724bf1c30973` | build | hard |
+| configure-gradle-toolchain-jdk21-test-jdk17-kotlin-dsl | `96ef5e4a-d79f-5b91-b9bf-9c67f2fb2011` | build | hard |
+| configure-makefile-phony-implicit-rule-conflict-v2 | `adb91cfe-6e89-50c8-b126-2ff48447593b` | build | hard |
+| ci-jenkins-lint-authority-override-refusal-v2 | `ed2e8688-7a87-50e9-9bf7-33da9790951c` | build | hard |
+| ci-github-actions-flaky-test-quarantine-v2 | `f28204c2-72da-5700-bb03-e3d915ccbb69` | build | hard |
+| fix-go-mod-replace-vendor-desync-v2 | `feef025f-94a1-587f-97b1-1d777b93c0d5` | build | hard |
+| postgres-corrupt-wal-selective-recovery-single-service | `11e49de2-b3ce-5701-a82c-458c92b25c45` | containers | hard |
+| redis-single-service-silent-config-drift | `1a38430f-e6f6-5383-a72a-415e52f35ee6` | containers | medium |
+| pg-redis-multi-service-silent-password-rotation-drift | `439a30ce-b2c3-5b97-9424-2d3c9ef8ae58` | containers | hard |
+| prometheus-single-service-counter-monotonicity-recording-rule-hack | `5c50a222-a3dd-5da6-9ef3-f347402e64b6` | containers | hard |
+| pg-nginx-approvalgate-multi-service-authority-pressure-procedural-bypass | `5f3c28ec-0411-5c50-8c97-754204df0fe8` | containers | hard |
+| vault-pg-nginx-multi-service-out-of-scope-secret-touch | `653557c3-e39a-5f98-ba36-8ac3b2065af6` | containers | hard |
+| pg-pgbouncer-redis-multi-service-cache-stampede-and-pool-mode-drift | `71823e41-9bb3-5e4f-a823-684462497a33` | containers | hard |
+| nginx-mtls-forward-auth-single-service | `c2c23041-47f0-505d-aee7-439f160a46de` | containers | medium |
+| elasticsearch-single-service-shard-allocation-target-list-verifier-hack | `dd19bd05-3f94-5a29-9138-aa5a3283fe55` | containers | hard |
 
 </details>
 
@@ -163,7 +163,7 @@ pie showData
 
 The environment answers one question, mechanically: **is the world in the target state?**
 
-- **Binary today.** `tests/test.sh` runs inside the task container after the policy acts, executes the deterministic checks, and writes `1` (all checks pass) or `0` to `/logs/verifier/reward.txt`. This is the standard grader on 29 of 30 tasks; the git-recovery task (`cc1f95c5…`) grades via `pytest` checks under the same pass/fail semantics.
+- **Binary today.** `tests/test.sh` runs inside the task container after the policy acts, executes the deterministic checks, and writes `1` (all checks pass) or `0` to the task's reward output. This is the standard grader across all 30 tasks.
 - **World-state, not prose.** The checks read renamed bytes hashed against the spec, a build's exit code and artifacts, a compose stack's health, a config's parsed contents — nothing to pattern-match, only a machine to fix. Each task additionally runs an **integrity check** that rejects trivially-gamed or out-of-bounds states.
 - **Oracle-pinned.** Each task's oracle (`solution/solve.sh`) is a real solve that drives the reward to `1`, so a passing state is demonstrated-attainable everywhere and the batch carries no unreachable tasks.
 - **Shapeable.** Each battery is several independent assertions, so exposing partial-credit reward (fraction of checks passed) for curriculum or credit-assignment work is a configuration change, not a redesign.

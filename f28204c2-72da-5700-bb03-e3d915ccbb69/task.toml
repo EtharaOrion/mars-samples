@@ -1,0 +1,55 @@
+schema_version = "1.1"
+
+[task]
+name = "mars/ci-github-actions-flaky-test-quarantine-v2"
+description = "Configure a GitHub Actions workflow so a pytest test suite converges to a passing exit status across multiple independent runs. The initial workflow under-configures both the MAX_RETRIES env variable and the pytest-rerunfailures --reruns argv. The test source encodes an internal convergence rule the agent must read and match; naive copy-paste of --reruns 1 from documentation leaves the test flaking. The verifier parses the workflow yaml, extracts the env value and the argv value, requires them to match numerically at or above the convergence floor, and runs the pytest step multiple times against a clean state directory to prove convergence."
+authors = [{ name = "mars-forge" }]
+keywords = ["python", "pytest", "pytest-rerunfailures", "github-actions", "ci-pipeline", "compositional-multi-domain-reasoning", "retry-configuration"]
+
+[metadata]
+mars_sub_type = "build-ci-cd"
+mars_archetype = "ci-pipeline"
+mars_maturity = "draft"
+mars_tier = "frontier-defeat"
+mars_disposition_ceiling = "HOLD:PILOT_REQUIRED"
+mars_forge_contract_sha256 = "7fa61afd155a88f234f6c741a34546782fa0f53ca44afd5ead5a71094a7e5655"
+mars_forge_invocation = "35"
+mars_primary_hardness_lever = "compositional-multi-domain-reasoning"
+mars_legacy_predecessor_uuid = "e67de4b9-437c-5ba5-a455-d574c2e948f8"
+mars_task_uuid = "f28204c2-72da-5700-bb03-e3d915ccbb69"
+
+[verifier]
+timeout_sec = 600.0
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+build_timeout_sec = 1800.0
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0
+network_mode = "public"
+
+[verifier.env]
+[environment.env]
+[solution.env]
+
+[[artifacts]]
+source = "/workspace/.github/workflows/test.yml"
+
+[[artifacts]]
+source = "/workspace/tests/test_convergence.py"
+
+[[artifacts]]
+source = "/workspace/pyproject.toml"
+
+[[artifacts]]
+source = "/workspace/observed_ci_output.txt"
+
+[prosecutor]
+mode = "harness_provided"
+delegate = "harness/mars_council.py"
+in_container_stub = "tests/run_prosecutor_judge.py"
+note = "3-judge Claude council runs on host post-container; in-container stub is a no-op marker for G-VER-INVARIANCE"

@@ -1,0 +1,30 @@
+{
+  "schema": "forge.expected_output/v1",
+  "task_uuid": "feef025f-94a1-587f-97b1-1d777b93c0d5",
+  "task_slug": "fix-go-mod-replace-vendor-desync-v2",
+  "generated_by": "solution/recompute.py",
+  "source_of_truth": "solution/grounding.yaml",
+  "grader_semantics": {
+    "invariants": {
+      "I1_root_gomod_present": "/workspace/myapp/go.mod parses as a valid go.mod file",
+      "I2_root_module_declaration_unchanged": "the root go.mod module directive equals 'example.com/myapp'",
+      "I3_replace_directive_still_present": "the root go.mod carries a replace directive 'example.com/mylib' => '../mylib' in either single-line or block form",
+      "I4_local_replace_target_present": "the directory '/workspace/mylib' exists and contains a go.mod file",
+      "I5_local_target_module_declaration_fixed": "the go.mod at '/workspace/mylib/go.mod' declares module 'example.com/mylib'"
+    },
+    "runtime_gate": {
+      "D1_go_mod_verify": "go mod verify in /workspace/myapp exits 0",
+      "D2_go_build": "go build ./... in /workspace/myapp exits 0",
+      "D3_go_test": "go test -count=1 ./... in /workspace/myapp exits 0"
+    }
+  },
+  "authored_broken_state": {
+    "root_gomod_module_line": "module example.com/myapp",
+    "root_gomod_replace_line": "replace example.com/mylib => ../mylib",
+    "root_gomod_require_line": "require example.com/mylib v0.0.0-00010101000000-000000000000",
+    "local_gomod_module_line": "module example.com/mylib-WRONG",
+    "local_gomod_module_line_intentional": true,
+    "local_gomod_module_line_is_the_single_broken_line": true
+  },
+  "canonical_fix_summary": "Edit /workspace/mylib/go.mod so its module declaration reads\n`module example.com/mylib` instead of `module example.com/mylib-WRONG`.\nEvery other file stays exactly as authored. The `go` toolchain\nre-reads the local target's go.mod on the next command, and because\nthe declared module now matches the replace directive in the root\nproject, the build resolves, the tests link, and all three graded\ncommands exit 0.\n"
+}

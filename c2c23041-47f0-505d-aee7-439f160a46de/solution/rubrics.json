@@ -1,0 +1,1404 @@
+{
+  "schema": "forge.rubric_bundle/v1",
+  "task_uuid": "c2c23041-47f0-505d-aee7-439f160a46de",
+  "task_slug": "nginx-mtls-forward-auth-single-service",
+  "generated_by": "dataset/<uuid>/solution/recompute.py",
+  "source_of_truth": "dataset/<uuid>/solution/grounding.yaml",
+  "bound_by_contract": "seed/contract.yaml#rubric",
+  "compiled_item_weight_share": 0.9863013698630136,
+  "compilation_floor": 0.8,
+  "compilation_floor_note": "per_seed_contract_yaml_rubric_block_and_invariant_24",
+  "item_count": 73,
+  "items": [
+    {
+      "id": "R0001",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "log_file_contents_or_line_match_or_line_absence",
+      "criterion": "the value at grounding path bound_log_field_set > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "log_file_contents_or_line_match_or_line_absence"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_log_field_set",
+        0
+      ],
+      "grounding_path_display": "bound_log_field_set > [0]",
+      "expected_literal": "request_id"
+    },
+    {
+      "id": "R0002",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "log_file_contents_or_line_match_or_line_absence",
+      "criterion": "the value at grounding path bound_log_field_set > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "log_file_contents_or_line_match_or_line_absence"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_log_field_set",
+        1
+      ],
+      "grounding_path_display": "bound_log_field_set > [1]",
+      "expected_literal": "remote_addr"
+    },
+    {
+      "id": "R0003",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "log_file_contents_or_line_match_or_line_absence",
+      "criterion": "the value at grounding path bound_log_field_set > [2] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "log_file_contents_or_line_match_or_line_absence"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_log_field_set",
+        2
+      ],
+      "grounding_path_display": "bound_log_field_set > [2]",
+      "expected_literal": "ts_iso8601"
+    },
+    {
+      "id": "R0004",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "log_file_contents_or_line_match_or_line_absence",
+      "criterion": "the value at grounding path bound_log_field_set > [3] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "log_file_contents_or_line_match_or_line_absence"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_log_field_set",
+        3
+      ],
+      "grounding_path_display": "bound_log_field_set > [3]",
+      "expected_literal": "request_method"
+    },
+    {
+      "id": "R0005",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "log_file_contents_or_line_match_or_line_absence",
+      "criterion": "the value at grounding path bound_log_field_set > [4] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "log_file_contents_or_line_match_or_line_absence"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_log_field_set",
+        4
+      ],
+      "grounding_path_display": "bound_log_field_set > [4]",
+      "expected_literal": "request_uri"
+    },
+    {
+      "id": "R0006",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "log_file_contents_or_line_match_or_line_absence",
+      "criterion": "the value at grounding path bound_log_field_set > [5] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "log_file_contents_or_line_match_or_line_absence"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_log_field_set",
+        5
+      ],
+      "grounding_path_display": "bound_log_field_set > [5]",
+      "expected_literal": "http_host"
+    },
+    {
+      "id": "R0007",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "log_file_contents_or_line_match_or_line_absence",
+      "criterion": "the value at grounding path bound_log_field_set > [6] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "log_file_contents_or_line_match_or_line_absence"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_log_field_set",
+        6
+      ],
+      "grounding_path_display": "bound_log_field_set > [6]",
+      "expected_literal": "status"
+    },
+    {
+      "id": "R0008",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "log_file_contents_or_line_match_or_line_absence",
+      "criterion": "the value at grounding path bound_log_field_set > [7] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "log_file_contents_or_line_match_or_line_absence"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_log_field_set",
+        7
+      ],
+      "grounding_path_display": "bound_log_field_set > [7]",
+      "expected_literal": "body_bytes_sent"
+    },
+    {
+      "id": "R0009",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "log_file_contents_or_line_match_or_line_absence",
+      "criterion": "the value at grounding path bound_log_field_set > [8] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "log_file_contents_or_line_match_or_line_absence"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_log_field_set",
+        8
+      ],
+      "grounding_path_display": "bound_log_field_set > [8]",
+      "expected_literal": "request_time_seconds"
+    },
+    {
+      "id": "R0010",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "log_file_contents_or_line_match_or_line_absence",
+      "criterion": "the value at grounding path bound_log_field_set > [9] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "log_file_contents_or_line_match_or_line_absence"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_log_field_set",
+        9
+      ],
+      "grounding_path_display": "bound_log_field_set > [9]",
+      "expected_literal": "ssl_client_verify"
+    },
+    {
+      "id": "R0011",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "log_file_contents_or_line_match_or_line_absence",
+      "criterion": "the value at grounding path bound_log_field_set > [10] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "log_file_contents_or_line_match_or_line_absence"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_log_field_set",
+        10
+      ],
+      "grounding_path_display": "bound_log_field_set > [10]",
+      "expected_literal": "ssl_client_s_dn"
+    },
+    {
+      "id": "R0012",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "log_file_contents_or_line_match_or_line_absence",
+      "criterion": "the value at grounding path bound_log_field_set > [11] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "log_file_contents_or_line_match_or_line_absence"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_log_field_set",
+        11
+      ],
+      "grounding_path_display": "bound_log_field_set > [11]",
+      "expected_literal": "http_user_agent"
+    },
+    {
+      "id": "R0013",
+      "dimension": "correctness_of_effect",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path combined_line_budget equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "combined_line_budget"
+      ],
+      "grounding_path_display": "combined_line_budget",
+      "expected_literal": 220
+    },
+    {
+      "id": "R0014",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path reference_client_cn_pattern equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_client_cn_pattern"
+      ],
+      "grounding_path_display": "reference_client_cn_pattern",
+      "expected_literal": "CN=svc-[a-z0-9]+,O=Ethara"
+    },
+    {
+      "id": "R0015",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "log_file_contents_or_line_match_or_line_absence",
+      "criterion": "the value at grounding path reference_log_record_P1 > ssl_client_s_dn_regex equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "log_file_contents_or_line_match_or_line_absence"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_log_record_P1",
+        "ssl_client_s_dn_regex"
+      ],
+      "grounding_path_display": "reference_log_record_P1 > ssl_client_s_dn_regex",
+      "expected_literal": "^CN=svc-alpha,O=Ethara$"
+    },
+    {
+      "id": "R0016",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "log_file_contents_or_line_match_or_line_absence",
+      "criterion": "the value at grounding path reference_log_record_P1 > ssl_client_verify equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "log_file_contents_or_line_match_or_line_absence"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_log_record_P1",
+        "ssl_client_verify"
+      ],
+      "grounding_path_display": "reference_log_record_P1 > ssl_client_verify",
+      "expected_literal": "SUCCESS"
+    },
+    {
+      "id": "R0017",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "service_endpoint_response_status",
+      "criterion": "the value at grounding path reference_log_record_P1 > status equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "service_endpoint_response_status"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_log_record_P1",
+        "status"
+      ],
+      "grounding_path_display": "reference_log_record_P1 > status",
+      "expected_literal": 200
+    },
+    {
+      "id": "R0018",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path reference_mime_types_body equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_mime_types_body"
+      ],
+      "grounding_path_display": "reference_mime_types_body",
+      "expected_literal": "embedded in tests/grader.py under REFERENCE_MIME_TYPES constant"
+    },
+    {
+      "id": "R0019",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path reference_nginx_conf_body equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_nginx_conf_body"
+      ],
+      "grounding_path_display": "reference_nginx_conf_body",
+      "expected_literal": "embedded in tests/grader.py under REFERENCE_NGINX_CONF constant"
+    },
+    {
+      "id": "R0020",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path reference_pki_authoring_recipe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_pki_authoring_recipe"
+      ],
+      "grounding_path_display": "reference_pki_authoring_recipe",
+      "expected_literal": "baked at image build via /tmp/build_pki.sh with pinned serials 0x1001,0x2001,0x3001,0x4001,0x4002,0x4003,0x4004,0x9001 and pinned -not_before/-not_after for the expired client"
+    },
+    {
+      "id": "R0021",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "service_endpoint_response_body",
+      "criterion": "the value at grounding path reference_probe_truth_table > canonical_response_form matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "service_endpoint_response_body"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "canonical_response_form"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > canonical_response_form",
+      "expected_literal": "Ordered 8-tuple in probe-id order:\n(probe_id, http_status_code, response_body_sha256_hex_or_null,\n upstream_observed_subject_or_null)\n",
+      "semantic_residue": "value_carries_embedded_newlines_multiline_blob"
+    },
+    {
+      "id": "R0022",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [0] > body_sha256 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        0,
+        "body_sha256"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [0] > body_sha256",
+      "expected_literal": "c19511a15470c746f541a5eda64d7f2f4eea4ffeb54f92b7ec963450fd8f90d5"
+    },
+    {
+      "id": "R0023",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [0] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        0,
+        "probe"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [0] > probe",
+      "expected_literal": "P1"
+    },
+    {
+      "id": "R0024",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "service_endpoint_response_status",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [0] > status equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "service_endpoint_response_status"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        0,
+        "status"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [0] > status",
+      "expected_literal": 200
+    },
+    {
+      "id": "R0025",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [0] > upstream_observed_subject equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        0,
+        "upstream_observed_subject"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [0] > upstream_observed_subject",
+      "expected_literal": "CN=svc-alpha,O=Ethara"
+    },
+    {
+      "id": "R0026",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [1] > body_sha256 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        1,
+        "body_sha256"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [1] > body_sha256",
+      "expected_literal": null
+    },
+    {
+      "id": "R0027",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [1] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        1,
+        "probe"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [1] > probe",
+      "expected_literal": "P2"
+    },
+    {
+      "id": "R0028",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "service_endpoint_response_status",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [1] > status equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "service_endpoint_response_status"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        1,
+        "status"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [1] > status",
+      "expected_literal": 404
+    },
+    {
+      "id": "R0029",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [1] > upstream_observed_subject equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        1,
+        "upstream_observed_subject"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [1] > upstream_observed_subject",
+      "expected_literal": null
+    },
+    {
+      "id": "R0030",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [2] > body_sha256 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        2,
+        "body_sha256"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [2] > body_sha256",
+      "expected_literal": null
+    },
+    {
+      "id": "R0031",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [2] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        2,
+        "probe"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [2] > probe",
+      "expected_literal": "P3"
+    },
+    {
+      "id": "R0032",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "service_endpoint_response_status",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [2] > status equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "service_endpoint_response_status"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        2,
+        "status"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [2] > status",
+      "expected_literal": 495
+    },
+    {
+      "id": "R0033",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [2] > upstream_observed_subject equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        2,
+        "upstream_observed_subject"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [2] > upstream_observed_subject",
+      "expected_literal": null
+    },
+    {
+      "id": "R0034",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [3] > body_sha256 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        3,
+        "body_sha256"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [3] > body_sha256",
+      "expected_literal": null
+    },
+    {
+      "id": "R0035",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [3] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        3,
+        "probe"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [3] > probe",
+      "expected_literal": "P4"
+    },
+    {
+      "id": "R0036",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "service_endpoint_response_status",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [3] > status equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "service_endpoint_response_status"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        3,
+        "status"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [3] > status",
+      "expected_literal": 495
+    },
+    {
+      "id": "R0037",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [3] > upstream_observed_subject equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        3,
+        "upstream_observed_subject"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [3] > upstream_observed_subject",
+      "expected_literal": null
+    },
+    {
+      "id": "R0038",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [4] > body_sha256 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        4,
+        "body_sha256"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [4] > body_sha256",
+      "expected_literal": null
+    },
+    {
+      "id": "R0039",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [4] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        4,
+        "probe"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [4] > probe",
+      "expected_literal": "P5"
+    },
+    {
+      "id": "R0040",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "service_endpoint_response_status",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [4] > status equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "service_endpoint_response_status"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        4,
+        "status"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [4] > status",
+      "expected_literal": 495
+    },
+    {
+      "id": "R0041",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [4] > upstream_observed_subject equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        4,
+        "upstream_observed_subject"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [4] > upstream_observed_subject",
+      "expected_literal": null
+    },
+    {
+      "id": "R0042",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [5] > body_sha256 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        5,
+        "body_sha256"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [5] > body_sha256",
+      "expected_literal": null
+    },
+    {
+      "id": "R0043",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [5] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        5,
+        "probe"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [5] > probe",
+      "expected_literal": "P6"
+    },
+    {
+      "id": "R0044",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "service_endpoint_response_status",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [5] > status equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "service_endpoint_response_status"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        5,
+        "status"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [5] > status",
+      "expected_literal": 496
+    },
+    {
+      "id": "R0045",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [5] > upstream_observed_subject equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        5,
+        "upstream_observed_subject"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [5] > upstream_observed_subject",
+      "expected_literal": null
+    },
+    {
+      "id": "R0046",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [6] > body_sha256 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        6,
+        "body_sha256"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [6] > body_sha256",
+      "expected_literal": null
+    },
+    {
+      "id": "R0047",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "command_exit_code",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [6] > curl_exit_nonzero equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_exit_code"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        6,
+        "curl_exit_nonzero"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [6] > curl_exit_nonzero",
+      "expected_literal": true
+    },
+    {
+      "id": "R0048",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [6] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        6,
+        "probe"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [6] > probe",
+      "expected_literal": "P7"
+    },
+    {
+      "id": "R0049",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "service_endpoint_response_status",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [6] > status equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "service_endpoint_response_status"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        6,
+        "status"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [6] > status",
+      "expected_literal": 0
+    },
+    {
+      "id": "R0050",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [6] > upstream_observed_subject equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        6,
+        "upstream_observed_subject"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [6] > upstream_observed_subject",
+      "expected_literal": null
+    },
+    {
+      "id": "R0051",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [7] > body_sha256 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        7,
+        "body_sha256"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [7] > body_sha256",
+      "expected_literal": null
+    },
+    {
+      "id": "R0052",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [7] > location_header equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        7,
+        "location_header"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [7] > location_header",
+      "expected_literal": "https://localhost/foo"
+    },
+    {
+      "id": "R0053",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [7] > probe equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        7,
+        "probe"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [7] > probe",
+      "expected_literal": "P8"
+    },
+    {
+      "id": "R0054",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "service_endpoint_response_status",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [7] > status equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "service_endpoint_response_status"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        7,
+        "status"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [7] > status",
+      "expected_literal": 301
+    },
+    {
+      "id": "R0055",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path reference_probe_truth_table > rows > [7] > upstream_observed_subject equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_probe_truth_table",
+        "rows",
+        7,
+        "upstream_observed_subject"
+      ],
+      "grounding_path_display": "reference_probe_truth_table > rows > [7] > upstream_observed_subject",
+      "expected_literal": null
+    },
+    {
+      "id": "R0056",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path reference_reload_sh_body equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_reload_sh_body"
+      ],
+      "grounding_path_display": "reference_reload_sh_body",
+      "expected_literal": "embedded in tests/grader.py under REFERENCE_RELOAD_SH constant"
+    },
+    {
+      "id": "R0057",
+      "dimension": "correctness_of_value",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path reference_upstream_observed_subject_map > P1 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_upstream_observed_subject_map",
+        "P1"
+      ],
+      "grounding_path_display": "reference_upstream_observed_subject_map > P1",
+      "expected_literal": "CN=svc-alpha,O=Ethara"
+    },
+    {
+      "id": "R0058",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "command_exit_code",
+      "criterion": "the value at grounding path reload_sh_success_contract > exit_code equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_exit_code"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reload_sh_success_contract",
+        "exit_code"
+      ],
+      "grounding_path_display": "reload_sh_success_contract > exit_code",
+      "expected_literal": 0
+    },
+    {
+      "id": "R0059",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "command_exit_code",
+      "criterion": "the value at grounding path reload_sh_success_contract > nginx_t_recheck_exit_code equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_exit_code"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reload_sh_success_contract",
+        "nginx_t_recheck_exit_code"
+      ],
+      "grounding_path_display": "reload_sh_success_contract > nginx_t_recheck_exit_code",
+      "expected_literal": 0
+    },
+    {
+      "id": "R0060",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path reload_sh_success_contract > tcp_443_bound_within_seconds equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reload_sh_success_contract",
+        "tcp_443_bound_within_seconds"
+      ],
+      "grounding_path_display": "reload_sh_success_contract > tcp_443_bound_within_seconds",
+      "expected_literal": 5
+    },
+    {
+      "id": "R0061",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [0] > nonempty equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "three_authored_files_shape_contract",
+        0,
+        "nonempty"
+      ],
+      "grounding_path_display": "three_authored_files_shape_contract > [0] > nonempty",
+      "expected_literal": "required"
+    },
+    {
+      "id": "R0062",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [0] > path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "three_authored_files_shape_contract",
+        0,
+        "path"
+      ],
+      "grounding_path_display": "three_authored_files_shape_contract > [0] > path",
+      "expected_literal": "/workspace/nginx.conf"
+    },
+    {
+      "id": "R0063",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [0] > presence equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "three_authored_files_shape_contract",
+        0,
+        "presence"
+      ],
+      "grounding_path_display": "three_authored_files_shape_contract > [0] > presence",
+      "expected_literal": "required"
+    },
+    {
+      "id": "R0064",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [0] > utf8 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "three_authored_files_shape_contract",
+        0,
+        "utf8"
+      ],
+      "grounding_path_display": "three_authored_files_shape_contract > [0] > utf8",
+      "expected_literal": "required"
+    },
+    {
+      "id": "R0065",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [1] > nonempty equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "three_authored_files_shape_contract",
+        1,
+        "nonempty"
+      ],
+      "grounding_path_display": "three_authored_files_shape_contract > [1] > nonempty",
+      "expected_literal": "required"
+    },
+    {
+      "id": "R0066",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [1] > path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "three_authored_files_shape_contract",
+        1,
+        "path"
+      ],
+      "grounding_path_display": "three_authored_files_shape_contract > [1] > path",
+      "expected_literal": "/workspace/mime.types"
+    },
+    {
+      "id": "R0067",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [1] > presence equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "three_authored_files_shape_contract",
+        1,
+        "presence"
+      ],
+      "grounding_path_display": "three_authored_files_shape_contract > [1] > presence",
+      "expected_literal": "required"
+    },
+    {
+      "id": "R0068",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [1] > utf8 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "three_authored_files_shape_contract",
+        1,
+        "utf8"
+      ],
+      "grounding_path_display": "three_authored_files_shape_contract > [1] > utf8",
+      "expected_literal": "required"
+    },
+    {
+      "id": "R0069",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [2] > mode_bit_owner_exec equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "three_authored_files_shape_contract",
+        2,
+        "mode_bit_owner_exec"
+      ],
+      "grounding_path_display": "three_authored_files_shape_contract > [2] > mode_bit_owner_exec",
+      "expected_literal": "required"
+    },
+    {
+      "id": "R0070",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [2] > nonempty equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "three_authored_files_shape_contract",
+        2,
+        "nonempty"
+      ],
+      "grounding_path_display": "three_authored_files_shape_contract > [2] > nonempty",
+      "expected_literal": "required"
+    },
+    {
+      "id": "R0071",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [2] > path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "three_authored_files_shape_contract",
+        2,
+        "path"
+      ],
+      "grounding_path_display": "three_authored_files_shape_contract > [2] > path",
+      "expected_literal": "/workspace/reload.sh"
+    },
+    {
+      "id": "R0072",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [2] > presence equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "three_authored_files_shape_contract",
+        2,
+        "presence"
+      ],
+      "grounding_path_display": "three_authored_files_shape_contract > [2] > presence",
+      "expected_literal": "required"
+    },
+    {
+      "id": "R0073",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.0136986301369863,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path three_authored_files_shape_contract > [2] > utf8 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "three_authored_files_shape_contract",
+        2,
+        "utf8"
+      ],
+      "grounding_path_display": "three_authored_files_shape_contract > [2] > utf8",
+      "expected_literal": "required"
+    }
+  ]
+}

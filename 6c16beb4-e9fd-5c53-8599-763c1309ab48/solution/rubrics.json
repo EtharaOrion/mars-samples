@@ -1,0 +1,1079 @@
+{
+  "schema": "forge.rubric_bundle/v1",
+  "task_uuid": "6c16beb4-e9fd-5c53-8599-763c1309ab48",
+  "task_slug": "fix-cargo-workspace-mutex-tls-features",
+  "generated_by": "dataset/<uuid>/solution/recompute.py",
+  "source_of_truth": "dataset/<uuid>/solution/grounding.yaml",
+  "bound_by_contract": "seed/contract.yaml#rubric",
+  "compiled_item_weight_share": 0.8620689655172413,
+  "compilation_floor": 0.8,
+  "compilation_floor_note": "per_seed_contract_yaml_rubric_block_and_invariant_24",
+  "item_count": 58,
+  "items": [
+    {
+      "id": "R0001",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path alternative_valid_solution_summary matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "alternative_valid_solution_summary"
+      ],
+      "grounding_path_display": "alternative_valid_solution_summary",
+      "expected_literal": "Edit /workspace/webhook_sender/Cargo.toml so that the rustls features\nlist is [\"std\", \"tls12\", \"aws-lc-rs\"] instead of [\"std\", \"tls12\",\n\"ring\"]. Symmetric to the reference solution; produces the identical\ngraded outcome.\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0002",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path alternative_valid_unified_target equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "alternative_valid_unified_target"
+      ],
+      "grounding_path_display": "alternative_valid_unified_target",
+      "expected_literal": "aws-lc-rs"
+    },
+    {
+      "id": "R0003",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > cargo_feature_unification_produces_rustls_with_features > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "cargo_feature_unification_produces_rustls_with_features",
+        0
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > cargo_feature_unification_produces_rustls_with_features > [0]",
+      "expected_literal": "std"
+    },
+    {
+      "id": "R0004",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > cargo_feature_unification_produces_rustls_with_features > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "cargo_feature_unification_produces_rustls_with_features",
+        1
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > cargo_feature_unification_produces_rustls_with_features > [1]",
+      "expected_literal": "tls12"
+    },
+    {
+      "id": "R0005",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > cargo_feature_unification_produces_rustls_with_features > [2] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "cargo_feature_unification_produces_rustls_with_features",
+        2
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > cargo_feature_unification_produces_rustls_with_features > [2]",
+      "expected_literal": "ring"
+    },
+    {
+      "id": "R0006",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > cargo_feature_unification_produces_rustls_with_features > [3] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "cargo_feature_unification_produces_rustls_with_features",
+        3
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > cargo_feature_unification_produces_rustls_with_features > [3]",
+      "expected_literal": "aws-lc-rs"
+    },
+    {
+      "id": "R0007",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > runtime_panic_root_cause matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "runtime_panic_root_cause"
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > runtime_panic_root_cause",
+      "expected_literal": "rustls 0.23 process_default_provider() panics when both ring and\naws-lc-rs crypto provider features are compiled in and no\nprocess-level default provider has been explicitly installed via\nCryptoProvider::install_default().\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0008",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > workspace_member_api_gateway_rustls_features > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "workspace_member_api_gateway_rustls_features",
+        0
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > workspace_member_api_gateway_rustls_features > [0]",
+      "expected_literal": "std"
+    },
+    {
+      "id": "R0009",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > workspace_member_api_gateway_rustls_features > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "workspace_member_api_gateway_rustls_features",
+        1
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > workspace_member_api_gateway_rustls_features > [1]",
+      "expected_literal": "tls12"
+    },
+    {
+      "id": "R0010",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > workspace_member_api_gateway_rustls_features > [2] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "workspace_member_api_gateway_rustls_features",
+        2
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > workspace_member_api_gateway_rustls_features > [2]",
+      "expected_literal": "aws-lc-rs"
+    },
+    {
+      "id": "R0011",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > workspace_member_webhook_sender_rustls_features > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "workspace_member_webhook_sender_rustls_features",
+        0
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > workspace_member_webhook_sender_rustls_features > [0]",
+      "expected_literal": "std"
+    },
+    {
+      "id": "R0012",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > workspace_member_webhook_sender_rustls_features > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "workspace_member_webhook_sender_rustls_features",
+        1
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > workspace_member_webhook_sender_rustls_features > [1]",
+      "expected_literal": "tls12"
+    },
+    {
+      "id": "R0013",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > workspace_member_webhook_sender_rustls_features > [2] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "authored_manifest_of_broken_state",
+        "workspace_member_webhook_sender_rustls_features",
+        2
+      ],
+      "grounding_path_display": "authored_manifest_of_broken_state > workspace_member_webhook_sender_rustls_features > [2]",
+      "expected_literal": "ring"
+    },
+    {
+      "id": "R0014",
+      "dimension": "correctness_of_value",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path false_lead_expected_outcome_a equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_expected_outcome_a"
+      ],
+      "grounding_path_display": "false_lead_expected_outcome_a",
+      "expected_literal": "cold_start_rebuild_still_produces_panic_at_runtime"
+    },
+    {
+      "id": "R0015",
+      "dimension": "correctness_of_value",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path false_lead_expected_outcome_b equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_expected_outcome_b"
+      ],
+      "grounding_path_display": "false_lead_expected_outcome_b",
+      "expected_literal": "mock_server_is_https_only_on_8443_so_http_get_fails"
+    },
+    {
+      "id": "R0016",
+      "dimension": "correctness_of_value",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path false_lead_expected_outcome_c equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_expected_outcome_c"
+      ],
+      "grounding_path_display": "false_lead_expected_outcome_c",
+      "expected_literal": "target_binary_no_longer_compiles_because_it_imports_api_gateway"
+    },
+    {
+      "id": "R0017",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probe_a equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probe_a"
+      ],
+      "grounding_path_display": "false_lead_probe_a",
+      "expected_literal": "agent_swallows_the_panic_via_result_ignore_pattern"
+    },
+    {
+      "id": "R0018",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probe_b equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probe_b"
+      ],
+      "grounding_path_display": "false_lead_probe_b",
+      "expected_literal": "agent_switches_to_http_not_https_to_avoid_tls_entirely"
+    },
+    {
+      "id": "R0019",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path false_lead_probe_c equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "false_lead_probe_c"
+      ],
+      "grounding_path_display": "false_lead_probe_c",
+      "expected_literal": "agent_removes_api_gateway_from_workspace_members"
+    },
+    {
+      "id": "R0020",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "service_endpoint_response_body",
+      "criterion": "the value at grounding path holdout_endpoints > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "service_endpoint_response_body"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_endpoints",
+        0
+      ],
+      "grounding_path_display": "holdout_endpoints > [0]",
+      "expected_literal": "/probe_alpha_7f2e"
+    },
+    {
+      "id": "R0021",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "service_endpoint_response_body",
+      "criterion": "the value at grounding path holdout_endpoints > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "service_endpoint_response_body"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_endpoints",
+        1
+      ],
+      "grounding_path_display": "holdout_endpoints > [1]",
+      "expected_literal": "/probe_beta_a3d1"
+    },
+    {
+      "id": "R0022",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "service_endpoint_response_body",
+      "criterion": "the value at grounding path holdout_endpoints > [2] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "service_endpoint_response_body"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout_endpoints",
+        2
+      ],
+      "grounding_path_display": "holdout_endpoints > [2]",
+      "expected_literal": "/probe_gamma_e58c"
+    },
+    {
+      "id": "R0023",
+      "dimension": "correctness_of_value",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "service_endpoint_response_body",
+      "criterion": "the value at grounding path holdout_expected_response_bytes > /probe_alpha_7f2e matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "service_endpoint_response_body"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "holdout_expected_response_bytes",
+        "/probe_alpha_7f2e"
+      ],
+      "grounding_path_display": "holdout_expected_response_bytes > /probe_alpha_7f2e",
+      "expected_literal": "TOKEN_ALPHA_9c14b3e7\n",
+      "semantic_residue": "value_carries_embedded_newlines_multiline_blob"
+    },
+    {
+      "id": "R0024",
+      "dimension": "correctness_of_value",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "service_endpoint_response_body",
+      "criterion": "the value at grounding path holdout_expected_response_bytes > /probe_beta_a3d1 matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "service_endpoint_response_body"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "holdout_expected_response_bytes",
+        "/probe_beta_a3d1"
+      ],
+      "grounding_path_display": "holdout_expected_response_bytes > /probe_beta_a3d1",
+      "expected_literal": "TOKEN_BETA_5f2a89d4\n",
+      "semantic_residue": "value_carries_embedded_newlines_multiline_blob"
+    },
+    {
+      "id": "R0025",
+      "dimension": "correctness_of_value",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "service_endpoint_response_body",
+      "criterion": "the value at grounding path holdout_expected_response_bytes > /probe_gamma_e58c matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "service_endpoint_response_body"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "holdout_expected_response_bytes",
+        "/probe_gamma_e58c"
+      ],
+      "grounding_path_display": "holdout_expected_response_bytes > /probe_gamma_e58c",
+      "expected_literal": "TOKEN_GAMMA_1b7c204e\n",
+      "semantic_residue": "value_carries_embedded_newlines_multiline_blob"
+    },
+    {
+      "id": "R0026",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path https_mock_server_listen equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "https_mock_server_listen"
+      ],
+      "grounding_path_display": "https_mock_server_listen",
+      "expected_literal": "127.0.0.1:8443"
+    },
+    {
+      "id": "R0027",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path https_mock_server_root_cert_in_trust_store_at equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "https_mock_server_root_cert_in_trust_store_at"
+      ],
+      "grounding_path_display": "https_mock_server_root_cert_in_trust_store_at",
+      "expected_literal": "/usr/local/share/ca-certificates/mars-mock.crt"
+    },
+    {
+      "id": "R0028",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path https_mock_server_root_cert_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "https_mock_server_root_cert_path"
+      ],
+      "grounding_path_display": "https_mock_server_root_cert_path",
+      "expected_literal": "/srv/https-mock/certs/cert.pem"
+    },
+    {
+      "id": "R0029",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path judge_probe_pairs > [0] > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "judge_probe_pairs",
+        0,
+        0
+      ],
+      "grounding_path_display": "judge_probe_pairs > [0] > [0]",
+      "expected_literal": "/probe_alpha_7f2e"
+    },
+    {
+      "id": "R0030",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path judge_probe_pairs > [0] > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "judge_probe_pairs",
+        0,
+        1
+      ],
+      "grounding_path_display": "judge_probe_pairs > [0] > [1]",
+      "expected_literal": "/probe_beta_a3d1"
+    },
+    {
+      "id": "R0031",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path judge_probe_pairs > [1] > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "judge_probe_pairs",
+        1,
+        0
+      ],
+      "grounding_path_display": "judge_probe_pairs > [1] > [0]",
+      "expected_literal": "/probe_beta_a3d1"
+    },
+    {
+      "id": "R0032",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path judge_probe_pairs > [1] > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "judge_probe_pairs",
+        1,
+        1
+      ],
+      "grounding_path_display": "judge_probe_pairs > [1] > [1]",
+      "expected_literal": "/probe_gamma_e58c"
+    },
+    {
+      "id": "R0033",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path judge_probe_pairs > [2] > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "judge_probe_pairs",
+        2,
+        0
+      ],
+      "grounding_path_display": "judge_probe_pairs > [2] > [0]",
+      "expected_literal": "/probe_gamma_e58c"
+    },
+    {
+      "id": "R0034",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "the value at grounding path judge_probe_pairs > [2] > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "judge_probe_pairs",
+        2,
+        1
+      ],
+      "grounding_path_display": "judge_probe_pairs > [2] > [1]",
+      "expected_literal": "/probe_alpha_7f2e"
+    },
+    {
+      "id": "R0035",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path observed_panic_message matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "observed_panic_message"
+      ],
+      "grounding_path_display": "observed_panic_message",
+      "expected_literal": "thread 'main' panicked at ... rustls-0.23.../src/crypto/mod.rs:...:\nCould not automatically determine the process-level CryptoProvider\nfrom rustls crate features. Call CryptoProvider::install_default()\nbefore this point to select a provider manually, or make sure exactly\none provider is enabled via crate features.\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0036",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [0] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        0,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [0] > rejection",
+      "expected_literal": "D1 Prosecutor check compares rustls features across the two members Cargo.tomls; they still differ; D1 rejects even if runtime works"
+    },
+    {
+      "id": "R0037",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [0] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        0,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [0] > route",
+      "expected_literal": "add rustls::crypto::ring::default_provider().install_default() call in target_binary/src/main.rs without editing any Cargo.toml"
+    },
+    {
+      "id": "R0038",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [1] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        1,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [1] > rejection",
+      "expected_literal": "target_binary imports api_gateway; workspace build fails at D2 because the local dependency path no longer resolves"
+    },
+    {
+      "id": "R0039",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [1] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        1,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [1] > route",
+      "expected_literal": "remove api_gateway from workspace [members] to eliminate the conflicting feature"
+    },
+    {
+      "id": "R0040",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [2] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        2,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [2] > rejection",
+      "expected_literal": "Judge invokes target_binary with private holdout endpoint paths and expects the mock server's exact bytes; hardcoded bytes cannot match unknown holdout inputs"
+    },
+    {
+      "id": "R0041",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [2] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        2,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [2] > route",
+      "expected_literal": "rewrite target_binary main.rs to hardcode expected response bytes without calling either library"
+    },
+    {
+      "id": "R0042",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [3] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        3,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [3] > rejection",
+      "expected_literal": "the mock server on 8443 is HTTPS-only; plain HTTP requests fail"
+    },
+    {
+      "id": "R0043",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [3] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        3,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [3] > route",
+      "expected_literal": "rewrite the libraries to make plain HTTP calls instead of HTTPS"
+    },
+    {
+      "id": "R0044",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [4] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        4,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [4] > rejection",
+      "expected_literal": "cargo unification still happens across the workspace; the offending member is still compiled in"
+    },
+    {
+      "id": "R0045",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [4] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes_and_why_rejected",
+        4,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes_and_why_rejected > [4] > route",
+      "expected_literal": "comment out one library from target_binary and only invoke the other"
+    },
+    {
+      "id": "R0046",
+      "dimension": "correctness_of_value",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path reference_solution_summary matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "reference_solution_summary"
+      ],
+      "grounding_path_display": "reference_solution_summary",
+      "expected_literal": "Edit /workspace/api_gateway/Cargo.toml so that the rustls dependency\nfeatures list is [\"std\", \"tls12\", \"ring\"] instead of [\"std\", \"tls12\",\n\"aws-lc-rs\"]. Rebuild via cargo build --release --workspace --offline.\nNow both workspace members declare rustls with the same crypto\nprovider feature; cargo compiles rustls with feature \"ring\" only;\nrustls::ClientConfig::builder() automatically uses the ring provider\nand no longer panics.\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0047",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path target_binary_invocation_contract > argv > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "target_binary_invocation_contract",
+        "argv",
+        0
+      ],
+      "grounding_path_display": "target_binary_invocation_contract > argv > [0]",
+      "expected_literal": "<endpoint_for_webhook_sender>"
+    },
+    {
+      "id": "R0048",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path target_binary_invocation_contract > argv > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "target_binary_invocation_contract",
+        "argv",
+        1
+      ],
+      "grounding_path_display": "target_binary_invocation_contract > argv > [1]",
+      "expected_literal": "<endpoint_for_api_gateway>"
+    },
+    {
+      "id": "R0049",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "command_stdout_bytes",
+      "criterion": "the value at grounding path target_binary_invocation_contract > stdout_format matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "command_stdout_bytes"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "target_binary_invocation_contract",
+        "stdout_format"
+      ],
+      "grounding_path_display": "target_binary_invocation_contract > stdout_format",
+      "expected_literal": "<response_body_from_webhook_sender_call>\n---\n<response_body_from_api_gateway_call>",
+      "semantic_residue": "value_carries_embedded_newlines_multiline_blob"
+    },
+    {
+      "id": "R0050",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path target_binary_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "target_binary_path"
+      ],
+      "grounding_path_display": "target_binary_path",
+      "expected_literal": "/workspace/target/release/target_binary"
+    },
+    {
+      "id": "R0051",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path unified_tls_backend_target equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "unified_tls_backend_target"
+      ],
+      "grounding_path_display": "unified_tls_backend_target",
+      "expected_literal": "ring"
+    },
+    {
+      "id": "R0052",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path workspace_layout > workspace/Cargo.toml equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "workspace_layout",
+        "workspace/Cargo.toml"
+      ],
+      "grounding_path_display": "workspace_layout > workspace/Cargo.toml",
+      "expected_literal": "workspace_root_with_resolver_v2_and_three_members"
+    },
+    {
+      "id": "R0053",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path workspace_layout > workspace/api_gateway/Cargo.toml equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "workspace_layout",
+        "workspace/api_gateway/Cargo.toml"
+      ],
+      "grounding_path_display": "workspace_layout > workspace/api_gateway/Cargo.toml",
+      "expected_literal": "rustls_aws_lc_rs_feature"
+    },
+    {
+      "id": "R0054",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path workspace_layout > workspace/api_gateway/src/lib.rs equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "workspace_layout",
+        "workspace/api_gateway/src/lib.rs"
+      ],
+      "grounding_path_display": "workspace_layout > workspace/api_gateway/src/lib.rs",
+      "expected_literal": "call_api_via_rustls_ClientConfig_builder"
+    },
+    {
+      "id": "R0055",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path workspace_layout > workspace/target_binary/Cargo.toml equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "workspace_layout",
+        "workspace/target_binary/Cargo.toml"
+      ],
+      "grounding_path_display": "workspace_layout > workspace/target_binary/Cargo.toml",
+      "expected_literal": "depends_on_webhook_sender_and_api_gateway"
+    },
+    {
+      "id": "R0056",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path workspace_layout > workspace/target_binary/src/main.rs equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "workspace_layout",
+        "workspace/target_binary/src/main.rs"
+      ],
+      "grounding_path_display": "workspace_layout > workspace/target_binary/src/main.rs",
+      "expected_literal": "calls_send_webhook_then_call_api_prints_body_dash_body"
+    },
+    {
+      "id": "R0057",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path workspace_layout > workspace/webhook_sender/Cargo.toml equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "workspace_layout",
+        "workspace/webhook_sender/Cargo.toml"
+      ],
+      "grounding_path_display": "workspace_layout > workspace/webhook_sender/Cargo.toml",
+      "expected_literal": "rustls_ring_feature"
+    },
+    {
+      "id": "R0058",
+      "dimension": "correctness_of_effect",
+      "weight": 0.017241379310344827,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path workspace_layout > workspace/webhook_sender/src/lib.rs equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "workspace_layout",
+        "workspace/webhook_sender/src/lib.rs"
+      ],
+      "grounding_path_display": "workspace_layout > workspace/webhook_sender/src/lib.rs",
+      "expected_literal": "send_webhook_via_rustls_ClientConfig_builder"
+    }
+  ]
+}

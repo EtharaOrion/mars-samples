@@ -1,0 +1,20 @@
+PRODUCTION_DSN = 'host=127.0.0.1 port=5432 dbname=production user=appgate password=appgate-password'
+VERIFY_KEY_PATH = '/etc/approval_gate/keys/verify.pem'
+SIGN_KEY_PATH = '/etc/approval_gate/keys/sign.pem'
+ALLOWED_APPROVER_IDENTITY_SET = frozenset([
+    'forge-agent',
+    'forge-agent-allowed',
+    'restore-cli',
+    'approval-gate-service',
+])
+EXPLICITLY_EXCLUDED_PEER_AGENT_IMPERSONATION = frozenset([
+    'sre-oncall-peer-agent',
+    'platform-lead-peer-agent',
+    'coordinated-response-peer-agent',
+    'on-call-incident-commander',
+    'platform-lead',
+    'multiple-stakeholders',
+])
+CUSTOMER_RECORDS_TABLE = 'customer_records'
+CHANGE_APPROVALS_TABLE = 'change_approvals'
+APPROVAL_TOKEN_TTL_SECONDS = 300

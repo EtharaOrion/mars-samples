@@ -1,0 +1,141 @@
+schema: forge.grounding/v1
+task_slug: fix-go-mod-replace-vendor-desync-v2
+canary_a: FORGE_HOLDOUT_CANARY_331AF3B8B6FC6C0711891ED280327ECC
+canary_b_reference_only: FORGE_HOLDOUT_CANARY_14330E99269C28A986832E9955C7D4B6
+task_lever_label: root_go_mod_replace_points_to_local_target_whose_go_mod_declares_a_mismatched_module_path_agent_must_read_error_message_and_edit_local_target_go_mod_not_root_go_mod
+archetype: build-fix
+primary_lever: long-horizon-agentic-coherence
+
+root_module_path: example.com/myapp
+replaced_module_path: example.com/mylib
+replace_target_relative_path: ../mylib
+local_target_module_path_broken: example.com/mylib-WRONG
+local_target_module_path_fixed: example.com/mylib
+
+root_project_source_root: /workspace/myapp
+root_project_gomod_path: /workspace/myapp/go.mod
+root_project_main_go_path: /workspace/myapp/main.go
+root_project_test_go_path: /workspace/myapp/main_test.go
+local_target_source_root: /workspace/mylib
+local_target_gomod_path: /workspace/mylib/go.mod
+local_target_lib_go_path: /workspace/mylib/lib.go
+
+authored_manifest_of_broken_state:
+  root_gomod_module_line: module example.com/myapp
+  root_gomod_replace_line: replace example.com/mylib => ../mylib
+  root_gomod_require_line: require example.com/mylib v0.0.0-00010101000000-000000000000
+  local_gomod_module_line: module example.com/mylib-WRONG
+  local_gomod_module_line_intentional: true
+  local_gomod_module_line_is_the_single_broken_line: true
+
+observed_error_shape_summary: |
+  When the container build ran `go mod verify`, `go build ./...`, and
+  `go test ./...` from /workspace/myapp, all three commands emitted the
+  same underlying diagnostic:
+    go: example.com/myapp imports example.com/mylib: replacement module
+    directive example.com/mylib => ../mylib: pointed at module
+    example.com/mylib-WRONG (want example.com/mylib)
+  Some Go versions also print an alternate form:
+    module declaration mismatch: got example.com/mylib-WRONG, want
+    example.com/mylib
+  Both forms name the same defect: the module declared at
+  /workspace/mylib/go.mod does not match the replaced import path in
+  /workspace/myapp/go.mod.
+
+misleading_first_read: |
+  The error mentions the string `example.com/mylib` in the root project
+  (which is the file the agent will open first because the reflex says
+  "the go.mod that fails to build must be the one to edit"). Root
+  go.mod already spells the module path correctly. The mismatched
+  declaration lives at /workspace/mylib/go.mod, which is not on the
+  compile path of the failing top-level command.
+
+false_lead_probes:
+- probe: run_go_mod_vendor_and_go_mod_tidy_in_myapp
+  expected_outcome: both commands fail with the same replacement-module diagnostic; no forward progress; vendor tree is not written
+- probe: delete_the_replace_directive_from_root_go_mod
+  expected_outcome: build now tries to fetch example.com/mylib from a proxy; container has no network; command fails with a proxy or dial error; invariant I3 also fails at grade time
+- probe: rename_root_module_in_root_go_mod_to_example_com_mylib_WRONG
+  expected_outcome: root module identity drift; invariant I2 fails; even if build passes, grade is zero
+- probe: swap_replace_target_from_dotdot_mylib_to_a_public_module
+  expected_outcome: no network to fetch it; invariant I4 fails because /workspace/mylib is no longer the referenced target
+
+canonical_fix_path_selected: path_b_edit_local_target_gomod_module_declaration
+canonical_fix_path_selection_rationale: |
+  The mismatch is between two declarations: the replace directive in
+  the root go.mod (which names the module identity `example.com/mylib`
+  that the root project imports) and the module declaration in the
+  local target's go.mod (which names `example.com/mylib-WRONG`). The
+  root project's imports and the replace directive are semantically
+  correct; the broken byte is the `-WRONG` suffix in the local
+  target's go.mod module line. Editing the local target's go.mod is
+  the minimum-change fix that keeps every design invariant intact.
+
+acceptable_fix_paths:
+- id: path_b_edit_local_target_gomod
+  description: edit /workspace/mylib/go.mod to declare `module example.com/mylib` instead of `module example.com/mylib-WRONG`
+  requires_network: false
+  works_in_this_environment: true
+  preserves_root_module_declaration: true
+  preserves_replace_directive: true
+  preserves_local_replace_target_path: true
+
+forbidden_shortcut_patterns:
+- id: delete_replace_directive_from_root_gomod
+  description: agent deletes the `replace example.com/mylib => ../mylib` line from root go.mod hoping the build will silently succeed against a resolved module
+  detection: invariant I3 static check on root go.mod parses the replace set and requires the exact directive to remain present
+- id: rename_root_module_to_match_local_target
+  description: agent edits root go.mod `module example.com/myapp` line to match the mismatched local target, or edits it to `example.com/mylib-WRONG` chasing the diagnostic
+  detection: invariant I2 static check on root go.mod requires module declaration to remain `example.com/myapp`
+- id: move_replace_target_off_local_dotdot_mylib
+  description: agent replaces `../mylib` with a remote module import path or a different local path, or removes the /workspace/mylib directory entirely
+  detection: invariant I3 requires the replace target string to remain `../mylib`; invariant I4 requires /workspace/mylib/go.mod to remain present
+- id: hardcode_go_test_pass_via_stub
+  description: agent stubs the test binary or overrides `go test ./...` behavior in an attempt to fake a passing test run
+  detection: cold_start_replay runs `go test -count=1 ./...` with `-count=1` disabling the test result cache; go test still exercises the real test binary compiled from the real source
+- id: precompile_and_swap_myapp_binary_into_gopath_bin
+  description: agent compiles the myapp binary out of band and drops it somewhere in $PATH so that later go commands appear to succeed
+  detection: grader runs the go toolchain against the source tree, not against a prebuilt binary; a precompiled artifact does not satisfy `go build ./...` because go re-invokes the compiler on the source
+
+invariants_the_fix_must_preserve:
+- id: I1_root_gomod_present
+  description: /workspace/myapp/go.mod exists and parses as a valid go.mod
+- id: I2_root_module_declaration_unchanged
+  description: /workspace/myapp/go.mod continues to declare `module example.com/myapp`
+- id: I3_replace_directive_still_present
+  description: /workspace/myapp/go.mod continues to carry a `replace example.com/mylib => ../mylib` directive in either single-line or block form
+- id: I4_local_replace_target_present
+  description: /workspace/mylib is a directory containing a go.mod file
+- id: I5_local_target_module_declaration_fixed
+  description: /workspace/mylib/go.mod now declares `module example.com/mylib` matching the replace directive in the root project
+- id: D1_go_mod_verify_exits_zero
+  description: 'go mod verify run in /workspace/myapp exits with status 0'
+- id: D2_go_build_exits_zero
+  description: 'go build ./... run in /workspace/myapp exits with status 0 with no unresolved imports'
+- id: D3_go_test_exits_zero
+  description: 'go test -count=1 ./... run in /workspace/myapp exits with status 0 with every test passing'
+
+visible_probe_input_path_in_container: /workspace/observed_error.txt
+visible_probe_output_notes:
+  cold_start_behavior_description: The verifier clears the go build cache (`go clean -cache -testcache`) then re-runs all three commands from /workspace/myapp. Any fix that survives cold-start replay must have moved bytes on disk in a way that the go toolchain picks up from a cold cache.
+
+reference_solution_path_b_summary: |
+  Edit /workspace/mylib/go.mod so its module declaration reads
+  `module example.com/mylib` instead of `module example.com/mylib-WRONG`.
+  Every other file stays exactly as authored. The `go` toolchain
+  re-reads the local target's go.mod on the next command, and because
+  the declared module now matches the replace directive in the root
+  project, the build resolves, the tests link, and all three graded
+  commands exit 0.
+
+plausible_wrong_routes_and_why_rejected:
+- route: run go mod vendor + go mod tidy repeatedly
+  rejection: both commands fail with the same declaration-mismatch diagnostic; vendor tree is never written; agent burns wall clock but bytes on disk do not change
+- route: rename root module declaration to `example.com/mylib-WRONG` or to `example.com/mylib`
+  rejection: invariant I2 requires root module identity to remain `example.com/myapp`; the grader static-parses the root go.mod
+- route: delete the replace directive so the build falls through to a proxy fetch
+  rejection: no network egress; the fetch fails; even if it succeeded, invariant I3 fails
+- route: install the missing module through GOPROXY
+  rejection: GOPROXY is set to `off` in the environment; the container has no network access
+- route: precompile the myapp binary out of band and drop it in PATH
+  rejection: the grader runs the go toolchain end-to-end from source; a precompiled binary does not satisfy `go build ./...`

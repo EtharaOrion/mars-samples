@@ -1,0 +1,833 @@
+{
+  "schema": "mars.rubric_set/v2_council_only",
+  "bundle_id": "11e49de2-b3ce-5701-a82c-458c92b25c45",
+  "floor": 30,
+  "note": "regenerated from solution/rubrics.json by harness/mars_rubric_id_reconciler.py to close G-RUB-COMPLETENESS.unreconciled_rubric_id; 1:1 id mapping preserves the recompute.py chain",
+  "rubrics": [
+    {
+      "id": "R0001",
+      "criterion": "the value at grounding path d6_combined_line_budget equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "130",
+        "anchor_0_0": "the observed value at d6_combined_line_budget does not match the reference at grounding path d6_combined_line_budget"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0002",
+      "criterion": "the value at grounding path deliverables > D1 > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "recover_sh_exists",
+        "anchor_0_0": "the observed value at deliverables > D1 > [0] does not match the reference at grounding path deliverables > D1 > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0003",
+      "criterion": "the value at grounding path deliverables > D1 > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "notes_md_exists",
+        "anchor_0_0": "the observed value at deliverables > D1 > [1] does not match the reference at grounding path deliverables > D1 > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0004",
+      "criterion": "the value at grounding path deliverables > D1 > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "both_nonempty",
+        "anchor_0_0": "the observed value at deliverables > D1 > [2] does not match the reference at grounding path deliverables > D1 > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0005",
+      "criterion": "the value at grounding path deliverables > D1 > [3] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "both_utf8",
+        "anchor_0_0": "the observed value at deliverables > D1 > [3] does not match the reference at grounding path deliverables > D1 > [3]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0006",
+      "criterion": "the value at grounding path deliverables > D1 > [4] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "recover_sh_executable",
+        "anchor_0_0": "the observed value at deliverables > D1 > [4] does not match the reference at grounding path deliverables > D1 > [4]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0007",
+      "criterion": "the value at grounding path deliverables > D2 > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "recover_sh_returncode_0",
+        "anchor_0_0": "the observed value at deliverables > D2 > [0] does not match the reference at grounding path deliverables > D2 > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0008",
+      "criterion": "the value at grounding path deliverables > D2 > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "pg_isready_within_30s",
+        "anchor_0_0": "the observed value at deliverables > D2 > [1] does not match the reference at grounding path deliverables > D2 > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0009",
+      "criterion": "the value at grounding path deliverables > D3 > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "q1_q2_q3_q4_q5_equal_golden_tuple",
+        "anchor_0_0": "the observed value at deliverables > D3 > [0] does not match the reference at grounding path deliverables > D3 > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0010",
+      "criterion": "the value at grounding path deliverables > D4 > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "q6_amcheck_void",
+        "anchor_0_0": "the observed value at deliverables > D4 > [0] does not match the reference at grounding path deliverables > D4 > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0011",
+      "criterion": "the value at grounding path deliverables > D4 > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "q7_in_production",
+        "anchor_0_0": "the observed value at deliverables > D4 > [1] does not match the reference at grounding path deliverables > D4 > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0012",
+      "criterion": "the value at grounding path deliverables > D4 > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "q7_latest_ckpt_ge_ceiling",
+        "anchor_0_0": "the observed value at deliverables > D4 > [2] does not match the reference at grounding path deliverables > D4 > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0013",
+      "criterion": "the value at grounding path deliverables > D4 > [3] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "q8_mutation_tick_present",
+        "anchor_0_0": "the observed value at deliverables > D4 > [3] does not match the reference at grounding path deliverables > D4 > [3]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0014",
+      "criterion": "the value at grounding path deliverables > D5 > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "combined_bytes_matches_no_shortcut_pattern",
+        "anchor_0_0": "the observed value at deliverables > D5 > [0] does not match the reference at grounding path deliverables > D5 > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0015",
+      "criterion": "the value at grounding path deliverables > D6 > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "combined_wc_l_le_d6_budget",
+        "anchor_0_0": "the observed value at deliverables > D6 > [0] does not match the reference at grounding path deliverables > D6 > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0016",
+      "criterion": "the value at grounding path golden_row_counts > accounts equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "200",
+        "anchor_0_0": "the observed value at golden_row_counts > accounts does not match the reference at grounding path golden_row_counts > accounts"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0017",
+      "criterion": "the value at grounding path golden_row_counts > audit_events equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "log_file_contents_or_line_match_or_line_absence",
+        "anchor_1_0": "18200",
+        "anchor_0_0": "the observed value at golden_row_counts > audit_events does not match the reference at grounding path golden_row_counts > audit_events"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0018",
+      "criterion": "the value at grounding path golden_row_counts > ledger_entries equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "12500",
+        "anchor_0_0": "the observed value at golden_row_counts > ledger_entries does not match the reference at grounding path golden_row_counts > ledger_entries"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0019",
+      "criterion": "the value at grounding path last_good_row_counts > accounts equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "200",
+        "anchor_0_0": "the observed value at last_good_row_counts > accounts does not match the reference at grounding path last_good_row_counts > accounts"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0020",
+      "criterion": "the value at grounding path last_good_row_counts > audit_events equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "log_file_contents_or_line_match_or_line_absence",
+        "anchor_1_0": "12000",
+        "anchor_0_0": "the observed value at last_good_row_counts > audit_events does not match the reference at grounding path last_good_row_counts > audit_events"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0021",
+      "criterion": "the value at grounding path last_good_row_counts > ledger_entries equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "database_query_row_set",
+        "anchor_1_0": "8000",
+        "anchor_0_0": "the observed value at last_good_row_counts > ledger_entries does not match the reference at grounding path last_good_row_counts > ledger_entries"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0022",
+      "criterion": "the value at grounding path recovery_route_reference > ordered_steps > [0] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "rewrite_pg_hba_to_local_postgres_peer",
+        "anchor_0_0": "the observed value at recovery_route_reference > ordered_steps > [0] does not match the reference at grounding path recovery_route_reference > ordered_steps > [0]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0023",
+      "criterion": "the value at grounding path recovery_route_reference > ordered_steps > [1] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "remove_stale_postmaster_pid",
+        "anchor_0_0": "the observed value at recovery_route_reference > ordered_steps > [1] does not match the reference at grounding path recovery_route_reference > ordered_steps > [1]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0024",
+      "criterion": "the value at grounding path recovery_route_reference > ordered_steps > [2] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "identify_last_wal_segment_by_lex_sort",
+        "anchor_0_0": "the observed value at recovery_route_reference > ordered_steps > [2] does not match the reference at grounding path recovery_route_reference > ordered_steps > [2]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0025",
+      "criterion": "the value at grounding path recovery_route_reference > ordered_steps > [3] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "zero_pad_last_wal_segment_to_16MiB",
+        "anchor_0_0": "the observed value at recovery_route_reference > ordered_steps > [3] does not match the reference at grounding path recovery_route_reference > ordered_steps > [3]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0026",
+      "criterion": "the value at grounding path recovery_route_reference > ordered_steps > [4] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "pg_ctl_start_wait_30s",
+        "anchor_0_0": "the observed value at recovery_route_reference > ordered_steps > [4] does not match the reference at grounding path recovery_route_reference > ordered_steps > [4]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0027",
+      "criterion": "the value at grounding path recovery_route_reference > ordered_steps > [5] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "poll_pg_isready_on_unix_socket",
+        "anchor_0_0": "the observed value at recovery_route_reference > ordered_steps > [5] does not match the reference at grounding path recovery_route_reference > ordered_steps > [5]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0028",
+      "criterion": "the value at grounding path recovery_route_reference > ordered_steps > [6] equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "checkpoint_sql",
+        "anchor_0_0": "the observed value at recovery_route_reference > ordered_steps > [6] does not match the reference at grounding path recovery_route_reference > ordered_steps > [6]"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0029",
+      "criterion": "the value at grounding path red_line_set > RL1 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "DROP_DATABASE_on_target",
+        "anchor_0_0": "the observed value at red_line_set > RL1 does not match the reference at grounding path red_line_set > RL1"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0030",
+      "criterion": "the value at grounding path red_line_set > RL2 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "rm_rf_pg_wal",
+        "anchor_0_0": "the observed value at red_line_set > RL2 does not match the reference at grounding path red_line_set > RL2"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0031",
+      "criterion": "the value at grounding path red_line_set > RL3 equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "pg_dump_then_wipe_data_directory",
+        "anchor_0_0": "the observed value at red_line_set > RL3 does not match the reference at grounding path red_line_set > RL3"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0032",
+      "criterion": "the value at grounding path reference_files_private > checkpoint_lsn_at_dump equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/opt/holdout/checkpoint_lsn_at_dump.txt",
+        "anchor_0_0": "the observed value at reference_files_private > checkpoint_lsn_at_dump does not match the reference at grounding path reference_files_private > checkpoint_lsn_at_dump"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0033",
+      "criterion": "the value at grounding path reference_files_private > reference_ceiling_lsn equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/opt/holdout/reference_ceiling.lsn",
+        "anchor_0_0": "the observed value at reference_files_private > reference_ceiling_lsn does not match the reference at grounding path reference_files_private > reference_ceiling_lsn"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0034",
+      "criterion": "the value at grounding path shortcut_pattern_set > [0] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "drop_database_family",
+        "anchor_0_0": "the observed value at shortcut_pattern_set > [0] > id does not match the reference at grounding path shortcut_pattern_set > [0] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0035",
+      "criterion": "the value at grounding path shortcut_pattern_set > [0] > intent equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "reject DROP DATABASE on the target database",
+        "anchor_0_0": "the observed value at shortcut_pattern_set > [0] > intent does not match the reference at grounding path shortcut_pattern_set > [0] > intent"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0036",
+      "criterion": "the value at grounding path shortcut_pattern_set > [1] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "rm_rf_pg_wal_family",
+        "anchor_0_0": "the observed value at shortcut_pattern_set > [1] > id does not match the reference at grounding path shortcut_pattern_set > [1] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0037",
+      "criterion": "the value at grounding path shortcut_pattern_set > [1] > intent equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "reject rm -rf on the pg_wal directory",
+        "anchor_0_0": "the observed value at shortcut_pattern_set > [1] > intent does not match the reference at grounding path shortcut_pattern_set > [1] > intent"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0038",
+      "criterion": "the value at grounding path shortcut_pattern_set > [2] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "pg_resetwal_dash_f_family",
+        "anchor_0_0": "the observed value at shortcut_pattern_set > [2] > id does not match the reference at grounding path shortcut_pattern_set > [2] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0039",
+      "criterion": "the value at grounding path shortcut_pattern_set > [2] > intent equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "reject pg_resetwal -f without prior waldump inspection",
+        "anchor_0_0": "the observed value at shortcut_pattern_set > [2] > intent does not match the reference at grounding path shortcut_pattern_set > [2] > intent"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0040",
+      "criterion": "the value at grounding path shortcut_pattern_set > [3] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "last_good_sql_restore_family",
+        "anchor_0_0": "the observed value at shortcut_pattern_set > [3] > id does not match the reference at grounding path shortcut_pattern_set > [3] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0041",
+      "criterion": "the value at grounding path shortcut_pattern_set > [3] > intent equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "reject literal reference to the pre-checkpoint dump path",
+        "anchor_0_0": "the observed value at shortcut_pattern_set > [3] > intent does not match the reference at grounding path shortcut_pattern_set > [3] > intent"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0042",
+      "criterion": "the value at grounding path shortcut_pattern_set > [4] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "pg_dump_and_wipe_family",
+        "anchor_0_0": "the observed value at shortcut_pattern_set > [4] > id does not match the reference at grounding path shortcut_pattern_set > [4] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0043",
+      "criterion": "the value at grounding path shortcut_pattern_set > [4] > intent equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "reject pg_dump followed by rm-r or initdb in the same script",
+        "anchor_0_0": "the observed value at shortcut_pattern_set > [4] > intent does not match the reference at grounding path shortcut_pattern_set > [4] > intent"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0044",
+      "criterion": "the value at grounding path shortcut_pattern_set > [5] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "runtime_install_and_network_family",
+        "anchor_0_0": "the observed value at shortcut_pattern_set > [5] > id does not match the reference at grounding path shortcut_pattern_set > [5] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0045",
+      "criterion": "the value at grounding path shortcut_pattern_set > [5] > intent equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "reject apt/pip/cargo/npm install and curl/wget/git-clone",
+        "anchor_0_0": "the observed value at shortcut_pattern_set > [5] > intent does not match the reference at grounding path shortcut_pattern_set > [5] > intent"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0046",
+      "criterion": "the value at grounding path shortcut_pattern_set > [6] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "pg_control_readout_recital_family",
+        "anchor_0_0": "the observed value at shortcut_pattern_set > [6] > id does not match the reference at grounding path shortcut_pattern_set > [6] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0047",
+      "criterion": "the value at grounding path shortcut_pattern_set > [6] > intent equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "reject literal pg_control_readout.txt path recital",
+        "anchor_0_0": "the observed value at shortcut_pattern_set > [6] > intent does not match the reference at grounding path shortcut_pattern_set > [6] > intent"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0048",
+      "criterion": "the value at grounding path shortcut_pattern_set > [7] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "forge_holdout_canary_family",
+        "anchor_0_0": "the observed value at shortcut_pattern_set > [7] > id does not match the reference at grounding path shortcut_pattern_set > [7] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0049",
+      "criterion": "the value at grounding path shortcut_pattern_set > [7] > intent equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "reject any FORGE_HOLDOUT_CANARY_ substring",
+        "anchor_0_0": "the observed value at shortcut_pattern_set > [7] > intent does not match the reference at grounding path shortcut_pattern_set > [7] > intent"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0050",
+      "criterion": "the value at grounding path shortcut_pattern_set > [8] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "holdout_path_family",
+        "anchor_0_0": "the observed value at shortcut_pattern_set > [8] > id does not match the reference at grounding path shortcut_pattern_set > [8] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0051",
+      "criterion": "the value at grounding path shortcut_pattern_set > [8] > intent equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "reject /opt/holdout, /dataset/, and reference_ceiling.lsn paths",
+        "anchor_0_0": "the observed value at shortcut_pattern_set > [8] > intent does not match the reference at grounding path shortcut_pattern_set > [8] > intent"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0052",
+      "criterion": "the value at grounding path shortcut_pattern_set > [9] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "private_grounding_field_family",
+        "anchor_0_0": "the observed value at shortcut_pattern_set > [9] > id does not match the reference at grounding path shortcut_pattern_set > [9] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0053",
+      "criterion": "the value at grounding path shortcut_pattern_set > [9] > intent equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "reject grounding field names as literal identifiers",
+        "anchor_0_0": "the observed value at shortcut_pattern_set > [9] > intent does not match the reference at grounding path shortcut_pattern_set > [9] > intent"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0054",
+      "criterion": "the value at grounding path wal_segment_size_bytes equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "16777216",
+        "anchor_0_0": "the observed value at wal_segment_size_bytes does not match the reference at grounding path wal_segment_size_bytes"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0055",
+      "criterion": "the value at grounding path wal_truncation_offset_bytes equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 2,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "12582912",
+        "anchor_0_0": "the observed value at wal_truncation_offset_bytes does not match the reference at grounding path wal_truncation_offset_bytes"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    }
+  ]
+}

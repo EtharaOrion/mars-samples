@@ -1,0 +1,1253 @@
+{
+  "schema": "mars.rubric_set/v2_council_only",
+  "bundle_id": "feef025f-94a1-587f-97b1-1d777b93c0d5",
+  "floor": 30,
+  "note": "regenerated from solution/rubrics.json by harness/mars_rubric_id_reconciler.py to close G-RUB-COMPLETENESS.unreconciled_rubric_id; 1:1 id mapping preserves the recompute.py chain",
+  "rubrics": [
+    {
+      "id": "R0001",
+      "criterion": "the value at grounding path acceptable_fix_paths > [0] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "edit /workspace/mylib/go.mod to declare `module example.com/mylib` instead of `module example.com/mylib-WRONG`",
+        "anchor_0_0": "the observed value at acceptable_fix_paths > [0] > description does not match the reference at grounding path acceptable_fix_paths > [0] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0002",
+      "criterion": "the value at grounding path acceptable_fix_paths > [0] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "path_b_edit_local_target_gomod",
+        "anchor_0_0": "the observed value at acceptable_fix_paths > [0] > id does not match the reference at grounding path acceptable_fix_paths > [0] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0003",
+      "criterion": "the value at grounding path acceptable_fix_paths > [0] > preserves_local_replace_target_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at acceptable_fix_paths > [0] > preserves_local_replace_target_path does not match the reference at grounding path acceptable_fix_paths > [0] > preserves_local_replace_target_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0004",
+      "criterion": "the value at grounding path acceptable_fix_paths > [0] > preserves_replace_directive equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at acceptable_fix_paths > [0] > preserves_replace_directive does not match the reference at grounding path acceptable_fix_paths > [0] > preserves_replace_directive"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0005",
+      "criterion": "the value at grounding path acceptable_fix_paths > [0] > preserves_root_module_declaration equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at acceptable_fix_paths > [0] > preserves_root_module_declaration does not match the reference at grounding path acceptable_fix_paths > [0] > preserves_root_module_declaration"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0006",
+      "criterion": "the value at grounding path acceptable_fix_paths > [0] > requires_network equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "the value at grounding path acceptable_fix_paths > [0] > requires_network equals the frozen literal",
+        "anchor_0_0": "the observed value at acceptable_fix_paths > [0] > requires_network does not match the reference at grounding path acceptable_fix_paths > [0] > requires_network"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0007",
+      "criterion": "the value at grounding path acceptable_fix_paths > [0] > works_in_this_environment equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at acceptable_fix_paths > [0] > works_in_this_environment does not match the reference at grounding path acceptable_fix_paths > [0] > works_in_this_environment"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0008",
+      "criterion": "the value at grounding path archetype equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "build-fix",
+        "anchor_0_0": "the observed value at archetype does not match the reference at grounding path archetype"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0009",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > local_gomod_module_line equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "module example.com/mylib-WRONG",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > local_gomod_module_line does not match the reference at grounding path authored_manifest_of_broken_state > local_gomod_module_line"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0010",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > local_gomod_module_line_intentional equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > local_gomod_module_line_intentional does not match the reference at grounding path authored_manifest_of_broken_state > local_gomod_module_line_intentional"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0011",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > local_gomod_module_line_is_the_single_broken_line equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "true",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > local_gomod_module_line_is_the_single_broken_line does not match the reference at grounding path authored_manifest_of_broken_state > local_gomod_module_line_is_the_single_broken_line"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0012",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > root_gomod_module_line equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "module example.com/myapp",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > root_gomod_module_line does not match the reference at grounding path authored_manifest_of_broken_state > root_gomod_module_line"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0013",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > root_gomod_replace_line equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "replace example.com/mylib => ../mylib",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > root_gomod_replace_line does not match the reference at grounding path authored_manifest_of_broken_state > root_gomod_replace_line"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0014",
+      "criterion": "the value at grounding path authored_manifest_of_broken_state > root_gomod_require_line equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "require example.com/mylib v0.0.0-00010101000000-000000000000",
+        "anchor_0_0": "the observed value at authored_manifest_of_broken_state > root_gomod_require_line does not match the reference at grounding path authored_manifest_of_broken_state > root_gomod_require_line"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0015",
+      "criterion": "the value at grounding path canonical_fix_path_selected equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "path_b_edit_local_target_gomod_module_declaration",
+        "anchor_0_0": "the observed value at canonical_fix_path_selected does not match the reference at grounding path canonical_fix_path_selected"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0016",
+      "criterion": "the value at grounding path canonical_fix_path_selection_rationale matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "The mismatch is between two declarations: the replace directive in\nthe root go.mod (which names the module identity `example.com/mylib`\nthat the root project imports) and the module declaration in the\nlocal target's go.mod (which names `example.com/mylib-WRONG`). The\nroot project's imports and the replace directive are semantically\ncorrect; the broken byte is the `-WRONG` suffix in the local\ntarget's go.mod module line. Editing the local target's go.mod is\nthe minimum-change fix that keeps every...[truncated]",
+        "anchor_0_0": "the observed value at canonical_fix_path_selection_rationale does not match the reference at grounding path canonical_fix_path_selection_rationale"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0017",
+      "criterion": "the value at grounding path false_lead_probes > [0] > expected_outcome equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "both commands fail with the same replacement-module diagnostic; no forward progress; vendor tree is not written",
+        "anchor_0_0": "the observed value at false_lead_probes > [0] > expected_outcome does not match the reference at grounding path false_lead_probes > [0] > expected_outcome"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0018",
+      "criterion": "the value at grounding path false_lead_probes > [0] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "run_go_mod_vendor_and_go_mod_tidy_in_myapp",
+        "anchor_0_0": "the observed value at false_lead_probes > [0] > probe does not match the reference at grounding path false_lead_probes > [0] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0019",
+      "criterion": "the value at grounding path false_lead_probes > [1] > expected_outcome equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "build now tries to fetch example.com/mylib from a proxy; container has no network; command fails with a proxy or dial error; invariant I3 also fails at grade time",
+        "anchor_0_0": "the observed value at false_lead_probes > [1] > expected_outcome does not match the reference at grounding path false_lead_probes > [1] > expected_outcome"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0020",
+      "criterion": "the value at grounding path false_lead_probes > [1] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "delete_the_replace_directive_from_root_go_mod",
+        "anchor_0_0": "the observed value at false_lead_probes > [1] > probe does not match the reference at grounding path false_lead_probes > [1] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0021",
+      "criterion": "the value at grounding path false_lead_probes > [2] > expected_outcome equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "root module identity drift; invariant I2 fails; even if build passes, grade is zero",
+        "anchor_0_0": "the observed value at false_lead_probes > [2] > expected_outcome does not match the reference at grounding path false_lead_probes > [2] > expected_outcome"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0022",
+      "criterion": "the value at grounding path false_lead_probes > [2] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "rename_root_module_in_root_go_mod_to_example_com_mylib_WRONG",
+        "anchor_0_0": "the observed value at false_lead_probes > [2] > probe does not match the reference at grounding path false_lead_probes > [2] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0023",
+      "criterion": "the value at grounding path false_lead_probes > [3] > expected_outcome equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "no network to fetch it; invariant I4 fails because /workspace/mylib is no longer the referenced target",
+        "anchor_0_0": "the observed value at false_lead_probes > [3] > expected_outcome does not match the reference at grounding path false_lead_probes > [3] > expected_outcome"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0024",
+      "criterion": "the value at grounding path false_lead_probes > [3] > probe equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "swap_replace_target_from_dotdot_mylib_to_a_public_module",
+        "anchor_0_0": "the observed value at false_lead_probes > [3] > probe does not match the reference at grounding path false_lead_probes > [3] > probe"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0025",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [0] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "agent deletes the `replace example.com/mylib => ../mylib` line from root go.mod hoping the build will silently succeed against a resolved module",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [0] > description does not match the reference at grounding path forbidden_shortcut_patterns > [0] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0026",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [0] > detection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "invariant I3 static check on root go.mod parses the replace set and requires the exact directive to remain present",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [0] > detection does not match the reference at grounding path forbidden_shortcut_patterns > [0] > detection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0027",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [0] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "delete_replace_directive_from_root_gomod",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [0] > id does not match the reference at grounding path forbidden_shortcut_patterns > [0] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0028",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [1] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "agent edits root go.mod `module example.com/myapp` line to match the mismatched local target, or edits it to `example.com/mylib-WRONG` chasing the diagnostic",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [1] > description does not match the reference at grounding path forbidden_shortcut_patterns > [1] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0029",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [1] > detection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "invariant I2 static check on root go.mod requires module declaration to remain `example.com/myapp`",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [1] > detection does not match the reference at grounding path forbidden_shortcut_patterns > [1] > detection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0030",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [1] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "rename_root_module_to_match_local_target",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [1] > id does not match the reference at grounding path forbidden_shortcut_patterns > [1] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0031",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [2] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "agent replaces `../mylib` with a remote module import path or a different local path, or removes the /workspace/mylib directory entirely",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [2] > description does not match the reference at grounding path forbidden_shortcut_patterns > [2] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0032",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [2] > detection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "invariant I3 requires the replace target string to remain `../mylib`; invariant I4 requires /workspace/mylib/go.mod to remain present",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [2] > detection does not match the reference at grounding path forbidden_shortcut_patterns > [2] > detection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0033",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [2] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "move_replace_target_off_local_dotdot_mylib",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [2] > id does not match the reference at grounding path forbidden_shortcut_patterns > [2] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0034",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [3] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "agent stubs the test binary or overrides `go test ./...` behavior in an attempt to fake a passing test run",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [3] > description does not match the reference at grounding path forbidden_shortcut_patterns > [3] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0035",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [3] > detection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "cold_start_replay runs `go test -count=1 ./...` with `-count=1` disabling the test result cache; go test still exercises the real test binary compiled from the real source",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [3] > detection does not match the reference at grounding path forbidden_shortcut_patterns > [3] > detection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0036",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [3] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "hardcode_go_test_pass_via_stub",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [3] > id does not match the reference at grounding path forbidden_shortcut_patterns > [3] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0037",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [4] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "agent compiles the myapp binary out of band and drops it somewhere in $PATH so that later go commands appear to succeed",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [4] > description does not match the reference at grounding path forbidden_shortcut_patterns > [4] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0038",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [4] > detection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "grader runs the go toolchain against the source tree, not against a prebuilt binary; a precompiled artifact does not satisfy `go build ./...` because go re-invokes the compiler on the source",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [4] > detection does not match the reference at grounding path forbidden_shortcut_patterns > [4] > detection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0039",
+      "criterion": "the value at grounding path forbidden_shortcut_patterns > [4] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "precompile_and_swap_myapp_binary_into_gopath_bin",
+        "anchor_0_0": "the observed value at forbidden_shortcut_patterns > [4] > id does not match the reference at grounding path forbidden_shortcut_patterns > [4] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0040",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [0] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "/workspace/myapp/go.mod exists and parses as a valid go.mod",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [0] > description does not match the reference at grounding path invariants_the_fix_must_preserve > [0] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0041",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [0] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "I1_root_gomod_present",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [0] > id does not match the reference at grounding path invariants_the_fix_must_preserve > [0] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0042",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [1] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "/workspace/myapp/go.mod continues to declare `module example.com/myapp`",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [1] > description does not match the reference at grounding path invariants_the_fix_must_preserve > [1] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0043",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [1] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "I2_root_module_declaration_unchanged",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [1] > id does not match the reference at grounding path invariants_the_fix_must_preserve > [1] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0044",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [2] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "/workspace/myapp/go.mod continues to carry a `replace example.com/mylib => ../mylib` directive in either single-line or block form",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [2] > description does not match the reference at grounding path invariants_the_fix_must_preserve > [2] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0045",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [2] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "I3_replace_directive_still_present",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [2] > id does not match the reference at grounding path invariants_the_fix_must_preserve > [2] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0046",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [3] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "/workspace/mylib is a directory containing a go.mod file",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [3] > description does not match the reference at grounding path invariants_the_fix_must_preserve > [3] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0047",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [3] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "I4_local_replace_target_present",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [3] > id does not match the reference at grounding path invariants_the_fix_must_preserve > [3] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0048",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [4] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "/workspace/mylib/go.mod now declares `module example.com/mylib` matching the replace directive in the root project",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [4] > description does not match the reference at grounding path invariants_the_fix_must_preserve > [4] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0049",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [4] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "I5_local_target_module_declaration_fixed",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [4] > id does not match the reference at grounding path invariants_the_fix_must_preserve > [4] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0050",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [5] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "go mod verify run in /workspace/myapp exits with status 0",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [5] > description does not match the reference at grounding path invariants_the_fix_must_preserve > [5] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0051",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [5] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "D1_go_mod_verify_exits_zero",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [5] > id does not match the reference at grounding path invariants_the_fix_must_preserve > [5] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0052",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [6] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "go build ./... run in /workspace/myapp exits with status 0 with no unresolved imports",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [6] > description does not match the reference at grounding path invariants_the_fix_must_preserve > [6] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0053",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [6] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "D2_go_build_exits_zero",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [6] > id does not match the reference at grounding path invariants_the_fix_must_preserve > [6] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0054",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [7] > description equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "go test -count=1 ./... run in /workspace/myapp exits with status 0 with every test passing",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [7] > description does not match the reference at grounding path invariants_the_fix_must_preserve > [7] > description"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0055",
+      "criterion": "the value at grounding path invariants_the_fix_must_preserve > [7] > id equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "grader_probe_result_boolean_or_scalar",
+        "anchor_1_0": "D3_go_test_exits_zero",
+        "anchor_0_0": "the observed value at invariants_the_fix_must_preserve > [7] > id does not match the reference at grounding path invariants_the_fix_must_preserve > [7] > id"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0056",
+      "criterion": "the value at grounding path local_target_gomod_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/mylib/go.mod",
+        "anchor_0_0": "the observed value at local_target_gomod_path does not match the reference at grounding path local_target_gomod_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0057",
+      "criterion": "the value at grounding path local_target_lib_go_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/mylib/lib.go",
+        "anchor_0_0": "the observed value at local_target_lib_go_path does not match the reference at grounding path local_target_lib_go_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0058",
+      "criterion": "the value at grounding path local_target_module_path_broken equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "example.com/mylib-WRONG",
+        "anchor_0_0": "the observed value at local_target_module_path_broken does not match the reference at grounding path local_target_module_path_broken"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0059",
+      "criterion": "the value at grounding path local_target_module_path_fixed equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "example.com/mylib",
+        "anchor_0_0": "the observed value at local_target_module_path_fixed does not match the reference at grounding path local_target_module_path_fixed"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0060",
+      "criterion": "the value at grounding path local_target_source_root equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/mylib",
+        "anchor_0_0": "the observed value at local_target_source_root does not match the reference at grounding path local_target_source_root"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0061",
+      "criterion": "the value at grounding path misleading_first_read matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "The error mentions the string `example.com/mylib` in the root project\n(which is the file the agent will open first because the reflex says\n\"the go.mod that fails to build must be the one to edit\"). Root\ngo.mod already spells the module path correctly. The mismatched\ndeclaration lives at /workspace/mylib/go.mod, which is not on the\ncompile path of the failing top-level command.\n",
+        "anchor_0_0": "the observed value at misleading_first_read does not match the reference at grounding path misleading_first_read"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0062",
+      "criterion": "the value at grounding path observed_error_shape_summary matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "When the container build ran `go mod verify`, `go build ./...`, and\n`go test ./...` from /workspace/myapp, all three commands emitted the\nsame underlying diagnostic:\n  go: example.com/myapp imports example.com/mylib: replacement module\n  directive example.com/mylib => ../mylib: pointed at module\n  example.com/mylib-WRONG (want example.com/mylib)\nSome Go versions also print an alternate form:\n  module declaration mismatch: got example.com/mylib-WRONG, want\n  example.com/mylib\nBoth forms name the ...[truncated]",
+        "anchor_0_0": "the observed value at observed_error_shape_summary does not match the reference at grounding path observed_error_shape_summary"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0063",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [0] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "both commands fail with the same declaration-mismatch diagnostic; vendor tree is never written; agent burns wall clock but bytes on disk do not change",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [0] > rejection does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [0] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0064",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [0] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "run go mod vendor + go mod tidy repeatedly",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [0] > route does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [0] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0065",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [1] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "invariant I2 requires root module identity to remain `example.com/myapp`; the grader static-parses the root go.mod",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [1] > rejection does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [1] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0066",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [1] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "rename root module declaration to `example.com/mylib-WRONG` or to `example.com/mylib`",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [1] > route does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [1] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0067",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [2] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "no network egress; the fetch fails; even if it succeeded, invariant I3 fails",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [2] > rejection does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [2] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0068",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [2] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "delete the replace directive so the build falls through to a proxy fetch",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [2] > route does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [2] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0069",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [3] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "GOPROXY is set to `off` in the environment; the container has no network access",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [3] > rejection does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [3] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0070",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [3] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "install the missing module through GOPROXY",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [3] > route does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [3] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0071",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [4] > rejection equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "the grader runs the go toolchain end-to-end from source; a precompiled binary does not satisfy `go build ./...`",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [4] > rejection does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [4] > rejection"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0072",
+      "criterion": "the value at grounding path plausible_wrong_routes_and_why_rejected > [4] > route equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "precompile the myapp binary out of band and drop it in PATH",
+        "anchor_0_0": "the observed value at plausible_wrong_routes_and_why_rejected > [4] > route does not match the reference at grounding path plausible_wrong_routes_and_why_rejected > [4] > route"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0073",
+      "criterion": "the value at grounding path primary_lever equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "long-horizon-agentic-coherence",
+        "anchor_0_0": "the observed value at primary_lever does not match the reference at grounding path primary_lever"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0074",
+      "criterion": "the value at grounding path reference_solution_path_b_summary matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "Edit /workspace/mylib/go.mod so its module declaration reads\n`module example.com/mylib` instead of `module example.com/mylib-WRONG`.\nEvery other file stays exactly as authored. The `go` toolchain\nre-reads the local target's go.mod on the next command, and because\nthe declared module now matches the replace directive in the root\nproject, the build resolves, the tests link, and all three graded\ncommands exit 0.\n",
+        "anchor_0_0": "the observed value at reference_solution_path_b_summary does not match the reference at grounding path reference_solution_path_b_summary"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0075",
+      "criterion": "the value at grounding path replace_target_relative_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "../mylib",
+        "anchor_0_0": "the observed value at replace_target_relative_path does not match the reference at grounding path replace_target_relative_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0076",
+      "criterion": "the value at grounding path replaced_module_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "example.com/mylib",
+        "anchor_0_0": "the observed value at replaced_module_path does not match the reference at grounding path replaced_module_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0077",
+      "criterion": "the value at grounding path root_module_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "example.com/myapp",
+        "anchor_0_0": "the observed value at root_module_path does not match the reference at grounding path root_module_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0078",
+      "criterion": "the value at grounding path root_project_gomod_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/myapp/go.mod",
+        "anchor_0_0": "the observed value at root_project_gomod_path does not match the reference at grounding path root_project_gomod_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0079",
+      "criterion": "the value at grounding path root_project_main_go_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/myapp/main.go",
+        "anchor_0_0": "the observed value at root_project_main_go_path does not match the reference at grounding path root_project_main_go_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0080",
+      "criterion": "the value at grounding path root_project_source_root equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/myapp",
+        "anchor_0_0": "the observed value at root_project_source_root does not match the reference at grounding path root_project_source_root"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0081",
+      "criterion": "the value at grounding path root_project_test_go_path equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/myapp/main_test.go",
+        "anchor_0_0": "the observed value at root_project_test_go_path does not match the reference at grounding path root_project_test_go_path"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0082",
+      "criterion": "the value at grounding path visible_probe_input_path_in_container equals the frozen literal",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": true,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "/workspace/observed_error.txt",
+        "anchor_0_0": "the observed value at visible_probe_input_path_in_container does not match the reference at grounding path visible_probe_input_path_in_container"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass"
+    },
+    {
+      "id": "R0083",
+      "criterion": "the value at grounding path visible_probe_output_notes > cold_start_behavior_description matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 1,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "workspace_filesystem_path_contents",
+        "anchor_1_0": "The verifier clears the go build cache (`go clean -cache -testcache`) then re-runs all three commands from /workspace/myapp. Any fix that survives cold-start replay must have moved bytes on disk in a way that the go toolchain picks up from a cold cache.",
+        "anchor_0_0": "the observed value at visible_probe_output_notes > cold_start_behavior_description does not match the reference at grounding path visible_probe_output_notes > cold_start_behavior_description"
+      },
+      "source_mode": "judged",
+      "source_judgment": "pass"
+    }
+  ]
+}

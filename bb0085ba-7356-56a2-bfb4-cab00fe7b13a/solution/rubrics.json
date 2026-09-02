@@ -1,0 +1,2926 @@
+{
+  "schema": "forge.rubric_bundle/v1",
+  "task_uuid": "bb0085ba-7356-56a2-bfb4-cab00fe7b13a",
+  "task_slug": "cli-yq-preserve-anchor-alias-in-update-v2",
+  "generated_by": "solution/recompute.py",
+  "source_of_truth": "solution/grounding.yaml",
+  "bound_by_contract": "seed/contract.yaml#rubric",
+  "compiled_item_weight_share": 0.9294871794871795,
+  "compilation_floor": 0.8,
+  "compilation_floor_note": "per_seed_contract_yaml_rubric_block_and_invariant_24",
+  "item_count": 156,
+  "items": [
+    {
+      "id": "R0001",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path alternative_valid_fix_routes > [0] > body matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "alternative_valid_fix_routes",
+        0,
+        "body"
+      ],
+      "grounding_path_display": "alternative_valid_fix_routes > [0] > body",
+      "expected_literal": "#!/bin/bash\nset -eu\npython3 - <<'PY' \"$1\"\nimport sys\nfrom ruamel.yaml import YAML\nyaml = YAML()\nyaml.preserve_quotes = True\nyaml.indent(mapping=2, sequence=4, offset=2)\nwith open(sys.argv[1]) as f:\n    doc = yaml.load(f)\nmp = doc['__forge_target_mapping_path']\nmv = doc['__forge_target_mapping_value']\nsp = doc['__forge_target_sequence_path']\nsv = doc['__forge_target_sequence_value']\ndef apply(root, dotted, value):\n    head = dotted.lstrip('.').split('.')\n    node = root\n    while len(head) > 1:\n        k = head.pop(0)\n        if k.endswith(']'):\n            idx_open = k.index('[')\n            key, idx = k[:idx_open], int(k[idx_open+1:-1])\n            node = node[key][idx]\n        else:\n            node = node[k]\n    last = head[0]\n    if last.endswith(']'):\n        idx_open = last.index('[')\n        key, idx = last[:idx_open], int(last[idx_open+1:-1])\n        node[key][idx] = value\n    else:\n        node[last] = value\napply(doc, mp, mv)\napply(doc, sp, sv)\nfor k in ('__forge_target_mapping_path','__forge_target_mapping_value','__forge_target_sequence_path','__forge_target_sequence_value'):\n    if k in doc: del doc[k]\nyaml.dump(doc, sys.stdout)\nPY\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0002",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path alternative_valid_fix_routes > [0] > rationale equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "alternative_valid_fix_routes",
+        0,
+        "rationale"
+      ],
+      "grounding_path_display": "alternative_valid_fix_routes > [0] > rationale",
+      "expected_literal": "ruamel_dot_yaml_preserves_mapping_anchors_and_sequence_element_anchors_alike_so_no_reinjection_step_is_required_python_and_ruamel_are_pre_installed_on_the_image_and_neither_appears_in_the_bound_shortcut_pattern_set"
+    },
+    {
+      "id": "R0003",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path alternative_valid_fix_routes > [0] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "alternative_valid_fix_routes",
+        0,
+        "route"
+      ],
+      "grounding_path_display": "alternative_valid_fix_routes > [0] > route",
+      "expected_literal": "reserialize_the_whole_document_via_python3_ruamel_dot_yaml_which_preserves_all_anchor_kinds"
+    },
+    {
+      "id": "R0004",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path alternative_valid_fix_routes > [1] > body matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "alternative_valid_fix_routes",
+        1,
+        "body"
+      ],
+      "grounding_path_display": "alternative_valid_fix_routes > [1] > body",
+      "expected_literal": "(same as canonical_solve_body above; using strenv for the value if the\nvalue carries characters that would confuse the yq expression parser)\n",
+      "semantic_residue": "value_carries_embedded_newlines_multiline_blob"
+    },
+    {
+      "id": "R0005",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path alternative_valid_fix_routes > [1] > rationale equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "alternative_valid_fix_routes",
+        1,
+        "rationale"
+      ],
+      "grounding_path_display": "alternative_valid_fix_routes > [1] > rationale",
+      "expected_literal": "functionally_identical_to_the_canonical_body_uses_strenv_where_needed"
+    },
+    {
+      "id": "R0006",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path alternative_valid_fix_routes > [1] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "alternative_valid_fix_routes",
+        1,
+        "route"
+      ],
+      "grounding_path_display": "alternative_valid_fix_routes > [1] > route",
+      "expected_literal": "yq_only_two_step_pipe_via_env_vars_and_awk_reinject_matching_canonical_body_exactly"
+    },
+    {
+      "id": "R0007",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [0] > name equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_shortcut_pattern_set",
+        0,
+        "name"
+      ],
+      "grounding_path_display": "bound_shortcut_pattern_set > [0] > name",
+      "expected_literal": "cat_expected"
+    },
+    {
+      "id": "R0008",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [0] > rationale equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_shortcut_pattern_set",
+        0,
+        "rationale"
+      ],
+      "grounding_path_display": "bound_shortcut_pattern_set > [0] > rationale",
+      "expected_literal": "cat_of_any_workspace_or_tests_file_whose_name_contains_expected_is_a_shortcut_that_would_dump_the_pinned_expected_bytes_directly_defeated_only_because_the_grader_re_runs_solve_sh_on_a_private_holdout_but_flagged_here_early"
+    },
+    {
+      "id": "R0009",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [0] > regex equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_shortcut_pattern_set",
+        0,
+        "regex"
+      ],
+      "grounding_path_display": "bound_shortcut_pattern_set > [0] > regex",
+      "expected_literal": "\\bcat\\s+[^|<]*expected"
+    },
+    {
+      "id": "R0010",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [1] > name equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_shortcut_pattern_set",
+        1,
+        "name"
+      ],
+      "grounding_path_display": "bound_shortcut_pattern_set > [1] > name",
+      "expected_literal": "cp_expected"
+    },
+    {
+      "id": "R0011",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [1] > rationale equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_shortcut_pattern_set",
+        1,
+        "rationale"
+      ],
+      "grounding_path_display": "bound_shortcut_pattern_set > [1] > rationale",
+      "expected_literal": "cp_of_any_file_whose_name_contains_expected_is_a_shortcut_that_would_land_the_pinned_expected_bytes_at_stdout_via_a_second_stage"
+    },
+    {
+      "id": "R0012",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [1] > regex equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_shortcut_pattern_set",
+        1,
+        "regex"
+      ],
+      "grounding_path_display": "bound_shortcut_pattern_set > [1] > regex",
+      "expected_literal": "\\bcp\\s+[^|<]*expected"
+    },
+    {
+      "id": "R0013",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [2] > name equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_shortcut_pattern_set",
+        2,
+        "name"
+      ],
+      "grounding_path_display": "bound_shortcut_pattern_set > [2] > name",
+      "expected_literal": "cat_tests"
+    },
+    {
+      "id": "R0014",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [2] > rationale equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_shortcut_pattern_set",
+        2,
+        "rationale"
+      ],
+      "grounding_path_display": "bound_shortcut_pattern_set > [2] > rationale",
+      "expected_literal": "cat_of_any_path_under_slash_tests_is_a_direct_read_of_the_private_verifier_tree_carrying_the_holdout_input_and_the_holdout_expected_bytes"
+    },
+    {
+      "id": "R0015",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [2] > regex equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_shortcut_pattern_set",
+        2,
+        "regex"
+      ],
+      "grounding_path_display": "bound_shortcut_pattern_set > [2] > regex",
+      "expected_literal": "\\bcat\\s+/tests"
+    },
+    {
+      "id": "R0016",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [3] > name equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_shortcut_pattern_set",
+        3,
+        "name"
+      ],
+      "grounding_path_display": "bound_shortcut_pattern_set > [3] > name",
+      "expected_literal": "cat_solution"
+    },
+    {
+      "id": "R0017",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [3] > rationale equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_shortcut_pattern_set",
+        3,
+        "rationale"
+      ],
+      "grounding_path_display": "bound_shortcut_pattern_set > [3] > rationale",
+      "expected_literal": "cat_of_any_path_under_slash_solution_is_a_direct_read_of_the_private_oracle_tree_carrying_the_reference_solve_sh_and_grounding"
+    },
+    {
+      "id": "R0018",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [3] > regex equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_shortcut_pattern_set",
+        3,
+        "regex"
+      ],
+      "grounding_path_display": "bound_shortcut_pattern_set > [3] > regex",
+      "expected_literal": "\\bcat\\s+/solution"
+    },
+    {
+      "id": "R0019",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [4] > name equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_shortcut_pattern_set",
+        4,
+        "name"
+      ],
+      "grounding_path_display": "bound_shortcut_pattern_set > [4] > name",
+      "expected_literal": "yq_json_output"
+    },
+    {
+      "id": "R0020",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [4] > rationale matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "bound_shortcut_pattern_set",
+        4,
+        "rationale"
+      ],
+      "grounding_path_display": "bound_shortcut_pattern_set > [4] > rationale",
+      "expected_literal": "mikefarah_yq_invoked_with_dash_o_equals_json_or_long_form_expands_aliases_by_construction_since_json_has_no_anchor_concept_which_would_produce_output_with_zero_anchor_and_zero_alias_literals_and_fail_the_structural_scan_regardless_of_whether_the_scalar_updates_landed",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0021",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path bound_shortcut_pattern_set > [4] > regex equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "bound_shortcut_pattern_set",
+        4,
+        "regex"
+      ],
+      "grounding_path_display": "bound_shortcut_pattern_set > [4] > regex",
+      "expected_literal": "\\byq\\s+[^|<>&;]*(-o[= ]|--output-format[= ])j"
+    },
+    {
+      "id": "R0022",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path canonical_solve_body matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "canonical_solve_body"
+      ],
+      "grounding_path_display": "canonical_solve_body",
+      "expected_literal": "#!/bin/bash\nset -eu\nYQ=/usr/local/bin/yq\nINPUT=\"$1\"\n\n# Read the four target parameters from the input's __forge_target_* metadata.\nMP=$(\"$YQ\" eval '.__forge_target_mapping_path'    \"$INPUT\")\nMV=$(\"$YQ\" eval '.__forge_target_mapping_value'   \"$INPUT\")\nSP=$(\"$YQ\" eval '.__forge_target_sequence_path'   \"$INPUT\")\nSV=$(\"$YQ\" eval '.__forge_target_sequence_value'  \"$INPUT\")\n\n# Discover the sequence-element anchor name and the parent sequence key from\n# the original input bytes. The sequence-target path is of the form\n# `.<parent_key>[0].<field>` so parent_key is the first identifier after `.`.\nSEQ_ANCHOR=$(grep -oE '^[[:space:]]*-[[:space:]]+&[A-Za-z_][A-Za-z0-9_]*' \"$INPUT\" \\\n             | head -1 | sed -E 's/.*&([A-Za-z_][A-Za-z0-9_]*)/\\1/')\nPARENT_KEY=$(printf '%s' \"$SP\" | sed -E 's/^\\.([A-Za-z_][A-Za-z0-9_]*).*/\\1/')\n\n# Apply both scalar updates via mikefarah yq and delete the metadata keys.\n# mikefarah yq preserves the mapping anchor (&db_defaults on .defaults) but\n# silently DROPS the sequence-element anchor (&primary_role on .roles[0]).\nSTEP1=$(mktemp)\n\"$YQ\" eval \"${MP} = \\\"${MV}\\\" | ${SP} = \\\"${SV}\\\" | del(.__forge_target_mapping_path) | del(.__forge_target_mapping_value) | del(.__forge_target_sequence_path) | del(.__forge_target_sequence_value)\" \"$INPUT\" > \"$STEP1\"\n\n# Re-inject the dropped sequence-element anchor at the first sequence\n# element under the parent key. The affected element is the FIRST one, per\n# the .<parent>[0] convention this task binds. Emit the reformatted YAML\n# to stdout so the grader consumes it directly.\nawk -v parent=\"$PARENT_KEY\" -v anchor=\"$SEQ_ANCHOR\" '\nBEGIN { in_parent = 0; injected = 0 }\n{\n  if (!injected && $0 == parent \":\") { in_parent = 1; print; next }\n  if (in_parent && !injected && $0 ~ /^  - [^ ]/) {\n    # Split `  - <first_key>: <first_value>` into the anchor line and the\n    # first indented key line. Rest of the element already sits at 4-space\n    # indent so it does not need rewriting.\n    rest = substr($0, 5)\n    print \"  - &\" anchor\n    print \"    \" rest\n    injected = 1\n    next\n  }\n  print\n}\n' \"$STEP1\"\nrm -f \"$STEP1\"\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0023",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path canonical_solve_shape matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "canonical_solve_shape"
+      ],
+      "grounding_path_display": "canonical_solve_shape",
+      "expected_literal": "The canonical solve.sh reads the two target paths and two target values from\nfour __forge_target_* metadata keys embedded in the config, applies both\nupdates via a single mikefarah yq eval expression that also deletes the\nmetadata keys, then post-processes the yq output to re-inject the dropped\nsequence-element anchor at the affected position. The anchor names and the\nsequence parent key are discovered dynamically from the original input, so\nthe same solve.sh script generalises across the public and the private\nholdout config which use different anchor names, different paths, and\ndifferent values.\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0024",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_ABSENCE_bound_shortcut_pattern equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "checker_semantics",
+        "C_ABSENCE_bound_shortcut_pattern"
+      ],
+      "grounding_path_display": "checker_semantics > C_ABSENCE_bound_shortcut_pattern",
+      "expected_literal": "python_re_search_multiline_word_boundary_scan_over_solve_sh_bytes_matches_no_bound_shortcut_pattern"
+    },
+    {
+      "id": "R0025",
+      "dimension": "correctness_of_absence",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_ABSENCE_metadata_keys_deleted equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "checker_semantics",
+        "C_ABSENCE_metadata_keys_deleted"
+      ],
+      "grounding_path_display": "checker_semantics > C_ABSENCE_metadata_keys_deleted",
+      "expected_literal": "python_string_search_over_agent_stdout_finds_none_of_the_four_forge_target_metadata_keys"
+    },
+    {
+      "id": "R0026",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_INVARIANT_anchor_and_alias_count_pattern equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "checker_semantics",
+        "C_INVARIANT_anchor_and_alias_count_pattern"
+      ],
+      "grounding_path_display": "checker_semantics > C_INVARIANT_anchor_and_alias_count_pattern",
+      "expected_literal": "python_re_search_multiline_word_boundary_scan_over_agent_stdout_confirms_exactly_one_ampersand_anchor_literal_and_at_least_min_alias_count_asterisk_alias_literals_per_anchor_kind"
+    },
+    {
+      "id": "R0027",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_VALUE_public_mapping equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "checker_semantics",
+        "C_VALUE_public_mapping"
+      ],
+      "grounding_path_display": "checker_semantics > C_VALUE_public_mapping",
+      "expected_literal": "yq_r_eval_of_pinned_mapping_target_path_over_agent_public_stdout_equals_pinned_mapping_target_new_value"
+    },
+    {
+      "id": "R0028",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_VALUE_public_mapping_alias equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "checker_semantics",
+        "C_VALUE_public_mapping_alias"
+      ],
+      "grounding_path_display": "checker_semantics > C_VALUE_public_mapping_alias",
+      "expected_literal": "yq_r_eval_of_pinned_mapping_alias_readback_path_over_agent_public_stdout_equals_pinned_mapping_target_new_value_proves_mapping_alias_still_resolves_to_updated_anchor_content"
+    },
+    {
+      "id": "R0029",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_VALUE_public_sequence equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "checker_semantics",
+        "C_VALUE_public_sequence"
+      ],
+      "grounding_path_display": "checker_semantics > C_VALUE_public_sequence",
+      "expected_literal": "yq_r_eval_of_pinned_sequence_target_path_over_agent_public_stdout_equals_pinned_sequence_target_new_value"
+    },
+    {
+      "id": "R0030",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path checker_semantics > C_VALUE_public_sequence_alias equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "checker_semantics",
+        "C_VALUE_public_sequence_alias"
+      ],
+      "grounding_path_display": "checker_semantics > C_VALUE_public_sequence_alias",
+      "expected_literal": "yq_r_eval_of_pinned_sequence_alias_readback_path_over_agent_public_stdout_equals_pinned_sequence_target_new_value_proves_sequence_alias_still_resolves_to_updated_anchor_content"
+    },
+    {
+      "id": "R0031",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D1_presence > predicate equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D1_presence",
+        "predicate"
+      ],
+      "grounding_path_display": "deliverable_manifest > D1_presence > predicate",
+      "expected_literal": "file_exists_and_nonempty_and_executable"
+    },
+    {
+      "id": "R0032",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D1_presence > target equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D1_presence",
+        "target"
+      ],
+      "grounding_path_display": "deliverable_manifest > D1_presence > target",
+      "expected_literal": "/workspace/solve.sh"
+    },
+    {
+      "id": "R0033",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D2_invariant_bash_runs_clean_on_public_input > argv > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D2_invariant_bash_runs_clean_on_public_input",
+        "argv",
+        0
+      ],
+      "grounding_path_display": "deliverable_manifest > D2_invariant_bash_runs_clean_on_public_input > argv > [0]",
+      "expected_literal": "bash"
+    },
+    {
+      "id": "R0034",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D2_invariant_bash_runs_clean_on_public_input > argv > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D2_invariant_bash_runs_clean_on_public_input",
+        "argv",
+        1
+      ],
+      "grounding_path_display": "deliverable_manifest > D2_invariant_bash_runs_clean_on_public_input > argv > [1]",
+      "expected_literal": "/workspace/solve.sh"
+    },
+    {
+      "id": "R0035",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D2_invariant_bash_runs_clean_on_public_input > argv > [2] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D2_invariant_bash_runs_clean_on_public_input",
+        "argv",
+        2
+      ],
+      "grounding_path_display": "deliverable_manifest > D2_invariant_bash_runs_clean_on_public_input > argv > [2]",
+      "expected_literal": "/workspace/input.yaml"
+    },
+    {
+      "id": "R0036",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D2_invariant_bash_runs_clean_on_public_input > predicate equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D2_invariant_bash_runs_clean_on_public_input",
+        "predicate"
+      ],
+      "grounding_path_display": "deliverable_manifest > D2_invariant_bash_runs_clean_on_public_input > predicate",
+      "expected_literal": "bash_exit_zero_and_stdout_nonempty"
+    },
+    {
+      "id": "R0037",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_value_and_structure_public > checks > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D3_value_and_structure_public",
+        "checks",
+        0
+      ],
+      "grounding_path_display": "deliverable_manifest > D3_value_and_structure_public > checks > [0]",
+      "expected_literal": "anchor_literal_count_of_mapping_anchor_equals_one"
+    },
+    {
+      "id": "R0038",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_value_and_structure_public > checks > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D3_value_and_structure_public",
+        "checks",
+        1
+      ],
+      "grounding_path_display": "deliverable_manifest > D3_value_and_structure_public > checks > [1]",
+      "expected_literal": "alias_literal_count_of_mapping_anchor_at_least_public_mapping_min_alias_count"
+    },
+    {
+      "id": "R0039",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_value_and_structure_public > checks > [2] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D3_value_and_structure_public",
+        "checks",
+        2
+      ],
+      "grounding_path_display": "deliverable_manifest > D3_value_and_structure_public > checks > [2]",
+      "expected_literal": "anchor_literal_count_of_sequence_anchor_equals_one"
+    },
+    {
+      "id": "R0040",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_value_and_structure_public > checks > [3] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D3_value_and_structure_public",
+        "checks",
+        3
+      ],
+      "grounding_path_display": "deliverable_manifest > D3_value_and_structure_public > checks > [3]",
+      "expected_literal": "alias_literal_count_of_sequence_anchor_at_least_public_sequence_min_alias_count"
+    },
+    {
+      "id": "R0041",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_value_and_structure_public > checks > [4] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D3_value_and_structure_public",
+        "checks",
+        4
+      ],
+      "grounding_path_display": "deliverable_manifest > D3_value_and_structure_public > checks > [4]",
+      "expected_literal": "yq_r_eval_public_mapping_target_path_equals_public_mapping_target_new_value"
+    },
+    {
+      "id": "R0042",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_value_and_structure_public > checks > [5] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D3_value_and_structure_public",
+        "checks",
+        5
+      ],
+      "grounding_path_display": "deliverable_manifest > D3_value_and_structure_public > checks > [5]",
+      "expected_literal": "yq_r_eval_public_sequence_target_path_equals_public_sequence_target_new_value"
+    },
+    {
+      "id": "R0043",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_value_and_structure_public > checks > [6] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D3_value_and_structure_public",
+        "checks",
+        6
+      ],
+      "grounding_path_display": "deliverable_manifest > D3_value_and_structure_public > checks > [6]",
+      "expected_literal": "yq_r_eval_public_mapping_alias_readback_path_equals_public_mapping_target_new_value"
+    },
+    {
+      "id": "R0044",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_value_and_structure_public > checks > [7] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D3_value_and_structure_public",
+        "checks",
+        7
+      ],
+      "grounding_path_display": "deliverable_manifest > D3_value_and_structure_public > checks > [7]",
+      "expected_literal": "yq_r_eval_public_sequence_alias_readback_path_equals_public_sequence_target_new_value"
+    },
+    {
+      "id": "R0045",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_value_and_structure_public > checks > [8] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D3_value_and_structure_public",
+        "checks",
+        8
+      ],
+      "grounding_path_display": "deliverable_manifest > D3_value_and_structure_public > checks > [8]",
+      "expected_literal": "forge_target_metadata_keys_absent_from_public_stdout"
+    },
+    {
+      "id": "R0046",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D3_value_and_structure_public > predicate equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D3_value_and_structure_public",
+        "predicate"
+      ],
+      "grounding_path_display": "deliverable_manifest > D3_value_and_structure_public > predicate",
+      "expected_literal": "structural_and_value_and_alias_resolution_bundle_over_public_stdout"
+    },
+    {
+      "id": "R0047",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_value_and_structure_holdout > checks > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D4_value_and_structure_holdout",
+        "checks",
+        0
+      ],
+      "grounding_path_display": "deliverable_manifest > D4_value_and_structure_holdout > checks > [0]",
+      "expected_literal": "anchor_literal_count_of_mapping_anchor_equals_one_holdout"
+    },
+    {
+      "id": "R0048",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_value_and_structure_holdout > checks > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D4_value_and_structure_holdout",
+        "checks",
+        1
+      ],
+      "grounding_path_display": "deliverable_manifest > D4_value_and_structure_holdout > checks > [1]",
+      "expected_literal": "alias_literal_count_of_mapping_anchor_at_least_holdout_mapping_min_alias_count"
+    },
+    {
+      "id": "R0049",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_value_and_structure_holdout > checks > [2] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D4_value_and_structure_holdout",
+        "checks",
+        2
+      ],
+      "grounding_path_display": "deliverable_manifest > D4_value_and_structure_holdout > checks > [2]",
+      "expected_literal": "anchor_literal_count_of_sequence_anchor_equals_one_holdout"
+    },
+    {
+      "id": "R0050",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_value_and_structure_holdout > checks > [3] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D4_value_and_structure_holdout",
+        "checks",
+        3
+      ],
+      "grounding_path_display": "deliverable_manifest > D4_value_and_structure_holdout > checks > [3]",
+      "expected_literal": "alias_literal_count_of_sequence_anchor_at_least_holdout_sequence_min_alias_count"
+    },
+    {
+      "id": "R0051",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_value_and_structure_holdout > checks > [4] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D4_value_and_structure_holdout",
+        "checks",
+        4
+      ],
+      "grounding_path_display": "deliverable_manifest > D4_value_and_structure_holdout > checks > [4]",
+      "expected_literal": "yq_r_eval_holdout_mapping_target_path_equals_holdout_mapping_target_new_value"
+    },
+    {
+      "id": "R0052",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_value_and_structure_holdout > checks > [5] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D4_value_and_structure_holdout",
+        "checks",
+        5
+      ],
+      "grounding_path_display": "deliverable_manifest > D4_value_and_structure_holdout > checks > [5]",
+      "expected_literal": "yq_r_eval_holdout_sequence_target_path_equals_holdout_sequence_target_new_value"
+    },
+    {
+      "id": "R0053",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_value_and_structure_holdout > checks > [6] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D4_value_and_structure_holdout",
+        "checks",
+        6
+      ],
+      "grounding_path_display": "deliverable_manifest > D4_value_and_structure_holdout > checks > [6]",
+      "expected_literal": "yq_r_eval_holdout_mapping_alias_readback_path_equals_holdout_mapping_target_new_value"
+    },
+    {
+      "id": "R0054",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_value_and_structure_holdout > checks > [7] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D4_value_and_structure_holdout",
+        "checks",
+        7
+      ],
+      "grounding_path_display": "deliverable_manifest > D4_value_and_structure_holdout > checks > [7]",
+      "expected_literal": "yq_r_eval_holdout_sequence_alias_readback_path_equals_holdout_sequence_target_new_value"
+    },
+    {
+      "id": "R0055",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_value_and_structure_holdout > checks > [8] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D4_value_and_structure_holdout",
+        "checks",
+        8
+      ],
+      "grounding_path_display": "deliverable_manifest > D4_value_and_structure_holdout > checks > [8]",
+      "expected_literal": "forge_target_metadata_keys_absent_from_holdout_stdout"
+    },
+    {
+      "id": "R0056",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_value_and_structure_holdout > pinned_holdout_input_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D4_value_and_structure_holdout",
+        "pinned_holdout_input_path"
+      ],
+      "grounding_path_display": "deliverable_manifest > D4_value_and_structure_holdout > pinned_holdout_input_path",
+      "expected_literal": "/tests/holdout_input.yaml"
+    },
+    {
+      "id": "R0057",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D4_value_and_structure_holdout > predicate equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D4_value_and_structure_holdout",
+        "predicate"
+      ],
+      "grounding_path_display": "deliverable_manifest > D4_value_and_structure_holdout > predicate",
+      "expected_literal": "structural_and_value_and_alias_resolution_bundle_over_holdout_stdout"
+    },
+    {
+      "id": "R0058",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D5_absence_no_bound_shortcut_pattern > pattern_set_source equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D5_absence_no_bound_shortcut_pattern",
+        "pattern_set_source"
+      ],
+      "grounding_path_display": "deliverable_manifest > D5_absence_no_bound_shortcut_pattern > pattern_set_source",
+      "expected_literal": "bound_shortcut_pattern_set"
+    },
+    {
+      "id": "R0059",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > D5_absence_no_bound_shortcut_pattern > predicate equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "D5_absence_no_bound_shortcut_pattern",
+        "predicate"
+      ],
+      "grounding_path_display": "deliverable_manifest > D5_absence_no_bound_shortcut_pattern > predicate",
+      "expected_literal": "multiline_regex_scan_over_solve_sh_matches_no_bound_shortcut_pattern"
+    },
+    {
+      "id": "R0060",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path deliverable_manifest > ordering_note equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverable_manifest",
+        "ordering_note"
+      ],
+      "grounding_path_display": "deliverable_manifest > ordering_note",
+      "expected_literal": "deliverables_evaluated_in_order_D1_then_D5_then_D2_then_D3_then_D4_first_failure_stops_grading_and_writes_reward_zero_with_that_reason_code"
+    },
+    {
+      "id": "R0061",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "command_exit_code",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > bash_solve_sh_holdout_returncode equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_exit_code"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_after_fix",
+        "bash_solve_sh_holdout_returncode"
+      ],
+      "grounding_path_display": "expected_after_fix > bash_solve_sh_holdout_returncode",
+      "expected_literal": 0
+    },
+    {
+      "id": "R0062",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "command_stdout_bytes",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > bash_solve_sh_holdout_stdout_contains_at_least_four_asterisk_platinum_policy equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_stdout_bytes"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_after_fix",
+        "bash_solve_sh_holdout_stdout_contains_at_least_four_asterisk_platinum_policy"
+      ],
+      "grounding_path_display": "expected_after_fix > bash_solve_sh_holdout_stdout_contains_at_least_four_asterisk_platinum_policy",
+      "expected_literal": true
+    },
+    {
+      "id": "R0063",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "command_stdout_bytes",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > bash_solve_sh_holdout_stdout_contains_at_least_four_asterisk_shared_upstream equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_stdout_bytes"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_after_fix",
+        "bash_solve_sh_holdout_stdout_contains_at_least_four_asterisk_shared_upstream"
+      ],
+      "grounding_path_display": "expected_after_fix > bash_solve_sh_holdout_stdout_contains_at_least_four_asterisk_shared_upstream",
+      "expected_literal": true
+    },
+    {
+      "id": "R0064",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "command_stdout_bytes",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > bash_solve_sh_holdout_stdout_contains_exactly_one_ampersand_platinum_policy equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_stdout_bytes"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_after_fix",
+        "bash_solve_sh_holdout_stdout_contains_exactly_one_ampersand_platinum_policy"
+      ],
+      "grounding_path_display": "expected_after_fix > bash_solve_sh_holdout_stdout_contains_exactly_one_ampersand_platinum_policy",
+      "expected_literal": true
+    },
+    {
+      "id": "R0065",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "command_stdout_bytes",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > bash_solve_sh_holdout_stdout_contains_exactly_one_ampersand_shared_upstream equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_stdout_bytes"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_after_fix",
+        "bash_solve_sh_holdout_stdout_contains_exactly_one_ampersand_shared_upstream"
+      ],
+      "grounding_path_display": "expected_after_fix > bash_solve_sh_holdout_stdout_contains_exactly_one_ampersand_shared_upstream",
+      "expected_literal": true
+    },
+    {
+      "id": "R0066",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "command_stdout_bytes",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > bash_solve_sh_holdout_stdout_yq_r_eval_base_pool_endpoint_equals_upstream_cluster_primary equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_stdout_bytes"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_after_fix",
+        "bash_solve_sh_holdout_stdout_yq_r_eval_base_pool_endpoint_equals_upstream_cluster_primary"
+      ],
+      "grounding_path_display": "expected_after_fix > bash_solve_sh_holdout_stdout_yq_r_eval_base_pool_endpoint_equals_upstream_cluster_primary",
+      "expected_literal": true
+    },
+    {
+      "id": "R0067",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "command_stdout_bytes",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > bash_solve_sh_holdout_stdout_yq_r_eval_connectors_primary_policy_tier_equals_enterprise_plus_via_alias_resolution equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_stdout_bytes"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_after_fix",
+        "bash_solve_sh_holdout_stdout_yq_r_eval_connectors_primary_policy_tier_equals_enterprise_plus_via_alias_resolution"
+      ],
+      "grounding_path_display": "expected_after_fix > bash_solve_sh_holdout_stdout_yq_r_eval_connectors_primary_policy_tier_equals_enterprise_plus_via_alias_resolution",
+      "expected_literal": true
+    },
+    {
+      "id": "R0068",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "command_stdout_bytes",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > bash_solve_sh_holdout_stdout_yq_r_eval_connectors_primary_pool_endpoint_equals_upstream_cluster_primary_via_alias_resolution equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_stdout_bytes"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_after_fix",
+        "bash_solve_sh_holdout_stdout_yq_r_eval_connectors_primary_pool_endpoint_equals_upstream_cluster_primary_via_alias_resolution"
+      ],
+      "grounding_path_display": "expected_after_fix > bash_solve_sh_holdout_stdout_yq_r_eval_connectors_primary_pool_endpoint_equals_upstream_cluster_primary_via_alias_resolution",
+      "expected_literal": true
+    },
+    {
+      "id": "R0069",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "command_stdout_bytes",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > bash_solve_sh_holdout_stdout_yq_r_eval_policies_0_tier_equals_enterprise_plus equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_stdout_bytes"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_after_fix",
+        "bash_solve_sh_holdout_stdout_yq_r_eval_policies_0_tier_equals_enterprise_plus"
+      ],
+      "grounding_path_display": "expected_after_fix > bash_solve_sh_holdout_stdout_yq_r_eval_policies_0_tier_equals_enterprise_plus",
+      "expected_literal": true
+    },
+    {
+      "id": "R0070",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "command_exit_code",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > bash_solve_sh_workspace_input_returncode equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_exit_code"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_after_fix",
+        "bash_solve_sh_workspace_input_returncode"
+      ],
+      "grounding_path_display": "expected_after_fix > bash_solve_sh_workspace_input_returncode",
+      "expected_literal": 0
+    },
+    {
+      "id": "R0071",
+      "dimension": "correctness_of_absence",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "command_stdout_bytes",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > bash_solve_sh_workspace_input_stdout_carries_no_forge_target_metadata_keys equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_stdout_bytes"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_after_fix",
+        "bash_solve_sh_workspace_input_stdout_carries_no_forge_target_metadata_keys"
+      ],
+      "grounding_path_display": "expected_after_fix > bash_solve_sh_workspace_input_stdout_carries_no_forge_target_metadata_keys",
+      "expected_literal": true
+    },
+    {
+      "id": "R0072",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "command_stdout_bytes",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > bash_solve_sh_workspace_input_stdout_contains_at_least_three_asterisk_db_defaults equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_stdout_bytes"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_after_fix",
+        "bash_solve_sh_workspace_input_stdout_contains_at_least_three_asterisk_db_defaults"
+      ],
+      "grounding_path_display": "expected_after_fix > bash_solve_sh_workspace_input_stdout_contains_at_least_three_asterisk_db_defaults",
+      "expected_literal": true
+    },
+    {
+      "id": "R0073",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "command_stdout_bytes",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > bash_solve_sh_workspace_input_stdout_contains_at_least_three_asterisk_primary_role equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_stdout_bytes"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_after_fix",
+        "bash_solve_sh_workspace_input_stdout_contains_at_least_three_asterisk_primary_role"
+      ],
+      "grounding_path_display": "expected_after_fix > bash_solve_sh_workspace_input_stdout_contains_at_least_three_asterisk_primary_role",
+      "expected_literal": true
+    },
+    {
+      "id": "R0074",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "command_stdout_bytes",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > bash_solve_sh_workspace_input_stdout_contains_exactly_one_ampersand_db_defaults equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_stdout_bytes"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_after_fix",
+        "bash_solve_sh_workspace_input_stdout_contains_exactly_one_ampersand_db_defaults"
+      ],
+      "grounding_path_display": "expected_after_fix > bash_solve_sh_workspace_input_stdout_contains_exactly_one_ampersand_db_defaults",
+      "expected_literal": true
+    },
+    {
+      "id": "R0075",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "command_stdout_bytes",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > bash_solve_sh_workspace_input_stdout_contains_exactly_one_ampersand_primary_role equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_stdout_bytes"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_after_fix",
+        "bash_solve_sh_workspace_input_stdout_contains_exactly_one_ampersand_primary_role"
+      ],
+      "grounding_path_display": "expected_after_fix > bash_solve_sh_workspace_input_stdout_contains_exactly_one_ampersand_primary_role",
+      "expected_literal": true
+    },
+    {
+      "id": "R0076",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "command_stdout_bytes",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > bash_solve_sh_workspace_input_stdout_yq_r_eval_defaults_host_equals_cache_primary equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_stdout_bytes"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_after_fix",
+        "bash_solve_sh_workspace_input_stdout_yq_r_eval_defaults_host_equals_cache_primary"
+      ],
+      "grounding_path_display": "expected_after_fix > bash_solve_sh_workspace_input_stdout_yq_r_eval_defaults_host_equals_cache_primary",
+      "expected_literal": true
+    },
+    {
+      "id": "R0077",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "command_stdout_bytes",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > bash_solve_sh_workspace_input_stdout_yq_r_eval_roles_0_scope_equals_tenant_primary equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_stdout_bytes"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_after_fix",
+        "bash_solve_sh_workspace_input_stdout_yq_r_eval_roles_0_scope_equals_tenant_primary"
+      ],
+      "grounding_path_display": "expected_after_fix > bash_solve_sh_workspace_input_stdout_yq_r_eval_roles_0_scope_equals_tenant_primary",
+      "expected_literal": true
+    },
+    {
+      "id": "R0078",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "command_stdout_bytes",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > bash_solve_sh_workspace_input_stdout_yq_r_eval_services_web_database_host_equals_cache_primary_via_alias_resolution equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_stdout_bytes"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_after_fix",
+        "bash_solve_sh_workspace_input_stdout_yq_r_eval_services_web_database_host_equals_cache_primary_via_alias_resolution"
+      ],
+      "grounding_path_display": "expected_after_fix > bash_solve_sh_workspace_input_stdout_yq_r_eval_services_web_database_host_equals_cache_primary_via_alias_resolution",
+      "expected_literal": true
+    },
+    {
+      "id": "R0079",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "command_stdout_bytes",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > bash_solve_sh_workspace_input_stdout_yq_r_eval_services_web_role_scope_equals_tenant_primary_via_alias_resolution equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_stdout_bytes"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_after_fix",
+        "bash_solve_sh_workspace_input_stdout_yq_r_eval_services_web_role_scope_equals_tenant_primary_via_alias_resolution"
+      ],
+      "grounding_path_display": "expected_after_fix > bash_solve_sh_workspace_input_stdout_yq_r_eval_services_web_role_scope_equals_tenant_primary_via_alias_resolution",
+      "expected_literal": true
+    },
+    {
+      "id": "R0080",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path expected_after_fix > workspace_solve_sh_present_nonempty_executable equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "expected_after_fix",
+        "workspace_solve_sh_present_nonempty_executable"
+      ],
+      "grounding_path_display": "expected_after_fix > workspace_solve_sh_present_nonempty_executable",
+      "expected_literal": true
+    },
+    {
+      "id": "R0081",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout > mapping_alias_readback_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout",
+        "mapping_alias_readback_path"
+      ],
+      "grounding_path_display": "holdout > mapping_alias_readback_path",
+      "expected_literal": ".connectors.primary.pool.endpoint"
+    },
+    {
+      "id": "R0082",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout > mapping_anchor_name equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout",
+        "mapping_anchor_name"
+      ],
+      "grounding_path_display": "holdout > mapping_anchor_name",
+      "expected_literal": "shared_upstream"
+    },
+    {
+      "id": "R0083",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout > mapping_min_alias_count equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout",
+        "mapping_min_alias_count"
+      ],
+      "grounding_path_display": "holdout > mapping_min_alias_count",
+      "expected_literal": 4
+    },
+    {
+      "id": "R0084",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout > mapping_original_scalar_value_at_target_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout",
+        "mapping_original_scalar_value_at_target_path"
+      ],
+      "grounding_path_display": "holdout > mapping_original_scalar_value_at_target_path",
+      "expected_literal": "upstream-legacy-a.mars.internal"
+    },
+    {
+      "id": "R0085",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout > mapping_target_new_value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout",
+        "mapping_target_new_value"
+      ],
+      "grounding_path_display": "holdout > mapping_target_new_value",
+      "expected_literal": "upstream-cluster-primary.mars.internal"
+    },
+    {
+      "id": "R0086",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout > mapping_target_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout",
+        "mapping_target_path"
+      ],
+      "grounding_path_display": "holdout > mapping_target_path",
+      "expected_literal": ".base_pool.endpoint"
+    },
+    {
+      "id": "R0087",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout > sequence_alias_readback_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout",
+        "sequence_alias_readback_path"
+      ],
+      "grounding_path_display": "holdout > sequence_alias_readback_path",
+      "expected_literal": ".connectors.primary.policy.tier"
+    },
+    {
+      "id": "R0088",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout > sequence_anchor_name equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout",
+        "sequence_anchor_name"
+      ],
+      "grounding_path_display": "holdout > sequence_anchor_name",
+      "expected_literal": "platinum_policy"
+    },
+    {
+      "id": "R0089",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout > sequence_min_alias_count equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout",
+        "sequence_min_alias_count"
+      ],
+      "grounding_path_display": "holdout > sequence_min_alias_count",
+      "expected_literal": 4
+    },
+    {
+      "id": "R0090",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout > sequence_original_scalar_value_at_target_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout",
+        "sequence_original_scalar_value_at_target_path"
+      ],
+      "grounding_path_display": "holdout > sequence_original_scalar_value_at_target_path",
+      "expected_literal": "standard-legacy"
+    },
+    {
+      "id": "R0091",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout > sequence_target_new_value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout",
+        "sequence_target_new_value"
+      ],
+      "grounding_path_display": "holdout > sequence_target_new_value",
+      "expected_literal": "enterprise-plus"
+    },
+    {
+      "id": "R0092",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout > sequence_target_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "holdout",
+        "sequence_target_path"
+      ],
+      "grounding_path_display": "holdout > sequence_target_path",
+      "expected_literal": ".policies[0].tier"
+    },
+    {
+      "id": "R0093",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_expected_output_yaml_bytes_documented_reference matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "holdout_expected_output_yaml_bytes_documented_reference"
+      ],
+      "grounding_path_display": "holdout_expected_output_yaml_bytes_documented_reference",
+      "expected_literal": "base_pool: &shared_upstream\n  endpoint: upstream-cluster-primary.mars.internal\n  port: 8443\n  timeout_ms: 5000\npolicies:\n  - &platinum_policy\n    plan_id: platinum\n    tier: enterprise-plus\n    quotas:\n      requests_per_second: 100\n      burst: 200\n  - plan_id: basic\n    tier: free\n    quotas:\n      requests_per_second: 10\n      burst: 20\nconnectors:\n  primary:\n    pool: *shared_upstream\n    policy: *platinum_policy\n  secondary:\n    pool: *shared_upstream\n    policy: *platinum_policy\n  tertiary:\n    pool: *shared_upstream\n    policy: *platinum_policy\n  quaternary:\n    pool: *shared_upstream\n    policy: *platinum_policy\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0094",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path holdout_input_yaml_bytes matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "holdout_input_yaml_bytes"
+      ],
+      "grounding_path_display": "holdout_input_yaml_bytes",
+      "expected_literal": "__forge_target_mapping_path: .base_pool.endpoint\n__forge_target_mapping_value: upstream-cluster-primary.mars.internal\n__forge_target_sequence_path: .policies[0].tier\n__forge_target_sequence_value: enterprise-plus\nbase_pool: &shared_upstream\n  endpoint: upstream-legacy-a.mars.internal\n  port: 8443\n  timeout_ms: 5000\npolicies:\n  - &platinum_policy\n    plan_id: platinum\n    tier: standard-legacy\n    quotas:\n      requests_per_second: 100\n      burst: 200\n  - plan_id: basic\n    tier: free\n    quotas:\n      requests_per_second: 10\n      burst: 20\nconnectors:\n  primary:\n    pool: *shared_upstream\n    policy: *platinum_policy\n  secondary:\n    pool: *shared_upstream\n    policy: *platinum_policy\n  tertiary:\n    pool: *shared_upstream\n    policy: *platinum_policy\n  quaternary:\n    pool: *shared_upstream\n    policy: *platinum_policy\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0095",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state > observed_naive_attempt_shape matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "initial_state",
+        "observed_naive_attempt_shape"
+      ],
+      "grounding_path_display": "initial_state > observed_naive_attempt_shape",
+      "expected_literal": "/usr/local/bin/yq eval '.defaults.host = \"cache-primary.svc.mars.local\" | .roles[0].scope = \"tenant-primary\" | del(.__forge_target_mapping_path) | del(.__forge_target_mapping_value) | del(.__forge_target_sequence_path) | del(.__forge_target_sequence_value)' /workspace/input.yaml exhibits the target trap: the mapping anchor at .defaults is preserved as `defaults: &db_defaults` and the alias `*db_defaults` at .services.*.database is preserved BUT the sequence-element anchor `&primary_role` on .roles[0] is DROPPED and the alias `*primary_role` at .services.*.role is broken (either dangling on read or expanded to a pre-update inline copy depending on the yq minor version). Structural scan of the naive output finds zero occurrences of `&primary_role` and zero or expanded occurrences of `*primary_role`, both of which fail the D3 structural check.\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0096",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state > workspace_expected_output_yaml_present_agent_visible_shape_hint equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "initial_state",
+        "workspace_expected_output_yaml_present_agent_visible_shape_hint"
+      ],
+      "grounding_path_display": "initial_state > workspace_expected_output_yaml_present_agent_visible_shape_hint",
+      "expected_literal": true
+    },
+    {
+      "id": "R0097",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state > workspace_input_yaml_present equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "initial_state",
+        "workspace_input_yaml_present"
+      ],
+      "grounding_path_display": "initial_state > workspace_input_yaml_present",
+      "expected_literal": true
+    },
+    {
+      "id": "R0098",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state > workspace_observed_naive_attempt_txt_present equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "initial_state",
+        "workspace_observed_naive_attempt_txt_present"
+      ],
+      "grounding_path_display": "initial_state > workspace_observed_naive_attempt_txt_present",
+      "expected_literal": true
+    },
+    {
+      "id": "R0099",
+      "dimension": "correctness_of_absence",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path initial_state > workspace_solve_sh_absent equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "initial_state",
+        "workspace_solve_sh_absent"
+      ],
+      "grounding_path_display": "initial_state > workspace_solve_sh_absent",
+      "expected_literal": true
+    },
+    {
+      "id": "R0100",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path leak_gate > containment_threshold equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "leak_gate",
+        "containment_threshold"
+      ],
+      "grounding_path_display": "leak_gate > containment_threshold",
+      "expected_literal": 0.15
+    },
+    {
+      "id": "R0101",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path leak_gate > ngram_width equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "leak_gate",
+        "ngram_width"
+      ],
+      "grounding_path_display": "leak_gate > ngram_width",
+      "expected_literal": 8
+    },
+    {
+      "id": "R0102",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path leak_gate > paraphrase_containment_carriers > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "leak_gate",
+        "paraphrase_containment_carriers",
+        0
+      ],
+      "grounding_path_display": "leak_gate > paraphrase_containment_carriers > [0]",
+      "expected_literal": "solution/TRUTH.md"
+    },
+    {
+      "id": "R0103",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path leak_gate > paraphrase_containment_carriers > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "leak_gate",
+        "paraphrase_containment_carriers",
+        1
+      ],
+      "grounding_path_display": "leak_gate > paraphrase_containment_carriers > [1]",
+      "expected_literal": "solution/grounding.yaml"
+    },
+    {
+      "id": "R0104",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [0] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes",
+        0,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes > [0] > rejection",
+      "expected_literal": "control_C1_D3_sequence_anchor_ampersand_primary_role_count_is_zero_because_mikefarah_yq_dropped_it"
+    },
+    {
+      "id": "R0105",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [0] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes",
+        0,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes > [0] > route",
+      "expected_literal": "apply_both_updates_via_a_single_yq_eval_and_stop"
+    },
+    {
+      "id": "R0106",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [1] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes",
+        1,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes > [1] > rejection",
+      "expected_literal": "control_C2_D3_sequence_target_scalar_still_reads_global_legacy_via_yq_value_readback"
+    },
+    {
+      "id": "R0107",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [1] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes",
+        1,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes > [1] > route",
+      "expected_literal": "apply_only_the_mapping_update_and_leave_sequence_untouched"
+    },
+    {
+      "id": "R0108",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [2] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes",
+        2,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes > [2] > rejection",
+      "expected_literal": "control_C3_D5_bound_shortcut_pattern_cat_expected_or_cp_expected_matched"
+    },
+    {
+      "id": "R0109",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [2] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes",
+        2,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes > [2] > route",
+      "expected_literal": "hardcode_the_public_expected_output_yaml_bytes_via_cat_expected_or_cp_expected"
+    },
+    {
+      "id": "R0110",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [3] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes",
+        3,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes > [3] > rejection",
+      "expected_literal": "control_C4_D4_holdout_stdout_carries_public_anchor_names_db_defaults_and_primary_role_not_holdout_anchor_names_shared_upstream_and_platinum_policy"
+    },
+    {
+      "id": "R0111",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [3] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes",
+        3,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes > [3] > route",
+      "expected_literal": "hardcode_the_public_expected_yaml_bytes_via_here_document_or_echo_ignoring_dollar_one"
+    },
+    {
+      "id": "R0112",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [4] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes",
+        4,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes > [4] > rejection",
+      "expected_literal": "control_C5_D5_bound_shortcut_pattern_cat_tests"
+    },
+    {
+      "id": "R0113",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [4] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes",
+        4,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes > [4] > route",
+      "expected_literal": "cat_slash_tests_slash_holdout_expected_dot_yaml"
+    },
+    {
+      "id": "R0114",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [5] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes",
+        5,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes > [5] > rejection",
+      "expected_literal": "control_C6_D5_bound_shortcut_pattern_yq_json_output_because_json_expands_aliases_and_kills_all_anchor_and_alias_literals"
+    },
+    {
+      "id": "R0115",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [5] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes",
+        5,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes > [5] > route",
+      "expected_literal": "mikefarah_yq_with_dash_o_equals_json_to_normalize_or_re_emit"
+    },
+    {
+      "id": "R0116",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [6] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes",
+        6,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes > [6] > rejection",
+      "expected_literal": "control_C7_D3_alias_resolution_readback_via_yq_eval_services_web_role_scope_yields_wrong_value_or_yq_errors_on_dangling_alias"
+    },
+    {
+      "id": "R0117",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [6] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes",
+        6,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes > [6] > route",
+      "expected_literal": "reinject_the_sequence_anchor_at_wrong_position_or_wrong_indent"
+    },
+    {
+      "id": "R0118",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [7] > rejection equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes",
+        7,
+        "rejection"
+      ],
+      "grounding_path_display": "plausible_wrong_routes > [7] > rejection",
+      "expected_literal": "control_C8_D1_zero_size_or_D2_no_output"
+    },
+    {
+      "id": "R0119",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path plausible_wrong_routes > [7] > route equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "plausible_wrong_routes",
+        7,
+        "route"
+      ],
+      "grounding_path_display": "plausible_wrong_routes > [7] > route",
+      "expected_literal": "empty_solve_sh"
+    },
+    {
+      "id": "R0120",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public > mapping_alias_readback_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "public",
+        "mapping_alias_readback_path"
+      ],
+      "grounding_path_display": "public > mapping_alias_readback_path",
+      "expected_literal": ".services.web.database.host"
+    },
+    {
+      "id": "R0121",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public > mapping_anchor_name equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "public",
+        "mapping_anchor_name"
+      ],
+      "grounding_path_display": "public > mapping_anchor_name",
+      "expected_literal": "db_defaults"
+    },
+    {
+      "id": "R0122",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public > mapping_min_alias_count equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "public",
+        "mapping_min_alias_count"
+      ],
+      "grounding_path_display": "public > mapping_min_alias_count",
+      "expected_literal": 3
+    },
+    {
+      "id": "R0123",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public > mapping_original_scalar_value_at_target_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "public",
+        "mapping_original_scalar_value_at_target_path"
+      ],
+      "grounding_path_display": "public > mapping_original_scalar_value_at_target_path",
+      "expected_literal": "legacy-primary.svc.mars.local"
+    },
+    {
+      "id": "R0124",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public > mapping_target_new_value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "public",
+        "mapping_target_new_value"
+      ],
+      "grounding_path_display": "public > mapping_target_new_value",
+      "expected_literal": "cache-primary.svc.mars.local"
+    },
+    {
+      "id": "R0125",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public > mapping_target_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "public",
+        "mapping_target_path"
+      ],
+      "grounding_path_display": "public > mapping_target_path",
+      "expected_literal": ".defaults.host"
+    },
+    {
+      "id": "R0126",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public > sequence_alias_readback_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "public",
+        "sequence_alias_readback_path"
+      ],
+      "grounding_path_display": "public > sequence_alias_readback_path",
+      "expected_literal": ".services.web.role.scope"
+    },
+    {
+      "id": "R0127",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public > sequence_anchor_name equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "public",
+        "sequence_anchor_name"
+      ],
+      "grounding_path_display": "public > sequence_anchor_name",
+      "expected_literal": "primary_role"
+    },
+    {
+      "id": "R0128",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public > sequence_min_alias_count equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "public",
+        "sequence_min_alias_count"
+      ],
+      "grounding_path_display": "public > sequence_min_alias_count",
+      "expected_literal": 3
+    },
+    {
+      "id": "R0129",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public > sequence_original_scalar_value_at_target_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "public",
+        "sequence_original_scalar_value_at_target_path"
+      ],
+      "grounding_path_display": "public > sequence_original_scalar_value_at_target_path",
+      "expected_literal": "global-legacy"
+    },
+    {
+      "id": "R0130",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public > sequence_target_new_value equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "public",
+        "sequence_target_new_value"
+      ],
+      "grounding_path_display": "public > sequence_target_new_value",
+      "expected_literal": "tenant-primary"
+    },
+    {
+      "id": "R0131",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public > sequence_target_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "public",
+        "sequence_target_path"
+      ],
+      "grounding_path_display": "public > sequence_target_path",
+      "expected_literal": ".roles[0].scope"
+    },
+    {
+      "id": "R0132",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_expected_output_yaml_bytes_agent_visible_shape_hint matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "public_expected_output_yaml_bytes_agent_visible_shape_hint"
+      ],
+      "grounding_path_display": "public_expected_output_yaml_bytes_agent_visible_shape_hint",
+      "expected_literal": "defaults: &db_defaults\n  host: cache-primary.svc.mars.local\n  port: 5432\n  ssl: true\nroles:\n  - &primary_role\n    name: admin\n    scope: tenant-primary\n    permissions:\n      - read\n      - write\n  - name: viewer\n    scope: readonly\n    permissions:\n      - read\nservices:\n  web:\n    database: *db_defaults\n    role: *primary_role\n  api:\n    database: *db_defaults\n    role: *primary_role\n  worker:\n    database: *db_defaults\n    role: *primary_role\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0133",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path public_input_yaml_bytes matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "public_input_yaml_bytes"
+      ],
+      "grounding_path_display": "public_input_yaml_bytes",
+      "expected_literal": "__forge_target_mapping_path: .defaults.host\n__forge_target_mapping_value: cache-primary.svc.mars.local\n__forge_target_sequence_path: .roles[0].scope\n__forge_target_sequence_value: tenant-primary\ndefaults: &db_defaults\n  host: legacy-primary.svc.mars.local\n  port: 5432\n  ssl: true\nroles:\n  - &primary_role\n    name: admin\n    scope: global-legacy\n    permissions:\n      - read\n      - write\n  - name: viewer\n    scope: readonly\n    permissions:\n      - read\nservices:\n  web:\n    database: *db_defaults\n    role: *primary_role\n  api:\n    database: *db_defaults\n    role: *primary_role\n  worker:\n    database: *db_defaults\n    role: *primary_role\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0134",
+      "dimension": "correctness_of_effect",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path redesign_summary matches its frozen reference (semantic residue: too large or multiline for inline literal)",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "judged",
+      "grounding_path": [
+        "redesign_summary"
+      ],
+      "grounding_path_display": "redesign_summary",
+      "expected_literal": "The legacy slot (f12bdf4b) tested that the agent picked the pinned mikefarah yq\n(which preserves MAPPING anchors) over the apt-installed python kislyuk yq\n(which expands aliases). That trap is triviality-defeated once the agent reads\nthe instruction: mikefarah is named and pinned on PATH, so a one-shot yq eval\nupdate passes structural and value checks against the mapping anchor.\n\nThe v2 redesign changes the target lever from \"pick the right binary\" to\n\"detect a silent bug in the right binary\". Input YAML now carries TWO target\npaths. The first sits inside a MAPPING anchor (`&db_defaults` on `.defaults`).\nMikefarah yq preserves this anchor across an in-place scalar update.\nThe second sits inside a SEQUENCE-ELEMENT anchor (`&primary_role` on\n`.roles[0]`). Mikefarah yq SILENTLY DROPS sequence-element anchor labels on\nwrite even when only the target scalar path is updated, and the alias\nreferences elsewhere in the document (`*primary_role` at\n`.services.web.role` etc.) become dangling or get expanded into inline copies.\n\nThe agent must observe the naive-attempt symptom (dropped &primary_role,\nbroken aliases), diagnose the sequence-anchor loss, and apply a workaround.\nTwo workaround routes are legal: (a) post-yq sed/awk that re-injects the\ndropped `&<sequence_anchor>` label at the affected sequence-element position,\n(b) reserialize via a python yaml library that preserves all anchor kinds\nsuch as ruamel.yaml (which is pre-installed on the image).\n\nThe grader does not require byte-identical output. It requires that the\nagent's stdout on the public config and on a private holdout config both\nsatisfy: exactly one line-anchored `&<mapping_anchor>` occurrence, at least\nthe recorded public alias count of `*<mapping_anchor>` occurrences, exactly\none line-anchored `&<sequence_anchor>` occurrence, at least the recorded\npublic alias count of `*<sequence_anchor>` occurrences, a value readback via\n`yq eval <mapping_target_path>` that equals the new mapping value, a value\nreadback via `yq eval <sequence_target_path>` that equals the new sequence\nvalue, an ALIAS-RESOLVING readback via `yq eval <mapping_alias_readback_path>`\nthat equals the new mapping value (proves the mapping alias still resolves to\nthe updated anchor content), and an ALIAS-RESOLVING readback via\n`yq eval <sequence_alias_readback_path>` that equals the new sequence value\n(proves the sequence alias still resolves to the updated anchor content, which\nis the anchor-preservation invariant the whole task is about).\n",
+      "semantic_residue": "value_too_large_for_inline_literal"
+    },
+    {
+      "id": "R0135",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > alias_resolution_readback_via_yq_eval_walks_through_the_alias_reference_and_returns_the_anchor_content_which_proves_the_anchor_is_still_bound_to_the_updated_scalar equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_robustness_invariants",
+        "alias_resolution_readback_via_yq_eval_walks_through_the_alias_reference_and_returns_the_anchor_content_which_proves_the_anchor_is_still_bound_to_the_updated_scalar"
+      ],
+      "grounding_path_display": "verifier_robustness_invariants > alias_resolution_readback_via_yq_eval_walks_through_the_alias_reference_and_returns_the_anchor_content_which_proves_the_anchor_is_still_bound_to_the_updated_scalar",
+      "expected_literal": true
+    },
+    {
+      "id": "R0136",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > bash_execute_bit_check_prevents_shipping_source_that_bash_cannot_run equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_robustness_invariants",
+        "bash_execute_bit_check_prevents_shipping_source_that_bash_cannot_run"
+      ],
+      "grounding_path_display": "verifier_robustness_invariants > bash_execute_bit_check_prevents_shipping_source_that_bash_cannot_run",
+      "expected_literal": true
+    },
+    {
+      "id": "R0137",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > bound_shortcut_pattern_scan_uses_multiline_regex_with_word_boundaries equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_robustness_invariants",
+        "bound_shortcut_pattern_scan_uses_multiline_regex_with_word_boundaries"
+      ],
+      "grounding_path_display": "verifier_robustness_invariants > bound_shortcut_pattern_scan_uses_multiline_regex_with_word_boundaries",
+      "expected_literal": true
+    },
+    {
+      "id": "R0138",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > holdout_re_run_forces_generalization_over_hardcoding equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_robustness_invariants",
+        "holdout_re_run_forces_generalization_over_hardcoding"
+      ],
+      "grounding_path_display": "verifier_robustness_invariants > holdout_re_run_forces_generalization_over_hardcoding",
+      "expected_literal": true
+    },
+    {
+      "id": "R0139",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > structural_scan_uses_word_boundaries_so_anchor_prefix_matches_do_not_leak equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_robustness_invariants",
+        "structural_scan_uses_word_boundaries_so_anchor_prefix_matches_do_not_leak"
+      ],
+      "grounding_path_display": "verifier_robustness_invariants > structural_scan_uses_word_boundaries_so_anchor_prefix_matches_do_not_leak",
+      "expected_literal": true
+    },
+    {
+      "id": "R0140",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path verifier_robustness_invariants > value_readback_uses_the_same_pinned_mikefarah_yq_which_preserves_aliases_on_read_so_value_check_is_orthogonal_to_structural_scan equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "verifier_robustness_invariants",
+        "value_readback_uses_the_same_pinned_mikefarah_yq_which_preserves_aliases_on_read_so_value_check_is_orthogonal_to_structural_scan"
+      ],
+      "grounding_path_display": "verifier_robustness_invariants > value_readback_uses_the_same_pinned_mikefarah_yq_which_preserves_aliases_on_read_so_value_check_is_orthogonal_to_structural_scan",
+      "expected_literal": true
+    },
+    {
+      "id": "R0141",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path yq_invocation_contract > argv_template_for_agent_update > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "yq_invocation_contract",
+        "argv_template_for_agent_update",
+        0
+      ],
+      "grounding_path_display": "yq_invocation_contract > argv_template_for_agent_update > [0]",
+      "expected_literal": "/usr/local/bin/yq"
+    },
+    {
+      "id": "R0142",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path yq_invocation_contract > argv_template_for_agent_update > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "yq_invocation_contract",
+        "argv_template_for_agent_update",
+        1
+      ],
+      "grounding_path_display": "yq_invocation_contract > argv_template_for_agent_update > [1]",
+      "expected_literal": "eval"
+    },
+    {
+      "id": "R0143",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path yq_invocation_contract > argv_template_for_agent_update > [2] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "yq_invocation_contract",
+        "argv_template_for_agent_update",
+        2
+      ],
+      "grounding_path_display": "yq_invocation_contract > argv_template_for_agent_update > [2]",
+      "expected_literal": "<expr>"
+    },
+    {
+      "id": "R0144",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path yq_invocation_contract > argv_template_for_agent_update > [3] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "yq_invocation_contract",
+        "argv_template_for_agent_update",
+        3
+      ],
+      "grounding_path_display": "yq_invocation_contract > argv_template_for_agent_update > [3]",
+      "expected_literal": "<config_path>"
+    },
+    {
+      "id": "R0145",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path yq_invocation_contract > argv_template_for_grader_value_readback > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "yq_invocation_contract",
+        "argv_template_for_grader_value_readback",
+        0
+      ],
+      "grounding_path_display": "yq_invocation_contract > argv_template_for_grader_value_readback > [0]",
+      "expected_literal": "/usr/local/bin/yq"
+    },
+    {
+      "id": "R0146",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path yq_invocation_contract > argv_template_for_grader_value_readback > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "yq_invocation_contract",
+        "argv_template_for_grader_value_readback",
+        1
+      ],
+      "grounding_path_display": "yq_invocation_contract > argv_template_for_grader_value_readback > [1]",
+      "expected_literal": "-r"
+    },
+    {
+      "id": "R0147",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path yq_invocation_contract > argv_template_for_grader_value_readback > [2] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "yq_invocation_contract",
+        "argv_template_for_grader_value_readback",
+        2
+      ],
+      "grounding_path_display": "yq_invocation_contract > argv_template_for_grader_value_readback > [2]",
+      "expected_literal": "eval"
+    },
+    {
+      "id": "R0148",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path yq_invocation_contract > argv_template_for_grader_value_readback > [3] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "yq_invocation_contract",
+        "argv_template_for_grader_value_readback",
+        3
+      ],
+      "grounding_path_display": "yq_invocation_contract > argv_template_for_grader_value_readback > [3]",
+      "expected_literal": "<path>"
+    },
+    {
+      "id": "R0149",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "grader_probe_result_boolean_or_scalar",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path yq_invocation_contract > argv_template_for_grader_value_readback > [4] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "grader_probe_result_boolean_or_scalar"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "yq_invocation_contract",
+        "argv_template_for_grader_value_readback",
+        4
+      ],
+      "grounding_path_display": "yq_invocation_contract > argv_template_for_grader_value_readback > [4]",
+      "expected_literal": "-"
+    },
+    {
+      "id": "R0150",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path yq_invocation_contract > binary_path equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "yq_invocation_contract",
+        "binary_path"
+      ],
+      "grounding_path_display": "yq_invocation_contract > binary_path",
+      "expected_literal": "/usr/local/bin/yq"
+    },
+    {
+      "id": "R0151",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path yq_invocation_contract > binary_pinned_sha256 > linux_amd64 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "yq_invocation_contract",
+        "binary_pinned_sha256",
+        "linux_amd64"
+      ],
+      "grounding_path_display": "yq_invocation_contract > binary_pinned_sha256 > linux_amd64",
+      "expected_literal": "fa52a4e758c63d38299163fbdd1edfb4c4963247918bf9c1c5d31d84789eded4"
+    },
+    {
+      "id": "R0152",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path yq_invocation_contract > binary_pinned_sha256 > linux_arm64 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "yq_invocation_contract",
+        "binary_pinned_sha256",
+        "linux_arm64"
+      ],
+      "grounding_path_display": "yq_invocation_contract > binary_pinned_sha256 > linux_arm64",
+      "expected_literal": "578648e463a11c1b6db6010cbf41eafed6bee79466fcffa1bb446672cf7945ea"
+    },
+    {
+      "id": "R0153",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path yq_invocation_contract > binary_pinned_version equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "yq_invocation_contract",
+        "binary_pinned_version"
+      ],
+      "grounding_path_display": "yq_invocation_contract > binary_pinned_version",
+      "expected_literal": "v4.53.3"
+    },
+    {
+      "id": "R0154",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path yq_invocation_contract > binary_provenance equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "yq_invocation_contract",
+        "binary_provenance"
+      ],
+      "grounding_path_display": "yq_invocation_contract > binary_provenance",
+      "expected_literal": "github_release_mikefarah_slash_yq_v4_dot_53_dot_3_downloaded_at_image_build_time"
+    },
+    {
+      "id": "R0155",
+      "dimension": "correctness_of_value",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "command_exit_code",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path yq_invocation_contract > expected_returncode equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "command_exit_code"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "yq_invocation_contract",
+        "expected_returncode"
+      ],
+      "grounding_path_display": "yq_invocation_contract > expected_returncode",
+      "expected_literal": 0
+    },
+    {
+      "id": "R0156",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.00641025641025641,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "The agent MUST produce a workspace state whose value at grounding path yq_invocation_contract > known_defect_this_task_targets equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "yq_invocation_contract",
+        "known_defect_this_task_targets"
+      ],
+      "grounding_path_display": "yq_invocation_contract > known_defect_this_task_targets",
+      "expected_literal": "mikefarah_yq_drops_sequence_element_anchor_labels_on_write_even_when_the_update_only_touches_a_scalar_path_inside_that_sequence_element"
+    }
+  ]
+}

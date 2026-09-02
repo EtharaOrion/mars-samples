@@ -1,0 +1,116 @@
+2026-08-03 12:00:00
+Full thread dump OpenJDK 64-Bit Server VM (17.0.1+12-mars mixed mode):
+
+"Worker-0001" #1 prio=5 os_prio=0 tid=0x00007fabc0000210 nid=0x28 runnable [0x00007fabcffffff1]
+   java.lang.Thread.State: RUNNABLE
+	at com.mars.jstack.corpus.Worker.tick(Worker.java:12)
+	at com.mars.jstack.corpus.Worker.run(Worker.java:8)
+	at java.lang.Thread.run(Thread.java:833)
+
+"Worker-0002" #2 prio=5 os_prio=0 tid=0x00007fabc0000110 nid=0x15 sleeping [0x00007fabcffffff2]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleep(Native Method)
+	at com.mars.jstack.corpus.SlowJob.pause(SlowJob.java:75)
+	- locked <0x00007fabc4d691f8> (a com.mars.jstack.corpus.CacheEntry)
+	at com.mars.jstack.corpus.SlowJob.run(SlowJob.java:40)
+	at java.lang.Thread.run(Thread.java:833)
+
+"Worker-0003" #3 prio=5 os_prio=0 tid=0x00007fabc0000a10 nid=0xa waiting for monitor entry [0x00007fabcffffff3]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.mars.jstack.corpus.WorkerCore.step2(WorkerCore.java:88)
+	- waiting to lock <0x00007fabc4b53e91> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at com.mars.jstack.corpus.WorkerCore.step1(WorkerCore.java:56)
+	- locked <0x00007fabc47a2b1c> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at com.mars.jstack.corpus.WorkerCore.run(WorkerCore.java:33)
+	at java.lang.Thread.run(Thread.java:833)
+
+"Worker-0004" #4 daemon prio=5 os_prio=0 tid=0x00007fabc0000410 nid=0x2a in Object.wait() [0x00007fabcffffff4]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00007fabc42fb508> (a com.mars.jstack.corpus.QueueMonitor)
+	at com.mars.jstack.corpus.QueuePoller.poll(QueuePoller.java:88)
+	at com.mars.jstack.corpus.QueuePoller.run(QueuePoller.java:33)
+	at java.lang.Thread.run(Thread.java:833)
+
+"Worker-0005" #5 prio=5 os_prio=0 tid=0x00007fabc0000c10 nid=0xc waiting for monitor entry [0x00007fabcffffff5]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.mars.jstack.corpus.WorkerCore.step2(WorkerCore.java:88)
+	- waiting to lock <0x00007fabc47a2b1c> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at com.mars.jstack.corpus.WorkerCore.step1(WorkerCore.java:56)
+	- locked <0x00007fabc4f108a7> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at com.mars.jstack.corpus.WorkerCore.run(WorkerCore.java:33)
+	at java.lang.Thread.run(Thread.java:833)
+
+"Worker-0006" #6 prio=5 os_prio=0 tid=0x00007fabc0000e10 nid=0x1f waiting for monitor entry [0x00007fabcffffff6]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.mars.jstack.corpus.Requester.acquire(Requester.java:44)
+	- waiting to lock <0x00007fabc48c4d63> (a com.mars.jstack.corpus.SharedResource)
+	at com.mars.jstack.corpus.Requester.run(Requester.java:22)
+	at java.lang.Thread.run(Thread.java:833)
+
+"Worker-0007" #7 prio=5 os_prio=0 tid=0x00007fabc0000f00 nid=0x1 runnable [0x00007fabcffffff7]
+   java.lang.Thread.State: RUNNABLE
+	at com.mars.jstack.corpus.Main.run(Main.java:42)
+	at com.mars.jstack.corpus.Main.main(Main.java:19)
+
+"Worker-0008" #8 daemon prio=5 os_prio=0 tid=0x00007fabc0000610 nid=0x2c waiting on condition [0x00007fabcffffff8]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(Native Method)
+	- parking to wait for <0x00007fabc4638e2a> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+	at com.mars.jstack.corpus.Housekeeper.idle(Housekeeper.java:60)
+	at java.lang.Thread.run(Thread.java:833)
+
+"Worker-0009" #9 prio=5 os_prio=0 tid=0x00007fabc0000010 nid=0x14 runnable [0x00007fabcffffff9]
+   java.lang.Thread.State: RUNNABLE
+	at com.mars.jstack.corpus.HotLoop.spin(HotLoop.java:200)
+	- locked <0x00007fabc48c4d63> (a com.mars.jstack.corpus.SharedResource)
+	at com.mars.jstack.corpus.HotLoop.run(HotLoop.java:120)
+	at java.lang.Thread.run(Thread.java:833)
+
+"Worker-0010" #10 prio=5 os_prio=0 tid=0x00007fabc0000f10 nid=0x20 waiting for monitor entry [0x00007fabcffffffa]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.mars.jstack.corpus.CacheReader.read(CacheReader.java:66)
+	- waiting to lock <0x00007fabc4d691f8> (a com.mars.jstack.corpus.CacheEntry)
+	at com.mars.jstack.corpus.CacheReader.run(CacheReader.java:22)
+	at java.lang.Thread.run(Thread.java:833)
+
+"Worker-0011" #11 prio=5 os_prio=0 tid=0x00007fabc0000b10 nid=0xb waiting for monitor entry [0x00007fabcffffffb]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.mars.jstack.corpus.WorkerCore.step2(WorkerCore.java:88)
+	- waiting to lock <0x00007fabc4f108a7> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at com.mars.jstack.corpus.WorkerCore.step1(WorkerCore.java:56)
+	- locked <0x00007fabc4b53e91> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+	at com.mars.jstack.corpus.WorkerCore.run(WorkerCore.java:33)
+	at java.lang.Thread.run(Thread.java:833)
+
+"Worker-0012" #12 daemon prio=5 os_prio=0 tid=0x00007fabc0000710 nid=0x2d in Object.wait() [0x00007fabcffffffc]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00007fabc4ac7391> (a com.mars.jstack.corpus.HeartbeatMonitor)
+	at com.mars.jstack.corpus.Heartbeat.await(Heartbeat.java:88)
+	at com.mars.jstack.corpus.Heartbeat.run(Heartbeat.java:33)
+	at java.lang.Thread.run(Thread.java:833)
+
+"Worker-0013" #13 prio=5 os_prio=0 tid=0x00007fabc0000d10 nid=0x1e waiting for monitor entry [0x00007fabcffffffd]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at com.mars.jstack.corpus.Requester.acquire(Requester.java:44)
+	- waiting to lock <0x00007fabc48c4d63> (a com.mars.jstack.corpus.SharedResource)
+	at com.mars.jstack.corpus.Requester.run(Requester.java:22)
+	at java.lang.Thread.run(Thread.java:833)
+
+"Worker-0014" #14 daemon prio=5 os_prio=0 tid=0x00007fabc0000310 nid=0x29 waiting on condition [0x00007fabcffffffe]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(Native Method)
+	- parking to wait for <0x00007fabc406a2c1> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+	at com.mars.jstack.corpus.EventLoop.await(EventLoop.java:210)
+	at com.mars.jstack.corpus.EventLoop.run(EventLoop.java:140)
+	at java.lang.Thread.run(Thread.java:833)
+
+"Worker-0015" #15 daemon prio=5 os_prio=0 tid=0x00007fabc0000510 nid=0x2b runnable [0x00007fabcfffffff]
+   java.lang.Thread.State: RUNNABLE
+	at com.mars.jstack.corpus.Housekeeper.sweep(Housekeeper.java:44)
+	at com.mars.jstack.corpus.Housekeeper.run(Housekeeper.java:22)
+	at java.lang.Thread.run(Thread.java:833)
+

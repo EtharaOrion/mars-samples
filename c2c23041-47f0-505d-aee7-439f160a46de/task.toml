@@ -1,0 +1,57 @@
+schema_version = "1.4"
+
+[task]
+name = "mars/nginx-mtls-forward-auth-single-service"
+description = "Author /workspace/{nginx.conf,mime.types,reload.sh} to configure nginx as a mTLS-terminating forward-auth reverse proxy in front of a pre-started upstream stub; reload.sh must copy the two config files to /etc/nginx/, validate via nginx -t, start nginx bound to TCP 443 (TLS 1.3, mTLS with CRL) and TCP 80 (301 redirect), and pass an 8-probe response matrix plus a bound JSON access-log field-set check plus a bound shortcut-pattern scan plus a combined line-budget check."
+authors = [{ name = "mars-forge" }]
+keywords = ["container-setup", "nginx", "mtls", "forward-auth", "openssl", "crl"]
+
+[metadata]
+mars_sub_type = "container-setup"
+mars_archetype = "container-single-service"
+mars_maturity = "draft"
+mars_tier = "at_baseline"
+mars_disposition_ceiling = "HOLD:PILOT_REQUIRED"
+mars_forge_contract_sha256 = "8e3168c53af8c9eecea478d096032a11ec589a7d0d8739977b1d924cf3b0538a"
+mars_primary_hardness_lever = "long-horizon-agentic-coherence"
+
+[verifier]
+timeout_sec = 600.0
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 1800.0
+cpus = 2
+memory_mb = 2048
+storage_mb = 4096
+gpus = 0
+network_mode = "public"
+
+[environment.healthcheck]
+command = "nginx -v > /dev/null 2>&1 && openssl version > /dev/null 2>&1 && ss -ltn \"sport = :8080\" | grep -q \":8080\""
+interval_sec = 2.0
+timeout_sec = 5.0
+start_period_sec = 5.0
+retries = 5
+
+[verifier.env]
+
+[environment.env]
+LC_ALL = "C"
+
+[solution.env]
+LC_ALL = "C"
+
+[[artifacts]]
+source = "/workspace/input"
+
+[[artifacts]]
+source = "/workspace/README_FOR_AGENT.md"
+
+[prosecutor]
+mode = "harness_provided"
+delegate = "harness/mars_council.py"
+in_container_stub = "tests/run_prosecutor_judge.py"
+note = "3-judge Claude council runs on host post-container; in-container stub is a no-op marker for G-VER-INVARIANCE"

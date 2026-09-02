@@ -1,0 +1,368 @@
+{
+  "schema": "mars.rubric_set/v2_council_only",
+  "bundle_id": "c6fc843e-738f-5a2f-98af-067d9e24b756",
+  "floor": 30,
+  "note": "regenerated from solution/rubrics.json by harness/mars_rubric_id_reconciler.py to close G-RUB-COMPLETENESS.unreconciled_rubric_id; 1:1 id mapping preserves the recompute.py chain",
+  "rubrics": [
+    {
+      "id": "R001",
+      "criterion": "every_required_source_file_present_after_agent_edits",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 300,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y, :, :, R, E, Q, U, I, R, E, D, _, S, O, U, R, C, E, _, F, I, L, E, S,  , p, r, e, s, e, n, c, e,  , l, o, o, p",
+        "anchor_1_0": "every_required_source_file_present_after_agent_edits",
+        "anchor_0_0": "the observed value at workspace does not match the reference at grounding path workspace"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R002",
+      "criterion": "tsconfig_json_sha256_matches_baseline",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 300,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y, :, :, T, S, C, O, N, F, I, G, _, B, A, S, E, L, I, N, E, _, S, H, A, 2, 5, 6,  , c, o, m, p, a, r, i, s, o, n",
+        "anchor_1_0": "tsconfig_json_sha256_matches_baseline",
+        "anchor_0_0": "the observed value at workspace/tsconfig.json does not match the reference at grounding path workspace/tsconfig.json"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R003",
+      "criterion": "package_json_sha256_matches_baseline",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 300,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y, :, :, P, A, C, K, A, G, E, _, J, S, O, N, _, B, A, S, E, L, I, N, E, _, S, H, A, 2, 5, 6,  , c, o, m, p, a, r, i, s, o, n",
+        "anchor_1_0": "package_json_sha256_matches_baseline",
+        "anchor_0_0": "the observed value at workspace/package.json does not match the reference at grounding path workspace/package.json"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R004",
+      "criterion": "no_source_file_contains_ts_ignore_marker",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 300,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y, :, :, S, H, O, R, T, C, U, T, _, P, A, T, T, E, R, N, S, [, t, s, _, i, g, n, o, r, e, _, m, a, r, k, e, r, ]",
+        "anchor_1_0": "no_source_file_contains_ts_ignore_marker",
+        "anchor_0_0": "the observed value at src/*.ts + types/*.d.ts does not match the reference at grounding path src/*.ts + types/*.d.ts"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R005",
+      "criterion": "no_source_file_contains_ts_nocheck_marker",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 300,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y, :, :, S, H, O, R, T, C, U, T, _, P, A, T, T, E, R, N, S, [, t, s, _, n, o, c, h, e, c, k, _, m, a, r, k, e, r, ]",
+        "anchor_1_0": "no_source_file_contains_ts_nocheck_marker",
+        "anchor_0_0": "the observed value at src/*.ts + types/*.d.ts does not match the reference at grounding path src/*.ts + types/*.d.ts"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R006",
+      "criterion": "no_source_file_contains_ts_expect_error_marker",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 300,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y, :, :, S, H, O, R, T, C, U, T, _, P, A, T, T, E, R, N, S, [, t, s, _, e, x, p, e, c, t, _, e, r, r, o, r, _, m, a, r, k, e, r, ]",
+        "anchor_1_0": "no_source_file_contains_ts_expect_error_marker",
+        "anchor_0_0": "the observed value at src/*.ts + types/*.d.ts does not match the reference at grounding path src/*.ts + types/*.d.ts"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R007",
+      "criterion": "no_source_file_contains_any_type_annotation",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 300,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y, :, :, S, H, O, R, T, C, U, T, _, P, A, T, T, E, R, N, S, [, a, n, y, _, t, y, p, e, _, a, n, n, o, t, a, t, i, o, n, ]",
+        "anchor_1_0": "no_source_file_contains_any_type_annotation",
+        "anchor_0_0": "the observed value at src/*.ts + types/*.d.ts does not match the reference at grounding path src/*.ts + types/*.d.ts"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R008",
+      "criterion": "no_source_file_contains_any_generic_argument",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 300,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y, :, :, S, H, O, R, T, C, U, T, _, P, A, T, T, E, R, N, S, [, a, n, y, _, g, e, n, e, r, i, c, _, a, r, g, u, m, e, n, t, ]",
+        "anchor_1_0": "no_source_file_contains_any_generic_argument",
+        "anchor_0_0": "the observed value at src/*.ts + types/*.d.ts does not match the reference at grounding path src/*.ts + types/*.d.ts"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R009",
+      "criterion": "npx_tsc_noEmit_exits_zero",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 500,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y, :, :, s, u, b, p, r, o, c, e, s, s, ., r, u, n, (, n, p, x,  , t, s, c,  , -, -, n, o, E, m, i, t, )",
+        "anchor_1_0": "npx_tsc_noEmit_exits_zero",
+        "anchor_0_0": "the observed value at workspace does not match the reference at grounding path workspace"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R010",
+      "criterion": "tsc_noEmit_zero_implies_types_external_api_d_ts_ApiUser_id_declared_number",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 500,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y, :, :, D, 4, _, t, s, c, _, n, o, E, m, i, t, _, r, e, t, u, r, n, c, o, d, e, _, n, o, n, z, e, r, o",
+        "anchor_1_0": "tsc_noEmit_zero_implies_types_external_api_d_ts_ApiUser_id_declared_number",
+        "anchor_0_0": "the observed value at solution does not match the reference at grounding path solution"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R011",
+      "criterion": "tsc_noEmit_zero_implies_src_models_user_ts_constructor_accepts_displayName",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 500,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y, :, :, D, 4, _, t, s, c, _, n, o, E, m, i, t, _, r, e, t, u, r, n, c, o, d, e, _, n, o, n, z, e, r, o",
+        "anchor_1_0": "tsc_noEmit_zero_implies_src_models_user_ts_constructor_accepts_displayName",
+        "anchor_0_0": "the observed value at solution does not match the reference at grounding path solution"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R012",
+      "criterion": "tsc_noEmit_zero_implies_src_services_auth_service_ts_authenticate_is_async_and_awaits_createSession",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 500,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y, :, :, D, 4, _, t, s, c, _, n, o, E, m, i, t, _, r, e, t, u, r, n, c, o, d, e, _, n, o, n, z, e, r, o",
+        "anchor_1_0": "tsc_noEmit_zero_implies_src_services_auth_service_ts_authenticate_is_async_and_awaits_createSession",
+        "anchor_0_0": "the observed value at solution does not match the reference at grounding path solution"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R013",
+      "criterion": "tsc_noEmit_zero_implies_src_utils_logger_ts_log_returns_void_not_boolean",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 500,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y, :, :, D, 4, _, t, s, c, _, n, o, E, m, i, t, _, r, e, t, u, r, n, c, o, d, e, _, n, o, n, z, e, r, o",
+        "anchor_1_0": "tsc_noEmit_zero_implies_src_utils_logger_ts_log_returns_void_not_boolean",
+        "anchor_0_0": "the observed value at solution does not match the reference at grounding path solution"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R014",
+      "criterion": "file_src_index.ts_exists",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 100,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y,  , D, 1,  , l, o, o, p,  , o, v, e, r,  , s, r, c, /, i, n, d, e, x, ., t, s",
+        "anchor_1_0": "file_src_index.ts_exists",
+        "anchor_0_0": "the observed value at src/index.ts does not match the reference at grounding path src/index.ts"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R015",
+      "criterion": "file_src_models_user.ts_exists",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 100,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y,  , D, 1,  , l, o, o, p,  , o, v, e, r,  , s, r, c, /, m, o, d, e, l, s, /, u, s, e, r, ., t, s",
+        "anchor_1_0": "file_src_models_user.ts_exists",
+        "anchor_0_0": "the observed value at src/models/user.ts does not match the reference at grounding path src/models/user.ts"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R016",
+      "criterion": "file_src_models_order.ts_exists",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 100,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y,  , D, 1,  , l, o, o, p,  , o, v, e, r,  , s, r, c, /, m, o, d, e, l, s, /, o, r, d, e, r, ., t, s",
+        "anchor_1_0": "file_src_models_order.ts_exists",
+        "anchor_0_0": "the observed value at src/models/order.ts does not match the reference at grounding path src/models/order.ts"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R017",
+      "criterion": "file_src_models_account.ts_exists",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 100,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y,  , D, 1,  , l, o, o, p,  , o, v, e, r,  , s, r, c, /, m, o, d, e, l, s, /, a, c, c, o, u, n, t, ., t, s",
+        "anchor_1_0": "file_src_models_account.ts_exists",
+        "anchor_0_0": "the observed value at src/models/account.ts does not match the reference at grounding path src/models/account.ts"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R018",
+      "criterion": "file_src_services_auth.service.ts_exists",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 100,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y,  , D, 1,  , l, o, o, p,  , o, v, e, r,  , s, r, c, /, s, e, r, v, i, c, e, s, /, a, u, t, h, ., s, e, r, v, i, c, e, ., t, s",
+        "anchor_1_0": "file_src_services_auth.service.ts_exists",
+        "anchor_0_0": "the observed value at src/services/auth.service.ts does not match the reference at grounding path src/services/auth.service.ts"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R019",
+      "criterion": "file_src_services_payment.service.ts_exists",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 100,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y,  , D, 1,  , l, o, o, p,  , o, v, e, r,  , s, r, c, /, s, e, r, v, i, c, e, s, /, p, a, y, m, e, n, t, ., s, e, r, v, i, c, e, ., t, s",
+        "anchor_1_0": "file_src_services_payment.service.ts_exists",
+        "anchor_0_0": "the observed value at src/services/payment.service.ts does not match the reference at grounding path src/services/payment.service.ts"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R020",
+      "criterion": "file_src_services_notification.service.ts_exists",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 100,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y,  , D, 1,  , l, o, o, p,  , o, v, e, r,  , s, r, c, /, s, e, r, v, i, c, e, s, /, n, o, t, i, f, i, c, a, t, i, o, n, ., s, e, r, v, i, c, e, ., t, s",
+        "anchor_1_0": "file_src_services_notification.service.ts_exists",
+        "anchor_0_0": "the observed value at src/services/notification.service.ts does not match the reference at grounding path src/services/notification.service.ts"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R021",
+      "criterion": "file_src_utils_logger.ts_exists",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 100,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y,  , D, 1,  , l, o, o, p,  , o, v, e, r,  , s, r, c, /, u, t, i, l, s, /, l, o, g, g, e, r, ., t, s",
+        "anchor_1_0": "file_src_utils_logger.ts_exists",
+        "anchor_0_0": "the observed value at src/utils/logger.ts does not match the reference at grounding path src/utils/logger.ts"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R022",
+      "criterion": "file_src_utils_formatter.ts_exists",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 100,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y,  , D, 1,  , l, o, o, p,  , o, v, e, r,  , s, r, c, /, u, t, i, l, s, /, f, o, r, m, a, t, t, e, r, ., t, s",
+        "anchor_1_0": "file_src_utils_formatter.ts_exists",
+        "anchor_0_0": "the observed value at src/utils/formatter.ts does not match the reference at grounding path src/utils/formatter.ts"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R023",
+      "criterion": "file_src_utils_validator.ts_exists",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 100,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y,  , D, 1,  , l, o, o, p,  , o, v, e, r,  , s, r, c, /, u, t, i, l, s, /, v, a, l, i, d, a, t, o, r, ., t, s",
+        "anchor_1_0": "file_src_utils_validator.ts_exists",
+        "anchor_0_0": "the observed value at src/utils/validator.ts does not match the reference at grounding path src/utils/validator.ts"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    },
+    {
+      "id": "R024",
+      "criterion": "file_types_external-api.d.ts_exists",
+      "kind": "outcome",
+      "grader": "council",
+      "weight": 100,
+      "knockout": false,
+      "evaluation": {
+        "evidence": "g, r, a, d, e, r, ., p, y,  , D, 1,  , l, o, o, p,  , o, v, e, r,  , t, y, p, e, s, /, e, x, t, e, r, n, a, l, -, a, p, i, ., d, ., t, s",
+        "anchor_1_0": "file_types_external-api.d.ts_exists",
+        "anchor_0_0": "the observed value at types/external-api.d.ts does not match the reference at grounding path types/external-api.d.ts"
+      },
+      "source_mode": "compiled",
+      "source_judgment": "pass_when_criterion_holds_else_fail"
+    }
+  ]
+}

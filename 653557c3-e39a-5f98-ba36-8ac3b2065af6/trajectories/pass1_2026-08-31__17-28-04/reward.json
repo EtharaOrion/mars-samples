@@ -1,0 +1,17 @@
+{
+  "reward": 0,
+  "reason": "D3_failed",
+  "detail": {
+    "D1": {
+      "pass": true,
+      "ok": true
+    },
+    "D3": {
+      "pass": false,
+      "section": "BUG-DETECTION",
+      "field": "method",
+      "value": "Queried the public health endpoint through nginx and inspected the postgres server log.",
+      "expected_pattern": "^(curl\\s+.*127\\.0\\.0\\.1/health.*|curl\\s+.*127\\.0\\.0\\.1:5000/health.*|psql\\s+.*127\\.0\\.0\\.1:5432.*|tail\\s+.*(webapp|postgresql|nginx)\\.log.*|cat\\s+.*/etc/webapp/config\\.py.*|supervisorctl\\s+.*status.*|grep\\s+.*(password\\s+authentication\\s+failed|stale_credential|unhealthy).*)$"
+    }
+  }
+}

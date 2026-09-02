@@ -1,0 +1,35 @@
+# Harbor task manifest for redis-single-service-silent-config-drift.
+# Bound by seed/contract.yaml delivery block (inv-24).
+schema_version = "1.1"
+name = "redis-single-service-silent-config-drift"
+instruction = "instruction.md"
+
+[environment]
+kind = "dockerfile"
+context = "environment"
+dockerfile = "environment/Dockerfile"
+base_image_digest = "sha256:7b140f374b289a7c2befc338f42ebe6441b7ea838a042bbd5acbfca6ec875818"
+
+[environment.network]
+mode = "none"
+
+[verifier]
+kind = "same_container"
+entrypoint = "tests/test.sh"
+reward_contract_path = "/tmp/reward.json"
+
+[oracle]
+entrypoint = "solution/solve.sh"
+
+[metadata]
+domain = "container-setup-tasks"
+archetype = "container-single-service"
+primary_lever = "environmental-drift-survival"
+maturity = "draft"
+invocation = 24
+
+[prosecutor]
+mode = "harness_provided"
+delegate = "harness/mars_council.py"
+in_container_stub = "tests/run_prosecutor_judge.py"
+note = "3-judge Claude council runs on host post-container; in-container stub is a no-op marker for G-VER-INVARIANCE"

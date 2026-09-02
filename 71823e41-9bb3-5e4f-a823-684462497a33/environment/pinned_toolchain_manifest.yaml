@@ -1,0 +1,88 @@
+bundle: pg-pgbouncer-redis-multi-service-cache-stampede-and-pool-mode-drift
+invocation: 27
+schema_version: '1.0'
+description: |
+  Toolchain manifest for FORGE inv-27. Every executable the agent
+  is allowed to invoke inside the running container is listed here
+  with its Debian package origin and version. Anything not present
+  here is either absent from the image or reserved to the grader.
+
+base_image: debian:bookworm-slim@sha256:7b140f374b289a7c2befc338f42ebe6441b7ea838a042bbd5acbfca6ec875818
+
+apt_repositories:
+  - name: debian-bookworm
+    url: http://deb.debian.org/debian
+  - name: pgdg-postgresql
+    url: https://apt.postgresql.org/pub/repos/apt
+    signing_key: /etc/apt/keyrings/pgdg.gpg
+    signing_key_source: https://www.postgresql.org/media/keys/ACCC4CF8.asc
+
+installed_packages:
+  - {name: postgresql,                version: '16.4-*',   source: pgdg-postgresql}
+  - {name: postgresql-client-16,      version: '16.4-*',   source: pgdg-postgresql}
+  - {name: pgbouncer,                 version: '1.23.*-*', source: debian-bookworm}
+  - {name: redis-server,              version: '7:7.4.*-*',source: debian-bookworm}
+  - {name: redis-tools,               version: '7:7.4.*-*',source: debian-bookworm}
+  - {name: supervisor,                version: apt_pinned, source: debian-bookworm}
+  - {name: python3,                   version: apt_pinned, source: debian-bookworm}
+  - {name: python3-psycopg2,          version: apt_pinned, source: debian-bookworm}
+  - {name: python3-redis,             version: apt_pinned, source: debian-bookworm}
+  - {name: python3-yaml,              version: apt_pinned, source: debian-bookworm}
+  - {name: bash,                      version: apt_pinned, source: debian-bookworm}
+  - {name: coreutils,                 version: apt_pinned, source: debian-bookworm}
+  - {name: curl,                      version: apt_pinned, source: debian-bookworm}
+  - {name: jq,                        version: apt_pinned, source: debian-bookworm}
+  - {name: procps,                    version: apt_pinned, source: debian-bookworm}
+  - {name: iproute2,                  version: apt_pinned, source: debian-bookworm}
+  - {name: diffutils,                 version: apt_pinned, source: debian-bookworm}
+  - {name: util-linux,                version: apt_pinned, source: debian-bookworm}
+  - {name: gawk,                      version: apt_pinned, source: debian-bookworm}
+  - {name: sed,                       version: apt_pinned, source: debian-bookworm}
+  - {name: grep,                      version: apt_pinned, source: debian-bookworm}
+  - {name: patch,                     version: apt_pinned, source: debian-bookworm}
+  - {name: gnupg2,                    version: apt_pinned, source: debian-bookworm}
+  - {name: apt-transport-https,       version: apt_pinned, source: debian-bookworm}
+  - {name: ca-certificates,           version: apt_pinned, source: debian-bookworm}
+
+allowed_command_families:
+  - shell_builtins: [cd, set, export, if, for, while, case, echo, printf, read, exit]
+  - text_processing: [awk, sed, grep, cut, sort, uniq, head, tail, wc, tr, tee, diff, patch]
+  - file_ops: [ls, cat, cp, mv, mkdir, rm, chmod, chown, touch, ln, stat, readlink]
+  - process: [ps, kill, pgrep, sleep, timeout, xargs]
+  - loopback_network: [curl (127.0.0.1 only)]
+  - json_yaml: [jq, python3 -m json.tool, python3 -c "import yaml"]
+  - postgres_client: [psql (against 5432 and 6432)]
+  - redis_client: [redis-cli (against 6379)]
+  - supervisord: [supervisorctl (restart/stop/start postgres|pgbouncer|redis), supervisord (do not kill parent)]
+  - python: [python3 (stdlib + psycopg2 + redis + PyYAML, no pip install)]
+
+network_policy:
+  outbound: forbidden
+  loopback: allowed_on_127_0_0_1_only
+  allowed_endpoints:
+    - 127.0.0.1:5432    # postgres direct (do not use as bypass of pgbouncer)
+    - 127.0.0.1:6432    # pgbouncer (application path)
+    - 127.0.0.1:6379    # redis
+  forbidden_endpoints:
+    - any non-loopback address
+    - external DNS
+    - apt.postgresql.org (only reachable at image build time)
+
+filesystem_write_policy:
+  writable:
+    - /workspace/
+    - /tmp/
+  writable_via_supervisor:
+    - /etc/pgbouncer/pgbouncer.ini    # edit + supervisorctl restart pgbouncer
+    - /etc/app/config.py              # edit; picked up by worker on next invocation
+  writable_via_config_only:
+    - /var/lib/postgresql/16/main/    # only via supervisorctl restart postgres
+    - /var/log/postgresql/
+    - /var/log/pgbouncer/
+    - /var/log/redis/
+  read_only_to_agent:
+    - /opt/holdout/                   # private grounding, chmod 700 root
+    - /etc/postgresql/16/main/pg_hba.conf
+    - /etc/redis/redis.conf
+    - /workspace/pinned_toolchain_manifest.yaml
+    - /workspace/README_FOR_AGENT.md

@@ -1,0 +1,116 @@
+{
+    "id": "01e0565e-d722-4ddc-9014-282331e88e07",
+    "task_name": "mars/cargo-audit-triage",
+    "trial_name": "6f98c743-c505-5ff7-b1ea-27e15018__h2bYLYA",
+    "trial_uri": "file:///Users/apple/Sources/office/mars-anubis/mars/jobs/2026-08-31__14-21-27/6f98c743-c505-5ff7-b1ea-27e15018__h2bYLYA",
+    "task_id": {
+        "path": "/Users/apple/Sources/office/mars-anubis/mars/dataset/6f98c743-c505-5ff7-b1ea-27e150189ee2"
+    },
+    "source": null,
+    "task_checksum": "7125b0d18fb2450a34a42530f8e8132de2fedd40b9b7b86354074212763d20e6",
+    "config": {
+        "task": {
+            "path": "/Users/apple/Sources/office/mars-anubis/mars/dataset/6f98c743-c505-5ff7-b1ea-27e150189ee2",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "6f98c743-c505-5ff7-b1ea-27e15018__h2bYLYA",
+        "trials_dir": "jobs/2026-08-31__14-21-27",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": 5.0,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "claude-code",
+            "import_path": null,
+            "model_name": "claude-opus-4-8",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "c7d9a5f8-46d3-4007-92ab-a376e5ec903c",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.251",
+        "model_info": {
+            "name": "claude-opus-4-8",
+            "provider": null
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 212185,
+        "n_cache_tokens": 178196,
+        "n_output_tokens": 6773,
+        "cost_usd": 0.47083674999999997,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0,
+            "success": 1
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-08-31T08:51:28.067516Z",
+    "finished_at": "2026-08-31T08:54:59.547299Z",
+    "environment_setup": {
+        "started_at": "2026-08-31T08:51:28.178149Z",
+        "finished_at": "2026-08-31T08:51:33.322064Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-08-31T08:51:33.593879Z",
+        "finished_at": "2026-08-31T08:53:35.025581Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-08-31T08:53:35.044488Z",
+        "finished_at": "2026-08-31T08:54:54.743828Z"
+    },
+    "verifier": {
+        "started_at": "2026-08-31T08:54:56.183390Z",
+        "finished_at": "2026-08-31T08:54:56.509281Z"
+    },
+    "step_results": null
+}

@@ -1,0 +1,55 @@
+schema_version = "1.1"
+
+[task]
+name = "mars/cli-rg-multiline-stacktrace-with-comment-filter-v2"
+description = "Extract real process_data(N): DESC traceback headers from a seeded C source file at /workspace/source.c, skipping every header that falls inside a C-style /* ... */ block comment. Comment blocks span more than 200 lines in places and shadow multiple traceback headers along the way, so line-scoped ripgrep alone cannot distinguish real headers from shadowed ones. The agent must build a shell pipeline that tracks /* ... */ open-close state across the whole file. The verifier grades byte-exact stdout equality against a pinned public expected extraction, re-runs the same agent script against a private holdout source file with different real-header count and different N range, forbids literal hardcoded expected rows plus in-place source mutation, and re-verifies both source files' SHA-256 at grader time to defeat comment-block deletion shortcuts."
+authors = [{ name = "mars-forge" }]
+keywords = ["ripgrep", "awk", "comment-state-tracking", "cli-shell-pipeline", "long-horizon-agentic-coherence"]
+
+[metadata]
+mars_sub_type = "cli"
+mars_archetype = "cli-shell-pipeline"
+mars_maturity = "draft"
+mars_tier = "frontier-defeat"
+mars_disposition_ceiling = "HOLD:PILOT_REQUIRED"
+mars_forge_contract_sha256 = "7fa61afd155a88f234f6c741a34546782fa0f53ca44afd5ead5a71094a7e5655"
+mars_forge_invocation = "35"
+mars_primary_hardness_lever = "long-horizon-agentic-coherence"
+mars_legacy_predecessor_uuid = "706a5c3c-ea85-507d-bab9-bcdd002ec59e"
+mars_task_uuid = "be11c210-f793-5245-9f59-71f3d663e7a9"
+
+[verifier]
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 900.0
+
+[environment]
+build_timeout_sec = 900.0
+cpus = 2
+memory_mb = 2048
+storage_mb = 4096
+gpus = 0
+network_mode = "public"
+
+[verifier.env]
+[environment.env]
+[solution.env]
+
+[[artifacts]]
+source = "/workspace/extract.sh"
+
+[[artifacts]]
+source = "/workspace/expected.txt"
+
+[[artifacts]]
+source = "/workspace/source.c"
+
+[[artifacts]]
+source = "/workspace/source_holdout.c"
+
+[prosecutor]
+mode = "harness_provided"
+delegate = "harness/mars_council.py"
+in_container_stub = "tests/run_prosecutor_judge.py"
+note = "3-judge Claude council runs on host post-container; in-container stub is a no-op marker for G-VER-INVARIANCE"

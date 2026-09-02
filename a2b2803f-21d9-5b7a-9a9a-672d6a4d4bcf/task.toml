@@ -1,0 +1,55 @@
+schema_version = "1.1"
+
+[task]
+name = "mars/cli-jq-nested-tag-array-flatten"
+description = "Flatten a JSON array of user records with a nested tags column into a CSV whose tags column preserves embedded delimiters. Tag payloads carry embedded ';', ',', double-quote, and newline octets that break any naive text-interpolation attempt. The verifier grades via Python csv.reader row-list equality on both the public input and a private holdout to defeat both naive concatenation and hardcoded-output shortcuts."
+authors = [{ name = "mars-forge" }]
+keywords = ["jq", "json", "csv", "cli-shell-pipeline", "shortcut-resistance", "adversarial-csv-escaping"]
+
+[metadata]
+mars_sub_type = "cli"
+mars_archetype = "cli-shell-pipeline"
+mars_maturity = "draft"
+mars_tier = "frontier-defeat"
+mars_disposition_ceiling = "HOLD:PILOT_REQUIRED"
+mars_forge_contract_sha256 = "7fa61afd155a88f234f6c741a34546782fa0f53ca44afd5ead5a71094a7e5655"
+mars_forge_invocation = "35"
+mars_primary_hardness_lever = "shortcut-resistance"
+mars_legacy_predecessor_uuid = "a3c3e325-de85-507f-ad5e-66ab8562137e"
+mars_task_uuid = "a2b2803f-21d9-5b7a-9a9a-672d6a4d4bcf"
+
+[verifier]
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 900.0
+
+[environment]
+build_timeout_sec = 600.0
+cpus = 2
+memory_mb = 2048
+storage_mb = 4096
+gpus = 0
+network_mode = "public"
+
+[verifier.env]
+[environment.env]
+[solution.env]
+
+[[artifacts]]
+source = "/workspace/tags.json"
+
+[[artifacts]]
+source = "/workspace/expected.csv"
+
+[[artifacts]]
+source = "/workspace/observed_naive_attempt.txt"
+
+[[artifacts]]
+source = "/workspace/solve.jq"
+
+[prosecutor]
+mode = "harness_provided"
+delegate = "harness/mars_council.py"
+in_container_stub = "tests/run_prosecutor_judge.py"
+note = "3-judge Claude council runs on host post-container; in-container stub is a no-op marker for G-VER-INVARIANCE"

@@ -1,0 +1,74 @@
+grounding:
+  task_slug: "pipe-jstack-deadlock-vs-contention"
+  contract_sha256: "d6d54ff0e53d2e11a504b3372bb20455ab5d6174bf9befee88c357ba2443c54c"
+  canary_a_placeholder: "FORGE_HOLDOUT_CANARY_63DC9F84097F538927A69BDB9C266271"
+  canary_b_placeholder: "FORGE_HOLDOUT_CANARY_BD33665C6088A5E383EFBC0CAB0413FE"
+  bash_invocation_contract:
+    invocation_form: "bash /workspace/solve.sh from a shell rooted at /workspace/ with LC_ALL=C"
+    tools_on_path: [bash, gawk, sed, grep, sort, uniq, python3, diffutils]
+    network_policy: "no-network"
+    workspace_root: "/workspace"
+    input_threaddump_path: "/workspace/input/threaddump.txt"
+    output_path: "/workspace/out/report.tsv"
+  output_file_shape_contract:
+    path: "/workspace/out/report.tsv"
+    field_separator: "0x09"
+    field_count: 2
+    non_empty: true
+    utf8: true
+    trailing_newline: true
+  per_field_schema_shape_regex_family:
+    field_1_row_type: '^(DEADLOCKED_THREAD_COUNT|CONTENTION_THREAD_COUNT|DEADLOCK_LOCK|CONTENTION_LOCK)$'
+    field_2_count: '^(0|[1-9][0-9]*)$'
+    field_2_lock_address: '^0x[0-9a-f]{16}$'
+  canonical_output_form:
+    line_shape: "<row_type>\t<value>\n"
+    trailing_newline_per_row: true
+    row_types_closed_set: [DEADLOCKED_THREAD_COUNT, CONTENTION_THREAD_COUNT, DEADLOCK_LOCK, CONTENTION_LOCK]
+  row_ordering_comparator_contract:
+    row_1_prefix: DEADLOCKED_THREAD_COUNT
+    row_2_prefix: CONTENTION_THREAD_COUNT
+    row_3_to_k_block_prefix: DEADLOCK_LOCK
+    row_k_plus_1_to_n_block_prefix: CONTENTION_LOCK
+    within_lock_block: field_2_lock_address_ascending_byte_order_lex
+    interleaving_allowed: false
+    locale: "C"
+  bound_shortcut_pattern_set:
+    - 'FORGE_HOLDOUT_CANARY_[A-Z0-9]{32}'
+    - 'solution/grounding\.yaml'
+    - 'solution/TRUTH\.md'
+    - 'dataset/[0-9a-f-]{36}/(solution|tests)/'
+    - '/holdout/'
+    - 'HARDCODED_REPORT_RECITAL_BEGIN'
+    - 'HARDCODED_REPORT_RECITAL_END'
+    - 'reference_row_set'
+    - 'reference_deadlock_locks'
+    - 'reference_contention_locks'
+    - 'reference_deadlock_count'
+    - 'reference_contention_count'
+    - 'canonical_output_form'
+    - 'per_field_schema_shape_regex_family'
+    - '/tests/grader\.py'
+    - 'EXPECTED_LINES'
+    - 'from\s+grader\s+import'
+    - "sys\\.path\\.insert\\s*\\([^)]*['\"]/?tests"
+    - "sys\\.path\\.append\\s*\\([^)]*['\"]/?tests"
+  solve_script_line_budget: 90
+  reference_row_set:
+    row_count: 7
+    stream_sha256: "f11cba60cc20840418bed1ab01c825e553735e070d17a707abdd76859ca6eebc"
+    first_row: "DEADLOCKED_THREAD_COUNT	3"
+    last_row: "CONTENTION_LOCK	0x00007fabc4d691f8"
+  reference_deadlock_count: 3
+  reference_contention_count: 3
+  reference_deadlock_locks: ["0x00007fabc47a2b1c", "0x00007fabc4b53e91", "0x00007fabc4f108a7"]
+  reference_contention_locks: ["0x00007fabc48c4d63", "0x00007fabc4d691f8"]
+  corpus:
+    total_stanzas: 15
+    blocked_threads: 6
+    deadlock_cycle_members: 3
+    contention_only_members: 3
+    non_blocked_owners_of_contention_locks: 2
+    noise_threads: 7
+    park_or_waiting_on_lines_to_ignore: 4
+    found_n_deadlock_epilogue_present: false

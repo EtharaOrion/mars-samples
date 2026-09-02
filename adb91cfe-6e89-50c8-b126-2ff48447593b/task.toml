@@ -1,0 +1,60 @@
+schema_version = "1.1"
+
+[task]
+name = "mars/configure-makefile-phony-implicit-rule-conflict-v2"
+description = "Fix a two-level recursive Make project so that make test and make build are both idempotent across two back-to-back invocations. The root Makefile has a .PHONY gap and recursively invokes $(MAKE) -C subdir, and the subdir Makefile has its own distinct .PHONY gap that only surfaces once a target-named file appears in the subdir workspace after the first invocation. The verifier runs make test and make build twice each and asserts all four invocations exit zero with the expected root+subdir marker lines on stdout."
+authors = [{ name = "mars-forge" }]
+keywords = ["make", "phony", "recursive-make", "build-configure", "long-horizon-agentic-coherence", "idempotence"]
+
+[metadata]
+mars_sub_type = "build-ci-cd"
+mars_archetype = "build-configure"
+mars_maturity = "draft"
+mars_tier = "frontier-defeat"
+mars_disposition_ceiling = "HOLD:PILOT_REQUIRED"
+mars_forge_contract_sha256 = "7fa61afd155a88f234f6c741a34546782fa0f53ca44afd5ead5a71094a7e5655"
+mars_forge_invocation = "35"
+mars_slot_index = 10
+mars_slot_slug = "configure-makefile-phony-implicit-rule-conflict-v2"
+mars_primary_hardness_lever = "long-horizon-agentic-coherence"
+mars_legacy_predecessor_uuid = "8228281a-2c19-5818-94ec-f2d4947eba36"
+mars_task_uuid = "adb91cfe-6e89-50c8-b126-2ff48447593b"
+
+[verifier]
+timeout_sec = 180.0
+
+[agent]
+timeout_sec = 1200.0
+
+[environment]
+build_timeout_sec = 600.0
+cpus = 2
+memory_mb = 2048
+storage_mb = 4096
+gpus = 0
+network_mode = "public"
+
+[verifier.env]
+[environment.env]
+[solution.env]
+
+[[artifacts]]
+source = "/workspace/Makefile"
+
+[[artifacts]]
+source = "/workspace/subdir/Makefile"
+
+[[artifacts]]
+source = "/workspace/main.c"
+
+[[artifacts]]
+source = "/workspace/subdir/helper.c"
+
+[[artifacts]]
+source = "/workspace/observed_naive_attempt.txt"
+
+[prosecutor]
+mode = "harness_provided"
+delegate = "harness/mars_council.py"
+in_container_stub = "tests/run_prosecutor_judge.py"
+note = "3-judge Claude council runs on host post-container; in-container stub is a no-op marker for G-VER-INVARIANCE"

@@ -1,0 +1,33 @@
+{
+  "breakdown": {
+    "D1": {
+      "mime_types": {
+        "size": 4338
+      },
+      "nginx_conf": {
+        "size": 4006
+      },
+      "pass": true,
+      "reload_sh": {
+        "size": 1556
+      }
+    },
+    "D5": {
+      "hits": [],
+      "pass": true
+    },
+    "D6": {
+      "budget": 220,
+      "combined_line_count": 261,
+      "pass": false,
+      "per_file": {
+        "/workspace/mime.types": 96,
+        "/workspace/nginx.conf": 109,
+        "/workspace/reload.sh": 56
+      }
+    }
+  },
+  "reason": "D6_combined_line_count_over_budget",
+  "reward": 0.0,
+  "success": false
+}

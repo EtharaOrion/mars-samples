@@ -1,0 +1,102 @@
+schema: forge.grounding/v1
+task_slug: fix-cargo-workspace-mutex-tls-features
+forge_canary_a: 42f9646b1fabb1abbac26a0ab6e97717
+forge_canary_b: 67d0f11cb77d801081a8ff8a463742f4
+
+unified_tls_backend_target: ring
+alternative_valid_unified_target: aws-lc-rs
+
+authored_manifest_of_broken_state:
+  workspace_member_webhook_sender_rustls_features:
+  - std
+  - tls12
+  - ring
+  workspace_member_api_gateway_rustls_features:
+  - std
+  - tls12
+  - aws-lc-rs
+  cargo_feature_unification_produces_rustls_with_features:
+  - std
+  - tls12
+  - ring
+  - aws-lc-rs
+  runtime_panic_root_cause: |
+    rustls 0.23 process_default_provider() panics when both ring and
+    aws-lc-rs crypto provider features are compiled in and no
+    process-level default provider has been explicitly installed via
+    CryptoProvider::install_default().
+
+observed_panic_message: |
+  thread 'main' panicked at ... rustls-0.23.../src/crypto/mod.rs:...:
+  Could not automatically determine the process-level CryptoProvider
+  from rustls crate features. Call CryptoProvider::install_default()
+  before this point to select a provider manually, or make sure exactly
+  one provider is enabled via crate features.
+
+false_lead_probe_a: agent_swallows_the_panic_via_result_ignore_pattern
+false_lead_expected_outcome_a: cold_start_rebuild_still_produces_panic_at_runtime
+false_lead_probe_b: agent_switches_to_http_not_https_to_avoid_tls_entirely
+false_lead_expected_outcome_b: mock_server_is_https_only_on_8443_so_http_get_fails
+false_lead_probe_c: agent_removes_api_gateway_from_workspace_members
+false_lead_expected_outcome_c: target_binary_no_longer_compiles_because_it_imports_api_gateway
+
+workspace_layout:
+  workspace/Cargo.toml: workspace_root_with_resolver_v2_and_three_members
+  workspace/webhook_sender/Cargo.toml: rustls_ring_feature
+  workspace/webhook_sender/src/lib.rs: send_webhook_via_rustls_ClientConfig_builder
+  workspace/api_gateway/Cargo.toml: rustls_aws_lc_rs_feature
+  workspace/api_gateway/src/lib.rs: call_api_via_rustls_ClientConfig_builder
+  workspace/target_binary/Cargo.toml: depends_on_webhook_sender_and_api_gateway
+  workspace/target_binary/src/main.rs: calls_send_webhook_then_call_api_prints_body_dash_body
+
+target_binary_path: /workspace/target/release/target_binary
+
+holdout_endpoints:
+- /probe_alpha_7f2e
+- /probe_beta_a3d1
+- /probe_gamma_e58c
+
+holdout_expected_response_bytes:
+  /probe_alpha_7f2e: "TOKEN_ALPHA_9c14b3e7\n"
+  /probe_beta_a3d1: "TOKEN_BETA_5f2a89d4\n"
+  /probe_gamma_e58c: "TOKEN_GAMMA_1b7c204e\n"
+
+judge_probe_pairs:
+- [/probe_alpha_7f2e, /probe_beta_a3d1]
+- [/probe_beta_a3d1, /probe_gamma_e58c]
+- [/probe_gamma_e58c, /probe_alpha_7f2e]
+
+https_mock_server_root_cert_path: /srv/https-mock/certs/cert.pem
+https_mock_server_root_cert_in_trust_store_at: /usr/local/share/ca-certificates/mars-mock.crt
+https_mock_server_listen: 127.0.0.1:8443
+
+reference_solution_summary: |
+  Edit /workspace/api_gateway/Cargo.toml so that the rustls dependency
+  features list is ["std", "tls12", "ring"] instead of ["std", "tls12",
+  "aws-lc-rs"]. Rebuild via cargo build --release --workspace --offline.
+  Now both workspace members declare rustls with the same crypto
+  provider feature; cargo compiles rustls with feature "ring" only;
+  rustls::ClientConfig::builder() automatically uses the ring provider
+  and no longer panics.
+
+alternative_valid_solution_summary: |
+  Edit /workspace/webhook_sender/Cargo.toml so that the rustls features
+  list is ["std", "tls12", "aws-lc-rs"] instead of ["std", "tls12",
+  "ring"]. Symmetric to the reference solution; produces the identical
+  graded outcome.
+
+plausible_wrong_routes_and_why_rejected:
+- route: add rustls::crypto::ring::default_provider().install_default() call in target_binary/src/main.rs without editing any Cargo.toml
+  rejection: D1 Prosecutor check compares rustls features across the two members Cargo.tomls; they still differ; D1 rejects even if runtime works
+- route: remove api_gateway from workspace [members] to eliminate the conflicting feature
+  rejection: target_binary imports api_gateway; workspace build fails at D2 because the local dependency path no longer resolves
+- route: rewrite target_binary main.rs to hardcode expected response bytes without calling either library
+  rejection: Judge invokes target_binary with private holdout endpoint paths and expects the mock server's exact bytes; hardcoded bytes cannot match unknown holdout inputs
+- route: rewrite the libraries to make plain HTTP calls instead of HTTPS
+  rejection: the mock server on 8443 is HTTPS-only; plain HTTP requests fail
+- route: comment out one library from target_binary and only invoke the other
+  rejection: cargo unification still happens across the workspace; the offending member is still compiled in
+
+target_binary_invocation_contract:
+  argv: [<endpoint_for_webhook_sender>, <endpoint_for_api_gateway>]
+  stdout_format: "<response_body_from_webhook_sender_call>\n---\n<response_body_from_api_gateway_call>"

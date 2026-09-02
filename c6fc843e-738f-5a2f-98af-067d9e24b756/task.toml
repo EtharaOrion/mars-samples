@@ -1,0 +1,38 @@
+schema_version = "1.4"
+
+[task]
+name = "mars/cli-tsc-root-cause-triage-from-40-errors-v2"
+description = "Fix a TypeScript project so `tsc --noEmit` produces zero diagnostics. Errors trace back to four root-cause files including one .d.ts type declaration that agents skip by habit."
+authors = [{ name = "mars-forge" }]
+keywords = ["typescript", "tsc", "dts", "typechecking", "verifier-hardness", "cli"]
+
+[metadata]
+mars_sub_type = "cli"
+mars_archetype = "build-fix"
+mars_maturity = "draft"
+mars_tier = "frontier-defeat-target"
+mars_disposition_ceiling = "HOLD:PILOT_REQUIRED"
+mars_forge_contract_sha256 = "7fa61afd155a88f234f6c741a34546782fa0f53ca44afd5ead5a71094a7e5655"
+mars_forge_invocation = "35"
+mars_primary_hardness_lever = "verifier-hardness"
+mars_slot_index = "16"
+mars_slot_slug = "cli-tsc-root-cause-triage-from-40-errors-v2"
+mars_legacy_predecessor_uuid = "d5d6f0f6-95d9-5dcd-afb6-4750054e9068"
+mars_task_uuid = "c6fc843e-738f-5a2f-98af-067d9e24b756"
+
+[verifier]
+timeout_sec = 300.0
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+build_timeout_sec = 900.0
+cpus = 2
+memory_mb = 4096
+
+[prosecutor]
+mode = "harness_provided"
+delegate = "harness/mars_council.py"
+in_container_stub = "tests/run_prosecutor_judge.py"
+note = "3-judge Claude council runs on host post-container; in-container stub is a no-op marker for G-VER-INVARIANCE"

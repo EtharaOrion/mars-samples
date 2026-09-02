@@ -1,0 +1,73 @@
+schema_version = "1.4"
+
+[task]
+name = "mars/fix-cargo-workspace-mutex-tls-features"
+description = "Fix a Rust cargo workspace where two members enable mutually-exclusive rustls crypto-provider features, producing a build-succeeds runtime-panics binary."
+authors = [{ name = "mars-forge" }]
+keywords = ["rust", "cargo", "workspace", "rustls", "tls", "build-fix"]
+
+[metadata]
+mars_sub_type = "build-ci-cd"
+mars_archetype = "build-fix"
+mars_maturity = "draft"
+mars_tier = "below_baseline"
+mars_disposition_ceiling = "HOLD:PILOT_REQUIRED"
+mars_forge_contract_sha256 = "98cbff365dda3ba46549a8eff6912aa96b627200b7ada5cb16b7e2c9c35966c7"
+mars_primary_hardness_lever = "verifier-hardness"
+
+[verifier]
+timeout_sec = 600.0
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+build_timeout_sec = 1800.0
+cpus = 4
+memory_mb = 8192
+storage_mb = 20480
+gpus = 0
+network_mode = "public"
+
+[environment.healthcheck]
+command = "curl -sSf --cacert /srv/https-mock/certs/ca.pem https://localhost:8443/hello > /dev/null 2>&1"
+interval_sec = 2.0
+timeout_sec = 5.0
+start_period_sec = 5.0
+retries = 5
+
+[verifier.env]
+
+[environment.env]
+
+[solution.env]
+
+[[artifacts]]
+source = "/workspace/Cargo.toml"
+
+[[artifacts]]
+source = "/workspace/webhook_sender/Cargo.toml"
+
+[[artifacts]]
+source = "/workspace/api_gateway/Cargo.toml"
+
+[[artifacts]]
+source = "/workspace/target_binary/Cargo.toml"
+
+[[artifacts]]
+source = "/workspace/Cargo.lock"
+
+[[artifacts]]
+source = "/workspace/rust-toolchain.toml"
+
+[[artifacts]]
+source = "/workspace/observed_panic.txt"
+
+[[artifacts]]
+source = "/workspace/prebuild_log.txt"
+
+[prosecutor]
+mode = "harness_provided"
+delegate = "harness/mars_council.py"
+in_container_stub = "tests/run_prosecutor_judge.py"
+note = "3-judge Claude council runs on host post-container; in-container stub is a no-op marker for G-VER-INVARIANCE"

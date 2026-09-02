@@ -1,0 +1,73 @@
+bundle: elasticsearch-single-service-shard-allocation-target-list-verifier-hack
+invocation: 26
+schema_version: '1.0'
+description: |
+  Toolchain manifest for FORGE inv-26. Every executable the agent is
+  allowed to invoke inside the running container is listed here with
+  its Debian package origin and version. Anything not present here is
+  either absent from the image or reserved to the grader.
+
+base_image: debian:bookworm-slim@sha256:7b140f374b289a7c2befc338f42ebe6441b7ea838a042bbd5acbfca6ec875818
+
+apt_repositories:
+  - name: debian-bookworm
+    url: http://deb.debian.org/debian
+  - name: elastic-8.x
+    url: https://artifacts.elastic.co/packages/8.x/apt
+    signing_key: /etc/apt/keyrings/elastic.gpg
+    signing_key_source: https://artifacts.elastic.co/GPG-KEY-elasticsearch
+
+installed_packages:
+  - {name: elasticsearch,             version: '8.13.4',   source: elastic-8.x}
+  - {name: openjdk-17-jre-headless,   version: apt_pinned, source: debian-bookworm}
+  - {name: supervisor,                version: apt_pinned, source: debian-bookworm}
+  - {name: python3,                   version: apt_pinned, source: debian-bookworm}
+  - {name: python3-yaml,              version: apt_pinned, source: debian-bookworm}
+  - {name: bash,                      version: apt_pinned, source: debian-bookworm}
+  - {name: coreutils,                 version: apt_pinned, source: debian-bookworm}
+  - {name: curl,                      version: apt_pinned, source: debian-bookworm}
+  - {name: jq,                        version: apt_pinned, source: debian-bookworm}
+  - {name: procps,                    version: apt_pinned, source: debian-bookworm}
+  - {name: iproute2,                  version: apt_pinned, source: debian-bookworm}
+  - {name: diffutils,                 version: apt_pinned, source: debian-bookworm}
+  - {name: util-linux,                version: apt_pinned, source: debian-bookworm}
+  - {name: gawk,                      version: apt_pinned, source: debian-bookworm}
+  - {name: sed,                       version: apt_pinned, source: debian-bookworm}
+  - {name: grep,                      version: apt_pinned, source: debian-bookworm}
+  - {name: patch,                     version: apt_pinned, source: debian-bookworm}
+  - {name: ca-certificates,           version: apt_pinned, source: debian-bookworm}
+
+allowed_command_families:
+  - shell_builtins: [cd, set, export, if, for, while, case, echo, printf, read, exit]
+  - text_processing: [awk, sed, grep, cut, sort, uniq, head, tail, wc, tr, tee, diff, patch]
+  - file_ops: [ls, cat, cp, mv, mkdir, rm, chmod, chown, touch, ln, stat, readlink]
+  - process: [ps, kill, pgrep, sleep, timeout, xargs]
+  - network_loopback_only: [curl (127.0.0.1 only), jq]
+  - json_yaml: [jq, python3 -m json.tool, python3 -c "import yaml"]
+  - supervisord: [supervisorctl (restart/stop/start elasticsearch), supervisord (do not kill parent)]
+  - python: [python3 (stdlib + PyYAML only, no pip install)]
+
+network_policy:
+  outbound: forbidden
+  loopback: allowed_on_127_0_0_1_only
+  allowed_endpoints:
+    - http://127.0.0.1:9200        # elasticsearch REST API
+    - http://127.0.0.1:9300        # elasticsearch transport (do not use)
+  forbidden_endpoints:
+    - any non-loopback address
+    - external DNS
+    - artifacts.elastic.co (only reachable at image build time)
+
+filesystem_write_policy:
+  writable:
+    - /workspace/
+    - /var/log/app/
+    - /tmp/
+  writable_via_supervisor:
+    - /var/lib/elasticsearch/     # only via supervisorctl restart, do not touch directly
+    - /var/log/elasticsearch/
+  read_only_to_agent:
+    - /opt/holdout/               # private grounding, chmod 700 root
+    - /etc/elasticsearch/         # baseline config
+    - /workspace/pinned_toolchain_manifest.yaml
+    - /workspace/README_FOR_AGENT.md

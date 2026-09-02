@@ -1,0 +1,63 @@
+schema_version = "1.1"
+
+[task]
+name = "mars/configure-gradle-toolchain-jdk21-test-jdk17-kotlin-dsl"
+description = "Edit /workspace/build.gradle.kts (Kotlin DSL only, no Groovy DSL fallback) so that the build toolchain stays pinned to JDK 21 while main-class bytecode targets JDK 17 (major version 61). Both JDK 21 and JDK 17 are pre-installed on the container; Gradle 8.5 is pinned at /usr/local/bin/gradle. The verifier greps build.gradle.kts for the Kotlin toolchain block plus a JDK-21 languageVersion pin, rejects any Groovy syntax residue (bare-integer sourceCompatibility/targetCompatibility, space-call jvmToolchain, single-quoted deps, Groovy named-arg apply plugin:), rejects a Groovy build.gradle or settings.gradle fallback on presence, then runs gradle build, javap -v on the compiled main class (must report major version 61), and gradle test."
+authors = [{ name = "mars-forge" }]
+keywords = ["gradle", "kotlin-dsl", "toolchain", "build-configure", "compositional-multi-domain-reasoning", "jdk21", "jdk17-target"]
+
+[metadata]
+mars_sub_type = "build-ci-cd"
+mars_archetype = "build-configure"
+mars_maturity = "draft"
+mars_tier = "frontier-defeat"
+mars_disposition_ceiling = "HOLD:PILOT_REQUIRED"
+mars_forge_contract_sha256 = "7fa61afd155a88f234f6c741a34546782fa0f53ca44afd5ead5a71094a7e5655"
+mars_forge_invocation = "35"
+mars_slot_index = 14
+mars_slot_slug = "configure-gradle-toolchain-jdk21-test-jdk17-kotlin-dsl"
+mars_primary_hardness_lever = "compositional-multi-domain-reasoning"
+mars_legacy_predecessor_uuid = "d39815ae-d0bc-5bc5-9ae3-41b8a8e20aa0"
+mars_task_uuid = "96ef5e4a-d79f-5b91-b9bf-9c67f2fb2011"
+
+[verifier]
+timeout_sec = 1200.0
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+build_timeout_sec = 900.0
+cpus = 2
+memory_mb = 4096
+storage_mb = 8192
+gpus = 0
+network_mode = "public"
+
+[verifier.env]
+[environment.env]
+[solution.env]
+
+[[artifacts]]
+source = "/workspace/build.gradle.kts"
+
+[[artifacts]]
+source = "/workspace/settings.gradle.kts"
+
+[[artifacts]]
+source = "/workspace/gradle.properties"
+
+[[artifacts]]
+source = "/workspace/src/main/java/com/example/App.java"
+
+[[artifacts]]
+source = "/workspace/src/test/java/com/example/AppTest.java"
+
+[[artifacts]]
+source = "/workspace/observed_bytecode_mismatch.txt"
+
+[prosecutor]
+mode = "harness_provided"
+delegate = "harness/mars_council.py"
+in_container_stub = "tests/run_prosecutor_judge.py"
+note = "3-judge Claude council runs on host post-container; in-container stub is a no-op marker for G-VER-INVARIANCE"

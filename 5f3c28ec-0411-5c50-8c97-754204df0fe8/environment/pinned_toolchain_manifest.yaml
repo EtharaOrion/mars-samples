@@ -1,0 +1,50 @@
+schema: forge.pinned_toolchain/v1
+generated_at: '2026-08-11'
+base_image: debian:bookworm-slim@sha256:7b140f374b289a7c2befc338f42ebe6441b7ea838a042bbd5acbfca6ec875818
+apt_packages:
+  - ca-certificates
+  - bash
+  - coreutils
+  - curl
+  - jq
+  - openssl
+  - procps
+  - iproute2
+  - diffutils
+  - util-linux
+  - python3
+  - python3-psycopg2
+  - python3-cryptography
+  - python3-fastapi
+  - python3-uvicorn
+  - python3-pydantic
+  - python3-jwt
+  - python3-requests
+  - python3-yaml
+  - nginx
+  - supervisor
+  - gawk
+  - sed
+  - grep
+  - patch
+  - gnupg2
+  - apt-transport-https
+  - adduser
+  - postgresql-16
+  - postgresql-client-16
+postgres_apt_repo:
+  key: https://www.postgresql.org/media/keys/ACCC4CF8.asc
+  repo: 'deb [signed-by=/etc/apt/keyrings/pgdg.gpg] https://apt.postgresql.org/pub/repos/apt bookworm-pgdg main'
+services:
+  postgres:
+    binary: /usr/lib/postgresql/16/bin/postgres
+    port: 5432
+    version_pin: '16.4-*'
+  nginx:
+    binary: /usr/sbin/nginx
+    port: 80
+    version_pin: '1.24.*-*'
+  approval-gate:
+    binary: /usr/bin/python3 -m uvicorn app:app
+    port: 8080
+    python_stack_pin: python3=3.11.* python3-fastapi python3-uvicorn python3-pydantic python3-cryptography python3-psycopg2

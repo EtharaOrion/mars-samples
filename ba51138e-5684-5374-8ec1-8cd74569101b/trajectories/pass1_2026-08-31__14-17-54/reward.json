@@ -1,0 +1,40 @@
+{
+  "breakdown": {
+    "D1_output_exists": {
+      "pass": true,
+      "path": "/workspace/out/report.tsv",
+      "size": 221
+    },
+    "D2_row_shape_invariant": {
+      "first_violation": null,
+      "pass": true,
+      "row_count": 7
+    },
+    "D3_set_equality": {
+      "actual_count": 7,
+      "expected_count": 7,
+      "extra_entries": [],
+      "extra_total": 0,
+      "missing_entries": [],
+      "missing_total": 0,
+      "pass": true
+    },
+    "D4_row_ordering": {
+      "first_violation": null,
+      "pass": true,
+      "row_count": 7
+    },
+    "D5_solve_script_shortcut_scan": {
+      "hits": [],
+      "pass": true
+    },
+    "D6_solve_script_line_budget": {
+      "budget": 90,
+      "line_count": 97,
+      "pass": false
+    }
+  },
+  "reason": "D6_solve_script_line_count_exceeds_budget",
+  "reward": 0.0,
+  "success": false
+}

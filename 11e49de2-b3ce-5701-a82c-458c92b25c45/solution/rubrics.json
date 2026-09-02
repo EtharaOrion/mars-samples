@@ -1,0 +1,1042 @@
+{
+  "schema": "forge.rubric_bundle/v1",
+  "task_uuid": "11e49de2-b3ce-5701-a82c-458c92b25c45",
+  "task_slug": "postgres-corrupt-wal-selective-recovery-single-service",
+  "generated_by": "dataset/<uuid>/solution/recompute.py",
+  "source_of_truth": "dataset/<uuid>/solution/grounding.yaml",
+  "bound_by_contract": "seed/contract.yaml#rubric",
+  "compiled_item_weight_share": 1.0,
+  "compilation_floor": 0.8,
+  "compilation_floor_note": "per_seed_contract_yaml_rubric_block_and_invariant_24",
+  "item_count": 55,
+  "items": [
+    {
+      "id": "R0001",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path d6_combined_line_budget equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "d6_combined_line_budget"
+      ],
+      "grounding_path_display": "d6_combined_line_budget",
+      "expected_literal": 130
+    },
+    {
+      "id": "R0002",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D1 > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D1",
+        0
+      ],
+      "grounding_path_display": "deliverables > D1 > [0]",
+      "expected_literal": "recover_sh_exists"
+    },
+    {
+      "id": "R0003",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D1 > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D1",
+        1
+      ],
+      "grounding_path_display": "deliverables > D1 > [1]",
+      "expected_literal": "notes_md_exists"
+    },
+    {
+      "id": "R0004",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D1 > [2] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D1",
+        2
+      ],
+      "grounding_path_display": "deliverables > D1 > [2]",
+      "expected_literal": "both_nonempty"
+    },
+    {
+      "id": "R0005",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D1 > [3] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D1",
+        3
+      ],
+      "grounding_path_display": "deliverables > D1 > [3]",
+      "expected_literal": "both_utf8"
+    },
+    {
+      "id": "R0006",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D1 > [4] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D1",
+        4
+      ],
+      "grounding_path_display": "deliverables > D1 > [4]",
+      "expected_literal": "recover_sh_executable"
+    },
+    {
+      "id": "R0007",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D2 > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D2",
+        0
+      ],
+      "grounding_path_display": "deliverables > D2 > [0]",
+      "expected_literal": "recover_sh_returncode_0"
+    },
+    {
+      "id": "R0008",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D2 > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D2",
+        1
+      ],
+      "grounding_path_display": "deliverables > D2 > [1]",
+      "expected_literal": "pg_isready_within_30s"
+    },
+    {
+      "id": "R0009",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D3 > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D3",
+        0
+      ],
+      "grounding_path_display": "deliverables > D3 > [0]",
+      "expected_literal": "q1_q2_q3_q4_q5_equal_golden_tuple"
+    },
+    {
+      "id": "R0010",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D4 > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D4",
+        0
+      ],
+      "grounding_path_display": "deliverables > D4 > [0]",
+      "expected_literal": "q6_amcheck_void"
+    },
+    {
+      "id": "R0011",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D4 > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D4",
+        1
+      ],
+      "grounding_path_display": "deliverables > D4 > [1]",
+      "expected_literal": "q7_in_production"
+    },
+    {
+      "id": "R0012",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D4 > [2] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D4",
+        2
+      ],
+      "grounding_path_display": "deliverables > D4 > [2]",
+      "expected_literal": "q7_latest_ckpt_ge_ceiling"
+    },
+    {
+      "id": "R0013",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D4 > [3] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D4",
+        3
+      ],
+      "grounding_path_display": "deliverables > D4 > [3]",
+      "expected_literal": "q8_mutation_tick_present"
+    },
+    {
+      "id": "R0014",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D5 > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D5",
+        0
+      ],
+      "grounding_path_display": "deliverables > D5 > [0]",
+      "expected_literal": "combined_bytes_matches_no_shortcut_pattern"
+    },
+    {
+      "id": "R0015",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path deliverables > D6 > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "deliverables",
+        "D6",
+        0
+      ],
+      "grounding_path_display": "deliverables > D6 > [0]",
+      "expected_literal": "combined_wc_l_le_d6_budget"
+    },
+    {
+      "id": "R0016",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path golden_row_counts > accounts equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "golden_row_counts",
+        "accounts"
+      ],
+      "grounding_path_display": "golden_row_counts > accounts",
+      "expected_literal": 200
+    },
+    {
+      "id": "R0017",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "log_file_contents_or_line_match_or_line_absence",
+      "criterion": "the value at grounding path golden_row_counts > audit_events equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "log_file_contents_or_line_match_or_line_absence"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "golden_row_counts",
+        "audit_events"
+      ],
+      "grounding_path_display": "golden_row_counts > audit_events",
+      "expected_literal": 18200
+    },
+    {
+      "id": "R0018",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path golden_row_counts > ledger_entries equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "golden_row_counts",
+        "ledger_entries"
+      ],
+      "grounding_path_display": "golden_row_counts > ledger_entries",
+      "expected_literal": 12500
+    },
+    {
+      "id": "R0019",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path last_good_row_counts > accounts equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "last_good_row_counts",
+        "accounts"
+      ],
+      "grounding_path_display": "last_good_row_counts > accounts",
+      "expected_literal": 200
+    },
+    {
+      "id": "R0020",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "log_file_contents_or_line_match_or_line_absence",
+      "criterion": "the value at grounding path last_good_row_counts > audit_events equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "log_file_contents_or_line_match_or_line_absence"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "last_good_row_counts",
+        "audit_events"
+      ],
+      "grounding_path_display": "last_good_row_counts > audit_events",
+      "expected_literal": 12000
+    },
+    {
+      "id": "R0021",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "database_query_row_set",
+      "criterion": "the value at grounding path last_good_row_counts > ledger_entries equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "database_query_row_set"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "last_good_row_counts",
+        "ledger_entries"
+      ],
+      "grounding_path_display": "last_good_row_counts > ledger_entries",
+      "expected_literal": 8000
+    },
+    {
+      "id": "R0022",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path recovery_route_reference > ordered_steps > [0] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "recovery_route_reference",
+        "ordered_steps",
+        0
+      ],
+      "grounding_path_display": "recovery_route_reference > ordered_steps > [0]",
+      "expected_literal": "rewrite_pg_hba_to_local_postgres_peer"
+    },
+    {
+      "id": "R0023",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path recovery_route_reference > ordered_steps > [1] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "recovery_route_reference",
+        "ordered_steps",
+        1
+      ],
+      "grounding_path_display": "recovery_route_reference > ordered_steps > [1]",
+      "expected_literal": "remove_stale_postmaster_pid"
+    },
+    {
+      "id": "R0024",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path recovery_route_reference > ordered_steps > [2] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "recovery_route_reference",
+        "ordered_steps",
+        2
+      ],
+      "grounding_path_display": "recovery_route_reference > ordered_steps > [2]",
+      "expected_literal": "identify_last_wal_segment_by_lex_sort"
+    },
+    {
+      "id": "R0025",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path recovery_route_reference > ordered_steps > [3] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "recovery_route_reference",
+        "ordered_steps",
+        3
+      ],
+      "grounding_path_display": "recovery_route_reference > ordered_steps > [3]",
+      "expected_literal": "zero_pad_last_wal_segment_to_16MiB"
+    },
+    {
+      "id": "R0026",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path recovery_route_reference > ordered_steps > [4] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "recovery_route_reference",
+        "ordered_steps",
+        4
+      ],
+      "grounding_path_display": "recovery_route_reference > ordered_steps > [4]",
+      "expected_literal": "pg_ctl_start_wait_30s"
+    },
+    {
+      "id": "R0027",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path recovery_route_reference > ordered_steps > [5] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "recovery_route_reference",
+        "ordered_steps",
+        5
+      ],
+      "grounding_path_display": "recovery_route_reference > ordered_steps > [5]",
+      "expected_literal": "poll_pg_isready_on_unix_socket"
+    },
+    {
+      "id": "R0028",
+      "dimension": "correctness_of_ordering",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path recovery_route_reference > ordered_steps > [6] equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "recovery_route_reference",
+        "ordered_steps",
+        6
+      ],
+      "grounding_path_display": "recovery_route_reference > ordered_steps > [6]",
+      "expected_literal": "checkpoint_sql"
+    },
+    {
+      "id": "R0029",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path red_line_set > RL1 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "red_line_set",
+        "RL1"
+      ],
+      "grounding_path_display": "red_line_set > RL1",
+      "expected_literal": "DROP_DATABASE_on_target"
+    },
+    {
+      "id": "R0030",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path red_line_set > RL2 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "red_line_set",
+        "RL2"
+      ],
+      "grounding_path_display": "red_line_set > RL2",
+      "expected_literal": "rm_rf_pg_wal"
+    },
+    {
+      "id": "R0031",
+      "dimension": "correctness_of_invariant",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path red_line_set > RL3 equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "red_line_set",
+        "RL3"
+      ],
+      "grounding_path_display": "red_line_set > RL3",
+      "expected_literal": "pg_dump_then_wipe_data_directory"
+    },
+    {
+      "id": "R0032",
+      "dimension": "correctness_of_value",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path reference_files_private > checkpoint_lsn_at_dump equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_files_private",
+        "checkpoint_lsn_at_dump"
+      ],
+      "grounding_path_display": "reference_files_private > checkpoint_lsn_at_dump",
+      "expected_literal": "/opt/holdout/checkpoint_lsn_at_dump.txt"
+    },
+    {
+      "id": "R0033",
+      "dimension": "correctness_of_value",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path reference_files_private > reference_ceiling_lsn equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "reference_files_private",
+        "reference_ceiling_lsn"
+      ],
+      "grounding_path_display": "reference_files_private > reference_ceiling_lsn",
+      "expected_literal": "/opt/holdout/reference_ceiling.lsn"
+    },
+    {
+      "id": "R0034",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path shortcut_pattern_set > [0] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "shortcut_pattern_set",
+        0,
+        "id"
+      ],
+      "grounding_path_display": "shortcut_pattern_set > [0] > id",
+      "expected_literal": "drop_database_family"
+    },
+    {
+      "id": "R0035",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path shortcut_pattern_set > [0] > intent equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "shortcut_pattern_set",
+        0,
+        "intent"
+      ],
+      "grounding_path_display": "shortcut_pattern_set > [0] > intent",
+      "expected_literal": "reject DROP DATABASE on the target database"
+    },
+    {
+      "id": "R0036",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path shortcut_pattern_set > [1] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "shortcut_pattern_set",
+        1,
+        "id"
+      ],
+      "grounding_path_display": "shortcut_pattern_set > [1] > id",
+      "expected_literal": "rm_rf_pg_wal_family"
+    },
+    {
+      "id": "R0037",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path shortcut_pattern_set > [1] > intent equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "shortcut_pattern_set",
+        1,
+        "intent"
+      ],
+      "grounding_path_display": "shortcut_pattern_set > [1] > intent",
+      "expected_literal": "reject rm -rf on the pg_wal directory"
+    },
+    {
+      "id": "R0038",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path shortcut_pattern_set > [2] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "shortcut_pattern_set",
+        2,
+        "id"
+      ],
+      "grounding_path_display": "shortcut_pattern_set > [2] > id",
+      "expected_literal": "pg_resetwal_dash_f_family"
+    },
+    {
+      "id": "R0039",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path shortcut_pattern_set > [2] > intent equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "shortcut_pattern_set",
+        2,
+        "intent"
+      ],
+      "grounding_path_display": "shortcut_pattern_set > [2] > intent",
+      "expected_literal": "reject pg_resetwal -f without prior waldump inspection"
+    },
+    {
+      "id": "R0040",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path shortcut_pattern_set > [3] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "shortcut_pattern_set",
+        3,
+        "id"
+      ],
+      "grounding_path_display": "shortcut_pattern_set > [3] > id",
+      "expected_literal": "last_good_sql_restore_family"
+    },
+    {
+      "id": "R0041",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path shortcut_pattern_set > [3] > intent equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "shortcut_pattern_set",
+        3,
+        "intent"
+      ],
+      "grounding_path_display": "shortcut_pattern_set > [3] > intent",
+      "expected_literal": "reject literal reference to the pre-checkpoint dump path"
+    },
+    {
+      "id": "R0042",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path shortcut_pattern_set > [4] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "shortcut_pattern_set",
+        4,
+        "id"
+      ],
+      "grounding_path_display": "shortcut_pattern_set > [4] > id",
+      "expected_literal": "pg_dump_and_wipe_family"
+    },
+    {
+      "id": "R0043",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path shortcut_pattern_set > [4] > intent equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "shortcut_pattern_set",
+        4,
+        "intent"
+      ],
+      "grounding_path_display": "shortcut_pattern_set > [4] > intent",
+      "expected_literal": "reject pg_dump followed by rm-r or initdb in the same script"
+    },
+    {
+      "id": "R0044",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path shortcut_pattern_set > [5] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "shortcut_pattern_set",
+        5,
+        "id"
+      ],
+      "grounding_path_display": "shortcut_pattern_set > [5] > id",
+      "expected_literal": "runtime_install_and_network_family"
+    },
+    {
+      "id": "R0045",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path shortcut_pattern_set > [5] > intent equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "shortcut_pattern_set",
+        5,
+        "intent"
+      ],
+      "grounding_path_display": "shortcut_pattern_set > [5] > intent",
+      "expected_literal": "reject apt/pip/cargo/npm install and curl/wget/git-clone"
+    },
+    {
+      "id": "R0046",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path shortcut_pattern_set > [6] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "shortcut_pattern_set",
+        6,
+        "id"
+      ],
+      "grounding_path_display": "shortcut_pattern_set > [6] > id",
+      "expected_literal": "pg_control_readout_recital_family"
+    },
+    {
+      "id": "R0047",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path shortcut_pattern_set > [6] > intent equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "shortcut_pattern_set",
+        6,
+        "intent"
+      ],
+      "grounding_path_display": "shortcut_pattern_set > [6] > intent",
+      "expected_literal": "reject literal pg_control_readout.txt path recital"
+    },
+    {
+      "id": "R0048",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path shortcut_pattern_set > [7] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "shortcut_pattern_set",
+        7,
+        "id"
+      ],
+      "grounding_path_display": "shortcut_pattern_set > [7] > id",
+      "expected_literal": "forge_holdout_canary_family"
+    },
+    {
+      "id": "R0049",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path shortcut_pattern_set > [7] > intent equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "shortcut_pattern_set",
+        7,
+        "intent"
+      ],
+      "grounding_path_display": "shortcut_pattern_set > [7] > intent",
+      "expected_literal": "reject any FORGE_HOLDOUT_CANARY_ substring"
+    },
+    {
+      "id": "R0050",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path shortcut_pattern_set > [8] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "shortcut_pattern_set",
+        8,
+        "id"
+      ],
+      "grounding_path_display": "shortcut_pattern_set > [8] > id",
+      "expected_literal": "holdout_path_family"
+    },
+    {
+      "id": "R0051",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path shortcut_pattern_set > [8] > intent equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "shortcut_pattern_set",
+        8,
+        "intent"
+      ],
+      "grounding_path_display": "shortcut_pattern_set > [8] > intent",
+      "expected_literal": "reject /opt/holdout, /dataset/, and reference_ceiling.lsn paths"
+    },
+    {
+      "id": "R0052",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path shortcut_pattern_set > [9] > id equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "shortcut_pattern_set",
+        9,
+        "id"
+      ],
+      "grounding_path_display": "shortcut_pattern_set > [9] > id",
+      "expected_literal": "private_grounding_field_family"
+    },
+    {
+      "id": "R0053",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path shortcut_pattern_set > [9] > intent equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "shortcut_pattern_set",
+        9,
+        "intent"
+      ],
+      "grounding_path_display": "shortcut_pattern_set > [9] > intent",
+      "expected_literal": "reject grounding field names as literal identifiers"
+    },
+    {
+      "id": "R0054",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path wal_segment_size_bytes equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "wal_segment_size_bytes"
+      ],
+      "grounding_path_display": "wal_segment_size_bytes",
+      "expected_literal": 16777216
+    },
+    {
+      "id": "R0055",
+      "dimension": "correctness_of_effect",
+      "weight": 0.01818181818181818,
+      "evaluation_target": "workspace_filesystem_path_contents",
+      "criterion": "the value at grounding path wal_truncation_offset_bytes equals the frozen literal",
+      "judgment": "pass",
+      "evidence": [
+        "workspace_filesystem_path_contents"
+      ],
+      "mode": "compiled",
+      "grounding_path": [
+        "wal_truncation_offset_bytes"
+      ],
+      "grounding_path_display": "wal_truncation_offset_bytes",
+      "expected_literal": 12582912
+    }
+  ]
+}
