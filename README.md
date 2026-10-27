@@ -220,3 +220,9 @@ To confirm the ceiling on any task, run its oracle before the grader — the rew
 ✦ &nbsp;·&nbsp; ✦ &nbsp;·&nbsp; ✦
 
 </div>
+
+---
+
+## Copyright
+
+Copyright (c) 2026 Green Rider Technology LLP (Ethara AI). All rights reserved.
